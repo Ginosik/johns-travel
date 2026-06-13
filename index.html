@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Feed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-area">
+      <div class="brand" aria-label="Social Feed">S</div>
+      <label class="search" aria-label="Search">
+        <span>?</span>
+        <input type="search" placeholder="Search Social" data-i18n-placeholder="search">
+      </label>
+    </div>
+
+    <nav class="tabs" aria-label="Main">
+      <button class="tab active" title="Home">H</button>
+    </nav>
+
+    <div class="quick-actions">
+      <button class="language-toggle" id="languageToggle" type="button" aria-pressed="false">Portuguese</button>
+      <div class="avatar" title="Your profile"><img src="assets/John.png" alt="John"></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <aside class="left-rail">
+      <section class="menu-group" aria-label="Shortcuts">
+        <button class="menu-item"><span class="avatar small"><img src="assets/John.png" alt="John"></span><strong data-i18n="profileName">John's Travel</strong></button>
+      </section>
+    </aside>
+
+    <section class="feed" aria-label="Feed">
+      <section class="composer" aria-label="Create post">
+        <div class="composer-top">
+          <div class="avatar"><img src="assets/John.png" alt="John"></div>
+          <button class="composer-input" id="openComposer" data-i18n="composer">What's on your mind, John?</button>
+        </div>
+        <div class="composer-actions">
+          <button class="action-btn"><span style="color: var(--green)">P</span><span data-i18n="photo">Photo</span></button>
+        </div>
+      </section>
+
+      <a class="post-preview" href="day1.html" aria-label="Open John's first day traveling post" data-i18n-aria-label="postAria">
+        <article class="post">
+          <header class="post-head">
+            <div class="avatar"><img src="assets/John.png" alt="John"></div>
+            <div class="post-meta">
+              <strong data-i18n="profileName">John's Travel</strong>
+              <span data-i18n="postSubtitle">Day 1 - First day traveling</span>
+            </div>
+          </header>
+          <p class="post-copy" data-i18n="postCopy">John's first day traveling.</p>
+          <div class="post-open" data-i18n="openPost">Open post</div>
+        </article>
+      </a>
+    </section>
+  </main>
+
+  <nav class="mobile-bar" aria-label="Mobile">
+    <button class="active">H</button>
+  </nav>
+
+  <script src="scripts/feed.js"></script>
+</body>
+</html>
+

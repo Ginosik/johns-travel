@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John's Travel - Day 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <button class="start-button" id="startConversation" type="button" aria-label="Start conversation">
+      <span></span>
+    </button>
+  </div>
+  <main class="post-page">
+    <div class="post-page-actions">
+      <a class="back-link" href="index.html" data-i18n="backLink">Back to feed</a>
+      <button class="language-toggle" id="languageToggle" type="button" aria-pressed="false">Portuguese</button>
+    </div>
+    <article class="post detail-post">
+      <header class="post-head">
+        <div class="avatar"><img src="assets/John.png" alt="John"></div>
+        <div class="post-meta">
+          <strong data-i18n="title">John's Travel</strong>
+          <span data-i18n="subtitle">Day 1 - First day traveling</span>
+        </div>
+      </header>
+      <p class="post-copy" data-i18n="intro">John's first day traveling starts with a conversation about Florianopolis, Brazil, Portuguese, food, winter, and Festa Junina.</p>
+
+      <section class="conversation-record" id="conversationRecord" aria-label="Conversation record"></section>
+      <div class="conversation-controls">
+        <button class="continue-button" id="continueConversation" type="button">Continue</button>
+      </div>
+    </article>
+  </main>
+  <script src="scripts/day1.js"></script>
+</body>
+</html>
+
