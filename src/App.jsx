@@ -1,48 +1,73 @@
 import { useEffect, useState } from "react";
-import { conversation } from "./data/day1Content.js";
-import Day1Page from "./pages/Day1Page.jsx";
+import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import { getPostById, getPostByPath, getPublishedPostNeighbors } from "./data/posts.js";
+import DayPostPage from "./pages/DayPostPage.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
-import { getDay1AudioPath } from "./utils/day1Audio.js";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import TripMapPage from "./pages/TripMapPage.jsx";
+
+function StoryRoute({ initialPlayback }) {
+  const { dayNumber } = useParams();
+  const post = getPostByPath(`/day/${dayNumber}`);
+
+  if (!post) return <NotFoundPage />;
+
+  const { previousPost, nextPost } = getPublishedPostNeighbors(post.id);
+  const postPlayback = initialPlayback?.postId === post.id ? initialPlayback : null;
+
+  return (
+    <DayPostPage
+      initialPlayback={postPlayback}
+      nextPost={nextPost}
+      post={post}
+      previousPost={previousPost}
+      key={post.id}
+    />
+  );
+}
 
 function App() {
-  const [route, setRoute] = useState(window.location.pathname);
-  const [initialDay1Playback, setInitialDay1Playback] = useState(null);
+  const [initialPlayback, setInitialPlayback] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    function handlePopState() {
-      setRoute(window.location.pathname);
-      setInitialDay1Playback(null);
+    if (!initialPlayback) return;
+
+    const playbackPost = getPostById(initialPlayback.postId);
+    if (playbackPost?.href !== location.pathname) {
+      setInitialPlayback(null);
+    }
+  }, [initialPlayback, location.pathname]);
+
+  function navigateToPost(postId, event) {
+    event?.preventDefault();
+
+    const post = getPostById(postId);
+    if (!post) {
+      setInitialPlayback(null);
+      navigate(`/day/${postId}`);
+      return;
     }
 
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  function navigateToFeed(event) {
-    event?.preventDefault();
-    window.history.pushState(null, "", "/");
-    setRoute("/");
-    setInitialDay1Playback(null);
-  }
-
-  function navigateToDay1(event) {
-    event?.preventDefault();
-
-    const firstMessage = conversation[0];
-    const audioPath = getDay1AudioPath(firstMessage, 0);
+    const firstMessage = post.story.conversation[0];
+    const audioPath = post.story.getAudioPath(firstMessage, 0);
     const audio = new Audio(audioPath);
 
     audio.play().catch(() => {});
-    window.history.pushState(null, "", "/day/1");
-    setInitialDay1Playback({ audio, audioPath });
-    setRoute("/day/1");
+    setInitialPlayback({ postId, audio, audioPath });
+    navigate(post.href);
   }
 
-  if (route === "/day/1" || route === "/day1.html") {
-    return <Day1Page initialPlayback={initialDay1Playback} onBack={navigateToFeed} />;
-  }
-
-  return <FeedPage onOpenDay1={navigateToDay1} />;
+  return (
+    <Routes>
+      <Route path="/" element={<FeedPage onOpenPost={navigateToPost} />} />
+      <Route path="/day/:dayNumber" element={<StoryRoute initialPlayback={initialPlayback} />} />
+      <Route path="/day1.html" element={<Navigate to="/day/1" replace />} />
+      <Route path="/trip-map" element={<TripMapPage onOpenPost={navigateToPost} />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
 }
 
 export default App;

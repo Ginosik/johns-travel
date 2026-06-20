@@ -1,6 +1,6 @@
 # John's Travel
 
-A React travel-story web experience styled like a social feed. The first post opens an interactive conversation with audio playback and word-by-word Portuguese translations.
+A React travel-story web experience styled like a social feed. Published posts open interactive conversations with audio playback, word-level hints, and progressive Portuguese translations.
 
 ## Files
 
@@ -8,6 +8,8 @@ A React travel-story web experience styled like a social feed. The first post op
 - `src/` - React app source
 - `styles.css` - shared layout and visual styling
 - `assets/` - profile images, feed images, and audio files
+- `docs/ADDING_A_STORY.md` - data-driven workflow for publishing another travel day
+- `docs/MOBILE_SUPPORT.md` - supported mobile layouts and release-device checklist
 
 ## Run locally
 
@@ -17,3 +19,52 @@ Install dependencies and start the Vite dev server:
 npm install
 npm run dev
 ```
+
+## Add another story
+
+Follow [Adding a Travel Story](docs/ADDING_A_STORY.md). New days are registered in `src/data/posts.js` and do not require new page components or route handlers.
+
+## Deployment routing
+
+The app uses browser-based routes such as `/day/1` and `/day/2`. Configure the production host to serve `index.html` as the fallback for unknown file paths so direct story links and browser refreshes reach React Router.
+
+## Playwright browser tests
+
+Install the Playwright browser once after `npm install`:
+
+```sh
+npx playwright install chromium
+```
+
+Run the full desktop and mobile suite:
+
+```sh
+npm test
+```
+
+Check Portuguese content for missing diacritics, mojibake, and UTF-8 configuration:
+
+```bash
+npm run check:portuguese
+```
+
+This check also runs automatically before every production build.
+
+Open Playwright's interactive UI—the easiest way to explore, run, and debug individual tests:
+
+```sh
+npm run test:ui
+```
+
+Inside the UI, choose a test or browser project and press the run button. The timeline, page snapshot, actions, console, and network details appear alongside the test.
+
+Other useful commands:
+
+```sh
+npm run test:headed   # Watch tests execute in browser windows
+npm run test:debug    # Step through tests with the Playwright Inspector
+npm run test:report   # Open the most recent HTML report
+npm test -- tests/conversation.spec.js  # Run one test file
+```
+
+The test runner starts and stops the local Vite server automatically. If Windows PowerShell blocks npm scripts, use `npm.cmd` instead, for example `npm.cmd run test:ui`.

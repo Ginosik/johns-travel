@@ -1,39 +1,40 @@
-import { useEffect, useState } from "react";
-import johnAvatar from "../../assets/John.png";
+import { useState } from "react";
 import Composer from "../components/Composer.jsx";
 import FeedLayout from "../components/FeedLayout.jsx";
 import PostPreview from "../components/PostPreview.jsx";
 import { feedTranslations } from "../data/feedTranslations.js";
 import { posts } from "../data/posts.js";
+import { useLanguage } from "../context/LanguageContext.jsx";
 
-function FeedPage({ onOpenDay1 }) {
-  const [language, setLanguage] = useState("en");
+function FeedPage({ onOpenPost }) {
   const [composerDrafting, setComposerDrafting] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
   const strings = feedTranslations[language];
+  const profileAvatar = posts[0].author.avatar;
   const feedPosts = posts.map((post) => ({
     ...post,
-    ariaLabel: strings[post.ariaLabelKey],
-    authorName: strings[post.authorNameKey],
-    copy: strings[post.copyKey],
-    openLabel: strings[post.openLabelKey],
-    subtitle: strings[post.subtitleKey]
+    ariaLabel: strings[post.feed.ariaLabelKey],
+    authorAlt: post.author.avatarAlt,
+    authorAvatar: post.author.avatar,
+    authorName: strings[post.feed.authorNameKey],
+    copy: strings[post.feed.copyKey],
+    coverAlt: post.feed.coverAltKey ? strings[post.feed.coverAltKey] : undefined,
+    coverImage: post.feed.coverImage,
+    openLabel: strings[post.feed.openLabelKey],
+    subtitle: strings[post.feed.subtitleKey]
   }));
-
-  useEffect(() => {
-    document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
-  }, [language]);
 
   return (
     <FeedLayout
       isPortuguese={language === "pt"}
-      onToggleLanguage={() => setLanguage(language === "en" ? "pt" : "en")}
-      profileAvatar={johnAvatar}
+      onToggleLanguage={toggleLanguage}
+      profileAvatar={profileAvatar}
       profileName={strings.profileName}
       searchPlaceholder={strings.search}
       toggleLabel={strings.toggle}
     >
       <Composer
-        avatar={johnAvatar}
+        avatar={profileAvatar}
         isDrafting={composerDrafting}
         onStartDraft={() => setComposerDrafting(true)}
         photoLabel={strings.photo}
@@ -41,7 +42,7 @@ function FeedPage({ onOpenDay1 }) {
       />
 
       {feedPosts.map((post) => (
-        <PostPreview post={post} onOpen={post.id === "day-1" ? onOpenDay1 : undefined} key={post.id} />
+        <PostPreview post={post} onOpen={(event) => onOpenPost(post.id, event)} key={post.id} />
       ))}
     </FeedLayout>
   );

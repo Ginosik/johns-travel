@@ -5,14 +5,24 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run check:portuguese && vite build",
+    "check:portuguese": "node scripts/check-portuguese.mjs",
+    "preview": "vite preview",
+    "test": "node scripts/run-playwright.mjs",
+    "test:ui": "node scripts/run-playwright.mjs --ui",
+    "test:headed": "node scripts/run-playwright.mjs --headed",
+    "test:debug": "node scripts/run-playwright.mjs --debug",
+    "test:report": "node node_modules/@playwright/test/cli.js show-report"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "@xyflow/react": "^12.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.18.0",
     "vite": "^5.4.21"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.0"
   }
 }

@@ -3,7 +3,7 @@ function Avatar({ alt, className = "", src, title }) {
 
   return (
     <div className={classes} title={title}>
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} width="384" height="384" decoding="async" />
     </div>
   );
 }

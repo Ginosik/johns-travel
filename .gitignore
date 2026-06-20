@@ -10,3 +10,7 @@ dist/
 build/
 
 *.log
+
+playwright-report/
+test-results/
+blob-report/
