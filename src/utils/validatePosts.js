@@ -74,6 +74,7 @@ export function validatePosts(posts) {
 
     const conversation = post.story?.conversation;
     const translations = post.story?.conversationTranslations;
+    const isHindiStory = post.story?.targetLanguage?.code === "hi";
 
     if (!Array.isArray(conversation) || conversation.length === 0) {
       errors.push(`${path}.story.conversation must contain at least one message`);
@@ -95,9 +96,50 @@ export function validatePosts(posts) {
       });
     }
 
-    if (typeof post.story?.getAudioPath !== "function") {
-      errors.push(`${path}.story.getAudioPath must be a function`);
-    } else if (Array.isArray(conversation)) {
+    if (isHindiStory) {
+      if (post.story?.chatLanguage?.code !== "hi") {
+        errors.push(`${path}.story.chatLanguage.code must be "hi" for Hindi chat`);
+      }
+      addMissingValueError(errors, post.story?.chatLanguage?.name, `${path}.story.chatLanguage.name`);
+      if (!post.story?.getAudioPath) {
+        addMissingValueError(errors, post.story?.pronunciation?.language, `${path}.story.pronunciation.language`);
+        addMissingValueError(errors, post.story?.pronunciation?.type, `${path}.story.pronunciation.type`);
+      }
+      addMissingValueError(errors, post.story?.sourceLanguage?.code, `${path}.story.sourceLanguage.code`);
+      addMissingValueError(errors, post.story?.sourceLanguage?.name, `${path}.story.sourceLanguage.name`);
+      addMissingValueError(errors, post.story?.targetLanguage?.name, `${path}.story.targetLanguage.name`);
+      addMissingValueError(errors, post.story?.targetLanguage?.badge, `${path}.story.targetLanguage.badge`);
+
+      [
+        ["transliterations", post.story?.transliterations],
+        ["meaningNotes", post.story?.meaningNotes]
+      ].forEach(([field, entries]) => {
+        if (!Array.isArray(entries) || entries.length !== conversation?.length) {
+          errors.push(`${path}.story.${field} must match the conversation length`);
+          return;
+        }
+
+        entries.forEach((entry, entryIndex) => {
+          addMissingValueError(errors, entry, `${path}.story.${field}[${entryIndex}]`);
+        });
+      });
+
+      translations?.forEach((translation, translationIndex) => {
+        if (translation && !/[\u0900-\u097f]/u.test(translation)) {
+          errors.push(`${path}.story.conversationTranslations[${translationIndex}] must contain Devanagari text`);
+        }
+      });
+
+      conversation?.forEach((message, messageIndex) => {
+        if (message.text && !/[\u0900-\u097f]/u.test(message.text)) {
+          errors.push(`${path}.story.conversation[${messageIndex}].text must contain Devanagari text`);
+        }
+      });
+    }
+
+    if (post.workflow?.audioStatus === "recorded" && typeof post.story?.getAudioPath !== "function") {
+      errors.push(`${path}.story.getAudioPath must be a function when audio is recorded`);
+    } else if (post.workflow?.audioStatus === "recorded" && Array.isArray(conversation)) {
       conversation.forEach((message, messageIndex) => {
         try {
           addMissingValueError(errors, post.story.getAudioPath(message, messageIndex), `${path}.story audio for message ${messageIndex}`);
@@ -111,6 +153,19 @@ export function validatePosts(posts) {
       STORY_TRANSLATION_KEYS.forEach((key) => {
         addMissingValueError(errors, post.story?.translations?.[language]?.[key], `${path}.story.translations.${language}.${key}`);
       });
+
+      if (isHindiStory) {
+        [
+          "learningDirection",
+          "meaningLabel",
+          "pronunciationLoading",
+          "pronunciationReplay",
+          "pronunciationUnavailable",
+          "transliterationLabel"
+        ].forEach((key) => {
+          addMissingValueError(errors, post.story?.translations?.[language]?.[key], `${path}.story.translations.${language}.${key}`);
+        });
+      }
     });
   });
 

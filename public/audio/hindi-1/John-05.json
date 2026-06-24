@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-24T03:19:39.017Z",
+  "languageCode": "hi",
+  "modelId": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "provider": "elevenlabs",
+  "speaker": "John",
+  "text": "मुझे यात्रा करना और भाषाएँ सीखना पसंद है।",
+  "textHash": "342b47e19035023c0acb2f1b38b3c7dd7de0095f00e478f93880f78da16b2f1f",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceSettings": {
+    "stability": 0.82,
+    "similarity_boost": 0.9,
+    "style": 0,
+    "use_speaker_boost": true
+  }
+}

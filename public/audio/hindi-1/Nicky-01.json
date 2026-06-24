@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-24T03:19:29.432Z",
+  "languageCode": "hi",
+  "modelId": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "provider": "elevenlabs",
+  "speaker": "Nicky",
+  "text": "नमस्ते, जॉन। आप कैसे हैं?",
+  "textHash": "6ec72ac51e9743295f5f45946a3fa5bf1659bbad5b221ee797cb54318b809f79",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceSettings": {
+    "stability": 0.82,
+    "similarity_boost": 0.9,
+    "style": 0,
+    "use_speaker_boost": true
+  }
+}

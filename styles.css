@@ -359,6 +359,10 @@
       width: min(1100px, 100%);
     }
 
+    .post-page.target-hi.has-translation {
+      width: min(1180px, 100%);
+    }
+
     .post-page-actions {
       display: flex;
       align-items: center;
@@ -427,6 +431,21 @@
       font-size: 15px;
     }
 
+    .learning-direction {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      margin: 0 14px 14px;
+      padding: 4px 10px;
+      border: 1px solid color-mix(in srgb, var(--green) 35%, var(--line));
+      border-radius: 999px;
+      color: #176b3a;
+      background: #f1fbf5;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
     .translation-toggle {
       display: inline-flex;
       align-items: center;
@@ -459,6 +478,10 @@
       align-items: start;
       gap: 18px;
       padding-right: 14px;
+    }
+
+    .target-hi .conversation-layout.is-translation-open {
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 410px);
     }
 
     .conversation-column {
@@ -560,6 +583,43 @@
     .translation-missing {
       color: var(--muted);
       font-style: italic;
+    }
+
+    .conversation-translation.is-hi .translation-language {
+      background: #e67617;
+    }
+
+    .translation-native[lang="hi"] {
+      font-family: "Noto Sans Devanagari", "Nirmala UI", Mangal, sans-serif;
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.65;
+      word-break: normal;
+    }
+
+    .translation-transliteration,
+    .translation-meaning {
+      margin-top: 6px !important;
+      color: var(--muted);
+      font-size: 13px !important;
+    }
+
+    .translation-transliteration span,
+    .translation-meaning span {
+      display: block;
+      margin-bottom: 1px;
+      color: var(--text);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .translation-meaning {
+      padding: 7px 9px;
+      border-left: 2px solid color-mix(in srgb, var(--green) 55%, var(--line));
+      border-radius: 0 7px 7px 0;
+      background: rgba(255, 255, 255, .7);
     }
 
     @keyframes translation-arrival {
@@ -676,6 +736,13 @@
       margin: 0;
     }
 
+    .speech-text[lang="hi"] {
+      font-family: "Noto Sans Devanagari", "Nirmala UI", Mangal, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      word-break: normal;
+    }
+
     .message-play-button {
       flex: 0 0 auto;
       display: grid;
@@ -726,6 +793,20 @@
       border-color: color-mix(in srgb, var(--red) 45%, var(--line));
     }
 
+    .pronunciation-button {
+      color: var(--green);
+    }
+
+    .pronunciation-button::before {
+      clip-path: polygon(12% 32%, 36% 32%, 62% 10%, 62% 90%, 36% 68%, 12% 68%);
+      transform: none;
+    }
+
+    .pronunciation-button.is-unavailable {
+      color: var(--red);
+      border-color: color-mix(in srgb, var(--red) 45%, var(--line));
+    }
+
     .message-audio-feedback {
       flex-basis: 100%;
       color: var(--muted);
@@ -740,6 +821,10 @@
     }
 
     .message-audio-feedback.is-error {
+      color: var(--red);
+    }
+
+    .message-audio-feedback.is-unavailable {
       color: var(--red);
     }
 
@@ -1239,6 +1324,10 @@
       .conversation-layout.is-translation-open {
         grid-template-columns: 1fr;
         padding-right: 0;
+      }
+
+      .target-hi .conversation-layout.is-translation-open {
+        grid-template-columns: 1fr;
       }
 
       .conversation-translation {

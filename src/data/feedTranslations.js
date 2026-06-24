@@ -12,6 +12,10 @@ export const feedTranslations = {
     day2PostSubtitle: "Day 2 - Exploring Lagoa da Conceição",
     day2PostCopy: "A busy lagoon, a new neighborhood, and John's first Portuguese order.",
     day2CoverAlt: "Coastal view representing Lagoa da Conceição",
+    hindi1PostAria: "Open the first English-to-Hindi learning story",
+    hindi1PostSubtitle: "Hindi 1 - Meeting someone",
+    hindi1PostCopy: "Learn a first Hindi greeting, introduction, and friendly goodbye.",
+    hindi1CoverAlt: "A café setting for a first conversation in Hindi",
     openPost: "Open post",
     toggle: "Portuguese"
   },
@@ -28,6 +32,10 @@ export const feedTranslations = {
     day2PostSubtitle: "Dia 2 - Explorando a Lagoa da Conceição",
     day2PostCopy: "Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em português.",
     day2CoverAlt: "Vista costeira representando a Lagoa da Conceição",
+    hindi1PostAria: "Abrir a primeira história de aprendizagem de inglês para hindi",
+    hindi1PostSubtitle: "Hindi 1 - Conhecendo alguém",
+    hindi1PostCopy: "Aprenda uma primeira saudação, apresentação e despedida amigável em hindi.",
+    hindi1CoverAlt: "Um café como cenário para uma primeira conversa em hindi",
     openPost: "Abrir post",
     toggle: "English"
   }

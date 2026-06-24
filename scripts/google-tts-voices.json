@@ -1,0 +1,12 @@
+{
+  "John": {
+    "languageCode": "hi-IN",
+    "name": "hi-IN-Chirp3-HD-Achird",
+    "ssmlGender": "MALE"
+  },
+  "Nicky": {
+    "languageCode": "hi-IN",
+    "name": "hi-IN-Chirp3-HD-Aoede",
+    "ssmlGender": "FEMALE"
+  }
+}

@@ -4,7 +4,9 @@ function HoverableText({ text, translations }) {
       return part;
     }
 
-    const normalizedWord = part.toLowerCase().replace(/^[^a-z']+|[^a-z']+$/g, "");
+    const normalizedWord = part
+      .toLocaleLowerCase()
+      .replace(/^[^\p{L}\p{M}']+|[^\p{L}\p{M}']+$/gu, "");
     const translation = translations[normalizedWord];
 
     return (

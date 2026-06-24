@@ -1,10 +1,19 @@
 import johnAvatar from "../../assets/John-mobile.jpg";
 import nickyAvatar from "../../assets/Nicky-mobile.jpg";
 import lagoaCover from "../../assets/feed-coast-mobile.jpg";
+import hindiCover from "../../assets/feed-cafe-mobile.jpg";
 import { createSpeakerSequenceAudioPathGetter } from "../utils/messageAudio.js";
 import { validatePosts } from "../utils/validatePosts.js";
 import { conversation, conversationTranslations, day1Translations, wordTranslations } from "./day1Content.js";
 import { day2Conversation, day2ConversationTranslations, day2Translations, day2WordTranslations } from "./day2Content.js";
+import {
+  hindi1Conversation,
+  hindi1ConversationTranslations,
+  hindi1MeaningNotes,
+  hindi1Translations,
+  hindi1Transliterations,
+  hindi1WordTranslations
+} from "./hindi1Content.js";
 
 const sharedAuthor = {
   name: "John",
@@ -25,6 +34,11 @@ const getDay1AudioPath = createSpeakerSequenceAudioPathGetter(
 const getDay2AudioPath = createSpeakerSequenceAudioPathGetter(
   day2Conversation,
   ({ message, paddedSequence }) => `/audio/day2/${message.speaker}-${paddedSequence}.wav`
+);
+
+const getHindi1AudioPath = createSpeakerSequenceAudioPathGetter(
+  hindi1Conversation,
+  ({ message, paddedSequence }) => `/audio/hindi-1/${message.speaker}-${paddedSequence}.mp3`
 );
 
 export const posts = validatePosts([
@@ -99,6 +113,48 @@ export const posts = validatePosts([
       translations: day2Translations,
       wordTranslations: day2WordTranslations,
       getAudioPath: getDay2AudioPath
+    }
+  },
+  {
+    id: "hindi-1",
+    day: 3,
+    href: "/day/3",
+    type: "conversation",
+    status: "published",
+    location: {
+      name: "New Delhi",
+      region: "Delhi",
+      country: "India"
+    },
+    tags: ["Hindi", "beginner", "greetings", "introductions"],
+    tripLabel: "Hindi 1 - Meeting someone",
+    workflow: {
+      writingStatus: "written",
+      audioStatus: "generated",
+      notes: "First English-to-Hindi learning story; pronunciation is expected from generated sentence audio files."
+    },
+    author: sharedAuthor,
+    feed: {
+      authorNameKey: "profileName",
+      ariaLabelKey: "hindi1PostAria",
+      copyKey: "hindi1PostCopy",
+      coverAltKey: "hindi1CoverAlt",
+      coverImage: hindiCover,
+      openLabelKey: "openPost",
+      subtitleKey: "hindi1PostSubtitle"
+    },
+    story: {
+      avatars: sharedAvatars,
+      chatLanguage: { code: "hi", name: "Hindi" },
+      conversation: hindi1Conversation,
+      conversationTranslations: hindi1ConversationTranslations,
+      getAudioPath: getHindi1AudioPath,
+      meaningNotes: hindi1MeaningNotes,
+      sourceLanguage: { code: "en", name: "English" },
+      targetLanguage: { code: "hi", name: "Hindi", badge: "HI" },
+      translations: hindi1Translations,
+      transliterations: hindi1Transliterations,
+      wordTranslations: hindi1WordTranslations
     }
   }
 ]);

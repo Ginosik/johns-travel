@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-24T03:19:37.284Z",
+  "languageCode": "hi",
+  "modelId": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "provider": "elevenlabs",
+  "speaker": "Nicky",
+  "text": "आपको क्या करना पसंद है?",
+  "textHash": "d597f48913e111813b96caaf23d861b13599f90ebdd1d93c816de21c6fc32330",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceSettings": {
+    "stability": 0.82,
+    "similarity_boost": 0.9,
+    "style": 0,
+    "use_speaker_boost": true
+  }
+}

@@ -51,7 +51,13 @@ function App() {
     }
 
     const firstMessage = post.story.conversation[0];
-    const audioPath = post.story.getAudioPath(firstMessage, 0);
+    const audioPath = post.story.getAudioPath?.(firstMessage, 0) ?? null;
+
+    if (!audioPath) {
+      setInitialPlayback(null);
+      navigate(post.href);
+      return;
+    }
     const audio = new Audio(audioPath);
 
     audio.play().catch(() => {});

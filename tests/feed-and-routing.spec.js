@@ -2,7 +2,8 @@ import { expect, test } from "@playwright/test";
 
 const publishedStories = [
   { href: "/day/1", subtitle: "Day 1 - First day traveling" },
-  { href: "/day/2", subtitle: "Day 2 - Exploring Lagoa da Conceição" }
+  { href: "/day/2", subtitle: "Day 2 - Exploring Lagoa da Conceição" },
+  { href: "/day/3", subtitle: "Hindi 1 - Meeting someone" }
 ];
 
 test("renders the feed, composer, and every published preview", async ({ page }) => {

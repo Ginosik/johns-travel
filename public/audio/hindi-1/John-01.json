@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-24T03:19:28.254Z",
+  "languageCode": "hi",
+  "modelId": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "provider": "elevenlabs",
+  "speaker": "John",
+  "text": "नमस्ते! मेरा नाम जॉन है।",
+  "textHash": "51635749d1ff145fe3506b231bc8e6474b87b0c6e818c6f2fd8e2186c9758a0f",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceSettings": {
+    "stability": 0.82,
+    "similarity_boost": 0.9,
+    "style": 0,
+    "use_speaker_boost": true
+  }
+}

@@ -6,6 +6,7 @@ import LanguageToggle from "../components/LanguageToggle.jsx";
 import PostHeader from "../components/PostHeader.jsx";
 import TypingMessage from "../components/TypingMessage.jsx";
 import useMessageAudio from "../hooks/useMessageAudio.js";
+import useSpeechPronunciation from "../hooks/useSpeechPronunciation.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 const TRANSLATION_PREFERENCE_KEY = "johns-travel:translation-open";
@@ -29,6 +30,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   const story = post.story;
   const strings = story.translations[language];
   const { audioState, playMessageAudio, playMessageAudioWhenPossible, playingPath } = useMessageAudio(initialPlayback);
+  const { speechState, speakPronunciation } = useSpeechPronunciation();
   const isComplete = nextMessageIndex >= story.conversation.length;
   const visibleMessages = story.conversation.slice(0, nextMessageIndex);
   const nextTypingMessage = hasStarted && !isComplete ? story.conversation[nextMessageIndex] : null;
@@ -77,10 +79,10 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
     if (isComplete) return;
 
     const message = story.conversation[nextMessageIndex];
-    const audioPath = story.getAudioPath(message, nextMessageIndex);
+    const audioPath = story.getAudioPath?.(message, nextMessageIndex) ?? null;
     setHasStarted(true);
     setNextMessageIndex((index) => index + 1);
-    playMessageAudioWhenPossible(audioPath);
+    if (audioPath) playMessageAudioWhenPossible(audioPath);
   }, [isComplete, nextMessageIndex, playMessageAudioWhenPossible, story]);
 
   useEffect(() => {
@@ -97,7 +99,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   }, [advanceConversation]);
 
   return (
-    <main className={`post-page${isTranslationOpen ? " has-translation" : ""}`}>
+    <main className={`post-page target-${story.targetLanguage?.code ?? "pt"}${isTranslationOpen ? " has-translation" : ""}`}>
       <div className="post-page-actions">
         <Link className="back-link" to="/">{strings.backLink}</Link>
         <LanguageToggle
@@ -115,6 +117,11 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
           subtitle={strings.subtitle}
         />
         <p className="post-copy">{strings.intro}</p>
+        {strings.learningDirection && (
+          <p className="learning-direction" aria-label={`Learning direction: ${strings.learningDirection}`}>
+            {strings.learningDirection}
+          </p>
+        )}
 
         <div className="conversation-toolbar">
           <p
@@ -137,7 +144,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
             onClick={toggleTranslation}
             ref={translationToggleRef}
           >
-            <span aria-hidden="true">PT</span>
+            <span aria-hidden="true">{story.targetLanguage?.badge ?? "PT"}</span>
             {isTranslationOpen ? strings.hideTranslation : strings.showTranslation}
           </button>
         </div>
@@ -146,8 +153,19 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
           <div className="conversation-column">
             <section className="conversation-record" aria-label={strings.conversationLabel ?? "Conversation record"}>
               {visibleMessages.map((message, index) => {
-                const audioPath = story.getAudioPath(message, index);
+                const audioPath = story.getAudioPath?.(message, index) ?? null;
                 const avatar = story.avatars[message.speaker];
+                const pronunciation = story.pronunciation && !audioPath ? {
+                  id: `pronunciation-${post.id}-${index}`,
+                  labels: {
+                    loading: strings.pronunciationLoading,
+                    replay: strings.pronunciationReplay,
+                    unavailable: strings.pronunciationUnavailable
+                  },
+                  language: story.pronunciation.language,
+                  status: speechState.id === `pronunciation-${post.id}-${index}` ? speechState.status : "idle",
+                  text: message.text
+                } : null;
 
                 return (
                   <ConversationMessage
@@ -164,7 +182,10 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
                     avatarSrc={avatar?.src}
                     isPlaying={playingPath === audioPath}
                     message={message}
+                    messageLanguage={story.chatLanguage?.code ?? "en"}
                     onPlay={playMessageAudio}
+                    onPronounce={speakPronunciation}
+                    pronunciation={pronunciation}
                     wordTranslations={story.wordTranslations}
                     ref={index === visibleMessages.length - 1 ? latestMessageRef : undefined}
                     key={`${message.speaker}-${index}`}
@@ -195,8 +216,14 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
           {isTranslationOpen && (
             <ConversationTranslation
               messages={visibleMessages}
+              languageBadge={story.targetLanguage?.badge ?? "PT"}
+              languageCode={story.targetLanguage?.code ?? "pt"}
+              meaningLabel={strings.meaningLabel}
+              meaningNotes={story.meaningNotes}
               title={strings.translationTitle}
               translations={story.conversationTranslations}
+              transliterationLabel={strings.transliterationLabel}
+              transliterations={story.transliterations}
               missingText={strings.translationMissing}
               progressText={`${visibleMessages.length} ${strings.progressOf} ${story.conversation.length}`}
               waitingText={strings.translationWaiting}
