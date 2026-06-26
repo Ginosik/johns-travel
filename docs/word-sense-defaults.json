@@ -1,0 +1,1354 @@
+{
+  "senses": {
+    "a": {
+      "lemma": "a",
+      "partOfSpeech": "article",
+      "meaningPt": "um / uma",
+      "notePt": "Artigo indefinido."
+    },
+    "about": {
+      "lemma": "about",
+      "partOfSpeech": "preposition",
+      "meaningPt": "sobre"
+    },
+    "adventures": {
+      "lemma": "adventure",
+      "partOfSpeech": "noun",
+      "meaningPt": "aventuras"
+    },
+    "all": {
+      "lemma": "all",
+      "partOfSpeech": "determiner",
+      "meaningPt": "tudo / todos"
+    },
+    "alright": {
+      "lemma": "alright",
+      "partOfSpeech": "adjective",
+      "meaningPt": "bem"
+    },
+    "american": {
+      "lemma": "American",
+      "partOfSpeech": "adjective",
+      "meaningPt": "americano / americana"
+    },
+    "and": {
+      "lemma": "and",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "e"
+    },
+    "any": {
+      "lemma": "any",
+      "partOfSpeech": "determiner",
+      "meaningPt": "algum / alguma"
+    },
+    "are": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "estão / são",
+      "grammarPt": "Presente do verbo be."
+    },
+    "at": {
+      "lemma": "at",
+      "partOfSpeech": "preposition",
+      "meaningPt": "em"
+    },
+    "beaches": {
+      "lemma": "beach",
+      "partOfSpeech": "noun",
+      "meaningPt": "praias"
+    },
+    "bean": {
+      "lemma": "bean",
+      "partOfSpeech": "noun",
+      "meaningPt": "feijão"
+    },
+    "both": {
+      "lemma": "both",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "ambos / os dois"
+    },
+    "brazil": {
+      "lemma": "Brazil",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Brasil"
+    },
+    "but": {
+      "lemma": "but",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "mas"
+    },
+    "by": {
+      "lemma": "by",
+      "partOfSpeech": "preposition",
+      "meaningPt": "por"
+    },
+    "called": {
+      "lemma": "call",
+      "partOfSpeech": "verb",
+      "meaningPt": "chamado / chamada",
+      "grammarPt": "Past participle used after celebration."
+    },
+    "can't": {
+      "lemma": "can",
+      "partOfSpeech": "modal verb",
+      "meaningPt": "não posso / não consigo",
+      "grammarPt": "Contração de cannot."
+    },
+    "cassava": {
+      "lemma": "cassava",
+      "partOfSpeech": "noun",
+      "meaningPt": "mandioca"
+    },
+    "celebration": {
+      "lemma": "celebration",
+      "partOfSpeech": "noun",
+      "meaningPt": "celebração / festa"
+    },
+    "colder": {
+      "lemma": "cold",
+      "partOfSpeech": "adjective",
+      "meaningPt": "mais frio",
+      "grammarPt": "Comparative adjective."
+    },
+    "could": {
+      "lemma": "can",
+      "partOfSpeech": "modal verb",
+      "meaningPt": "poderia / pudesse"
+    },
+    "countries": {
+      "lemma": "country",
+      "partOfSpeech": "noun",
+      "meaningPt": "países"
+    },
+    "did": {
+      "lemma": "do",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "marcador de pergunta no passado",
+      "grammarPt": "Auxiliar usado em perguntas no passado."
+    },
+    "do": {
+      "lemma": "do",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "marcador de pergunta",
+      "grammarPt": "Auxiliar usado em perguntas no presente."
+    },
+    "don't": {
+      "lemma": "do",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "não",
+      "grammarPt": "Contração de do not."
+    },
+    "enough": {
+      "lemma": "enough",
+      "partOfSpeech": "adverb",
+      "meaningPt": "suficientemente / tudo bem",
+      "notePt": "Em fair enough, a expressão significa tudo bem ou justo."
+    },
+    "exciting": {
+      "lemma": "exciting",
+      "partOfSpeech": "adjective",
+      "meaningPt": "empolgante"
+    },
+    "expecting": {
+      "lemma": "expect",
+      "partOfSpeech": "verb",
+      "meaningPt": "esperando"
+    },
+    "fair": {
+      "lemma": "fair",
+      "partOfSpeech": "adjective",
+      "meaningPt": "justo / razoável",
+      "notePt": "Em fair enough, a expressão aceita ou concorda com algo."
+    },
+    "farofa": {
+      "lemma": "farofa",
+      "partOfSpeech": "noun",
+      "meaningPt": "farofa",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "fast": {
+      "lemma": "fast",
+      "partOfSpeech": "adverb",
+      "meaningPt": "rápido / rapidamente"
+    },
+    "feijoada": {
+      "lemma": "feijoada",
+      "partOfSpeech": "noun",
+      "meaningPt": "feijoada",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "festa": {
+      "lemma": "Festa",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Festa",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "notePt": "Parte do nome cultural Festa Junina."
+    },
+    "few": {
+      "lemma": "few",
+      "partOfSpeech": "determiner",
+      "meaningPt": "poucos / poucas"
+    },
+    "fine": {
+      "lemma": "fine",
+      "partOfSpeech": "adjective",
+      "meaningPt": "bem"
+    },
+    "first": {
+      "lemma": "first",
+      "partOfSpeech": "noun",
+      "meaningPt": "começo / primeiro",
+      "notePt": "Em at first, significa no começo."
+    },
+    "florianópolis": {
+      "lemma": "Florianópolis",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Florianópolis"
+    },
+    "flour": {
+      "lemma": "flour",
+      "partOfSpeech": "noun",
+      "meaningPt": "farinha"
+    },
+    "focus": {
+      "lemma": "focus",
+      "partOfSpeech": "verb",
+      "meaningPt": "focar / concentrar-se"
+    },
+    "food": {
+      "lemma": "food",
+      "partOfSpeech": "noun",
+      "meaningPt": "comida"
+    },
+    "for": {
+      "lemma": "for",
+      "partOfSpeech": "preposition",
+      "meaningPt": "para"
+    },
+    "forget": {
+      "lemma": "forget",
+      "partOfSpeech": "verb",
+      "meaningPt": "esquecer"
+    },
+    "forward": {
+      "lemma": "forward",
+      "partOfSpeech": "adverb",
+      "meaningPt": "ansioso / ansiosa",
+      "notePt": "Parte da expressão looking forward to."
+    },
+    "go": {
+      "lemma": "go",
+      "partOfSpeech": "verb",
+      "meaningPt": "ir"
+    },
+    "good": {
+      "lemma": "good",
+      "partOfSpeech": "adjective",
+      "meaningPt": "bom / boa"
+    },
+    "got": {
+      "lemma": "get",
+      "partOfSpeech": "verb",
+      "meaningPt": "fiquei / deixei",
+      "notePt": "Em got it mixed up, marca o resultado: acabei confundindo."
+    },
+    "happening": {
+      "lemma": "happen",
+      "partOfSpeech": "verb",
+      "meaningPt": "acontecendo"
+    },
+    "have": {
+      "lemma": "have",
+      "partOfSpeech": "verb",
+      "meaningPt": "ter"
+    },
+    "heard": {
+      "lemma": "hear",
+      "partOfSpeech": "verb",
+      "meaningPt": "ouvi / ouvi falar"
+    },
+    "hello": {
+      "lemma": "hello",
+      "partOfSpeech": "interjection",
+      "meaningPt": "olá"
+    },
+    "hmm": {
+      "lemma": "hmm",
+      "partOfSpeech": "interjection",
+      "meaningPt": "hmm"
+    },
+    "how": {
+      "lemma": "how",
+      "partOfSpeech": "adverb",
+      "meaningPt": "como"
+    },
+    "i": {
+      "lemma": "I",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "eu"
+    },
+    "i'll": {
+      "lemma": "will",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "eu vou / eu irei",
+      "grammarPt": "Contração de I will."
+    },
+    "i'm": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "eu estou",
+      "grammarPt": "Contração de I am."
+    },
+    "i've": {
+      "lemma": "have",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "eu tenho",
+      "grammarPt": "Contração de I have."
+    },
+    "in": {
+      "lemma": "in",
+      "partOfSpeech": "preposition",
+      "meaningPt": "em"
+    },
+    "is": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "é / está",
+      "grammarPt": "Presente do verbo be."
+    },
+    "it": {
+      "lemma": "it",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "isso / ele / ela"
+    },
+    "it's": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "é / está",
+      "grammarPt": "Contração de it is."
+    },
+    "junina": {
+      "lemma": "Junina",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Junina",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "notePt": "Parte do nome cultural Festa Junina."
+    },
+    "just": {
+      "lemma": "just",
+      "partOfSpeech": "adverb",
+      "meaningPt": "apenas / só"
+    },
+    "keep": {
+      "lemma": "keep",
+      "partOfSpeech": "verb",
+      "meaningPt": "manter"
+    },
+    "know": {
+      "lemma": "know",
+      "partOfSpeech": "verb",
+      "meaningPt": "saber / conhecer"
+    },
+    "language": {
+      "lemma": "language",
+      "partOfSpeech": "noun",
+      "meaningPt": "idioma / língua"
+    },
+    "learn": {
+      "lemma": "learn",
+      "partOfSpeech": "verb",
+      "meaningPt": "aprender"
+    },
+    "local": {
+      "lemma": "local",
+      "partOfSpeech": "adjective",
+      "meaningPt": "local"
+    },
+    "looking": {
+      "lemma": "look",
+      "partOfSpeech": "verb",
+      "meaningPt": "ansioso / ansiosa",
+      "notePt": "Parte da expressão looking forward to."
+    },
+    "mixed": {
+      "lemma": "mix",
+      "partOfSpeech": "verb",
+      "meaningPt": "confundido / misturado",
+      "notePt": "Em mixed up, significa confundido."
+    },
+    "month": {
+      "lemma": "month",
+      "partOfSpeech": "noun",
+      "meaningPt": "mês"
+    },
+    "more": {
+      "lemma": "more",
+      "partOfSpeech": "adverb",
+      "meaningPt": "mais"
+    },
+    "most": {
+      "lemma": "most",
+      "partOfSpeech": "determiner",
+      "meaningPt": "a maior parte de / mais"
+    },
+    "much": {
+      "lemma": "much",
+      "partOfSpeech": "adverb",
+      "meaningPt": "muito"
+    },
+    "my": {
+      "lemma": "my",
+      "partOfSpeech": "determiner",
+      "meaningPt": "meu / minha"
+    },
+    "national": {
+      "lemma": "national",
+      "partOfSpeech": "adjective",
+      "meaningPt": "nacional"
+    },
+    "never": {
+      "lemma": "never",
+      "partOfSpeech": "adverb",
+      "meaningPt": "nunca"
+    },
+    "nice": {
+      "lemma": "nice",
+      "partOfSpeech": "adjective",
+      "meaningPt": "legal / bom / bonito"
+    },
+    "not": {
+      "lemma": "not",
+      "partOfSpeech": "adverb",
+      "meaningPt": "não"
+    },
+    "now": {
+      "lemma": "now",
+      "partOfSpeech": "adverb",
+      "meaningPt": "agora"
+    },
+    "of": {
+      "lemma": "of",
+      "partOfSpeech": "preposition",
+      "meaningPt": "de"
+    },
+    "oh": {
+      "lemma": "oh",
+      "partOfSpeech": "interjection",
+      "meaningPt": "ah"
+    },
+    "one": {
+      "lemma": "one",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "um / uma"
+    },
+    "on": {
+      "lemma": "on",
+      "partOfSpeech": "preposition",
+      "meaningPt": "em / sobre"
+    },
+    "online": {
+      "lemma": "online",
+      "partOfSpeech": "adverb",
+      "meaningPt": "online / na internet"
+    },
+    "or": {
+      "lemma": "or",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "ou"
+    },
+    "other": {
+      "lemma": "other",
+      "partOfSpeech": "determiner",
+      "meaningPt": "outros / outras"
+    },
+    "people": {
+      "lemma": "people",
+      "partOfSpeech": "noun",
+      "meaningPt": "pessoas"
+    },
+    "photos": {
+      "lemma": "photo",
+      "partOfSpeech": "noun",
+      "meaningPt": "fotos"
+    },
+    "portuguese": {
+      "lemma": "Portuguese",
+      "partOfSpeech": "noun",
+      "meaningPt": "português"
+    },
+    "probably": {
+      "lemma": "probably",
+      "partOfSpeech": "adverb",
+      "meaningPt": "provavelmente"
+    },
+    "really": {
+      "lemma": "really",
+      "partOfSpeech": "adverb",
+      "meaningPt": "mesmo / de verdade"
+    },
+    "saw": {
+      "lemma": "see",
+      "partOfSpeech": "verb",
+      "meaningPt": "vi"
+    },
+    "searching": {
+      "lemma": "search",
+      "partOfSpeech": "verb",
+      "meaningPt": "pesquisando"
+    },
+    "send": {
+      "lemma": "send",
+      "partOfSpeech": "verb",
+      "meaningPt": "enviar / mandar"
+    },
+    "should": {
+      "lemma": "should",
+      "partOfSpeech": "modal verb",
+      "meaningPt": "deveria"
+    },
+    "snow": {
+      "lemma": "snow",
+      "partOfSpeech": "verb",
+      "meaningPt": "nevar"
+    },
+    "sounds": {
+      "lemma": "sound",
+      "partOfSpeech": "verb",
+      "meaningPt": "soa / parece"
+    },
+    "south": {
+      "lemma": "south",
+      "partOfSpeech": "noun",
+      "meaningPt": "sul"
+    },
+    "spanish": {
+      "lemma": "Spanish",
+      "partOfSpeech": "noun",
+      "meaningPt": "espanhol"
+    },
+    "speak": {
+      "lemma": "speak",
+      "partOfSpeech": "verb",
+      "meaningPt": "falar"
+    },
+    "stew": {
+      "lemma": "stew",
+      "partOfSpeech": "noun",
+      "meaningPt": "ensopado"
+    },
+    "sure": {
+      "lemma": "sure",
+      "partOfSpeech": "adjective",
+      "meaningPt": "claro / com certeza",
+      "notePt": "Em for sure, significa com certeza."
+    },
+    "that": {
+      "lemma": "that",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "isso / essa coisa"
+    },
+    "that's": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "isso é / isso está",
+      "grammarPt": "Contração de that is."
+    },
+    "tell": {
+      "lemma": "tell",
+      "partOfSpeech": "verb",
+      "meaningPt": "contar / dizer"
+    },
+    "the": {
+      "lemma": "the",
+      "partOfSpeech": "article",
+      "meaningPt": "o / a / os / as",
+      "notePt": "Artigo definido."
+    },
+    "then": {
+      "lemma": "then",
+      "partOfSpeech": "adverb",
+      "meaningPt": "então"
+    },
+    "there": {
+      "lemma": "there",
+      "partOfSpeech": "adverb",
+      "meaningPt": "lá / ali"
+    },
+    "they": {
+      "lemma": "they",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "eles / elas"
+    },
+    "think": {
+      "lemma": "think",
+      "partOfSpeech": "verb",
+      "meaningPt": "achar / pensar"
+    },
+    "things": {
+      "lemma": "thing",
+      "partOfSpeech": "noun",
+      "meaningPt": "coisas"
+    },
+    "this": {
+      "lemma": "this",
+      "partOfSpeech": "determiner",
+      "meaningPt": "este / esta"
+    },
+    "to": {
+      "lemma": "to",
+      "partOfSpeech": "preposition",
+      "meaningPt": "para"
+    },
+    "too": {
+      "lemma": "too",
+      "partOfSpeech": "adverb",
+      "meaningPt": "também / demais"
+    },
+    "touch": {
+      "lemma": "touch",
+      "partOfSpeech": "noun",
+      "meaningPt": "contato",
+      "notePt": "Em keep in touch, significa manter contato."
+    },
+    "travel": {
+      "lemma": "travel",
+      "partOfSpeech": "verb",
+      "meaningPt": "viajar"
+    },
+    "up": {
+      "lemma": "up",
+      "partOfSpeech": "particle",
+      "meaningPt": "completamente / para cima",
+      "notePt": "Em mixed up, faz parte do phrasal verb que significa confundir."
+    },
+    "very": {
+      "lemma": "very",
+      "partOfSpeech": "adverb",
+      "meaningPt": "muito"
+    },
+    "wait": {
+      "lemma": "wait",
+      "partOfSpeech": "verb",
+      "meaningPt": "esperar"
+    },
+    "what": {
+      "lemma": "what",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "o que"
+    },
+    "which": {
+      "lemma": "which",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "que / qual"
+    },
+    "will": {
+      "lemma": "will",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "vai / irá",
+      "grammarPt": "Auxiliar de futuro."
+    },
+    "winter": {
+      "lemma": "winter",
+      "partOfSpeech": "noun",
+      "meaningPt": "inverno"
+    },
+    "wish": {
+      "lemma": "wish",
+      "partOfSpeech": "verb",
+      "meaningPt": "desejar / queria"
+    },
+    "with": {
+      "lemma": "with",
+      "partOfSpeech": "preposition",
+      "meaningPt": "com"
+    },
+    "won't": {
+      "lemma": "will",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "não vou / não irá",
+      "grammarPt": "Contração de will not."
+    },
+    "words": {
+      "lemma": "word",
+      "partOfSpeech": "noun",
+      "meaningPt": "palavras"
+    },
+    "wow": {
+      "lemma": "wow",
+      "partOfSpeech": "interjection",
+      "meaningPt": "uau"
+    },
+    "yes": {
+      "lemma": "yes",
+      "partOfSpeech": "interjection",
+      "meaningPt": "sim"
+    },
+    "you": {
+      "lemma": "you",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "você / vocês"
+    },
+    "youtube": {
+      "lemma": "YouTube",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "YouTube"
+    },
+    "you'll": {
+      "lemma": "will",
+      "partOfSpeech": "auxiliary verb",
+      "meaningPt": "você vai / você irá",
+      "grammarPt": "Contração de you will."
+    },
+    "you're": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "você está",
+      "grammarPt": "Contração de you are."
+    },
+    "accent": {
+      "lemma": "accent",
+      "partOfSpeech": "noun",
+      "meaningPt": "sotaque"
+    },
+    "after": {
+      "lemma": "after",
+      "partOfSpeech": "preposition",
+      "meaningPt": "depois de"
+    },
+    "afternoon": {
+      "lemma": "afternoon",
+      "partOfSpeech": "noun",
+      "meaningPt": "tarde"
+    },
+    "alive": {
+      "lemma": "alive",
+      "partOfSpeech": "adjective",
+      "meaningPt": "cheio de vida / vivo"
+    },
+    "answered": {
+      "lemma": "answer",
+      "partOfSpeech": "verb",
+      "meaningPt": "respondeu"
+    },
+    "anyone": {
+      "lemma": "anyone",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "alguém"
+    },
+    "around": {
+      "lemma": "around",
+      "partOfSpeech": "preposition",
+      "meaningPt": "ao redor de / por perto"
+    },
+    "area": {
+      "lemma": "area",
+      "partOfSpeech": "noun",
+      "meaningPt": "área / região"
+    },
+    "arrived": {
+      "lemma": "arrive",
+      "partOfSpeech": "verb",
+      "meaningPt": "chegou"
+    },
+    "beach": {
+      "lemma": "beach",
+      "partOfSpeech": "noun",
+      "meaningPt": "praia"
+    },
+    "because": {
+      "lemma": "because",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "porque"
+    },
+    "best": {
+      "lemma": "best",
+      "partOfSpeech": "noun",
+      "meaningPt": "melhor",
+      "notePt": "Em hope for the best, significa torcer pelo melhor."
+    },
+    "blends": {
+      "lemma": "blend",
+      "partOfSpeech": "verb",
+      "meaningPt": "se mistura"
+    },
+    "boats": {
+      "lemma": "boat",
+      "partOfSpeech": "noun",
+      "meaningPt": "barcos"
+    },
+    "bridge": {
+      "lemma": "bridge",
+      "partOfSpeech": "noun",
+      "meaningPt": "ponte"
+    },
+    "buses": {
+      "lemma": "bus",
+      "partOfSpeech": "noun",
+      "meaningPt": "ônibus"
+    },
+    "busy": {
+      "lemma": "busy",
+      "partOfSpeech": "adjective",
+      "meaningPt": "movimentado / ocupado"
+    },
+    "cafes": {
+      "lemma": "cafe",
+      "partOfSpeech": "noun",
+      "meaningPt": "cafés"
+    },
+    "calm": {
+      "lemma": "calm",
+      "partOfSpeech": "adjective",
+      "meaningPt": "calmo / tranquilo"
+    },
+    "cashier": {
+      "lemma": "cashier",
+      "partOfSpeech": "noun",
+      "meaningPt": "atendente / caixa"
+    },
+    "clearly": {
+      "lemma": "clearly",
+      "partOfSpeech": "adverb",
+      "meaningPt": "claramente / com clareza"
+    },
+    "close": {
+      "lemma": "close",
+      "partOfSpeech": "adjective",
+      "meaningPt": "perto"
+    },
+    "coffee": {
+      "lemma": "coffee",
+      "partOfSpeech": "noun",
+      "meaningPt": "café"
+    },
+    "confidence": {
+      "lemma": "confidence",
+      "partOfSpeech": "noun",
+      "meaningPt": "confiança"
+    },
+    "connected": {
+      "lemma": "connect",
+      "partOfSpeech": "verb",
+      "meaningPt": "conectado / ligada",
+      "grammarPt": "Past participle used as an adjective."
+    },
+    "counts": {
+      "lemma": "count",
+      "partOfSpeech": "verb",
+      "meaningPt": "conta / vale"
+    },
+    "counter": {
+      "lemma": "counter",
+      "partOfSpeech": "noun",
+      "meaningPt": "balcão"
+    },
+    "crossed": {
+      "lemma": "cross",
+      "partOfSpeech": "verb",
+      "meaningPt": "atravessei"
+    },
+    "da": {
+      "lemma": "da",
+      "partOfSpeech": "preposition",
+      "meaningPt": "da",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "day": {
+      "lemma": "day",
+      "partOfSpeech": "noun",
+      "meaningPt": "dia"
+    },
+    "de": {
+      "lemma": "de",
+      "partOfSpeech": "preposition",
+      "meaningPt": "de",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "even": {
+      "lemma": "even",
+      "partOfSpeech": "adverb",
+      "meaningPt": "mesmo / até"
+    },
+    "everything": {
+      "lemma": "everything",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "tudo"
+    },
+    "everywhere": {
+      "lemma": "everywhere",
+      "partOfSpeech": "adverb",
+      "meaningPt": "por toda parte"
+    },
+    "explored": {
+      "lemma": "explore",
+      "partOfSpeech": "verb",
+      "meaningPt": "explorei"
+    },
+    "exploring": {
+      "lemma": "explore",
+      "partOfSpeech": "verb",
+      "meaningPt": "explorando"
+    },
+    "feel": {
+      "lemma": "feel",
+      "partOfSpeech": "verb",
+      "meaningPt": "parecer / sentir"
+    },
+    "felt": {
+      "lemma": "feel",
+      "partOfSpeech": "verb",
+      "meaningPt": "parecia / senti"
+    },
+    "finally": {
+      "lemma": "finally",
+      "partOfSpeech": "adverb",
+      "meaningPt": "finalmente"
+    },
+    "hills": {
+      "lemma": "hill",
+      "partOfSpeech": "noun",
+      "meaningPt": "morros / colinas"
+    },
+    "hope": {
+      "lemma": "hope",
+      "partOfSpeech": "verb",
+      "meaningPt": "esperar / torcer"
+    },
+    "lagoa": {
+      "lemma": "lagoa",
+      "partOfSpeech": "noun",
+      "meaningPt": "lagoa",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "lagoon": {
+      "lemma": "lagoon",
+      "partOfSpeech": "noun",
+      "meaningPt": "lagoa"
+    },
+    "lake": {
+      "lemma": "lake",
+      "partOfSpeech": "noun",
+      "meaningPt": "lago"
+    },
+    "like": {
+      "lemma": "like",
+      "partOfSpeech": "preposition",
+      "meaningPt": "como / parecido com"
+    },
+    "little": {
+      "lemma": "little",
+      "partOfSpeech": "adjective",
+      "meaningPt": "pequeno / pouco"
+    },
+    "lively": {
+      "lemma": "lively",
+      "partOfSpeech": "adjective",
+      "meaningPt": "animado / cheio de vida"
+    },
+    "lots": {
+      "lemma": "lot",
+      "partOfSpeech": "noun",
+      "meaningPt": "muitos / muitas",
+      "notePt": "Em lots of, significa muitos."
+    },
+    "means": {
+      "lemma": "mean",
+      "partOfSpeech": "verb",
+      "meaningPt": "significa"
+    },
+    "movimentado": {
+      "lemma": "movimentado",
+      "partOfSpeech": "adjective",
+      "meaningPt": "movimentado",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "mostly": {
+      "lemma": "mostly",
+      "partOfSpeech": "adverb",
+      "meaningPt": "principalmente"
+    },
+    "myself": {
+      "lemma": "myself",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "sozinho / por mim mesmo"
+    },
+    "near": {
+      "lemma": "near",
+      "partOfSpeech": "preposition",
+      "meaningPt": "perto de"
+    },
+    "neighborhood": {
+      "lemma": "neighborhood",
+      "partOfSpeech": "noun",
+      "meaningPt": "bairro / vizinhança"
+    },
+    "new": {
+      "lemma": "new",
+      "partOfSpeech": "adjective",
+      "meaningPt": "novo / nova"
+    },
+    "noise": {
+      "lemma": "noise",
+      "partOfSpeech": "noun",
+      "meaningPt": "barulho"
+    },
+    "obrigado": {
+      "lemma": "obrigado",
+      "partOfSpeech": "interjection",
+      "meaningPt": "obrigado",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "only": {
+      "lemma": "only",
+      "partOfSpeech": "adverb",
+      "meaningPt": "apenas / só"
+    },
+    "ordered": {
+      "lemma": "order",
+      "partOfSpeech": "verb",
+      "meaningPt": "pedi / encomendei"
+    },
+    "paddleboards": {
+      "lemma": "paddleboard",
+      "partOfSpeech": "noun",
+      "meaningPt": "pranchas de stand-up paddle"
+    },
+    "paid": {
+      "lemma": "pay",
+      "partOfSpeech": "verb",
+      "meaningPt": "paguei"
+    },
+    "pão": {
+      "lemma": "pão",
+      "partOfSpeech": "noun",
+      "meaningPt": "pão",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "place": {
+      "lemma": "place",
+      "partOfSpeech": "noun",
+      "meaningPt": "lugar"
+    },
+    "places": {
+      "lemma": "place",
+      "partOfSpeech": "noun",
+      "meaningPt": "lugares"
+    },
+    "point": {
+      "lemma": "point",
+      "partOfSpeech": "verb",
+      "meaningPt": "apontar"
+    },
+    "ponte": {
+      "lemma": "ponte",
+      "partOfSpeech": "noun",
+      "meaningPt": "ponte",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "politely": {
+      "lemma": "politely",
+      "partOfSpeech": "adverb",
+      "meaningPt": "educadamente / com educação"
+    },
+    "practice": {
+      "lemma": "practice",
+      "partOfSpeech": "verb",
+      "meaningPt": "praticar"
+    },
+    "queijo": {
+      "lemma": "queijo",
+      "partOfSpeech": "noun",
+      "meaningPt": "queijo",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "quiet": {
+      "lemma": "quiet",
+      "partOfSpeech": "adjective",
+      "meaningPt": "tranquilo / silencioso"
+    },
+    "real": {
+      "lemma": "real",
+      "partOfSpeech": "adjective",
+      "meaningPt": "real / verdadeiro"
+    },
+    "repeated": {
+      "lemma": "repeat",
+      "partOfSpeech": "verb",
+      "meaningPt": "repeti"
+    },
+    "restaurants": {
+      "lemma": "restaurant",
+      "partOfSpeech": "noun",
+      "meaningPt": "restaurantes"
+    },
+    "safest": {
+      "lemma": "safe",
+      "partOfSpeech": "adjective",
+      "meaningPt": "mais seguro",
+      "grammarPt": "Superlative adjective."
+    },
+    "sea": {
+      "lemma": "sea",
+      "partOfSpeech": "noun",
+      "meaningPt": "mar"
+    },
+    "second": {
+      "lemma": "second",
+      "partOfSpeech": "adjective",
+      "meaningPt": "segundo"
+    },
+    "shops": {
+      "lemma": "shop",
+      "partOfSpeech": "noun",
+      "meaningPt": "lojas"
+    },
+    "slow": {
+      "lemma": "slow",
+      "partOfSpeech": "adjective",
+      "meaningPt": "devagar / lento"
+    },
+    "slowly": {
+      "lemma": "slowly",
+      "partOfSpeech": "adverb",
+      "meaningPt": "devagar"
+    },
+    "small": {
+      "lemma": "small",
+      "partOfSpeech": "adjective",
+      "meaningPt": "pequeno / pequena"
+    },
+    "smile": {
+      "lemma": "smile",
+      "partOfSpeech": "verb",
+      "meaningPt": "sorrir"
+    },
+    "smiled": {
+      "lemma": "smile",
+      "partOfSpeech": "verb",
+      "meaningPt": "sorri"
+    },
+    "so": {
+      "lemma": "so",
+      "partOfSpeech": "adverb",
+      "meaningPt": "tão / então"
+    },
+    "started": {
+      "lemma": "start",
+      "partOfSpeech": "verb",
+      "meaningPt": "começou"
+    },
+    "stayed": {
+      "lemma": "stay",
+      "partOfSpeech": "verb",
+      "meaningPt": "fiquei / permaneci"
+    },
+    "still": {
+      "lemma": "still",
+      "partOfSpeech": "adverb",
+      "meaningPt": "ainda"
+    },
+    "stop": {
+      "lemma": "stop",
+      "partOfSpeech": "noun",
+      "meaningPt": "parada"
+    },
+    "streets": {
+      "lemma": "street",
+      "partOfSpeech": "noun",
+      "meaningPt": "ruas"
+    },
+    "than": {
+      "lemma": "than",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "do que"
+    },
+    "those": {
+      "lemma": "those",
+      "partOfSpeech": "determiner",
+      "meaningPt": "aqueles / aquelas"
+    },
+    "though": {
+      "lemma": "though",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "embora / apesar de"
+    },
+    "today": {
+      "lemma": "today",
+      "partOfSpeech": "adverb",
+      "meaningPt": "hoje"
+    },
+    "together": {
+      "lemma": "together",
+      "partOfSpeech": "adverb",
+      "meaningPt": "junto / juntos"
+    },
+    "took": {
+      "lemma": "take",
+      "partOfSpeech": "verb",
+      "meaningPt": "tirei / peguei"
+    },
+    "town": {
+      "lemma": "town",
+      "partOfSpeech": "noun",
+      "meaningPt": "cidadezinha / vila"
+    },
+    "tried": {
+      "lemma": "try",
+      "partOfSpeech": "verb",
+      "meaningPt": "tentei / experimentei"
+    },
+    "understand": {
+      "lemma": "understand",
+      "partOfSpeech": "verb",
+      "meaningPt": "entender"
+    },
+    "useful": {
+      "lemma": "useful",
+      "partOfSpeech": "adjective",
+      "meaningPt": "útil"
+    },
+    "walked": {
+      "lemma": "walk",
+      "partOfSpeech": "verb",
+      "meaningPt": "caminhei"
+    },
+    "walking": {
+      "lemma": "walk",
+      "partOfSpeech": "verb",
+      "meaningPt": "caminhando"
+    },
+    "was": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "estava / era / foi",
+      "grammarPt": "Passado do verbo be."
+    },
+    "watched": {
+      "lemma": "watch",
+      "partOfSpeech": "verb",
+      "meaningPt": "observei / assisti"
+    },
+    "water": {
+      "lemma": "water",
+      "partOfSpeech": "noun",
+      "meaningPt": "água"
+    },
+    "were": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "estavam / eram",
+      "grammarPt": "Passado do verbo be."
+    },
+    "where": {
+      "lemma": "where",
+      "partOfSpeech": "adverb",
+      "meaningPt": "onde"
+    },
+    "while": {
+      "lemma": "while",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "enquanto"
+    },
+    "whole": {
+      "lemma": "whole",
+      "partOfSpeech": "adjective",
+      "meaningPt": "inteiro / toda"
+    },
+    "word": {
+      "lemma": "word",
+      "partOfSpeech": "noun",
+      "meaningPt": "palavra"
+    },
+    "conceição": {
+      "lemma": "Conceição",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Conceição",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    }
+  },
+  "pronunciations": {
+    "conceição": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/kõ.sejˈsɐ̃w/",
+      "audioPrompt": "kon-say-SOWN",
+      "audioPromptNote": "Approximation for English TTS voices inside Lagoa da Conceição."
+    },
+    "da": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/da/",
+      "audioPrompt": "dah",
+      "audioPromptNote": "Portuguese connector in Lagoa da Conceição."
+    },
+    "de": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/dʒi/",
+      "audioPrompt": "jee",
+      "audioPromptNote": "Brazilian Portuguese connector in pão de queijo."
+    },
+    "florianópolis": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/flo.ɾi.aˈnɔ.po.lis/",
+      "audioPrompt": "flo-ree-ah-NAW-po-lees",
+      "audioPromptNote": "Brazilian place name."
+    },
+    "lagoa": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/laˈɡo.a/",
+      "audioPrompt": "lah-GOH-ah",
+      "audioPromptNote": "Portuguese word and place-name component."
+    },
+    "movimentado": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/mo.vi.mẽˈta.du/",
+      "audioPrompt": "moh-vee-men-TAH-doo",
+      "audioPromptNote": "Portuguese adjective used as a vocabulary word."
+    },
+    "obrigado": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/o.bɾiˈɡa.du/",
+      "audioPrompt": "oh-bree-GAH-doo",
+      "audioPromptNote": "Common Portuguese thanks."
+    },
+    "pão": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/pɐ̃w̃/",
+      "audioPrompt": "pown",
+      "audioPromptNote": "Use as part of pão de queijo: pown jee KAY-zho."
+    },
+    "ponte": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/ˈpõ.tʃi/",
+      "audioPrompt": "PON-chee",
+      "audioPromptNote": "Brazilian Portuguese pronunciation."
+    },
+    "queijo": {
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese",
+      "ipa": "/ˈkej.ʒu/",
+      "audioPrompt": "KAY-zho",
+      "audioPromptNote": "Use as part of pão de queijo: pown jee KAY-zho."
+    }
+  }
+}

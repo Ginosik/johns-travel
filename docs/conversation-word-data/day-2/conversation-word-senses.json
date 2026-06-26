@@ -1,0 +1,2381 @@
+{
+  "source": "Dialog text only from day-1, day-2 content modules listed in docs/conversation-word-posts.json",
+  "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
+  "annotation": "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.",
+  "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
+  "totals": {
+    "occurrences": 270,
+    "uniqueSurfaceWords": 154,
+    "uniqueSenses": 164
+  },
+  "counts": {
+    "and": {
+      "totalCount": 15,
+      "senses": {
+        "and_default": {
+          "count": 15,
+          "lemma": "and",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "e",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "the": {
+      "totalCount": 14,
+      "senses": {
+        "the_default": {
+          "count": 14,
+          "lemma": "the",
+          "partOfSpeech": "article",
+          "meaningPt": "o / a / os / as",
+          "notePt": "Artigo definido.",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        }
+      }
+    },
+    "a": {
+      "totalCount": 9,
+      "senses": {
+        "a_default": {
+          "count": 9,
+          "lemma": "a",
+          "partOfSpeech": "article",
+          "meaningPt": "um / uma",
+          "notePt": "Artigo indefinido.",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "it": {
+      "totalCount": 8,
+      "senses": {
+        "it_place_reference": {
+          "count": 7,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / ele",
+          "notePt": "Retoma Lagoa da Conceição como lugar.",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        },
+        "it_word_reference": {
+          "count": 1,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / ela",
+          "notePt": "Retoma obrigado como palavra segura.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "you": {
+      "totalCount": 8,
+      "senses": {
+        "you_default": {
+          "count": 8,
+          "lemma": "you",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "você / vocês",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "What did you do first, after you arrived and started looking around the area?",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "did": {
+      "totalCount": 7,
+      "senses": {
+        "did_aux_question_past": {
+          "count": 5,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "auxiliar de pergunta no passado",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "What did you do first, after you arrived and started looking around the area?",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        },
+        "did_substitute_verb": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "verb",
+          "meaningPt": "fizeram / entenderam sim",
+          "notePt": "Substitui o verbo da pergunta anterior: they did = eles entenderam.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        },
+        "do_default": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "marcador de pergunta no passado",
+          "grammarPt": "Auxiliar usado em perguntas no passado.",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "i": {
+      "totalCount": 7,
+      "senses": {
+        "i_default": {
+          "count": 7,
+          "lemma": "I",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eu",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats.",
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "is": {
+      "totalCount": 4,
+      "senses": {
+        "be_default": {
+          "count": 4,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "é / está",
+          "grammarPt": "Presente do verbo be.",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "of": {
+      "totalCount": 4,
+      "senses": {
+        "of_default": {
+          "count": 4,
+          "lemma": "of",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "or": {
+      "totalCount": 4,
+      "senses": {
+        "or_default": {
+          "count": 4,
+          "lemma": "or",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "ou",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "there": {
+      "totalCount": 4,
+      "senses": {
+        "there_default": {
+          "count": 2,
+          "lemma": "there",
+          "partOfSpeech": "adverb",
+          "meaningPt": "lá / ali",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        },
+        "there_existential": {
+          "count": 2,
+          "lemma": "there",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "há / tem",
+          "notePt": "Em There is..., there cria uma afirmação de existência.",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "was": {
+      "totalCount": 4,
+      "senses": {
+        "be_default": {
+          "count": 4,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estava / era / foi",
+          "grammarPt": "Passado do verbo be.",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "with": {
+      "totalCount": 4,
+      "senses": {
+        "with_default": {
+          "count": 4,
+          "lemma": "with",
+          "partOfSpeech": "preposition",
+          "meaningPt": "com",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?",
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "around": {
+      "totalCount": 3,
+      "senses": {
+        "around_default": {
+          "count": 3,
+          "lemma": "around",
+          "partOfSpeech": "preposition",
+          "meaningPt": "ao redor de / por perto",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "What did you do first, after you arrived and started looking around the area?",
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "like": {
+      "totalCount": 3,
+      "senses": {
+        "like_similarity": {
+          "count": 2,
+          "lemma": "like",
+          "partOfSpeech": "preposition",
+          "meaningPt": "como / parecido com",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop.",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        },
+        "like_as_if": {
+          "count": 1,
+          "lemma": "like",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "como se",
+          "notePt": "Em like it was..., introduz uma comparação informal.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "means": {
+      "totalCount": 3,
+      "senses": {
+        "mean_default": {
+          "count": 3,
+          "lemma": "mean",
+          "partOfSpeech": "verb",
+          "meaningPt": "significa",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "neighborhood": {
+      "totalCount": 3,
+      "senses": {
+        "neighborhood_default": {
+          "count": 3,
+          "lemma": "neighborhood",
+          "partOfSpeech": "noun",
+          "meaningPt": "bairro / vizinhança",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?",
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "people": {
+      "totalCount": 3,
+      "senses": {
+        "people_default": {
+          "count": 3,
+          "lemma": "people",
+          "partOfSpeech": "noun",
+          "meaningPt": "pessoas",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop.",
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "that": {
+      "totalCount": 3,
+      "senses": {
+        "that_demonstrative": {
+          "count": 2,
+          "lemma": "that",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        },
+        "that_result": {
+          "count": 1,
+          "lemma": "that",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "que",
+          "notePt": "Parte da estrutura so ... that.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "to": {
+      "totalCount": 3,
+      "senses": {
+        "to_connection": {
+          "count": 1,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "a / com",
+          "notePt": "Indica conexão: connected to the sea.",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        },
+        "to_distance_reference": {
+          "count": 1,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de / perto de",
+          "notePt": "Em close to the water, indica proximidade.",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        },
+        "to_infinitive": {
+          "count": 1,
+          "lemma": "to",
+          "partOfSpeech": "infinitive marker",
+          "meaningPt": "marcador de infinitivo",
+          "notePt": "Antes de verbo, to forma o infinitivo: to speak.",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "water": {
+      "totalCount": 3,
+      "senses": {
+        "water_default": {
+          "count": 3,
+          "lemma": "water",
+          "partOfSpeech": "noun",
+          "meaningPt": "água",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats.",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "were": {
+      "totalCount": 3,
+      "senses": {
+        "be_default": {
+          "count": 3,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estavam / eram",
+          "grammarPt": "Passado do verbo be.",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop.",
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "afternoon": {
+      "totalCount": 2,
+      "senses": {
+        "afternoon_default": {
+          "count": 2,
+          "lemma": "afternoon",
+          "partOfSpeech": "noun",
+          "meaningPt": "tarde",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "all": {
+      "totalCount": 2,
+      "senses": {
+        "all_default": {
+          "count": 2,
+          "lemma": "all",
+          "partOfSpeech": "determiner",
+          "meaningPt": "tudo / todos",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop.",
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "because": {
+      "totalCount": 2,
+      "senses": {
+        "because_default": {
+          "count": 2,
+          "lemma": "because",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "porque",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "bridge": {
+      "totalCount": 2,
+      "senses": {
+        "bridge_default": {
+          "count": 2,
+          "lemma": "bridge",
+          "partOfSpeech": "noun",
+          "meaningPt": "ponte",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "busy": {
+      "totalCount": 2,
+      "senses": {
+        "busy_default": {
+          "count": 2,
+          "lemma": "busy",
+          "partOfSpeech": "adjective",
+          "meaningPt": "movimentado / ocupado",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "even": {
+      "totalCount": 2,
+      "senses": {
+        "even_default": {
+          "count": 2,
+          "lemma": "even",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mesmo / até",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?",
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "felt": {
+      "totalCount": 2,
+      "senses": {
+        "feel_default": {
+          "count": 2,
+          "lemma": "feel",
+          "partOfSpeech": "verb",
+          "meaningPt": "parecia / senti",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "for": {
+      "totalCount": 2,
+      "senses": {
+        "for_default": {
+          "count": 2,
+          "lemma": "for",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "lagoa": {
+      "totalCount": 2,
+      "senses": {
+        "lagoa_default": {
+          "count": 2,
+          "lemma": "lagoa",
+          "partOfSpeech": "noun",
+          "meaningPt": "lagoa",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/laˈɡo.a/",
+          "audioPrompt": "lah-GOH-ah",
+          "audioPromptNote": "Portuguese word and place-name component.",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "lagoon": {
+      "totalCount": 2,
+      "senses": {
+        "lagoon_default": {
+          "count": 2,
+          "lemma": "lagoon",
+          "partOfSpeech": "noun",
+          "meaningPt": "lagoa",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.",
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "little": {
+      "totalCount": 2,
+      "senses": {
+        "little_default": {
+          "count": 2,
+          "lemma": "little",
+          "partOfSpeech": "adjective",
+          "meaningPt": "pequeno / pouco",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats.",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "movimentado": {
+      "totalCount": 2,
+      "senses": {
+        "movimentado_default": {
+          "count": 2,
+          "lemma": "movimentado",
+          "partOfSpeech": "adjective",
+          "meaningPt": "movimentado",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/mo.vi.mẽˈta.du/",
+          "audioPrompt": "moh-vee-men-TAH-doo",
+          "audioPromptNote": "Portuguese adjective used as a vocabulary word.",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "new": {
+      "totalCount": 2,
+      "senses": {
+        "new_default": {
+          "count": 2,
+          "lemma": "new",
+          "partOfSpeech": "adjective",
+          "meaningPt": "novo / nova",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "practice": {
+      "totalCount": 2,
+      "senses": {
+        "practice_default": {
+          "count": 1,
+          "lemma": "practice",
+          "partOfSpeech": "verb",
+          "meaningPt": "praticar",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        },
+        "practice_noun": {
+          "count": 1,
+          "lemma": "practice",
+          "partOfSpeech": "noun",
+          "meaningPt": "prática",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "so": {
+      "totalCount": 2,
+      "senses": {
+        "so_intensifier": {
+          "count": 1,
+          "lemma": "so",
+          "partOfSpeech": "adverb",
+          "meaningPt": "tão",
+          "notePt": "Parte da estrutura so ... that.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        },
+        "so_result": {
+          "count": 1,
+          "lemma": "so",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "então / por isso",
+          "notePt": "Conecta a causa à impressão: havia movimento, então parecia uma cidadezinha.",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "they": {
+      "totalCount": 2,
+      "senses": {
+        "they_default": {
+          "count": 2,
+          "lemma": "they",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eles / elas",
+          "examples": [
+            "Did they understand you, even with the accent and all the noise around the counter?",
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "very": {
+      "totalCount": 2,
+      "senses": {
+        "very_default": {
+          "count": 2,
+          "lemma": "very",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado.",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "what": {
+      "totalCount": 2,
+      "senses": {
+        "what_default": {
+          "count": 2,
+          "lemma": "what",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "o que",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?",
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "words": {
+      "totalCount": 2,
+      "senses": {
+        "word_default": {
+          "count": 2,
+          "lemma": "word",
+          "partOfSpeech": "noun",
+          "meaningPt": "palavras",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?",
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "accent": {
+      "totalCount": 1,
+      "senses": {
+        "accent_default": {
+          "count": 1,
+          "lemma": "accent",
+          "partOfSpeech": "noun",
+          "meaningPt": "sotaque",
+          "examples": [
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "after": {
+      "totalCount": 1,
+      "senses": {
+        "after_default": {
+          "count": 1,
+          "lemma": "after",
+          "partOfSpeech": "preposition",
+          "meaningPt": "depois de",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "alive": {
+      "totalCount": 1,
+      "senses": {
+        "alive_default": {
+          "count": 1,
+          "lemma": "alive",
+          "partOfSpeech": "adjective",
+          "meaningPt": "cheio de vida / vivo",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "answered": {
+      "totalCount": 1,
+      "senses": {
+        "answer_default": {
+          "count": 1,
+          "lemma": "answer",
+          "partOfSpeech": "verb",
+          "meaningPt": "respondeu",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "anyone": {
+      "totalCount": 1,
+      "senses": {
+        "anyone_default": {
+          "count": 1,
+          "lemma": "anyone",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "alguém",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "area": {
+      "totalCount": 1,
+      "senses": {
+        "area_default": {
+          "count": 1,
+          "lemma": "area",
+          "partOfSpeech": "noun",
+          "meaningPt": "área / região",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "arrived": {
+      "totalCount": 1,
+      "senses": {
+        "arrive_default": {
+          "count": 1,
+          "lemma": "arrive",
+          "partOfSpeech": "verb",
+          "meaningPt": "chegou",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "at": {
+      "totalCount": 1,
+      "senses": {
+        "at_default": {
+          "count": 1,
+          "lemma": "at",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "beach": {
+      "totalCount": 1,
+      "senses": {
+        "beach_default": {
+          "count": 1,
+          "lemma": "beach",
+          "partOfSpeech": "noun",
+          "meaningPt": "praia",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "best": {
+      "totalCount": 1,
+      "senses": {
+        "best_default": {
+          "count": 1,
+          "lemma": "best",
+          "partOfSpeech": "noun",
+          "meaningPt": "melhor",
+          "notePt": "Em hope for the best, significa torcer pelo melhor.",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "blends": {
+      "totalCount": 1,
+      "senses": {
+        "blend_default": {
+          "count": 1,
+          "lemma": "blend",
+          "partOfSpeech": "verb",
+          "meaningPt": "se mistura",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "boats": {
+      "totalCount": 1,
+      "senses": {
+        "boat_default": {
+          "count": 1,
+          "lemma": "boat",
+          "partOfSpeech": "noun",
+          "meaningPt": "barcos",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "both": {
+      "totalCount": 1,
+      "senses": {
+        "both_default": {
+          "count": 1,
+          "lemma": "both",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "ambos / os dois",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "buses": {
+      "totalCount": 1,
+      "senses": {
+        "bus_default": {
+          "count": 1,
+          "lemma": "bus",
+          "partOfSpeech": "noun",
+          "meaningPt": "ônibus",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "but": {
+      "totalCount": 1,
+      "senses": {
+        "but_default": {
+          "count": 1,
+          "lemma": "but",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "mas",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "by": {
+      "totalCount": 1,
+      "senses": {
+        "by_default": {
+          "count": 1,
+          "lemma": "by",
+          "partOfSpeech": "preposition",
+          "meaningPt": "por",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "cafes": {
+      "totalCount": 1,
+      "senses": {
+        "cafe_default": {
+          "count": 1,
+          "lemma": "cafe",
+          "partOfSpeech": "noun",
+          "meaningPt": "cafés",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "calm": {
+      "totalCount": 1,
+      "senses": {
+        "calm_default": {
+          "count": 1,
+          "lemma": "calm",
+          "partOfSpeech": "adjective",
+          "meaningPt": "calmo / tranquilo",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "cashier": {
+      "totalCount": 1,
+      "senses": {
+        "cashier_default": {
+          "count": 1,
+          "lemma": "cashier",
+          "partOfSpeech": "noun",
+          "meaningPt": "atendente / caixa",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "clearly": {
+      "totalCount": 1,
+      "senses": {
+        "clearly_default": {
+          "count": 1,
+          "lemma": "clearly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "claramente / com clareza",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "close": {
+      "totalCount": 1,
+      "senses": {
+        "close_default": {
+          "count": 1,
+          "lemma": "close",
+          "partOfSpeech": "adjective",
+          "meaningPt": "perto",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        }
+      }
+    },
+    "coffee": {
+      "totalCount": 1,
+      "senses": {
+        "coffee_default": {
+          "count": 1,
+          "lemma": "coffee",
+          "partOfSpeech": "noun",
+          "meaningPt": "café",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "conceição": {
+      "totalCount": 1,
+      "senses": {
+        "concei_o_default": {
+          "count": 1,
+          "lemma": "Conceição",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Conceição",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/kõ.sejˈsɐ̃w/",
+          "audioPrompt": "kon-say-SOWN",
+          "audioPromptNote": "Approximation for English TTS voices inside Lagoa da Conceição.",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "confidence": {
+      "totalCount": 1,
+      "senses": {
+        "confidence_default": {
+          "count": 1,
+          "lemma": "confidence",
+          "partOfSpeech": "noun",
+          "meaningPt": "confiança",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "connected": {
+      "totalCount": 1,
+      "senses": {
+        "connect_default": {
+          "count": 1,
+          "lemma": "connect",
+          "partOfSpeech": "verb",
+          "meaningPt": "conectado / ligada",
+          "grammarPt": "Past participle used as an adjective.",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "counter": {
+      "totalCount": 1,
+      "senses": {
+        "counter_default": {
+          "count": 1,
+          "lemma": "counter",
+          "partOfSpeech": "noun",
+          "meaningPt": "balcão",
+          "examples": [
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "counts": {
+      "totalCount": 1,
+      "senses": {
+        "count_default": {
+          "count": 1,
+          "lemma": "count",
+          "partOfSpeech": "verb",
+          "meaningPt": "conta / vale",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "crossed": {
+      "totalCount": 1,
+      "senses": {
+        "cross_default": {
+          "count": 1,
+          "lemma": "cross",
+          "partOfSpeech": "verb",
+          "meaningPt": "atravessei",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "da": {
+      "totalCount": 1,
+      "senses": {
+        "da_default": {
+          "count": 1,
+          "lemma": "da",
+          "partOfSpeech": "preposition",
+          "meaningPt": "da",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/da/",
+          "audioPrompt": "dah",
+          "audioPromptNote": "Portuguese connector in Lagoa da Conceição.",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "day": {
+      "totalCount": 1,
+      "senses": {
+        "day_default": {
+          "count": 1,
+          "lemma": "day",
+          "partOfSpeech": "noun",
+          "meaningPt": "dia",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "de": {
+      "totalCount": 1,
+      "senses": {
+        "de_default": {
+          "count": 1,
+          "lemma": "de",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/dʒi/",
+          "audioPrompt": "jee",
+          "audioPromptNote": "Brazilian Portuguese connector in pão de queijo.",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "do": {
+      "totalCount": 1,
+      "senses": {
+        "do_main_verb": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "verb",
+          "meaningPt": "fazer",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "everything": {
+      "totalCount": 1,
+      "senses": {
+        "everything_default": {
+          "count": 1,
+          "lemma": "everything",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "tudo",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "everywhere": {
+      "totalCount": 1,
+      "senses": {
+        "everywhere_default": {
+          "count": 1,
+          "lemma": "everywhere",
+          "partOfSpeech": "adverb",
+          "meaningPt": "por toda parte",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "explored": {
+      "totalCount": 1,
+      "senses": {
+        "explore_default": {
+          "count": 1,
+          "lemma": "explore",
+          "partOfSpeech": "verb",
+          "meaningPt": "explorei",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "exploring": {
+      "totalCount": 1,
+      "senses": {
+        "explore_default": {
+          "count": 1,
+          "lemma": "explore",
+          "partOfSpeech": "verb",
+          "meaningPt": "explorando",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "fast": {
+      "totalCount": 1,
+      "senses": {
+        "fast_default": {
+          "count": 1,
+          "lemma": "fast",
+          "partOfSpeech": "adverb",
+          "meaningPt": "rápido / rapidamente",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "feel": {
+      "totalCount": 1,
+      "senses": {
+        "feel_default": {
+          "count": 1,
+          "lemma": "feel",
+          "partOfSpeech": "verb",
+          "meaningPt": "parecer / sentir",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        }
+      }
+    },
+    "finally": {
+      "totalCount": 1,
+      "senses": {
+        "finally_default": {
+          "count": 1,
+          "lemma": "finally",
+          "partOfSpeech": "adverb",
+          "meaningPt": "finalmente",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "first": {
+      "totalCount": 1,
+      "senses": {
+        "first_default": {
+          "count": 1,
+          "lemma": "first",
+          "partOfSpeech": "noun",
+          "meaningPt": "começo / primeiro",
+          "notePt": "Em at first, significa no começo.",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "food": {
+      "totalCount": 1,
+      "senses": {
+        "food_default": {
+          "count": 1,
+          "lemma": "food",
+          "partOfSpeech": "noun",
+          "meaningPt": "comida",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "good": {
+      "totalCount": 1,
+      "senses": {
+        "good_default": {
+          "count": 1,
+          "lemma": "good",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bom / boa",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "hills": {
+      "totalCount": 1,
+      "senses": {
+        "hill_default": {
+          "count": 1,
+          "lemma": "hill",
+          "partOfSpeech": "noun",
+          "meaningPt": "morros / colinas",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "hope": {
+      "totalCount": 1,
+      "senses": {
+        "hope_default": {
+          "count": 1,
+          "lemma": "hope",
+          "partOfSpeech": "verb",
+          "meaningPt": "esperar / torcer",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "lake": {
+      "totalCount": 1,
+      "senses": {
+        "lake_default": {
+          "count": 1,
+          "lemma": "lake",
+          "partOfSpeech": "noun",
+          "meaningPt": "lago",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "learn": {
+      "totalCount": 1,
+      "senses": {
+        "learn_default": {
+          "count": 1,
+          "lemma": "learn",
+          "partOfSpeech": "verb",
+          "meaningPt": "aprender",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "lively": {
+      "totalCount": 1,
+      "senses": {
+        "lively_default": {
+          "count": 1,
+          "lemma": "lively",
+          "partOfSpeech": "adjective",
+          "meaningPt": "animado / cheio de vida",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "looking": {
+      "totalCount": 1,
+      "senses": {
+        "look_default": {
+          "count": 1,
+          "lemma": "look",
+          "partOfSpeech": "verb",
+          "meaningPt": "ansioso / ansiosa",
+          "notePt": "Parte da expressão looking forward to.",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "lots": {
+      "totalCount": 1,
+      "senses": {
+        "lot_default": {
+          "count": 1,
+          "lemma": "lot",
+          "partOfSpeech": "noun",
+          "meaningPt": "muitos / muitas",
+          "notePt": "Em lots of, significa muitos.",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "more": {
+      "totalCount": 1,
+      "senses": {
+        "more_default": {
+          "count": 1,
+          "lemma": "more",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mais",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "most": {
+      "totalCount": 1,
+      "senses": {
+        "most_default": {
+          "count": 1,
+          "lemma": "most",
+          "partOfSpeech": "determiner",
+          "meaningPt": "a maior parte de / mais",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "mostly": {
+      "totalCount": 1,
+      "senses": {
+        "mostly_default": {
+          "count": 1,
+          "lemma": "mostly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "principalmente",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "my": {
+      "totalCount": 1,
+      "senses": {
+        "my_default": {
+          "count": 1,
+          "lemma": "my",
+          "partOfSpeech": "determiner",
+          "meaningPt": "meu / minha",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "myself": {
+      "totalCount": 1,
+      "senses": {
+        "myself_default": {
+          "count": 1,
+          "lemma": "myself",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "sozinho / por mim mesmo",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "near": {
+      "totalCount": 1,
+      "senses": {
+        "near_default": {
+          "count": 1,
+          "lemma": "near",
+          "partOfSpeech": "preposition",
+          "meaningPt": "perto de",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "nice": {
+      "totalCount": 1,
+      "senses": {
+        "nice_default": {
+          "count": 1,
+          "lemma": "nice",
+          "partOfSpeech": "adjective",
+          "meaningPt": "legal / bom / bonito",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "noise": {
+      "totalCount": 1,
+      "senses": {
+        "noise_default": {
+          "count": 1,
+          "lemma": "noise",
+          "partOfSpeech": "noun",
+          "meaningPt": "barulho",
+          "examples": [
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "not": {
+      "totalCount": 1,
+      "senses": {
+        "not_default": {
+          "count": 1,
+          "lemma": "not",
+          "partOfSpeech": "adverb",
+          "meaningPt": "não",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "obrigado": {
+      "totalCount": 1,
+      "senses": {
+        "obrigado_default": {
+          "count": 1,
+          "lemma": "obrigado",
+          "partOfSpeech": "interjection",
+          "meaningPt": "obrigado",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/o.bɾiˈɡa.du/",
+          "audioPrompt": "oh-bree-GAH-doo",
+          "audioPromptNote": "Common Portuguese thanks.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "on": {
+      "totalCount": 1,
+      "senses": {
+        "on_default": {
+          "count": 1,
+          "lemma": "on",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em / sobre",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "one": {
+      "totalCount": 1,
+      "senses": {
+        "one_default": {
+          "count": 1,
+          "lemma": "one",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "um / uma",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "only": {
+      "totalCount": 1,
+      "senses": {
+        "only_default": {
+          "count": 1,
+          "lemma": "only",
+          "partOfSpeech": "adverb",
+          "meaningPt": "apenas / só",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "ordered": {
+      "totalCount": 1,
+      "senses": {
+        "order_default": {
+          "count": 1,
+          "lemma": "order",
+          "partOfSpeech": "verb",
+          "meaningPt": "pedi / encomendei",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "paddleboards": {
+      "totalCount": 1,
+      "senses": {
+        "paddleboard_default": {
+          "count": 1,
+          "lemma": "paddleboard",
+          "partOfSpeech": "noun",
+          "meaningPt": "pranchas de stand-up paddle",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "paid": {
+      "totalCount": 1,
+      "senses": {
+        "pay_default": {
+          "count": 1,
+          "lemma": "pay",
+          "partOfSpeech": "verb",
+          "meaningPt": "paguei",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "pão": {
+      "totalCount": 1,
+      "senses": {
+        "p_o_default": {
+          "count": 1,
+          "lemma": "pão",
+          "partOfSpeech": "noun",
+          "meaningPt": "pão",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/pɐ̃w̃/",
+          "audioPrompt": "pown",
+          "audioPromptNote": "Use as part of pão de queijo: pown jee KAY-zho.",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "photos": {
+      "totalCount": 1,
+      "senses": {
+        "photo_default": {
+          "count": 1,
+          "lemma": "photo",
+          "partOfSpeech": "noun",
+          "meaningPt": "fotos",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "place": {
+      "totalCount": 1,
+      "senses": {
+        "place_default": {
+          "count": 1,
+          "lemma": "place",
+          "partOfSpeech": "noun",
+          "meaningPt": "lugar",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "places": {
+      "totalCount": 1,
+      "senses": {
+        "place_default": {
+          "count": 1,
+          "lemma": "place",
+          "partOfSpeech": "noun",
+          "meaningPt": "lugares",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "point": {
+      "totalCount": 1,
+      "senses": {
+        "point_default": {
+          "count": 1,
+          "lemma": "point",
+          "partOfSpeech": "verb",
+          "meaningPt": "apontar",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "politely": {
+      "totalCount": 1,
+      "senses": {
+        "politely_default": {
+          "count": 1,
+          "lemma": "politely",
+          "partOfSpeech": "adverb",
+          "meaningPt": "educadamente / com educação",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "ponte": {
+      "totalCount": 1,
+      "senses": {
+        "ponte_default": {
+          "count": 1,
+          "lemma": "ponte",
+          "partOfSpeech": "noun",
+          "meaningPt": "ponte",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/ˈpõ.tʃi/",
+          "audioPrompt": "PON-chee",
+          "audioPromptNote": "Brazilian Portuguese pronunciation.",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "portuguese": {
+      "totalCount": 1,
+      "senses": {
+        "portuguese_default": {
+          "count": 1,
+          "lemma": "Portuguese",
+          "partOfSpeech": "noun",
+          "meaningPt": "português",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "queijo": {
+      "totalCount": 1,
+      "senses": {
+        "queijo_default": {
+          "count": 1,
+          "lemma": "queijo",
+          "partOfSpeech": "noun",
+          "meaningPt": "queijo",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/ˈkej.ʒu/",
+          "audioPrompt": "KAY-zho",
+          "audioPromptNote": "Use as part of pão de queijo: pown jee KAY-zho.",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "quiet": {
+      "totalCount": 1,
+      "senses": {
+        "quiet_default": {
+          "count": 1,
+          "lemma": "quiet",
+          "partOfSpeech": "adjective",
+          "meaningPt": "tranquilo / silencioso",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        }
+      }
+    },
+    "real": {
+      "totalCount": 1,
+      "senses": {
+        "real_default": {
+          "count": 1,
+          "lemma": "real",
+          "partOfSpeech": "adjective",
+          "meaningPt": "real / verdadeiro",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "repeated": {
+      "totalCount": 1,
+      "senses": {
+        "repeat_default": {
+          "count": 1,
+          "lemma": "repeat",
+          "partOfSpeech": "verb",
+          "meaningPt": "repeti",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "restaurants": {
+      "totalCount": 1,
+      "senses": {
+        "restaurant_default": {
+          "count": 1,
+          "lemma": "restaurant",
+          "partOfSpeech": "noun",
+          "meaningPt": "restaurantes",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "safest": {
+      "totalCount": 1,
+      "senses": {
+        "safe_default": {
+          "count": 1,
+          "lemma": "safe",
+          "partOfSpeech": "adjective",
+          "meaningPt": "mais seguro",
+          "grammarPt": "Superlative adjective.",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "sea": {
+      "totalCount": 1,
+      "senses": {
+        "sea_default": {
+          "count": 1,
+          "lemma": "sea",
+          "partOfSpeech": "noun",
+          "meaningPt": "mar",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "second": {
+      "totalCount": 1,
+      "senses": {
+        "second_default": {
+          "count": 1,
+          "lemma": "second",
+          "partOfSpeech": "adjective",
+          "meaningPt": "segundo",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "shops": {
+      "totalCount": 1,
+      "senses": {
+        "shop_default": {
+          "count": 1,
+          "lemma": "shop",
+          "partOfSpeech": "noun",
+          "meaningPt": "lojas",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "slowly": {
+      "totalCount": 1,
+      "senses": {
+        "slowly_default": {
+          "count": 1,
+          "lemma": "slowly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "devagar",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "small": {
+      "totalCount": 1,
+      "senses": {
+        "small_default": {
+          "count": 1,
+          "lemma": "small",
+          "partOfSpeech": "adjective",
+          "meaningPt": "pequeno / pequena",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "smile": {
+      "totalCount": 1,
+      "senses": {
+        "smile_default": {
+          "count": 1,
+          "lemma": "smile",
+          "partOfSpeech": "verb",
+          "meaningPt": "sorrir",
+          "examples": [
+            "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+          ]
+        }
+      }
+    },
+    "smiled": {
+      "totalCount": 1,
+      "senses": {
+        "smile_default": {
+          "count": 1,
+          "lemma": "smile",
+          "partOfSpeech": "verb",
+          "meaningPt": "sorri",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "sounds": {
+      "totalCount": 1,
+      "senses": {
+        "sound_default": {
+          "count": 1,
+          "lemma": "sound",
+          "partOfSpeech": "verb",
+          "meaningPt": "soa / parece",
+          "examples": [
+            "That sounds like a very good second day, with food, practice, water, new words, and a little real confidence."
+          ]
+        }
+      }
+    },
+    "speak": {
+      "totalCount": 1,
+      "senses": {
+        "speak_default": {
+          "count": 1,
+          "lemma": "speak",
+          "partOfSpeech": "verb",
+          "meaningPt": "falar",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "started": {
+      "totalCount": 1,
+      "senses": {
+        "start_default": {
+          "count": 1,
+          "lemma": "start",
+          "partOfSpeech": "verb",
+          "meaningPt": "começou",
+          "examples": [
+            "What did you do first, after you arrived and started looking around the area?"
+          ]
+        }
+      }
+    },
+    "stayed": {
+      "totalCount": 1,
+      "senses": {
+        "stay_default": {
+          "count": 1,
+          "lemma": "stay",
+          "partOfSpeech": "verb",
+          "meaningPt": "fiquei / permaneci",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "still": {
+      "totalCount": 1,
+      "senses": {
+        "still_default": {
+          "count": 1,
+          "lemma": "still",
+          "partOfSpeech": "adverb",
+          "meaningPt": "ainda",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "stop": {
+      "totalCount": 1,
+      "senses": {
+        "stop_default": {
+          "count": 1,
+          "lemma": "stop",
+          "partOfSpeech": "noun",
+          "meaningPt": "parada",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "streets": {
+      "totalCount": 1,
+      "senses": {
+        "street_default": {
+          "count": 1,
+          "lemma": "street",
+          "partOfSpeech": "noun",
+          "meaningPt": "ruas",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "than": {
+      "totalCount": 1,
+      "senses": {
+        "than_default": {
+          "count": 1,
+          "lemma": "than",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "do que",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "then": {
+      "totalCount": 1,
+      "senses": {
+        "then_default": {
+          "count": 1,
+          "lemma": "then",
+          "partOfSpeech": "adverb",
+          "meaningPt": "então",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "those": {
+      "totalCount": 1,
+      "senses": {
+        "those_default": {
+          "count": 1,
+          "lemma": "those",
+          "partOfSpeech": "determiner",
+          "meaningPt": "aqueles / aquelas",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "though": {
+      "totalCount": 1,
+      "senses": {
+        "though_default": {
+          "count": 1,
+          "lemma": "though",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "embora / apesar de",
+          "examples": [
+            "Did it feel quiet, or was it busy even though you were close to the water?"
+          ]
+        }
+      }
+    },
+    "today": {
+      "totalCount": 1,
+      "senses": {
+        "today_default": {
+          "count": 1,
+          "lemma": "today",
+          "partOfSpeech": "adverb",
+          "meaningPt": "hoje",
+          "examples": [
+            "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+          ]
+        }
+      }
+    },
+    "together": {
+      "totalCount": 1,
+      "senses": {
+        "together_default": {
+          "count": 1,
+          "lemma": "together",
+          "partOfSpeech": "adverb",
+          "meaningPt": "junto / juntos",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "took": {
+      "totalCount": 1,
+      "senses": {
+        "take_default": {
+          "count": 1,
+          "lemma": "take",
+          "partOfSpeech": "verb",
+          "meaningPt": "tirei / peguei",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "town": {
+      "totalCount": 1,
+      "senses": {
+        "town_default": {
+          "count": 1,
+          "lemma": "town",
+          "partOfSpeech": "noun",
+          "meaningPt": "cidadezinha / vila",
+          "examples": [
+            "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+          ]
+        }
+      }
+    },
+    "tried": {
+      "totalCount": 1,
+      "senses": {
+        "try_default": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "tentei / experimentei",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    },
+    "understand": {
+      "totalCount": 1,
+      "senses": {
+        "understand_default": {
+          "count": 1,
+          "lemma": "understand",
+          "partOfSpeech": "verb",
+          "meaningPt": "entender",
+          "examples": [
+            "Did they understand you, even with the accent and all the noise around the counter?"
+          ]
+        }
+      }
+    },
+    "useful": {
+      "totalCount": 1,
+      "senses": {
+        "useful_default": {
+          "count": 1,
+          "lemma": "useful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "útil",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "walked": {
+      "totalCount": 1,
+      "senses": {
+        "walk_default": {
+          "count": 1,
+          "lemma": "walk",
+          "partOfSpeech": "verb",
+          "meaningPt": "caminhei",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "walking": {
+      "totalCount": 1,
+      "senses": {
+        "walk_default": {
+          "count": 1,
+          "lemma": "walk",
+          "partOfSpeech": "verb",
+          "meaningPt": "caminhando",
+          "examples": [
+            "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+          ]
+        }
+      }
+    },
+    "watched": {
+      "totalCount": 1,
+      "senses": {
+        "watch_default": {
+          "count": 1,
+          "lemma": "watch",
+          "partOfSpeech": "verb",
+          "meaningPt": "observei / assisti",
+          "examples": [
+            "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+          ]
+        }
+      }
+    },
+    "where": {
+      "totalCount": 1,
+      "senses": {
+        "where_default": {
+          "count": 1,
+          "lemma": "where",
+          "partOfSpeech": "adverb",
+          "meaningPt": "onde",
+          "examples": [
+            "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+          ]
+        }
+      }
+    },
+    "which": {
+      "totalCount": 1,
+      "senses": {
+        "which_default": {
+          "count": 1,
+          "lemma": "which",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "que / qual",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "while": {
+      "totalCount": 1,
+      "senses": {
+        "while_default": {
+          "count": 1,
+          "lemma": "while",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "enquanto",
+          "examples": [
+            "That still counts. What new words did you learn while you were exploring the neighborhood?"
+          ]
+        }
+      }
+    },
+    "whole": {
+      "totalCount": 1,
+      "senses": {
+        "whole_default": {
+          "count": 1,
+          "lemma": "whole",
+          "partOfSpeech": "adjective",
+          "meaningPt": "inteiro / toda",
+          "examples": [
+            "Lagoa means lagoon, ponte means bridge, and movimentado means busy, which was useful because the whole afternoon was very movimentado."
+          ]
+        }
+      }
+    },
+    "word": {
+      "totalCount": 1,
+      "senses": {
+        "word_default": {
+          "count": 1,
+          "lemma": "word",
+          "partOfSpeech": "noun",
+          "meaningPt": "palavra",
+          "examples": [
+            "They did, but the cashier answered so fast that I only smiled, paid, and repeated obrigado like it was my safest word."
+          ]
+        }
+      }
+    },
+    "yes": {
+      "totalCount": 1,
+      "senses": {
+        "yes_default": {
+          "count": 1,
+          "lemma": "yes",
+          "partOfSpeech": "interjection",
+          "meaningPt": "sim",
+          "examples": [
+            "Yes. I ordered coffee and pão de queijo by myself, and I tried to speak slowly, clearly, and politely."
+          ]
+        }
+      }
+    }
+  },
+  "postId": "day-2"
+}

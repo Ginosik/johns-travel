@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "staleOverrides": 0,
+    "countMismatches": 0,
+    "missingMeanings": 0,
+    "unknownPartsOfSpeech": 0
+  },
+  "workflow": [
+    "Run npm run words:senses after editing conversation content.",
+    "Open this review report and fix structural issues first.",
+    "Add reusable entries to docs/word-sense-defaults.json.",
+    "Add context-specific entries to docs/conversation-word-data/<post-id>/sense-overrides.json.",
+    "Run npm run words:senses again, then npm run words:validate."
+  ],
+  "structuralIssues": {
+    "staleOverrides": [],
+    "countMismatches": []
+  },
+  "reviewNeeded": {
+    "missingMeanings": [],
+    "unknownPartsOfSpeech": []
+  }
+}

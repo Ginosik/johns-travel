@@ -1,0 +1,2093 @@
+{
+  "source": "Dialog text only from day-1, day-2 content modules listed in docs/conversation-word-posts.json",
+  "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
+  "annotation": "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.",
+  "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
+  "totals": {
+    "occurrences": 207,
+    "uniqueSurfaceWords": 134,
+    "uniqueSenses": 146
+  },
+  "counts": {
+    "i": {
+      "totalCount": 9,
+      "senses": {
+        "i_default": {
+          "count": 9,
+          "lemma": "I",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eu",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "I see. I got it mixed up with other South American countries, then.",
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "in": {
+      "totalCount": 6,
+      "senses": {
+        "in_default": {
+          "count": 6,
+          "lemma": "in",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?",
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "you": {
+      "totalCount": 6,
+      "senses": {
+        "you_default": {
+          "count": 6,
+          "lemma": "you",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "você / vocês",
+          "examples": [
+            "Hello! How are you doing?",
+            "I'm doing alright. What about you?",
+            "Oh, really? Do you think you'll learn Spanish?"
+          ]
+        }
+      }
+    },
+    "to": {
+      "totalCount": 5,
+      "senses": {
+        "to_infinitive": {
+          "count": 3,
+          "lemma": "to",
+          "partOfSpeech": "infinitive marker",
+          "meaningPt": "marcador de infinitivo",
+          "notePt": "Antes de verbo, to forma o infinitivo: to see, to send, to know.",
+          "examples": [
+            "What nice things are you expecting to see there?",
+            "Wow, I wish I could go too! Don't forget to send photos!",
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        },
+        "to_default": {
+          "count": 1,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        },
+        "to_phrase_looking_forward": {
+          "count": 1,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "a / para",
+          "notePt": "Parte fixa da expressão looking forward to; por isso o verbo seguinte usa -ing.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "and": {
+      "totalCount": 4,
+      "senses": {
+        "and_default": {
+          "count": 4,
+          "lemma": "and",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "e",
+          "examples": [
+            "They have nice beaches and good food.",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour.",
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "brazil": {
+      "totalCount": 4,
+      "senses": {
+        "brazil_default": {
+          "count": 4,
+          "lemma": "Brazil",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Brasil",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?",
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "they": {
+      "totalCount": 4,
+      "senses": {
+        "they_default": {
+          "count": 4,
+          "lemma": "they",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eles / elas",
+          "examples": [
+            "They don't speak Spanish in Brazil. They speak Portuguese.",
+            "They have nice beaches and good food.",
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "a": {
+      "totalCount": 3,
+      "senses": {
+        "a_default": {
+          "count": 3,
+          "lemma": "a",
+          "partOfSpeech": "article",
+          "meaningPt": "um / uma",
+          "notePt": "Artigo indefinido.",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words.",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour.",
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "i'm": {
+      "totalCount": 3,
+      "senses": {
+        "be_default": {
+          "count": 3,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "eu estou",
+          "grammarPt": "Contração de I am.",
+          "examples": [
+            "I'm doing alright. What about you?",
+            "I'm fine. I'll travel to Florianópolis this month.",
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "is": {
+      "totalCount": 3,
+      "senses": {
+        "be_default": {
+          "count": 3,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "é / está",
+          "grammarPt": "Presente do verbo be.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "it": {
+      "totalCount": 3,
+      "senses": {
+        "it_object_reference": {
+          "count": 1,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso",
+          "notePt": "Retoma a ideia ou informação que foi confundida.",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        },
+        "it_topic_reference": {
+          "count": 1,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "disso / sobre isso",
+          "notePt": "Retoma Festa Junina.",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        },
+        "it_weather_dummy": {
+          "count": 1,
+          "lemma": "it",
+          "partOfSpeech": "dummy pronoun",
+          "meaningPt": "sem tradução direta",
+          "notePt": "Em frases sobre clima, it funciona como sujeito gramatical.",
+          "examples": [
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "right": {
+      "totalCount": 3,
+      "senses": {
+        "right_confirmation": {
+          "count": 2,
+          "lemma": "right",
+          "partOfSpeech": "adverb",
+          "meaningPt": "certo? / né?",
+          "notePt": "Usado no fim da frase para pedir confirmação.",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?",
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        },
+        "right_now": {
+          "count": 1,
+          "lemma": "right now",
+          "partOfSpeech": "adverbial phrase",
+          "meaningPt": "agora mesmo",
+          "notePt": "Right intensifica now.",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "south": {
+      "totalCount": 3,
+      "senses": {
+        "south_default": {
+          "count": 3,
+          "lemma": "south",
+          "partOfSpeech": "noun",
+          "meaningPt": "sul",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "I see. I got it mixed up with other South American countries, then.",
+            "Yes, and it's colder in the south."
+          ]
+        }
+      }
+    },
+    "speak": {
+      "totalCount": 3,
+      "senses": {
+        "speak_default": {
+          "count": 3,
+          "lemma": "speak",
+          "partOfSpeech": "verb",
+          "meaningPt": "falar",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "that": {
+      "totalCount": 3,
+      "senses": {
+        "that_conjunction": {
+          "count": 2,
+          "lemma": "that",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "que",
+          "notePt": "Introduz a informação ouvida.",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        },
+        "that_demonstrative": {
+          "count": 1,
+          "lemma": "that",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso",
+          "notePt": "Aponta para a ideia anterior.",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "the": {
+      "totalCount": 3,
+      "senses": {
+        "the_default": {
+          "count": 3,
+          "lemma": "the",
+          "partOfSpeech": "article",
+          "meaningPt": "o / a / os / as",
+          "notePt": "Artigo definido.",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "Fair enough, but I won't focus too much on the language at first, just a few words.",
+            "Yes, and it's colder in the south."
+          ]
+        }
+      }
+    },
+    "there": {
+      "totalCount": 3,
+      "senses": {
+        "there_default": {
+          "count": 2,
+          "lemma": "there",
+          "partOfSpeech": "adverb",
+          "meaningPt": "lá / ali",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "What nice things are you expecting to see there?"
+          ]
+        },
+        "there_existential": {
+          "count": 1,
+          "lemma": "there",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "há / tem",
+          "notePt": "Em Is there...?, there cria uma pergunta de existência.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "yes": {
+      "totalCount": 3,
+      "senses": {
+        "yes_default": {
+          "count": 3,
+          "lemma": "yes",
+          "partOfSpeech": "interjection",
+          "meaningPt": "sim",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour.",
+            "Yes, and it's colder in the south."
+          ]
+        }
+      }
+    },
+    "about": {
+      "totalCount": 2,
+      "senses": {
+        "about_default": {
+          "count": 2,
+          "lemma": "about",
+          "partOfSpeech": "preposition",
+          "meaningPt": "sobre",
+          "examples": [
+            "I'm doing alright. What about you?",
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "are": {
+      "totalCount": 2,
+      "senses": {
+        "be_default": {
+          "count": 2,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estão / são",
+          "grammarPt": "Presente do verbo be.",
+          "examples": [
+            "Hello! How are you doing?",
+            "What nice things are you expecting to see there?"
+          ]
+        }
+      }
+    },
+    "but": {
+      "totalCount": 2,
+      "senses": {
+        "but_default": {
+          "count": 2,
+          "lemma": "but",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "mas",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words.",
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "do": {
+      "totalCount": 2,
+      "senses": {
+        "do_aux_question_present": {
+          "count": 2,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "auxiliar de pergunta no presente",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?",
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "doing": {
+      "totalCount": 2,
+      "senses": {
+        "doing_state": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "verb",
+          "meaningPt": "estou / vou",
+          "notePt": "Em I'm doing alright, descreve como a pessoa está.",
+          "examples": [
+            "I'm doing alright. What about you?"
+          ]
+        },
+        "doing_wellbeing": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "verb",
+          "meaningPt": "indo / passando",
+          "notePt": "Em How are you doing?, pergunta como a pessoa está.",
+          "examples": [
+            "Hello! How are you doing?"
+          ]
+        }
+      }
+    },
+    "don't": {
+      "totalCount": 2,
+      "senses": {
+        "do_not_negative_imperative": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "não",
+          "grammarPt": "Usado no começo de um comando negativo: Don't forget = não esqueça.",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        },
+        "do_not_negative_present": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "não",
+          "grammarPt": "Contração de do not para negar uma ação no presente.",
+          "examples": [
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "food": {
+      "totalCount": 2,
+      "senses": {
+        "food_default": {
+          "count": 2,
+          "lemma": "food",
+          "partOfSpeech": "noun",
+          "meaningPt": "comida",
+          "examples": [
+            "They have nice beaches and good food.",
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "have": {
+      "totalCount": 2,
+      "senses": {
+        "have_event": {
+          "count": 1,
+          "lemma": "have",
+          "partOfSpeech": "verb",
+          "meaningPt": "ter / acontecer",
+          "notePt": "They have a celebration happening descreve um evento que existe/acontece.",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        },
+        "have_feature": {
+          "count": 1,
+          "lemma": "have",
+          "partOfSpeech": "verb",
+          "meaningPt": "ter / haver",
+          "notePt": "Usado para descrever características de um lugar.",
+          "examples": [
+            "They have nice beaches and good food."
+          ]
+        }
+      }
+    },
+    "heard": {
+      "totalCount": 2,
+      "senses": {
+        "hear_default": {
+          "count": 2,
+          "lemma": "hear",
+          "partOfSpeech": "verb",
+          "meaningPt": "ouvi / ouvi falar",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast.",
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "i'll": {
+      "totalCount": 2,
+      "senses": {
+        "will_default": {
+          "count": 2,
+          "lemma": "will",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "eu vou / eu irei",
+          "grammarPt": "Contração de I will.",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month.",
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "it's": {
+      "totalCount": 2,
+      "senses": {
+        "be_default": {
+          "count": 2,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "é / está",
+          "grammarPt": "Contração de it is.",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?",
+            "Yes, and it's colder in the south."
+          ]
+        }
+      }
+    },
+    "nice": {
+      "totalCount": 2,
+      "senses": {
+        "nice_default": {
+          "count": 2,
+          "lemma": "nice",
+          "partOfSpeech": "adjective",
+          "meaningPt": "legal / bom / bonito",
+          "examples": [
+            "What nice things are you expecting to see there?",
+            "They have nice beaches and good food."
+          ]
+        }
+      }
+    },
+    "of": {
+      "totalCount": 2,
+      "senses": {
+        "of_about_phrase": {
+          "count": 1,
+          "lemma": "of",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de / sobre",
+          "notePt": "Em heard of it, significa ouvir falar de algo.",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        },
+        "of_default": {
+          "count": 1,
+          "lemma": "of",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast."
+          ]
+        }
+      }
+    },
+    "on": {
+      "totalCount": 2,
+      "senses": {
+        "on_default": {
+          "count": 2,
+          "lemma": "on",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em / sobre",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words.",
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "see": {
+      "totalCount": 2,
+      "senses": {
+        "see_understand": {
+          "count": 1,
+          "lemma": "see",
+          "partOfSpeech": "verb",
+          "meaningPt": "entender",
+          "notePt": "I see significa Entendi.",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        },
+        "see_visit_notice": {
+          "count": 1,
+          "lemma": "see",
+          "partOfSpeech": "verb",
+          "meaningPt": "ver / conhecer",
+          "examples": [
+            "What nice things are you expecting to see there?"
+          ]
+        }
+      }
+    },
+    "spanish": {
+      "totalCount": 2,
+      "senses": {
+        "spanish_default": {
+          "count": 2,
+          "lemma": "Spanish",
+          "partOfSpeech": "noun",
+          "meaningPt": "espanhol",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?",
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "think": {
+      "totalCount": 2,
+      "senses": {
+        "think_default": {
+          "count": 2,
+          "lemma": "think",
+          "partOfSpeech": "verb",
+          "meaningPt": "achar / pensar",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?",
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "too": {
+      "totalCount": 2,
+      "senses": {
+        "too_default": {
+          "count": 2,
+          "lemma": "too",
+          "partOfSpeech": "adverb",
+          "meaningPt": "também / demais",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words.",
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "what": {
+      "totalCount": 2,
+      "senses": {
+        "what_default": {
+          "count": 2,
+          "lemma": "what",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "o que",
+          "examples": [
+            "I'm doing alright. What about you?",
+            "What nice things are you expecting to see there?"
+          ]
+        }
+      }
+    },
+    "which": {
+      "totalCount": 2,
+      "senses": {
+        "which_default": {
+          "count": 2,
+          "lemma": "which",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "que / qual",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "adventures": {
+      "totalCount": 1,
+      "senses": {
+        "adventure_default": {
+          "count": 1,
+          "lemma": "adventure",
+          "partOfSpeech": "noun",
+          "meaningPt": "aventuras",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "all": {
+      "totalCount": 1,
+      "senses": {
+        "all_default": {
+          "count": 1,
+          "lemma": "all",
+          "partOfSpeech": "determiner",
+          "meaningPt": "tudo / todos",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "alright": {
+      "totalCount": 1,
+      "senses": {
+        "alright_default": {
+          "count": 1,
+          "lemma": "alright",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bem",
+          "examples": [
+            "I'm doing alright. What about you?"
+          ]
+        }
+      }
+    },
+    "american": {
+      "totalCount": 1,
+      "senses": {
+        "american_default": {
+          "count": 1,
+          "lemma": "American",
+          "partOfSpeech": "adjective",
+          "meaningPt": "americano / americana",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "any": {
+      "totalCount": 1,
+      "senses": {
+        "any_default": {
+          "count": 1,
+          "lemma": "any",
+          "partOfSpeech": "determiner",
+          "meaningPt": "algum / alguma",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "at": {
+      "totalCount": 1,
+      "senses": {
+        "at_default": {
+          "count": 1,
+          "lemma": "at",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "beaches": {
+      "totalCount": 1,
+      "senses": {
+        "beach_default": {
+          "count": 1,
+          "lemma": "beach",
+          "partOfSpeech": "noun",
+          "meaningPt": "praias",
+          "examples": [
+            "They have nice beaches and good food."
+          ]
+        }
+      }
+    },
+    "bean": {
+      "totalCount": 1,
+      "senses": {
+        "bean_default": {
+          "count": 1,
+          "lemma": "bean",
+          "partOfSpeech": "noun",
+          "meaningPt": "feijão",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "called": {
+      "totalCount": 1,
+      "senses": {
+        "call_default": {
+          "count": 1,
+          "lemma": "call",
+          "partOfSpeech": "verb",
+          "meaningPt": "chamado / chamada",
+          "grammarPt": "Past participle used after celebration.",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "can't": {
+      "totalCount": 1,
+      "senses": {
+        "can_default": {
+          "count": 1,
+          "lemma": "can",
+          "partOfSpeech": "modal verb",
+          "meaningPt": "não posso / não consigo",
+          "grammarPt": "Contração de cannot.",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "cassava": {
+      "totalCount": 1,
+      "senses": {
+        "cassava_default": {
+          "count": 1,
+          "lemma": "cassava",
+          "partOfSpeech": "noun",
+          "meaningPt": "mandioca",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "celebration": {
+      "totalCount": 1,
+      "senses": {
+        "celebration_default": {
+          "count": 1,
+          "lemma": "celebration",
+          "partOfSpeech": "noun",
+          "meaningPt": "celebração / festa",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "colder": {
+      "totalCount": 1,
+      "senses": {
+        "cold_default": {
+          "count": 1,
+          "lemma": "cold",
+          "partOfSpeech": "adjective",
+          "meaningPt": "mais frio",
+          "grammarPt": "Comparative adjective.",
+          "examples": [
+            "Yes, and it's colder in the south."
+          ]
+        }
+      }
+    },
+    "could": {
+      "totalCount": 1,
+      "senses": {
+        "can_default": {
+          "count": 1,
+          "lemma": "can",
+          "partOfSpeech": "modal verb",
+          "meaningPt": "poderia / pudesse",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "countries": {
+      "totalCount": 1,
+      "senses": {
+        "country_default": {
+          "count": 1,
+          "lemma": "country",
+          "partOfSpeech": "noun",
+          "meaningPt": "países",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "enough": {
+      "totalCount": 1,
+      "senses": {
+        "enough_default": {
+          "count": 1,
+          "lemma": "enough",
+          "partOfSpeech": "adverb",
+          "meaningPt": "suficientemente / tudo bem",
+          "notePt": "Em fair enough, a expressão significa tudo bem ou justo.",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "exciting": {
+      "totalCount": 1,
+      "senses": {
+        "exciting_default": {
+          "count": 1,
+          "lemma": "exciting",
+          "partOfSpeech": "adjective",
+          "meaningPt": "empolgante",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "expecting": {
+      "totalCount": 1,
+      "senses": {
+        "expect_default": {
+          "count": 1,
+          "lemma": "expect",
+          "partOfSpeech": "verb",
+          "meaningPt": "esperando",
+          "examples": [
+            "What nice things are you expecting to see there?"
+          ]
+        }
+      }
+    },
+    "fair": {
+      "totalCount": 1,
+      "senses": {
+        "fair_default": {
+          "count": 1,
+          "lemma": "fair",
+          "partOfSpeech": "adjective",
+          "meaningPt": "justo / razoável",
+          "notePt": "Em fair enough, a expressão aceita ou concorda com algo.",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "farofa": {
+      "totalCount": 1,
+      "senses": {
+        "farofa_default": {
+          "count": 1,
+          "lemma": "farofa",
+          "partOfSpeech": "noun",
+          "meaningPt": "farofa",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "fast": {
+      "totalCount": 1,
+      "senses": {
+        "fast_default": {
+          "count": 1,
+          "lemma": "fast",
+          "partOfSpeech": "adverb",
+          "meaningPt": "rápido / rapidamente",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast."
+          ]
+        }
+      }
+    },
+    "feijoada": {
+      "totalCount": 1,
+      "senses": {
+        "feijoada_default": {
+          "count": 1,
+          "lemma": "feijoada",
+          "partOfSpeech": "noun",
+          "meaningPt": "feijoada",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "festa": {
+      "totalCount": 1,
+      "senses": {
+        "festa_default": {
+          "count": 1,
+          "lemma": "Festa",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Festa",
+          "notePt": "Parte do nome cultural Festa Junina.",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "few": {
+      "totalCount": 1,
+      "senses": {
+        "few_default": {
+          "count": 1,
+          "lemma": "few",
+          "partOfSpeech": "determiner",
+          "meaningPt": "poucos / poucas",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "fine": {
+      "totalCount": 1,
+      "senses": {
+        "fine_default": {
+          "count": 1,
+          "lemma": "fine",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bem",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        }
+      }
+    },
+    "first": {
+      "totalCount": 1,
+      "senses": {
+        "first_default": {
+          "count": 1,
+          "lemma": "first",
+          "partOfSpeech": "noun",
+          "meaningPt": "começo / primeiro",
+          "notePt": "Em at first, significa no começo.",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "florianópolis": {
+      "totalCount": 1,
+      "senses": {
+        "florian_polis_default": {
+          "count": 1,
+          "lemma": "Florianópolis",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Florianópolis",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/flo.ɾi.aˈnɔ.po.lis/",
+          "audioPrompt": "flo-ree-ah-NAW-po-lees",
+          "audioPromptNote": "Brazilian place name.",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        }
+      }
+    },
+    "flour": {
+      "totalCount": 1,
+      "senses": {
+        "flour_default": {
+          "count": 1,
+          "lemma": "flour",
+          "partOfSpeech": "noun",
+          "meaningPt": "farinha",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "focus": {
+      "totalCount": 1,
+      "senses": {
+        "focus_default": {
+          "count": 1,
+          "lemma": "focus",
+          "partOfSpeech": "verb",
+          "meaningPt": "focar / concentrar-se",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "for": {
+      "totalCount": 1,
+      "senses": {
+        "for_default": {
+          "count": 1,
+          "lemma": "for",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "forget": {
+      "totalCount": 1,
+      "senses": {
+        "forget_default": {
+          "count": 1,
+          "lemma": "forget",
+          "partOfSpeech": "verb",
+          "meaningPt": "esquecer",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "forward": {
+      "totalCount": 1,
+      "senses": {
+        "forward_default": {
+          "count": 1,
+          "lemma": "forward",
+          "partOfSpeech": "adverb",
+          "meaningPt": "ansioso / ansiosa",
+          "notePt": "Parte da expressão looking forward to.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "go": {
+      "totalCount": 1,
+      "senses": {
+        "go_default": {
+          "count": 1,
+          "lemma": "go",
+          "partOfSpeech": "verb",
+          "meaningPt": "ir",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "good": {
+      "totalCount": 1,
+      "senses": {
+        "good_default": {
+          "count": 1,
+          "lemma": "good",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bom / boa",
+          "examples": [
+            "They have nice beaches and good food."
+          ]
+        }
+      }
+    },
+    "got": {
+      "totalCount": 1,
+      "senses": {
+        "get_default": {
+          "count": 1,
+          "lemma": "get",
+          "partOfSpeech": "verb",
+          "meaningPt": "fiquei / deixei",
+          "notePt": "Em got it mixed up, marca o resultado: acabei confundindo.",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "happening": {
+      "totalCount": 1,
+      "senses": {
+        "happen_default": {
+          "count": 1,
+          "lemma": "happen",
+          "partOfSpeech": "verb",
+          "meaningPt": "acontecendo",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "hello": {
+      "totalCount": 1,
+      "senses": {
+        "hello_default": {
+          "count": 1,
+          "lemma": "hello",
+          "partOfSpeech": "interjection",
+          "meaningPt": "olá",
+          "examples": [
+            "Hello! How are you doing?"
+          ]
+        }
+      }
+    },
+    "hmm": {
+      "totalCount": 1,
+      "senses": {
+        "hmm_default": {
+          "count": 1,
+          "lemma": "hmm",
+          "partOfSpeech": "interjection",
+          "meaningPt": "hmm",
+          "examples": [
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "how": {
+      "totalCount": 1,
+      "senses": {
+        "how_default": {
+          "count": 1,
+          "lemma": "how",
+          "partOfSpeech": "adverb",
+          "meaningPt": "como",
+          "examples": [
+            "Hello! How are you doing?"
+          ]
+        }
+      }
+    },
+    "i've": {
+      "totalCount": 1,
+      "senses": {
+        "have_default": {
+          "count": 1,
+          "lemma": "have",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "eu tenho",
+          "grammarPt": "Contração de I have.",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "junina": {
+      "totalCount": 1,
+      "senses": {
+        "junina_default": {
+          "count": 1,
+          "lemma": "Junina",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Junina",
+          "notePt": "Parte do nome cultural Festa Junina.",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "just": {
+      "totalCount": 1,
+      "senses": {
+        "just_default": {
+          "count": 1,
+          "lemma": "just",
+          "partOfSpeech": "adverb",
+          "meaningPt": "apenas / só",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "keep": {
+      "totalCount": 1,
+      "senses": {
+        "keep_default": {
+          "count": 1,
+          "lemma": "keep",
+          "partOfSpeech": "verb",
+          "meaningPt": "manter",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "know": {
+      "totalCount": 1,
+      "senses": {
+        "know_default": {
+          "count": 1,
+          "lemma": "know",
+          "partOfSpeech": "verb",
+          "meaningPt": "saber / conhecer",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "language": {
+      "totalCount": 1,
+      "senses": {
+        "language_default": {
+          "count": 1,
+          "lemma": "language",
+          "partOfSpeech": "noun",
+          "meaningPt": "idioma / língua",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "learn": {
+      "totalCount": 1,
+      "senses": {
+        "learn_default": {
+          "count": 1,
+          "lemma": "learn",
+          "partOfSpeech": "verb",
+          "meaningPt": "aprender",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?"
+          ]
+        }
+      }
+    },
+    "like": {
+      "totalCount": 1,
+      "senses": {
+        "like_similarity": {
+          "count": 1,
+          "lemma": "like",
+          "partOfSpeech": "preposition",
+          "meaningPt": "como / parecido com",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "local": {
+      "totalCount": 1,
+      "senses": {
+        "local_default": {
+          "count": 1,
+          "lemma": "local",
+          "partOfSpeech": "adjective",
+          "meaningPt": "local",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "looking": {
+      "totalCount": 1,
+      "senses": {
+        "look_default": {
+          "count": 1,
+          "lemma": "look",
+          "partOfSpeech": "verb",
+          "meaningPt": "ansioso / ansiosa",
+          "notePt": "Parte da expressão looking forward to.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "mixed": {
+      "totalCount": 1,
+      "senses": {
+        "mix_default": {
+          "count": 1,
+          "lemma": "mix",
+          "partOfSpeech": "verb",
+          "meaningPt": "confundido / misturado",
+          "notePt": "Em mixed up, significa confundido.",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "month": {
+      "totalCount": 1,
+      "senses": {
+        "month_default": {
+          "count": 1,
+          "lemma": "month",
+          "partOfSpeech": "noun",
+          "meaningPt": "mês",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        }
+      }
+    },
+    "more": {
+      "totalCount": 1,
+      "senses": {
+        "more_default": {
+          "count": 1,
+          "lemma": "more",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mais",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "much": {
+      "totalCount": 1,
+      "senses": {
+        "much_default": {
+          "count": 1,
+          "lemma": "much",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "my": {
+      "totalCount": 1,
+      "senses": {
+        "my_default": {
+          "count": 1,
+          "lemma": "my",
+          "partOfSpeech": "determiner",
+          "meaningPt": "meu / minha",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "national": {
+      "totalCount": 1,
+      "senses": {
+        "national_default": {
+          "count": 1,
+          "lemma": "national",
+          "partOfSpeech": "adjective",
+          "meaningPt": "nacional",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "never": {
+      "totalCount": 1,
+      "senses": {
+        "never_default": {
+          "count": 1,
+          "lemma": "never",
+          "partOfSpeech": "adverb",
+          "meaningPt": "nunca",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "not": {
+      "totalCount": 1,
+      "senses": {
+        "not_default": {
+          "count": 1,
+          "lemma": "not",
+          "partOfSpeech": "adverb",
+          "meaningPt": "não",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "now": {
+      "totalCount": 1,
+      "senses": {
+        "now_default": {
+          "count": 1,
+          "lemma": "now",
+          "partOfSpeech": "adverb",
+          "meaningPt": "agora",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "oh": {
+      "totalCount": 1,
+      "senses": {
+        "oh_default": {
+          "count": 1,
+          "lemma": "oh",
+          "partOfSpeech": "interjection",
+          "meaningPt": "ah",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?"
+          ]
+        }
+      }
+    },
+    "online": {
+      "totalCount": 1,
+      "senses": {
+        "online_default": {
+          "count": 1,
+          "lemma": "online",
+          "partOfSpeech": "adverb",
+          "meaningPt": "online / na internet",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "other": {
+      "totalCount": 1,
+      "senses": {
+        "other_default": {
+          "count": 1,
+          "lemma": "other",
+          "partOfSpeech": "determiner",
+          "meaningPt": "outros / outras",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "people": {
+      "totalCount": 1,
+      "senses": {
+        "people_default": {
+          "count": 1,
+          "lemma": "people",
+          "partOfSpeech": "noun",
+          "meaningPt": "pessoas",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast."
+          ]
+        }
+      }
+    },
+    "photos": {
+      "totalCount": 1,
+      "senses": {
+        "photo_default": {
+          "count": 1,
+          "lemma": "photo",
+          "partOfSpeech": "noun",
+          "meaningPt": "fotos",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "portuguese": {
+      "totalCount": 1,
+      "senses": {
+        "portuguese_default": {
+          "count": 1,
+          "lemma": "Portuguese",
+          "partOfSpeech": "noun",
+          "meaningPt": "português",
+          "examples": [
+            "They don't speak Spanish in Brazil. They speak Portuguese."
+          ]
+        }
+      }
+    },
+    "probably": {
+      "totalCount": 1,
+      "senses": {
+        "probably_default": {
+          "count": 1,
+          "lemma": "probably",
+          "partOfSpeech": "adverb",
+          "meaningPt": "provavelmente",
+          "examples": [
+            "Probably not, but they have a national celebration happening called Festa Junina."
+          ]
+        }
+      }
+    },
+    "really": {
+      "totalCount": 1,
+      "senses": {
+        "really_default": {
+          "count": 1,
+          "lemma": "really",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mesmo / de verdade",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?"
+          ]
+        }
+      }
+    },
+    "saw": {
+      "totalCount": 1,
+      "senses": {
+        "see_default": {
+          "count": 1,
+          "lemma": "see",
+          "partOfSpeech": "verb",
+          "meaningPt": "vi",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "searching": {
+      "totalCount": 1,
+      "senses": {
+        "search_default": {
+          "count": 1,
+          "lemma": "search",
+          "partOfSpeech": "verb",
+          "meaningPt": "pesquisando",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "send": {
+      "totalCount": 1,
+      "senses": {
+        "send_default": {
+          "count": 1,
+          "lemma": "send",
+          "partOfSpeech": "verb",
+          "meaningPt": "enviar / mandar",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "should": {
+      "totalCount": 1,
+      "senses": {
+        "should_default": {
+          "count": 1,
+          "lemma": "should",
+          "partOfSpeech": "modal verb",
+          "meaningPt": "deveria",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "snow": {
+      "totalCount": 1,
+      "senses": {
+        "snow_default": {
+          "count": 1,
+          "lemma": "snow",
+          "partOfSpeech": "verb",
+          "meaningPt": "nevar",
+          "examples": [
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "sounds": {
+      "totalCount": 1,
+      "senses": {
+        "sound_default": {
+          "count": 1,
+          "lemma": "sound",
+          "partOfSpeech": "verb",
+          "meaningPt": "soa / parece",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "stew": {
+      "totalCount": 1,
+      "senses": {
+        "stew_default": {
+          "count": 1,
+          "lemma": "stew",
+          "partOfSpeech": "noun",
+          "meaningPt": "ensopado",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "sure": {
+      "totalCount": 1,
+      "senses": {
+        "sure_default": {
+          "count": 1,
+          "lemma": "sure",
+          "partOfSpeech": "adjective",
+          "meaningPt": "claro / com certeza",
+          "notePt": "Em for sure, significa com certeza.",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "tell": {
+      "totalCount": 1,
+      "senses": {
+        "tell_default": {
+          "count": 1,
+          "lemma": "tell",
+          "partOfSpeech": "verb",
+          "meaningPt": "contar / dizer",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "that's": {
+      "totalCount": 1,
+      "senses": {
+        "be_default": {
+          "count": 1,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "isso é / isso está",
+          "grammarPt": "Contração de that is.",
+          "examples": [
+            "That sounds exciting. That's in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "then": {
+      "totalCount": 1,
+      "senses": {
+        "then_default": {
+          "count": 1,
+          "lemma": "then",
+          "partOfSpeech": "adverb",
+          "meaningPt": "então",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "things": {
+      "totalCount": 1,
+      "senses": {
+        "thing_default": {
+          "count": 1,
+          "lemma": "thing",
+          "partOfSpeech": "noun",
+          "meaningPt": "coisas",
+          "examples": [
+            "What nice things are you expecting to see there?"
+          ]
+        }
+      }
+    },
+    "this": {
+      "totalCount": 1,
+      "senses": {
+        "this_default": {
+          "count": 1,
+          "lemma": "this",
+          "partOfSpeech": "determiner",
+          "meaningPt": "este / esta",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        }
+      }
+    },
+    "touch": {
+      "totalCount": 1,
+      "senses": {
+        "touch_default": {
+          "count": 1,
+          "lemma": "touch",
+          "partOfSpeech": "noun",
+          "meaningPt": "contato",
+          "notePt": "Em keep in touch, significa manter contato.",
+          "examples": [
+            "For sure. I'll keep in touch and tell you all about my adventures."
+          ]
+        }
+      }
+    },
+    "travel": {
+      "totalCount": 1,
+      "senses": {
+        "travel_default": {
+          "count": 1,
+          "lemma": "travel",
+          "partOfSpeech": "verb",
+          "meaningPt": "viajar",
+          "examples": [
+            "I'm fine. I'll travel to Florianópolis this month."
+          ]
+        }
+      }
+    },
+    "try": {
+      "totalCount": 1,
+      "senses": {
+        "try_food": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "experimentar",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    },
+    "trying": {
+      "totalCount": 1,
+      "senses": {
+        "trying_food": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "experimentar",
+          "grammarPt": "Forma com -ing depois de looking forward to.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "up": {
+      "totalCount": 1,
+      "senses": {
+        "up_default": {
+          "count": 1,
+          "lemma": "up",
+          "partOfSpeech": "particle",
+          "meaningPt": "completamente / para cima",
+          "notePt": "Em mixed up, faz parte do phrasal verb que significa confundir.",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "very": {
+      "totalCount": 1,
+      "senses": {
+        "very_default": {
+          "count": 1,
+          "lemma": "very",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Yes, in the south of Brazil. I heard that people there speak very fast."
+          ]
+        }
+      }
+    },
+    "wait": {
+      "totalCount": 1,
+      "senses": {
+        "wait_default": {
+          "count": 1,
+          "lemma": "wait",
+          "partOfSpeech": "verb",
+          "meaningPt": "esperar",
+          "examples": [
+            "I've never heard of it. I can't wait to know more!"
+          ]
+        }
+      }
+    },
+    "will": {
+      "totalCount": 1,
+      "senses": {
+        "will_default": {
+          "count": 1,
+          "lemma": "will",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "vai / irá",
+          "grammarPt": "Auxiliar de futuro.",
+          "examples": [
+            "Hmm, do you think it will snow?"
+          ]
+        }
+      }
+    },
+    "winter": {
+      "totalCount": 1,
+      "senses": {
+        "winter_default": {
+          "count": 1,
+          "lemma": "winter",
+          "partOfSpeech": "noun",
+          "meaningPt": "inverno",
+          "examples": [
+            "I'm searching online right now. It's winter in Brazil, right?"
+          ]
+        }
+      }
+    },
+    "wish": {
+      "totalCount": 1,
+      "senses": {
+        "wish_default": {
+          "count": 1,
+          "lemma": "wish",
+          "partOfSpeech": "verb",
+          "meaningPt": "desejar / queria",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "with": {
+      "totalCount": 1,
+      "senses": {
+        "with_default": {
+          "count": 1,
+          "lemma": "with",
+          "partOfSpeech": "preposition",
+          "meaningPt": "com",
+          "examples": [
+            "I see. I got it mixed up with other South American countries, then."
+          ]
+        }
+      }
+    },
+    "won't": {
+      "totalCount": 1,
+      "senses": {
+        "will_default": {
+          "count": 1,
+          "lemma": "will",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "não vou / não irá",
+          "grammarPt": "Contração de will not.",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "words": {
+      "totalCount": 1,
+      "senses": {
+        "word_default": {
+          "count": 1,
+          "lemma": "word",
+          "partOfSpeech": "noun",
+          "meaningPt": "palavras",
+          "examples": [
+            "Fair enough, but I won't focus too much on the language at first, just a few words."
+          ]
+        }
+      }
+    },
+    "wow": {
+      "totalCount": 1,
+      "senses": {
+        "wow_default": {
+          "count": 1,
+          "lemma": "wow",
+          "partOfSpeech": "interjection",
+          "meaningPt": "uau",
+          "examples": [
+            "Wow, I wish I could go too! Don't forget to send photos!"
+          ]
+        }
+      }
+    },
+    "you'll": {
+      "totalCount": 1,
+      "senses": {
+        "will_default": {
+          "count": 1,
+          "lemma": "will",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "você vai / você irá",
+          "grammarPt": "Contração de you will.",
+          "examples": [
+            "Oh, really? Do you think you'll learn Spanish?"
+          ]
+        }
+      }
+    },
+    "you're": {
+      "totalCount": 1,
+      "senses": {
+        "be_default": {
+          "count": 1,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "você está",
+          "grammarPt": "Contração de you are.",
+          "examples": [
+            "Is there any local food you're looking forward to trying?"
+          ]
+        }
+      }
+    },
+    "youtube": {
+      "totalCount": 1,
+      "senses": {
+        "youtube_default": {
+          "count": 1,
+          "lemma": "YouTube",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "YouTube",
+          "examples": [
+            "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
+          ]
+        }
+      }
+    }
+  },
+  "postId": "day-1"
+}

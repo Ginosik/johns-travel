@@ -10,13 +10,13 @@ const viewportMatrix = [
   { name: "phone-landscape", width: 844, height: 390 }
 ];
 
-test("shows the mobile bar only on the responsive feed", async ({ page }) => {
+test("does not show social mobile navigation on the public feed", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await expect(page.getByRole("navigation", { name: "Mobile" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Mobile" })).toHaveCount(0);
 
   await page.setViewportSize({ width: 1024, height: 768 });
-  await expect(page.getByRole("navigation", { name: "Mobile" })).toBeHidden();
+  await expect(page.getByRole("navigation", { name: "Mobile" })).toHaveCount(0);
 });
 
 test("keeps the translation panel usable across responsive layouts", async ({ page }) => {
@@ -69,6 +69,7 @@ test("preserves feed scroll and conversation progress on mobile navigation", asy
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   await page.evaluate(() => window.scrollTo(0, 420));
+  await page.locator('a.post-preview[href="/day/2"]').scrollIntoViewIfNeeded();
   const feedScroll = await page.evaluate(() => window.scrollY);
 
   await page.locator('a.post-preview[href="/day/2"]').click();

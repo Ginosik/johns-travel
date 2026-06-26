@@ -1,0 +1,252 @@
+[
+  {
+    "messageIndex": 1,
+    "tokenIndex": 2,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma Lagoa da Conceição como lugar."
+  },
+  {
+    "messageIndex": 1,
+    "tokenIndex": 10,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma Lagoa da Conceição como lugar."
+  },
+  {
+    "messageIndex": 2,
+    "tokenIndex": 0,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma Lagoa da Conceição como lugar."
+  },
+  {
+    "messageIndex": 2,
+    "tokenIndex": 3,
+    "senseId": "there_existential",
+    "lemma": "there",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "há / tem",
+    "notePt": "Em There is..., there cria uma afirmação de existência."
+  },
+  {
+    "messageIndex": 2,
+    "tokenIndex": 8,
+    "senseId": "to_connection",
+    "lemma": "to",
+    "partOfSpeech": "preposition",
+    "meaningPt": "a / com",
+    "notePt": "Indica conexão: connected to the sea."
+  },
+  {
+    "messageIndex": 2,
+    "tokenIndex": 15,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "ela / isso",
+    "notePt": "Retoma a lagoa ou a regi?o mencionada."
+  },
+  {
+    "messageIndex": 3,
+    "tokenIndex": 0,
+    "senseId": "did_aux_question_past",
+    "lemma": "do",
+    "partOfSpeech": "auxiliary verb",
+    "meaningPt": "auxiliar de pergunta no passado"
+  },
+  {
+    "messageIndex": 3,
+    "tokenIndex": 1,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma Lagoa da Conceição como lugar."
+  },
+  {
+    "messageIndex": 3,
+    "tokenIndex": 6,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma Lagoa da Conceição como lugar."
+  },
+  {
+    "messageIndex": 3,
+    "tokenIndex": 13,
+    "senseId": "to_distance_reference",
+    "lemma": "to",
+    "partOfSpeech": "preposition",
+    "meaningPt": "de / perto de",
+    "notePt": "Em close to the water, indica proximidade."
+  },
+  {
+    "messageIndex": 4,
+    "tokenIndex": 3,
+    "senseId": "there_existential",
+    "lemma": "there",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "havia / tinha",
+    "notePt": "Em There were..., there cria uma afirmação de existência no passado."
+  },
+  {
+    "messageIndex": 4,
+    "tokenIndex": 12,
+    "senseId": "so_result",
+    "lemma": "so",
+    "partOfSpeech": "conjunction",
+    "meaningPt": "então / por isso",
+    "notePt": "Conecta a causa à impressão: havia movimento, então parecia uma cidadezinha."
+  },
+  {
+    "messageIndex": 4,
+    "tokenIndex": 13,
+    "senseId": "it_place_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ele",
+    "notePt": "Retoma o lugar ou a experi?ncia descrita."
+  },
+  {
+    "messageIndex": 4,
+    "tokenIndex": 16,
+    "senseId": "like_similarity",
+    "lemma": "like",
+    "partOfSpeech": "preposition",
+    "meaningPt": "como / parecido com"
+  },
+  {
+    "messageIndex": 5,
+    "tokenIndex": 1,
+    "senseId": "did_aux_question_past",
+    "lemma": "do",
+    "partOfSpeech": "auxiliary verb",
+    "meaningPt": "auxiliar de pergunta no passado"
+  },
+  {
+    "messageIndex": 5,
+    "tokenIndex": 3,
+    "senseId": "do_main_verb",
+    "lemma": "do",
+    "partOfSpeech": "verb",
+    "meaningPt": "fazer"
+  },
+  {
+    "messageIndex": 7,
+    "tokenIndex": 0,
+    "senseId": "did_aux_question_past",
+    "lemma": "do",
+    "partOfSpeech": "auxiliary verb",
+    "meaningPt": "auxiliar de pergunta no passado"
+  },
+  {
+    "messageIndex": 8,
+    "tokenIndex": 13,
+    "senseId": "to_infinitive",
+    "lemma": "to",
+    "partOfSpeech": "infinitive marker",
+    "meaningPt": "marcador de infinitivo",
+    "notePt": "Antes de verbo, to forma o infinitivo: to speak."
+  },
+  {
+    "messageIndex": 9,
+    "tokenIndex": 0,
+    "senseId": "did_aux_question_past",
+    "lemma": "do",
+    "partOfSpeech": "auxiliary verb",
+    "meaningPt": "auxiliar de pergunta no passado"
+  },
+  {
+    "messageIndex": 10,
+    "tokenIndex": 1,
+    "senseId": "did_substitute_verb",
+    "lemma": "do",
+    "partOfSpeech": "verb",
+    "meaningPt": "fizeram / entenderam sim",
+    "notePt": "Substitui o verbo da pergunta anterior: they did = eles entenderam."
+  },
+  {
+    "messageIndex": 10,
+    "tokenIndex": 6,
+    "senseId": "so_intensifier",
+    "lemma": "so",
+    "partOfSpeech": "adverb",
+    "meaningPt": "tão",
+    "notePt": "Parte da estrutura so ... that."
+  },
+  {
+    "messageIndex": 10,
+    "tokenIndex": 8,
+    "senseId": "that_result",
+    "lemma": "that",
+    "partOfSpeech": "conjunction",
+    "meaningPt": "que",
+    "notePt": "Parte da estrutura so ... that."
+  },
+  {
+    "messageIndex": 10,
+    "tokenIndex": 16,
+    "senseId": "like_as_if",
+    "lemma": "like",
+    "partOfSpeech": "conjunction",
+    "meaningPt": "como se",
+    "notePt": "Em like it was..., introduz uma comparação informal."
+  },
+  {
+    "messageIndex": 10,
+    "tokenIndex": 17,
+    "senseId": "it_word_reference",
+    "lemma": "it",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso / ela",
+    "notePt": "Retoma obrigado como palavra segura."
+  },
+  {
+    "messageIndex": 11,
+    "tokenIndex": 0,
+    "senseId": "that_demonstrative",
+    "lemma": "that",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso"
+  },
+  {
+    "messageIndex": 11,
+    "tokenIndex": 6,
+    "senseId": "did_aux_question_past",
+    "lemma": "do",
+    "partOfSpeech": "auxiliary verb",
+    "meaningPt": "auxiliar de pergunta no passado"
+  },
+  {
+    "messageIndex": 13,
+    "tokenIndex": 0,
+    "senseId": "that_demonstrative",
+    "lemma": "that",
+    "partOfSpeech": "pronoun",
+    "meaningPt": "isso"
+  },
+  {
+    "messageIndex": 13,
+    "tokenIndex": 2,
+    "senseId": "like_similarity",
+    "lemma": "like",
+    "partOfSpeech": "preposition",
+    "meaningPt": "como / parece que"
+  },
+  {
+    "messageIndex": 13,
+    "tokenIndex": 10,
+    "senseId": "practice_noun",
+    "lemma": "practice",
+    "partOfSpeech": "noun",
+    "meaningPt": "prática"
+  }
+]

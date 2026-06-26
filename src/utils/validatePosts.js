@@ -74,6 +74,7 @@ export function validatePosts(posts) {
 
     const conversation = post.story?.conversation;
     const translations = post.story?.conversationTranslations;
+    const languageNotes = post.story?.languageNotes;
 
     if (!Array.isArray(conversation) || conversation.length === 0) {
       errors.push(`${path}.story.conversation must contain at least one message`);
@@ -92,6 +93,16 @@ export function validatePosts(posts) {
     } else {
       translations.forEach((translation, translationIndex) => {
         addMissingValueError(errors, translation, `${path}.story.conversationTranslations[${translationIndex}]`);
+      });
+    }
+
+    if (languageNotes !== undefined) {
+      if (!Array.isArray(languageNotes) || languageNotes.length !== conversation?.length) {
+        errors.push(`${path}.story.languageNotes must match the conversation length when provided`);
+      }
+
+      ["en", "pt"].forEach((language) => {
+        addMissingValueError(errors, post.story?.translations?.[language]?.languageNoteLabel, `${path}.story.translations.${language}.languageNoteLabel`);
       });
     }
 

@@ -5,11 +5,11 @@ const publishedStories = [
   { href: "/day/2", subtitle: "Day 2 - Exploring Lagoa da Conceição" }
 ];
 
-test("renders the feed, composer, and every published preview", async ({ page }) => {
+test("renders the public story library and every published preview", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page.getByRole("region", { name: "Create post" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "What's on your mind, John?" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Read travel stories and learn English from context." })).toBeVisible();
+  await expect(page.getByText("Vocabulary in context", { exact: true })).toBeVisible();
 
   for (const story of publishedStories) {
     await expect(page.locator(`a.post-preview[href="${story.href}"]`)).toBeVisible();
@@ -45,7 +45,7 @@ test("persists the language choice across routes and refreshes", async ({ page }
   await page.goto("/");
   await page.getByRole("button", { name: "Portuguese" }).click();
   await expect(page.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("button", { name: "No que você está pensando, John?" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Leia histórias de viagem e aprenda inglês pelo contexto." })).toBeVisible();
 
   await page.goto("/day/1");
   await expect(page.getByRole("button", { name: "Continuar" })).toBeVisible();
@@ -56,7 +56,7 @@ test("persists the language choice across routes and refreshes", async ({ page }
 test("renders Portuguese diacritics across the feed, stories, and vocabulary hints", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Portuguese" }).click();
-  await expect(page.getByRole("button", { name: "No que você está pensando, John?" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Leia histórias de viagem e aprenda inglês pelo contexto." })).toBeVisible();
   await expect(page.getByText("Dia 2 - Explorando a Lagoa da Conceição", { exact: true })).toBeVisible();
   await expect(page.getByText("Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em português.", { exact: true })).toBeVisible();
 

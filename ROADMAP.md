@@ -1,4 +1,4 @@
-# John's Travel Roadmap
+﻿# John's Travel Roadmap
 
 This roadmap turns John's Travel from a single interactive story into a reusable, testable travel-journal experience. Check off each item as it lands; a milestone is complete when all of its tasks are checked.
 
@@ -60,6 +60,32 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [x] Add timeline, branching-story, and location-based layout modes.
 - [x] Add visibility filters for content type and publication status.
 - [x] Keep layouts data-driven so new posts appear without page rewrites.
+- [x] Create a developer-only mapped-words dashboard at `/dev/words`.
+- [x] Add searchable vocabulary rows for surface words, lemmas, senses, Portuguese meanings, notes, and examples.
+- [x] Add developer filters for post scope, part of speech, minimum usage count, missing Portuguese mappings, and sort order.
+- [x] Keep the words dashboard out of user-facing feed navigation.
+
+## Milestone 6.1 - Build Hierarchical Vocabulary Study Data
+
+- [x] Treat the aggregate vocabulary files as a study index, not the only source of dashboard data.
+- [x] Generate `conversation-word-counts.json` and `conversation-word-senses.json` for every individual post.
+- [x] Store post-level vocabulary files in a predictable hierarchy so Day 1 and Day 2 each own their own small-scale data.
+- [x] Preserve aggregate all-post files for whole-trip study views.
+- [x] Update the developer words dashboard so multiple selected posts can be combined into one study set.
+- [x] Recalculate dashboard totals, unique words, unique senses, and filtered results from the selected post set.
+- [x] Keep the hierarchy ready for future posts without manually rewriting dashboard logic for every new day.
+- [x] Document the generated data contract clearly enough that future study tools can reuse it.
+
+## Milestone 6.2 - Make Vocabulary Sense Generation Scalable
+
+- [x] Refactor `scripts/build-conversation-word-senses.mjs` so it stays a generator engine instead of becoming the long-term home for all vocabulary decisions.
+- [x] Move reusable default sense metadata into a dedicated data file such as `docs/word-sense-defaults.json`.
+- [x] Move per-post context overrides into post-owned files such as `docs/conversation-word-data/day-1/sense-overrides.json`.
+- [x] Load future posts from the story registry or another data-driven manifest instead of manually extending the script's `posts` array.
+- [x] Add a concise validation command that reports unknown parts of speech, missing Portuguese meanings, count mismatches, and stale token overrides.
+- [x] Add a review report that highlights only the words and occurrences needing human judgment after generation.
+- [x] Document the repeatable workflow: generate vocabulary data, inspect the review report, add defaults or overrides, regenerate, and validate.
+- [x] Keep the process reliable for many future posts without hand-editing generated JSON files.
 
 ## Milestone 7 — Make the Core Experience Mobile-Ready
 
@@ -103,6 +129,8 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [x] Test audio controls using stable UI state rather than brittle playback timing.
 - [x] Add an accessibility smoke test for keyboard controls, expanded state, and live translation updates.
 - [x] Run the production build and browser tests in continuous integration.
+- [ ] Add browser coverage for the developer-only `/dev/words` dashboard search and filters.
+- [x] Repair the current `src/data/day2Content.js` parse issue so production builds can run again.
 
 ## Milestone 9 — Polish the Conversation and Translation Experience
 
@@ -154,6 +182,22 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [ ] Add chapter markers for conversations that grow beyond a comfortable single-session length.
 - [ ] Add a final visual consistency pass for spacing, typography, shadows, and button states.
 
+## Milestone 11.1 — Prepare the Public Website Release
+
+- [x] Map the public purpose: a story-learning website for reading travel conversations and learning English from context.
+- [x] Remove fake social interactions from the main page, including composer, search, sidebar profile navigation, and mobile social navigation.
+- [x] Add a learning-oriented main-page intro that explains stories, Portuguese support, and vocabulary-in-context.
+- [x] Keep developer-only routes out of public navigation.
+- [x] Set the initial public domain and site-level metadata for `https://conversante.net/`.
+- [ ] Decide whether direct access to developer-only routes should be blocked in production.
+- [ ] Add story-level metadata for browser titles, descriptions, and social previews.
+- [ ] Add a social preview image for link sharing.
+- [ ] Confirm DNS, hosting target, and canonical `www` behavior for `conversante.net`.
+- [ ] Add visible learning signals to story cards, such as audio availability, vocabulary count, or English level.
+- [ ] Improve the story completion state with a clear next-story path and return-to-library action.
+- [ ] Review the public copy in English and Portuguese for clarity, tone, and launch readiness.
+- [ ] Run a final public-readiness pass on desktop and mobile before deployment.
+
 ## Milestone 12 — Expand Beyond Conversation Posts
 
 - [ ] Add a photo-journal post type with a small gallery.
@@ -179,4 +223,6 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [ ] Add offline reading for previously opened stories.
 - [ ] Let readers bookmark a story or resume where they stopped.
 - [ ] Add a lightweight trip search.
+- [ ] Add export or copy helpers to the developer vocabulary dashboard for lesson planning.
 - [ ] Explore an authoring tool only after the content schema has stabilized.
+

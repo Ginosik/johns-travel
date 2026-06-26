@@ -1,20 +1,13 @@
 import Avatar from "./Avatar.jsx";
 import LanguageToggle from "./LanguageToggle.jsx";
 
-function TopBar({ isPortuguese, onToggleLanguage, profileAvatar, searchPlaceholder, toggleLabel }) {
+function TopBar({ isPortuguese, onToggleLanguage, profileAvatar, profileName, toggleLabel }) {
   return (
     <header className="topbar">
       <div className="brand-area">
-        <div className="brand" aria-label="Social Feed">C</div>
-        <label className="search" aria-label="Search">
-          <span>?</span>
-          <input type="search" placeholder={searchPlaceholder} />
-        </label>
+        <div className="brand" aria-hidden="true">JT</div>
+        <strong className="brand-name">{profileName}</strong>
       </div>
-
-      <nav className="tabs" aria-label="Main">
-        <button className="tab active" title="Home">H</button>
-      </nav>
 
       <div className="quick-actions">
         <LanguageToggle
@@ -22,7 +15,7 @@ function TopBar({ isPortuguese, onToggleLanguage, profileAvatar, searchPlacehold
           label={toggleLabel}
           onToggle={onToggleLanguage}
         />
-        <Avatar src={profileAvatar} alt="John" title="Your profile" />
+        <Avatar src={profileAvatar} alt="John" title={profileName} />
       </div>
     </header>
   );

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "day-1",
+    "module": "../src/data/day1Content.js",
+    "conversationExport": "conversation",
+    "wordTranslationsExport": "wordTranslations"
+  },
+  {
+    "id": "day-2",
+    "module": "../src/data/day2Content.js",
+    "conversationExport": "day2Conversation",
+    "wordTranslationsExport": "day2WordTranslations"
+  }
+]

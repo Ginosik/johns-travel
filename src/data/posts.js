@@ -3,8 +3,8 @@ import nickyAvatar from "../../assets/Nicky-mobile.jpg";
 import lagoaCover from "../../assets/feed-coast-mobile.jpg";
 import { createSpeakerSequenceAudioPathGetter } from "../utils/messageAudio.js";
 import { validatePosts } from "../utils/validatePosts.js";
-import { conversation, conversationTranslations, day1Translations, wordTranslations } from "./day1Content.js";
-import { day2Conversation, day2ConversationTranslations, day2Translations, day2WordTranslations } from "./day2Content.js";
+import { conversation, conversationLanguageNotes, conversationTranslations, day1Translations, wordTranslations } from "./day1Content.js";
+import { day2Conversation, day2ConversationLanguageNotes, day2ConversationTranslations, day2Translations, day2WordTranslations } from "./day2Content.js";
 
 const sharedAuthor = {
   name: "John",
@@ -58,6 +58,7 @@ export const posts = validatePosts([
     story: {
       avatars: sharedAvatars,
       conversation,
+      languageNotes: conversationLanguageNotes,
       conversationTranslations,
       translations: day1Translations,
       wordTranslations,
@@ -95,6 +96,7 @@ export const posts = validatePosts([
     story: {
       avatars: sharedAvatars,
       conversation: day2Conversation,
+      languageNotes: day2ConversationLanguageNotes,
       conversationTranslations: day2ConversationTranslations,
       translations: day2Translations,
       wordTranslations: day2WordTranslations,

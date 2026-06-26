@@ -20,6 +20,7 @@ export const day1Translations = {
     showTranslation: "Show translation",
     storyNavigationLabel: "Travel story navigation",
     translationTitle: "Portuguese translation",
+    languageNoteLabel: "Language note",
     translationMissing: "Translation unavailable for this message.",
     translationWaiting: "The translation will appear here as the conversation unfolds.",
     toggle: "Portuguese"
@@ -45,6 +46,7 @@ export const day1Translations = {
     showTranslation: "Mostrar tradução",
     storyNavigationLabel: "Navegação entre histórias da viagem",
     translationTitle: "Tradução em português",
+    languageNoteLabel: "Nota de idioma",
     translationMissing: "Tradução indisponível para esta mensagem.",
     translationWaiting: "A tradução aparecerá aqui conforme a conversa avançar.",
     toggle: "English"
@@ -95,6 +97,29 @@ export const conversationTranslations = [
   "Hmm, você acha que vai nevar?",
   "Provavelmente não, mas está acontecendo uma festa tradicional chamada Festa Junina.",
   "Nunca ouvi falar disso. Mal posso esperar para saber mais!"
+];
+
+export const conversationLanguageNotes = [
+  "How are you doing? é uma pergunta natural para saber como alguém está ou como as coisas estão indo.",
+  "What about you? devolve a mesma pergunta de forma curta, como E você?",
+  "I'll travel usa I'll para falar de um plano futuro; também seria comum dizer I'm going to travel.",
+  "That sounds exciting significa Isso parece empolgante; sounds fala da impressão que algo passa.",
+  "I heard that... introduz uma informação que você ouviu de outra pessoa.",
+  "Do you think you'll...? pergunta sobre a opinião da pessoa a respeito do futuro.",
+  "They don't speak... usa don't para negar uma ação no presente com they.",
+  "I got it mixed up significa Eu confundi; é uma expressão útil quando você troca uma coisa por outra.",
+  "At first quer dizer no começo ou inicialmente.",
+  "What nice things are you expecting to see? usa expecting para falar do que a pessoa espera encontrar.",
+  "They have... pode descrever características de um lugar, não só posse literal.",
+  "Looking forward to trying significa estar ansioso para experimentar; depois de to vem verbo com -ing.",
+  "I should try... soa como uma recomendação ou algo que seria uma boa ideia fazer.",
+  "I wish I could... expressa vontade por algo que não é possível naquele momento.",
+  "I'll keep in touch significa vou manter contato.",
+  "It's winter, right? usa right? no final para pedir confirmação.",
+  "It's colder usa o comparativo -er para dizer mais frio.",
+  "Do you think it will...? pergunta se a pessoa acha que algo vai acontecer.",
+  "Probably not quer dizer provavelmente não; probably suaviza a certeza.",
+  "I can't wait to... significa mal posso esperar para fazer algo."
 ];
 
 export const wordTranslations = {

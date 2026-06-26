@@ -96,6 +96,32 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
     return () => document.removeEventListener("keydown", handleKeydown);
   }, [advanceConversation]);
 
+  function renderConversationMessage(message, index) {
+    const audioPath = story.getAudioPath(message, index);
+    const avatar = story.avatars[message.speaker];
+
+    return (
+      <ConversationMessage
+        audioPath={audioPath}
+        audioLabels={{
+          error: strings.audioError,
+          loading: strings.audioLoading,
+          replay: strings.audioReplay,
+          retry: strings.audioRetry,
+          waiting: strings.audioWaiting
+        }}
+        audioStatus={audioState.audioPath === audioPath ? audioState.status : "idle"}
+        avatarClassName={avatar?.className}
+        avatarSrc={avatar?.src}
+        isPlaying={playingPath === audioPath}
+        message={message}
+        onPlay={playMessageAudio}
+        wordTranslations={story.wordTranslations}
+        ref={index === visibleMessages.length - 1 ? latestMessageRef : undefined}
+      />
+    );
+  }
+
   return (
     <main className={`post-page${isTranslationOpen ? " has-translation" : ""}`}>
       <div className="post-page-actions">
@@ -144,33 +170,43 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
 
         <div className={`conversation-layout${isTranslationOpen ? " is-translation-open" : ""}`}>
           <div className="conversation-column">
-            <section className="conversation-record" aria-label={strings.conversationLabel ?? "Conversation record"}>
-              {visibleMessages.map((message, index) => {
-                const audioPath = story.getAudioPath(message, index);
-                const avatar = story.avatars[message.speaker];
-
-                return (
-                  <ConversationMessage
-                    audioPath={audioPath}
-                    audioLabels={{
-                      error: strings.audioError,
-                      loading: strings.audioLoading,
-                      replay: strings.audioReplay,
-                      retry: strings.audioRetry,
-                      waiting: strings.audioWaiting
-                    }}
-                    audioStatus={audioState.audioPath === audioPath ? audioState.status : "idle"}
-                    avatarClassName={avatar?.className}
-                    avatarSrc={avatar?.src}
-                    isPlaying={playingPath === audioPath}
-                    message={message}
-                    onPlay={playMessageAudio}
-                    wordTranslations={story.wordTranslations}
-                    ref={index === visibleMessages.length - 1 ? latestMessageRef : undefined}
-                    key={`${message.speaker}-${index}`}
-                  />
-                );
-              })}
+            <section
+              className={`conversation-record${isTranslationOpen ? " has-inline-translations translation-transcript" : ""}`}
+              aria-label={strings.conversationLabel ?? "Conversation record"}
+              aria-live={isTranslationOpen ? "polite" : undefined}
+            >
+              {isTranslationOpen && (
+                <aside className="conversation-translation" id="conversation-translation" aria-labelledby="translation-title">
+                  <div className="translation-panel-heading">
+                    <span className="translation-language" aria-hidden="true">PT</span>
+                    <h2 id="translation-title">{strings.translationTitle}</h2>
+                    <span className="translation-panel-progress">{visibleMessages.length} {strings.progressOf} {story.conversation.length}</span>
+                  </div>
+                </aside>
+              )}
+              {visibleMessages.length === 0 && isTranslationOpen ? (
+                <div className="translation-transcript" aria-live="polite">
+                  <p className="translation-waiting">{strings.translationWaiting}</p>
+                </div>
+              ) : visibleMessages.map((message, index) => (
+                isTranslationOpen ? (
+                  <div className="conversation-pair" key={`${message.speaker}-${index}`}>
+                    {renderConversationMessage(message, index)}
+                    <ConversationTranslation
+                      isNew={index === visibleMessages.length - 1}
+                      message={message}
+                      missingText={strings.translationMissing}
+                      note={story.languageNotes?.[index]}
+                      noteLabel={strings.languageNoteLabel}
+                      translation={story.conversationTranslations[index]}
+                    />
+                  </div>
+                ) : (
+                  <div className="conversation-pair" key={`${message.speaker}-${index}`}>
+                    {renderConversationMessage(message, index)}
+                  </div>
+                )
+              ))}
               {nextTypingMessage && (
                 <TypingMessage
                   avatarClassName={nextTypingAvatar?.className}
@@ -191,17 +227,6 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
               </button>
             </div>
           </div>
-
-          {isTranslationOpen && (
-            <ConversationTranslation
-              messages={visibleMessages}
-              title={strings.translationTitle}
-              translations={story.conversationTranslations}
-              missingText={strings.translationMissing}
-              progressText={`${visibleMessages.length} ${strings.progressOf} ${story.conversation.length}`}
-              waitingText={strings.translationWaiting}
-            />
-          )}
         </div>
 
         {(previousPost || nextPost) && (

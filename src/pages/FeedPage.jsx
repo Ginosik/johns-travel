@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Composer from "../components/Composer.jsx";
 import FeedLayout from "../components/FeedLayout.jsx";
 import PostPreview from "../components/PostPreview.jsx";
 import { feedTranslations } from "../data/feedTranslations.js";
@@ -7,7 +5,6 @@ import { posts } from "../data/posts.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 function FeedPage({ onOpenPost }) {
-  const [composerDrafting, setComposerDrafting] = useState(false);
   const { language, toggleLanguage } = useLanguage();
   const strings = feedTranslations[language];
   const profileAvatar = posts[0].author.avatar;
@@ -30,16 +27,18 @@ function FeedPage({ onOpenPost }) {
       onToggleLanguage={toggleLanguage}
       profileAvatar={profileAvatar}
       profileName={strings.profileName}
-      searchPlaceholder={strings.search}
       toggleLabel={strings.toggle}
     >
-      <Composer
-        avatar={profileAvatar}
-        isDrafting={composerDrafting}
-        onStartDraft={() => setComposerDrafting(true)}
-        photoLabel={strings.photo}
-        prompt={composerDrafting ? strings.composerDraft : strings.composer}
-      />
+      <section className="feed-intro" aria-labelledby="feed-title">
+        <p className="feed-kicker">{strings.kicker}</p>
+        <h1 id="feed-title">{strings.feedTitle}</h1>
+        <p>{strings.feedIntro}</p>
+        <div className="feed-highlights" aria-label={strings.highlightsLabel}>
+          <span>{strings.highlightStories}</span>
+          <span>{strings.highlightTranslations}</span>
+          <span>{strings.highlightVocabulary}</span>
+        </div>
+      </section>
 
       {feedPosts.map((post) => (
         <PostPreview post={post} onOpen={(event) => onOpenPost(post.id, event)} key={post.id} />

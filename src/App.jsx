@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import { getPostById, getPostByPath, getPublishedPostNeighbors } from "./data/posts.js";
 import DayPostPage from "./pages/DayPostPage.jsx";
+import DevWordsPage from "./pages/DevWordsPage.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import TripMapPage from "./pages/TripMapPage.jsx";
@@ -65,6 +66,7 @@ function App() {
       <Route path="/day/:dayNumber" element={<StoryRoute initialPlayback={initialPlayback} />} />
       <Route path="/day1.html" element={<Navigate to="/day/1" replace />} />
       <Route path="/trip-map" element={<TripMapPage onOpenPost={navigateToPost} />} />
+      <Route path="/dev/words" element={<DevWordsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
