@@ -6,6 +6,7 @@ import DevWordsPage from "./pages/DevWordsPage.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import TripMapPage from "./pages/TripMapPage.jsx";
+import { clearActiveAudio, setActiveAudio, stopActiveAudio } from "./utils/audioController.js";
 
 function StoryRoute({ initialPlayback }) {
   const { dayNumber } = useParams();
@@ -36,7 +37,7 @@ function App() {
     if (!initialPlayback) return;
 
     const playbackPost = getPostById(initialPlayback.postId);
-    if (playbackPost?.href !== location.pathname) {
+    if (location.pathname.startsWith("/day/") && playbackPost?.href !== location.pathname) {
       setInitialPlayback(null);
     }
   }, [initialPlayback, location.pathname]);
@@ -46,6 +47,7 @@ function App() {
 
     const post = getPostById(postId);
     if (!post) {
+      stopActiveAudio();
       setInitialPlayback(null);
       navigate(`/day/${postId}`);
       return;
@@ -55,7 +57,10 @@ function App() {
     const audioPath = post.story.getAudioPath(firstMessage, 0);
     const audio = new Audio(audioPath);
 
-    audio.play().catch(() => {});
+    setActiveAudio(audio);
+    audio.addEventListener("ended", () => clearActiveAudio(audio), { once: true });
+    audio.addEventListener("error", () => clearActiveAudio(audio), { once: true });
+    audio.play().catch(() => clearActiveAudio(audio));
     setInitialPlayback({ postId, audio, audioPath });
     navigate(post.href);
   }

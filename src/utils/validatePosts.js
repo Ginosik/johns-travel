@@ -1,3 +1,6 @@
+const MIN_CONVERSATION_WORDS = 200;
+const WORD_TOKEN_PATTERN = /[\p{L}\p{N}]+(?:['\u2019][\p{L}\p{N}]+)?/gu;
+
 const STORY_TRANSLATION_KEYS = [
   "audioError",
   "audioLoading",
@@ -7,6 +10,7 @@ const STORY_TRANSLATION_KEYS = [
   "backLink",
   "complete",
   "continue",
+  "startConversation",
   "conversationLabel",
   "hideTranslation",
   "intro",
@@ -21,8 +25,20 @@ const STORY_TRANSLATION_KEYS = [
   "translationMissing",
   "progressLabel",
   "progressOf",
-  "translationWaiting"
+  "translationWaiting",
+  "languageNoteMoreLabel",
+  "languageNoteLessLabel"
 ];
+
+function countConversationWords(conversation) {
+  return conversation.reduce((total, message) => total + (message.text.match(WORD_TOKEN_PATTERN) ?? []).length, 0);
+}
+
+function languageArrayMatchesConversation(value, conversation) {
+  if (Array.isArray(value)) return value.length === conversation?.length;
+  if (!value || typeof value !== "object") return false;
+  return ["en", "pt"].every((language) => Array.isArray(value[language]) && value[language].length === conversation?.length);
+}
 
 function addMissingValueError(errors, value, path) {
   if (value === undefined || value === null || value === "") {
@@ -75,10 +91,16 @@ export function validatePosts(posts) {
     const conversation = post.story?.conversation;
     const translations = post.story?.conversationTranslations;
     const languageNotes = post.story?.languageNotes;
+    const languageNoteDetails = post.story?.languageNoteDetails;
 
     if (!Array.isArray(conversation) || conversation.length === 0) {
       errors.push(`${path}.story.conversation must contain at least one message`);
     } else {
+      const conversationWordCount = countConversationWords(conversation);
+      if (conversationWordCount < MIN_CONVERSATION_WORDS) {
+        errors.push(`${path}.story.conversation has ${conversationWordCount} words; each conversation needs at least ${MIN_CONVERSATION_WORDS} words.`);
+      }
+
       conversation.forEach((message, messageIndex) => {
         addMissingValueError(errors, message.speaker, `${path}.story.conversation[${messageIndex}].speaker`);
         addMissingValueError(errors, message.text, `${path}.story.conversation[${messageIndex}].text`);
@@ -97,8 +119,12 @@ export function validatePosts(posts) {
     }
 
     if (languageNotes !== undefined) {
-      if (!Array.isArray(languageNotes) || languageNotes.length !== conversation?.length) {
-        errors.push(`${path}.story.languageNotes must match the conversation length when provided`);
+      if (!languageArrayMatchesConversation(languageNotes, conversation)) {
+        errors.push(`${path}.story.languageNotes must include en and pt arrays matching the conversation length when provided`);
+      }
+
+      if (languageNoteDetails !== undefined && !languageArrayMatchesConversation(languageNoteDetails, conversation)) {
+        errors.push(`${path}.story.languageNoteDetails must include en and pt arrays matching the conversation length when provided`);
       }
 
       ["en", "pt"].forEach((language) => {

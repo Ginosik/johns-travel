@@ -1,5 +1,5 @@
 {
-  "source": "Dialog text only from day-1, day-2 content modules listed in docs/conversation-word-posts.json",
+  "source": "Dialog text only from day-1, day-2, day-3 content modules listed in docs/conversation-word-posts.json",
   "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
   "annotation": "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.",
   "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
@@ -996,6 +996,8 @@
           "lemma": "farofa",
           "partOfSpeech": "noun",
           "meaningPt": "farofa",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
           "examples": [
             "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
           ]
@@ -1024,6 +1026,8 @@
           "lemma": "feijoada",
           "partOfSpeech": "noun",
           "meaningPt": "feijoada",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
           "examples": [
             "Yes, I saw on YouTube that I should try feijoada, which is like a bean stew, and farofa, which is cassava flour."
           ]
@@ -1039,6 +1043,8 @@
           "partOfSpeech": "proper noun",
           "meaningPt": "Festa",
           "notePt": "Parte do nome cultural Festa Junina.",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
           "examples": [
             "Probably not, but they have a national celebration happening called Festa Junina."
           ]
@@ -1301,6 +1307,8 @@
           "partOfSpeech": "proper noun",
           "meaningPt": "Junina",
           "notePt": "Parte do nome cultural Festa Junina.",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
           "examples": [
             "Probably not, but they have a national celebration happening called Festa Junina."
           ]

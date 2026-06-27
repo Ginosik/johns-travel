@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { clearActiveAudio, setActiveAudio, stopActiveAudio } from "../utils/audioController.js";
 
 function useMessageAudio(initialPlayback = null) {
   const [playingPath, setPlayingPath] = useState(null);
@@ -11,25 +12,32 @@ function useMessageAudio(initialPlayback = null) {
   }, []);
 
   const stopCurrentAudio = useCallback(() => {
-    if (!currentAudioRef.current) return;
+    if (!currentAudioRef.current) {
+      stopActiveAudio();
+      return;
+    }
 
     currentAudioRef.current.pause();
     currentAudioRef.current.currentTime = 0;
+    clearActiveAudio(currentAudioRef.current);
     currentAudioRef.current = null;
     setPlayingPath(null);
     setAudioState({ audioPath: null, status: "idle" });
   }, []);
 
   const playMessageAudio = useCallback((audioPath, audio = new Audio(audioPath)) => {
+    clearPendingAutoplay();
     stopCurrentAudio();
 
     audio.preload = "none";
+    setActiveAudio(audio);
     currentAudioRef.current = audio;
     setAudioState({ audioPath, status: "loading" });
 
     const completePlayingAudio = () => {
       if (currentAudioRef.current === audio) {
         currentAudioRef.current = null;
+        clearActiveAudio(audio);
         setPlayingPath(null);
         setAudioState({ audioPath, status: "completed" });
       }
@@ -38,6 +46,7 @@ function useMessageAudio(initialPlayback = null) {
     const failPlayingAudio = () => {
       if (currentAudioRef.current === audio) {
         currentAudioRef.current = null;
+        clearActiveAudio(audio);
         setPlayingPath(null);
         setAudioState({ audioPath, status: "error" });
       }
@@ -54,12 +63,13 @@ function useMessageAudio(initialPlayback = null) {
       return true;
     }).catch(() => {
       if (currentAudioRef.current === audio) {
+        clearActiveAudio(audio);
         setPlayingPath(null);
         setAudioState({ audioPath, status: "waiting" });
       }
       return false;
     });
-  }, [stopCurrentAudio]);
+  }, [clearPendingAutoplay, stopCurrentAudio]);
 
   const playPendingAutoplay = useCallback(() => {
     if (!pendingAutoplayRef.current) return;
@@ -85,16 +95,18 @@ function useMessageAudio(initialPlayback = null) {
   }, [playMessageAudio, waitForAudioUnlock]);
 
   useEffect(() => {
-    if (!initialPlayback) return;
+    if (!initialPlayback) return undefined;
 
     const { audio, audioPath } = initialPlayback;
+    setActiveAudio(audio);
     currentAudioRef.current = audio;
     setPlayingPath(audioPath);
-    setAudioState({ audioPath, status: "playing" });
+    setAudioState({ audioPath, status: audio.paused ? "waiting" : "playing" });
 
     const clearPlayingAudio = () => {
       if (currentAudioRef.current === audio) {
         currentAudioRef.current = null;
+        clearActiveAudio(audio);
         setPlayingPath(null);
         setAudioState({ audioPath, status: "completed" });
       }
@@ -104,6 +116,7 @@ function useMessageAudio(initialPlayback = null) {
     const failPlayingAudio = () => {
       if (currentAudioRef.current === audio) {
         currentAudioRef.current = null;
+        clearActiveAudio(audio);
         setPlayingPath(null);
         setAudioState({ audioPath, status: "error" });
       }

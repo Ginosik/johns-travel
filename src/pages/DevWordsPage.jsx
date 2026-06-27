@@ -159,7 +159,7 @@ function WordRow({ row }) {
         {row.languageTag ? (
           <span className="word-dashboard-language">{row.languageName} <strong>{row.languageTag}</strong></span>
         ) : (
-          <span className="word-dashboard-muted">English</span>
+          <span className="word-dashboard-muted">Assumed English</span>
         )}
       </td>
       <td className="word-dashboard-count-cell">{row.senseCount}</td>
@@ -194,7 +194,7 @@ function WordCard({ row }) {
         <div><dt>Lemma</dt><dd>{row.lemma}</dd></div>
         <div><dt>Part of speech</dt><dd>{row.partOfSpeech}</dd></div>
         <div><dt>Meaning PT</dt><dd>{row.meaningPt || "Not mapped"}</dd></div>
-        <div><dt>Language</dt><dd>{row.languageTag ? `${row.languageName} ${row.languageTag}` : "English"}</dd></div>
+        <div><dt>Language</dt><dd>{row.languageTag ? `${row.languageName} ${row.languageTag}` : "Assumed English"}</dd></div>
       </dl>
       <p>{row.examples[0] ?? "No example yet"}</p>
       {row.audioPrompt && (

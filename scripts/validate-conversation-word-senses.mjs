@@ -47,9 +47,13 @@ for (const [postId, postMeta] of Object.entries(countsOutput.byPost ?? {})) {
 const structuralIssues = review.structuralIssues ?? {};
 const staleOverrides = structuralIssues.staleOverrides?.length ?? 0;
 const countMismatches = structuralIssues.countMismatches?.length ?? 0;
+const missingLanguageMetadata = review.reviewNeeded?.missingLanguageMetadata?.length ?? 0;
 
 if (staleOverrides || countMismatches) {
   problems.push(`review report has ${staleOverrides} stale overrides and ${countMismatches} count mismatches.`);
+}
+if (missingLanguageMetadata) {
+  problems.push(`review report has ${missingLanguageMetadata} non-English-looking words without language metadata.`);
 }
 
 const summary = review.summary ?? {};
@@ -57,6 +61,7 @@ console.log("Vocabulary validation summary:");
 console.log(`- stale overrides: ${summary.staleOverrides ?? 0}`);
 console.log(`- count mismatches: ${summary.countMismatches ?? 0}`);
 console.log(`- missing meanings needing review: ${summary.missingMeanings ?? 0}`);
+console.log(`- missing language metadata needing review: ${summary.missingLanguageMetadata ?? 0}`);
 console.log(`- unknown parts of speech needing review: ${summary.unknownPartsOfSpeech ?? 0}`);
 
 if (problems.length > 0) {

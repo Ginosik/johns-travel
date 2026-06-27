@@ -1,11 +1,13 @@
 import johnAvatar from "../../assets/John-mobile.jpg";
 import nickyAvatar from "../../assets/Nicky-mobile.jpg";
 import day1Cover from "../../assets/feed-day1-cover.jpg";
+import day3Cover from "../../assets/feed-day3-cover.jpg";
 import lagoaCover from "../../assets/feed-coast-mobile.jpg";
 import { createSpeakerSequenceAudioPathGetter } from "../utils/messageAudio.js";
 import { validatePosts } from "../utils/validatePosts.js";
-import { conversation, conversationLanguageNotes, conversationTranslations, day1Translations, wordTranslations } from "./day1Content.js";
-import { day2Conversation, day2ConversationLanguageNotes, day2ConversationTranslations, day2Translations, day2WordTranslations } from "./day2Content.js";
+import { conversation, conversationLanguageNoteDetails, conversationLanguageNotes, conversationTranslations, day1Translations, wordTranslations } from "./day1Content.js";
+import { day2Conversation, day2ConversationLanguageNoteDetails, day2ConversationLanguageNotes, day2ConversationTranslations, day2Translations, day2WordTranslations } from "./day2Content.js";
+import { day3Conversation, day3ConversationLanguageNoteDetails, day3ConversationLanguageNotes, day3ConversationTranslations, day3Translations, day3WordTranslations } from "./day3Content.js";
 
 const sharedAuthor = {
   name: "John",
@@ -26,6 +28,11 @@ const getDay1AudioPath = createSpeakerSequenceAudioPathGetter(
 const getDay2AudioPath = createSpeakerSequenceAudioPathGetter(
   day2Conversation,
   ({ message, paddedSequence }) => `/audio/day2/${message.speaker}-${paddedSequence}.mp3`
+);
+
+const getDay3AudioPath = createSpeakerSequenceAudioPathGetter(
+  day3Conversation,
+  ({ message, paddedSequence }) => `/audio/day3/${message.speaker}-${paddedSequence}.mp3`
 );
 
 export const posts = validatePosts([
@@ -62,6 +69,7 @@ export const posts = validatePosts([
       avatars: sharedAvatars,
       conversation,
       languageNotes: conversationLanguageNotes,
+      languageNoteDetails: conversationLanguageNoteDetails,
       conversationTranslations,
       translations: day1Translations,
       wordTranslations,
@@ -100,10 +108,50 @@ export const posts = validatePosts([
       avatars: sharedAvatars,
       conversation: day2Conversation,
       languageNotes: day2ConversationLanguageNotes,
+      languageNoteDetails: day2ConversationLanguageNoteDetails,
       conversationTranslations: day2ConversationTranslations,
       translations: day2Translations,
       wordTranslations: day2WordTranslations,
       getAudioPath: getDay2AudioPath
+    }
+  },
+  {
+    id: "day-3",
+    day: 3,
+    href: "/day/3",
+    type: "conversation",
+    status: "published",
+    location: {
+      name: "Campeche",
+      region: "Santa Catarina",
+      country: "Brazil"
+    },
+    tags: ["bus", "directions", "beach", "Campeche"],
+    tripLabel: "Day 3 - Wrong Bus to the Right Beach",
+    workflow: {
+      writingStatus: "written",
+      audioStatus: "recorded",
+      notes: "Published Campeche story with bus, direction, and beach vocabulary."
+    },
+    author: sharedAuthor,
+    feed: {
+      authorNameKey: "profileName",
+      ariaLabelKey: "day3PostAria",
+      copyKey: "day3PostCopy",
+      coverAltKey: "day3CoverAlt",
+      coverImage: day3Cover,
+      openLabelKey: "openPost",
+      subtitleKey: "day3PostSubtitle"
+    },
+    story: {
+      avatars: sharedAvatars,
+      conversation: day3Conversation,
+      languageNotes: day3ConversationLanguageNotes,
+      languageNoteDetails: day3ConversationLanguageNoteDetails,
+      conversationTranslations: day3ConversationTranslations,
+      translations: day3Translations,
+      wordTranslations: day3WordTranslations,
+      getAudioPath: getDay3AudioPath
     }
   }
 ]);

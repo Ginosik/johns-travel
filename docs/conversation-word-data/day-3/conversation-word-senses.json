@@ -1,0 +1,2355 @@
+{
+  "source": "Dialog text only from day-1, day-2, day-3 content modules listed in docs/conversation-word-posts.json",
+  "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
+  "annotation": "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.",
+  "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
+  "totals": {
+    "occurrences": 283,
+    "uniqueSurfaceWords": 161,
+    "uniqueSenses": 161
+  },
+  "counts": {
+    "the": {
+      "totalCount": 18,
+      "senses": {
+        "the_default": {
+          "count": 18,
+          "lemma": "the",
+          "partOfSpeech": "article",
+          "meaningPt": "o / a / os / as",
+          "notePt": "Artigo definido.",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "and": {
+      "totalCount": 11,
+      "senses": {
+        "and_default": {
+          "count": 11,
+          "lemma": "and",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "e",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "i": {
+      "totalCount": 11,
+      "senses": {
+        "i_default": {
+          "count": 11,
+          "lemma": "I",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eu",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "a": {
+      "totalCount": 10,
+      "senses": {
+        "a_default": {
+          "count": 10,
+          "lemma": "a",
+          "partOfSpeech": "article",
+          "meaningPt": "um / uma",
+          "notePt": "Artigo indefinido.",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "you": {
+      "totalCount": 10,
+      "senses": {
+        "you_default": {
+          "count": 10,
+          "lemma": "you",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "você / vocês",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "What did you do then? Did you ask someone, or did you just ride until the end?",
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "was": {
+      "totalCount": 8,
+      "senses": {
+        "be_default": {
+          "count": 8,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estava / era / foi",
+          "grammarPt": "Passado do verbo be.",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "At least you understood the important word. Did you know where Campeche was?",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "bus": {
+      "totalCount": 6,
+      "senses": {
+        "bus_default": {
+          "count": 6,
+          "lemma": "bus",
+          "partOfSpeech": "noun",
+          "meaningPt": "ônibus",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "did": {
+      "totalCount": 6,
+      "senses": {
+        "do_default": {
+          "count": 6,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "marcador de pergunta no passado",
+          "grammarPt": "Auxiliar usado em perguntas no passado.",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "What did you do then? Did you ask someone, or did you just ride until the end?",
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "not": {
+      "totalCount": 6,
+      "senses": {
+        "not_default": {
+          "count": 6,
+          "lemma": "not",
+          "partOfSpeech": "adverb",
+          "meaningPt": "não",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day.",
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "to": {
+      "totalCount": 6,
+      "senses": {
+        "to_default": {
+          "count": 6,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "beach": {
+      "totalCount": 5,
+      "senses": {
+        "beach_default": {
+          "count": 5,
+          "lemma": "beach",
+          "partOfSpeech": "noun",
+          "meaningPt": "praia",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach.",
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "is": {
+      "totalCount": 4,
+      "senses": {
+        "be_default": {
+          "count": 4,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "é / está",
+          "grammarPt": "Presente do verbo be.",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift.",
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "it": {
+      "totalCount": 4,
+      "senses": {
+        "it_default": {
+          "count": 4,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / ele / ela",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day.",
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "that": {
+      "totalCount": 4,
+      "senses": {
+        "that_default": {
+          "count": 4,
+          "lemma": "that",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / essa coisa",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift.",
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "wrong": {
+      "totalCount": 4,
+      "senses": {
+        "wrong_default": {
+          "count": 4,
+          "lemma": "wrong",
+          "partOfSpeech": "adjective",
+          "meaningPt": "errado / errada",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "but": {
+      "totalCount": 3,
+      "senses": {
+        "but_default": {
+          "count": 3,
+          "lemma": "but",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "mas",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded.",
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "campeche": {
+      "totalCount": 3,
+      "senses": {
+        "campeche_default": {
+          "count": 3,
+          "lemma": "Campeche",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Campeche",
+          "notePt": "Nome de lugar em Florianópolis.",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "lost": {
+      "totalCount": 3,
+      "senses": {
+        "lost_default": {
+          "count": 3,
+          "lemma": "lost",
+          "partOfSpeech": "adjective",
+          "meaningPt": "perdido",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused.",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "near": {
+      "totalCount": 3,
+      "senses": {
+        "near_default": {
+          "count": 3,
+          "lemma": "near",
+          "partOfSpeech": "preposition",
+          "meaningPt": "perto de",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach.",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "asked": {
+      "totalCount": 2,
+      "senses": {
+        "ask_default": {
+          "count": 2,
+          "lemma": "ask",
+          "partOfSpeech": "verb",
+          "meaningPt": "perguntei",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'",
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "at": {
+      "totalCount": 2,
+      "senses": {
+        "at_default": {
+          "count": 2,
+          "lemma": "at",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "confused": {
+      "totalCount": 2,
+      "senses": {
+        "confused_default": {
+          "count": 2,
+          "lemma": "confused",
+          "partOfSpeech": "adjective",
+          "meaningPt": "confuso",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused.",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "got": {
+      "totalCount": 2,
+      "senses": {
+        "get_default": {
+          "count": 2,
+          "lemma": "get",
+          "partOfSpeech": "verb",
+          "meaningPt": "fiquei / deixei",
+          "notePt": "Em got it mixed up, marca o resultado: acabei confundindo.",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "joaquina": {
+      "totalCount": 2,
+      "senses": {
+        "joaquina_default": {
+          "count": 2,
+          "lemma": "Joaquina",
+          "partOfSpeech": "proper noun",
+          "meaningPt": "Joaquina",
+          "notePt": "Nome de lugar em Florianópolis.",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "just": {
+      "totalCount": 2,
+      "senses": {
+        "just_default": {
+          "count": 2,
+          "lemma": "just",
+          "partOfSpeech": "adverb",
+          "meaningPt": "apenas / só",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "lucky": {
+      "totalCount": 2,
+      "senses": {
+        "lucky_default": {
+          "count": 2,
+          "lemma": "lucky",
+          "partOfSpeech": "adjective",
+          "meaningPt": "sortudo / com sorte",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "my": {
+      "totalCount": 2,
+      "senses": {
+        "my_default": {
+          "count": 2,
+          "lemma": "my",
+          "partOfSpeech": "determiner",
+          "meaningPt": "meu / minha",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "ocean": {
+      "totalCount": 2,
+      "senses": {
+        "ocean_default": {
+          "count": 2,
+          "lemma": "ocean",
+          "partOfSpeech": "noun",
+          "meaningPt": "oceano",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day.",
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "or": {
+      "totalCount": 2,
+      "senses": {
+        "or_default": {
+          "count": 2,
+          "lemma": "or",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "ou",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?",
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "saw": {
+      "totalCount": 2,
+      "senses": {
+        "see_default": {
+          "count": 2,
+          "lemma": "see",
+          "partOfSpeech": "verb",
+          "meaningPt": "vi",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day.",
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "still": {
+      "totalCount": 2,
+      "senses": {
+        "still_default": {
+          "count": 2,
+          "lemma": "still",
+          "partOfSpeech": "adverb",
+          "meaningPt": "ainda",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.",
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "stop": {
+      "totalCount": 2,
+      "senses": {
+        "stop_default": {
+          "count": 2,
+          "lemma": "stop",
+          "partOfSpeech": "noun",
+          "meaningPt": "parada",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop.",
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "temporarily": {
+      "totalCount": 2,
+      "senses": {
+        "temporarily_default": {
+          "count": 2,
+          "lemma": "temporarily",
+          "partOfSpeech": "adverb",
+          "meaningPt": "temporariamente",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused.",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "too": {
+      "totalCount": 2,
+      "senses": {
+        "too_default": {
+          "count": 2,
+          "lemma": "too",
+          "partOfSpeech": "adverb",
+          "meaningPt": "também / demais",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded.",
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "travel": {
+      "totalCount": 2,
+      "senses": {
+        "travel_default": {
+          "count": 2,
+          "lemma": "travel",
+          "partOfSpeech": "verb",
+          "meaningPt": "viajar",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift.",
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "accept": {
+      "totalCount": 1,
+      "senses": {
+        "accept_default": {
+          "count": 1,
+          "lemma": "accept",
+          "partOfSpeech": "verb",
+          "meaningPt": "aceitar",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "adventure": {
+      "totalCount": 1,
+      "senses": {
+        "adventure_default": {
+          "count": 1,
+          "lemma": "adventure",
+          "partOfSpeech": "noun",
+          "meaningPt": "aventura",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "after": {
+      "totalCount": 1,
+      "senses": {
+        "after_default": {
+          "count": 1,
+          "lemma": "after",
+          "partOfSpeech": "preposition",
+          "meaningPt": "depois de",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "again": {
+      "totalCount": 1,
+      "senses": {
+        "again_default": {
+          "count": 1,
+          "lemma": "again",
+          "partOfSpeech": "adverb",
+          "meaningPt": "de novo",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "already": {
+      "totalCount": 1,
+      "senses": {
+        "already_default": {
+          "count": 1,
+          "lemma": "already",
+          "partOfSpeech": "adverb",
+          "meaningPt": "já",
+          "examples": [
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "ask": {
+      "totalCount": 1,
+      "senses": {
+        "ask_default": {
+          "count": 1,
+          "lemma": "ask",
+          "partOfSpeech": "verb",
+          "meaningPt": "perguntar",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "back": {
+      "totalCount": 1,
+      "senses": {
+        "back_default": {
+          "count": 1,
+          "lemma": "back",
+          "partOfSpeech": "adverb",
+          "meaningPt": "de volta",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "beautiful": {
+      "totalCount": 1,
+      "senses": {
+        "beautiful_default": {
+          "count": 1,
+          "lemma": "beautiful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bonito / linda",
+          "examples": [
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "bought": {
+      "totalCount": 1,
+      "senses": {
+        "buy_default": {
+          "count": 1,
+          "lemma": "buy",
+          "partOfSpeech": "verb",
+          "meaningPt": "comprei",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "busy": {
+      "totalCount": 1,
+      "senses": {
+        "busy_default": {
+          "count": 1,
+          "lemma": "busy",
+          "partOfSpeech": "adjective",
+          "meaningPt": "movimentado / ocupado",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "by": {
+      "totalCount": 1,
+      "senses": {
+        "by_default": {
+          "count": 1,
+          "lemma": "by",
+          "partOfSpeech": "preposition",
+          "meaningPt": "por",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "calm": {
+      "totalCount": 1,
+      "senses": {
+        "calm_default": {
+          "count": 1,
+          "lemma": "calm",
+          "partOfSpeech": "adjective",
+          "meaningPt": "calmo / tranquilo",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "carrying": {
+      "totalCount": 1,
+      "senses": {
+        "carry_default": {
+          "count": 1,
+          "lemma": "carry",
+          "partOfSpeech": "verb",
+          "meaningPt": "carregando",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "category": {
+      "totalCount": 1,
+      "senses": {
+        "category_default": {
+          "count": 1,
+          "lemma": "category",
+          "partOfSpeech": "noun",
+          "meaningPt": "categoria",
+          "examples": [
+            "That is a beautiful travel category: not lost, just temporarily confused near a beach."
+          ]
+        }
+      }
+    },
+    "checked": {
+      "totalCount": 1,
+      "senses": {
+        "check_default": {
+          "count": 1,
+          "lemma": "check",
+          "partOfSpeech": "verb",
+          "meaningPt": "conferi / chequei",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "compared": {
+      "totalCount": 1,
+      "senses": {
+        "compare_default": {
+          "count": 1,
+          "lemma": "compare",
+          "partOfSpeech": "verb",
+          "meaningPt": "comparado",
+          "examples": [
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "completely": {
+      "totalCount": 1,
+      "senses": {
+        "completely_default": {
+          "count": 1,
+          "lemma": "completely",
+          "partOfSpeech": "adverb",
+          "meaningPt": "completamente",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "correct": {
+      "totalCount": 1,
+      "senses": {
+        "correct_default": {
+          "count": 1,
+          "lemma": "correct",
+          "partOfSpeech": "adjective",
+          "meaningPt": "correto / certo",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "crowded": {
+      "totalCount": 1,
+      "senses": {
+        "crowded_default": {
+          "count": 1,
+          "lemma": "crowded",
+          "partOfSpeech": "adjective",
+          "meaningPt": "cheio / lotado",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "day": {
+      "totalCount": 1,
+      "senses": {
+        "day_default": {
+          "count": 1,
+          "lemma": "day",
+          "partOfSpeech": "noun",
+          "meaningPt": "dia",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "de": {
+      "totalCount": 1,
+      "senses": {
+        "de_default": {
+          "count": 1,
+          "lemma": "de",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "ipa": "/dʒi/",
+          "audioPrompt": "jee",
+          "audioPromptNote": "Brazilian Portuguese connector in pão de queijo.",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "decided": {
+      "totalCount": 1,
+      "senses": {
+        "decide_default": {
+          "count": 1,
+          "lemma": "decide",
+          "partOfSpeech": "verb",
+          "meaningPt": "decidi",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "definitely": {
+      "totalCount": 1,
+      "senses": {
+        "definitely_default": {
+          "count": 1,
+          "lemma": "definitely",
+          "partOfSpeech": "adverb",
+          "meaningPt": "definitivamente",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "direction": {
+      "totalCount": 1,
+      "senses": {
+        "direction_default": {
+          "count": 1,
+          "lemma": "direction",
+          "partOfSpeech": "noun",
+          "meaningPt": "direção",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "do": {
+      "totalCount": 1,
+      "senses": {
+        "do_default": {
+          "count": 1,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "marcador de pergunta",
+          "grammarPt": "Auxiliar usado em perguntas no presente.",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "door": {
+      "totalCount": 1,
+      "senses": {
+        "door_default": {
+          "count": 1,
+          "lemma": "door",
+          "partOfSpeech": "noun",
+          "meaningPt": "porta",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "end": {
+      "totalCount": 1,
+      "senses": {
+        "end_default": {
+          "count": 1,
+          "lemma": "end",
+          "partOfSpeech": "noun",
+          "meaningPt": "fim / final",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "ended": {
+      "totalCount": 1,
+      "senses": {
+        "end_default": {
+          "count": 1,
+          "lemma": "end",
+          "partOfSpeech": "verb",
+          "meaningPt": "acabou",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "exactly": {
+      "totalCount": 1,
+      "senses": {
+        "exactly_default": {
+          "count": 1,
+          "lemma": "exactly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "exatamente",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "felt": {
+      "totalCount": 1,
+      "senses": {
+        "feel_default": {
+          "count": 1,
+          "lemma": "feel",
+          "partOfSpeech": "verb",
+          "meaningPt": "parecia / senti",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "fica": {
+      "totalCount": 1,
+      "senses": {
+        "ficar_default": {
+          "count": 1,
+          "lemma": "ficar",
+          "partOfSpeech": "verb",
+          "meaningPt": "fica",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "fight": {
+      "totalCount": 1,
+      "senses": {
+        "fight_default": {
+          "count": 1,
+          "lemma": "fight",
+          "partOfSpeech": "verb",
+          "meaningPt": "lutar / brigar",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "first": {
+      "totalCount": 1,
+      "senses": {
+        "first_default": {
+          "count": 1,
+          "lemma": "first",
+          "partOfSpeech": "noun",
+          "meaningPt": "começo / primeiro",
+          "notePt": "Em at first, significa no começo.",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "followed": {
+      "totalCount": 1,
+      "senses": {
+        "follow_default": {
+          "count": 1,
+          "lemma": "follow",
+          "partOfSpeech": "verb",
+          "meaningPt": "segui",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "found": {
+      "totalCount": 1,
+      "senses": {
+        "find_default": {
+          "count": 1,
+          "lemma": "find",
+          "partOfSpeech": "verb",
+          "meaningPt": "encontrou / encontrei",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "from": {
+      "totalCount": 1,
+      "senses": {
+        "from_default": {
+          "count": 1,
+          "lemma": "from",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "gift": {
+      "totalCount": 1,
+      "senses": {
+        "gift_default": {
+          "count": 1,
+          "lemma": "gift",
+          "partOfSpeech": "noun",
+          "meaningPt": "presente",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "go": {
+      "totalCount": 1,
+      "senses": {
+        "go_default": {
+          "count": 1,
+          "lemma": "go",
+          "partOfSpeech": "verb",
+          "meaningPt": "ir",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "going": {
+      "totalCount": 1,
+      "senses": {
+        "go_default": {
+          "count": 1,
+          "lemma": "go",
+          "partOfSpeech": "verb",
+          "meaningPt": "indo",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "good": {
+      "totalCount": 1,
+      "senses": {
+        "good_default": {
+          "count": 1,
+          "lemma": "good",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bom / boa",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "how": {
+      "totalCount": 1,
+      "senses": {
+        "how_default": {
+          "count": 1,
+          "lemma": "how",
+          "partOfSpeech": "adverb",
+          "meaningPt": "como",
+          "examples": [
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "if": {
+      "totalCount": 1,
+      "senses": {
+        "if_default": {
+          "count": 1,
+          "lemma": "if",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "se",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "important": {
+      "totalCount": 1,
+      "senses": {
+        "important_default": {
+          "count": 1,
+          "lemma": "important",
+          "partOfSpeech": "adjective",
+          "meaningPt": "importante",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "in": {
+      "totalCount": 1,
+      "senses": {
+        "in_default": {
+          "count": 1,
+          "lemma": "in",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "instead": {
+      "totalCount": 1,
+      "senses": {
+        "instead_default": {
+          "count": 1,
+          "lemma": "instead",
+          "partOfSpeech": "adverb",
+          "meaningPt": "em vez disso",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "know": {
+      "totalCount": 1,
+      "senses": {
+        "know_default": {
+          "count": 1,
+          "lemma": "know",
+          "partOfSpeech": "verb",
+          "meaningPt": "saber / conhecer",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "learned": {
+      "totalCount": 1,
+      "senses": {
+        "learn_default": {
+          "count": 1,
+          "lemma": "learn",
+          "partOfSpeech": "verb",
+          "meaningPt": "aprendi",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "least": {
+      "totalCount": 1,
+      "senses": {
+        "least_default": {
+          "count": 1,
+          "lemma": "least",
+          "partOfSpeech": "adverb",
+          "meaningPt": "menos",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "like": {
+      "totalCount": 1,
+      "senses": {
+        "like_default": {
+          "count": 1,
+          "lemma": "like",
+          "partOfSpeech": "preposition",
+          "meaningPt": "como / parecido com",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "line": {
+      "totalCount": 1,
+      "senses": {
+        "line_default": {
+          "count": 1,
+          "lemma": "line",
+          "partOfSpeech": "noun",
+          "meaningPt": "linha",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "little": {
+      "totalCount": 1,
+      "senses": {
+        "little_default": {
+          "count": 1,
+          "lemma": "little",
+          "partOfSpeech": "adjective",
+          "meaningPt": "pequeno / pouco",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "long": {
+      "totalCount": 1,
+      "senses": {
+        "long_default": {
+          "count": 1,
+          "lemma": "long",
+          "partOfSpeech": "adjective",
+          "meaningPt": "longo / longa",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "looked": {
+      "totalCount": 1,
+      "senses": {
+        "look_default": {
+          "count": 1,
+          "lemma": "look",
+          "partOfSpeech": "verb",
+          "meaningPt": "olhei",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "man": {
+      "totalCount": 1,
+      "senses": {
+        "man_default": {
+          "count": 1,
+          "lemma": "man",
+          "partOfSpeech": "noun",
+          "meaningPt": "homem",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "map": {
+      "totalCount": 1,
+      "senses": {
+        "map_default": {
+          "count": 1,
+          "lemma": "map",
+          "partOfSpeech": "noun",
+          "meaningPt": "mapa",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "market": {
+      "totalCount": 1,
+      "senses": {
+        "market_default": {
+          "count": 1,
+          "lemma": "market",
+          "partOfSpeech": "noun",
+          "meaningPt": "mercado / mercadinho",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "match": {
+      "totalCount": 1,
+      "senses": {
+        "match_default": {
+          "count": 1,
+          "lemma": "match",
+          "partOfSpeech": "verb",
+          "meaningPt": "combinar",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "maybe": {
+      "totalCount": 1,
+      "senses": {
+        "maybe_default": {
+          "count": 1,
+          "lemma": "maybe",
+          "partOfSpeech": "adverb",
+          "meaningPt": "talvez",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "me": {
+      "totalCount": 1,
+      "senses": {
+        "me_default": {
+          "count": 1,
+          "lemma": "me",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "me / mim",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "means": {
+      "totalCount": 1,
+      "senses": {
+        "mean_default": {
+          "count": 1,
+          "lemma": "mean",
+          "partOfSpeech": "verb",
+          "meaningPt": "significa",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "mistake": {
+      "totalCount": 1,
+      "senses": {
+        "mistake_default": {
+          "count": 1,
+          "lemma": "mistake",
+          "partOfSpeech": "noun",
+          "meaningPt": "erro",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "no": {
+      "totalCount": 1,
+      "senses": {
+        "no_default": {
+          "count": 1,
+          "lemma": "no",
+          "partOfSpeech": "interjection",
+          "meaningPt": "não",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "o": {
+      "totalCount": 1,
+      "senses": {
+        "o_default": {
+          "count": 1,
+          "lemma": "o",
+          "partOfSpeech": "article",
+          "meaningPt": "o",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "of": {
+      "totalCount": 1,
+      "senses": {
+        "of_default": {
+          "count": 1,
+          "lemma": "of",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "off": {
+      "totalCount": 1,
+      "senses": {
+        "off_default": {
+          "count": 1,
+          "lemma": "off",
+          "partOfSpeech": "particle",
+          "meaningPt": "fora / descer",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "on": {
+      "totalCount": 1,
+      "senses": {
+        "on_default": {
+          "count": 1,
+          "lemma": "on",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em / sobre",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "onde": {
+      "totalCount": 1,
+      "senses": {
+        "onde_default": {
+          "count": 1,
+          "lemma": "onde",
+          "partOfSpeech": "adverb",
+          "meaningPt": "onde",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "ônibus": {
+      "totalCount": 1,
+      "senses": {
+        "_nibus_default": {
+          "count": 1,
+          "lemma": "ônibus",
+          "partOfSpeech": "noun",
+          "meaningPt": "ônibus",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "out": {
+      "totalCount": 1,
+      "senses": {
+        "out_default": {
+          "count": 1,
+          "lemma": "out",
+          "partOfSpeech": "particle",
+          "meaningPt": "fora",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "panic": {
+      "totalCount": 1,
+      "senses": {
+        "panic_default": {
+          "count": 1,
+          "lemma": "panic",
+          "partOfSpeech": "noun",
+          "meaningPt": "pânico",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "passed": {
+      "totalCount": 1,
+      "senses": {
+        "pass_default": {
+          "count": 1,
+          "lemma": "pass",
+          "partOfSpeech": "verb",
+          "meaningPt": "passou",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "people": {
+      "totalCount": 1,
+      "senses": {
+        "people_default": {
+          "count": 1,
+          "lemma": "people",
+          "partOfSpeech": "noun",
+          "meaningPt": "pessoas",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "perdido": {
+      "totalCount": 1,
+      "senses": {
+        "perdido_default": {
+          "count": 1,
+          "lemma": "perdido",
+          "partOfSpeech": "adjective",
+          "meaningPt": "perdido",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    },
+    "phone": {
+      "totalCount": 1,
+      "senses": {
+        "phone_default": {
+          "count": 1,
+          "lemma": "phone",
+          "partOfSpeech": "noun",
+          "meaningPt": "celular",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "places": {
+      "totalCount": 1,
+      "senses": {
+        "place_default": {
+          "count": 1,
+          "lemma": "place",
+          "partOfSpeech": "noun",
+          "meaningPt": "lugares",
+          "examples": [
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "pointed": {
+      "totalCount": 1,
+      "senses": {
+        "point_default": {
+          "count": 1,
+          "lemma": "point",
+          "partOfSpeech": "verb",
+          "meaningPt": "apontou / indicou",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "ponto": {
+      "totalCount": 1,
+      "senses": {
+        "ponto_default": {
+          "count": 1,
+          "lemma": "ponto",
+          "partOfSpeech": "noun",
+          "meaningPt": "ponto",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "portuguese": {
+      "totalCount": 1,
+      "senses": {
+        "portuguese_default": {
+          "count": 1,
+          "lemma": "Portuguese",
+          "partOfSpeech": "noun",
+          "meaningPt": "português",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "practice": {
+      "totalCount": 1,
+      "senses": {
+        "practice_default": {
+          "count": 1,
+          "lemma": "practice",
+          "partOfSpeech": "verb",
+          "meaningPt": "praticar",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "practiced": {
+      "totalCount": 1,
+      "senses": {
+        "practice_default": {
+          "count": 1,
+          "lemma": "practice",
+          "partOfSpeech": "verb",
+          "meaningPt": "pratiquei",
+          "examples": [
+            "I practiced a little. I asked, 'Onde fica o ponto de ônibus?' and a man pointed me back to the correct stop."
+          ]
+        }
+      }
+    },
+    "realized": {
+      "totalCount": 1,
+      "senses": {
+        "realize_default": {
+          "count": 1,
+          "lemma": "realize",
+          "partOfSpeech": "verb",
+          "meaningPt": "percebi",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "really": {
+      "totalCount": 1,
+      "senses": {
+        "really_default": {
+          "count": 1,
+          "lemma": "really",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mesmo / de verdade",
+          "examples": [
+            "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+          ]
+        }
+      }
+    },
+    "recovering": {
+      "totalCount": 1,
+      "senses": {
+        "recover_default": {
+          "count": 1,
+          "lemma": "recover",
+          "partOfSpeech": "verb",
+          "meaningPt": "se recuperando",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "ride": {
+      "totalCount": 1,
+      "senses": {
+        "ride_default": {
+          "count": 1,
+          "lemma": "ride",
+          "partOfSpeech": "verb",
+          "meaningPt": "andar / ir de transporte",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "rule": {
+      "totalCount": 1,
+      "senses": {
+        "rule_default": {
+          "count": 1,
+          "lemma": "rule",
+          "partOfSpeech": "noun",
+          "meaningPt": "regra",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "said": {
+      "totalCount": 1,
+      "senses": {
+        "say_default": {
+          "count": 1,
+          "lemma": "say",
+          "partOfSpeech": "verb",
+          "meaningPt": "disse",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "sand": {
+      "totalCount": 1,
+      "senses": {
+        "sand_default": {
+          "count": 1,
+          "lemma": "sand",
+          "partOfSpeech": "noun",
+          "meaningPt": "areia",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "she": {
+      "totalCount": 1,
+      "senses": {
+        "she_default": {
+          "count": 1,
+          "lemma": "she",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "ela",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "signs": {
+      "totalCount": 1,
+      "senses": {
+        "sign_default": {
+          "count": 1,
+          "lemma": "sign",
+          "partOfSpeech": "noun",
+          "meaningPt": "placas",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "small": {
+      "totalCount": 1,
+      "senses": {
+        "small_default": {
+          "count": 1,
+          "lemma": "small",
+          "partOfSpeech": "adjective",
+          "meaningPt": "pequeno / pequena",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "smiled": {
+      "totalCount": 1,
+      "senses": {
+        "smile_default": {
+          "count": 1,
+          "lemma": "smile",
+          "partOfSpeech": "verb",
+          "meaningPt": "sorri",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "so": {
+      "totalCount": 1,
+      "senses": {
+        "so_default": {
+          "count": 1,
+          "lemma": "so",
+          "partOfSpeech": "adverb",
+          "meaningPt": "tão / então",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "someone": {
+      "totalCount": 1,
+      "senses": {
+        "someone_default": {
+          "count": 1,
+          "lemma": "someone",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "alguém",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "sounds": {
+      "totalCount": 1,
+      "senses": {
+        "sound_default": {
+          "count": 1,
+          "lemma": "sound",
+          "partOfSpeech": "verb",
+          "meaningPt": "soa / parece",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "staying": {
+      "totalCount": 1,
+      "senses": {
+        "stay_default": {
+          "count": 1,
+          "lemma": "stay",
+          "partOfSpeech": "verb",
+          "meaningPt": "mantendo / ficando",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "surfboards": {
+      "totalCount": 1,
+      "senses": {
+        "surfboard_default": {
+          "count": 1,
+          "lemma": "surfboard",
+          "partOfSpeech": "noun",
+          "meaningPt": "pranchas de surfe",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "takes": {
+      "totalCount": 1,
+      "senses": {
+        "take_default": {
+          "count": 1,
+          "lemma": "take",
+          "partOfSpeech": "verb",
+          "meaningPt": "leva / pega",
+          "examples": [
+            "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+          ]
+        }
+      }
+    },
+    "then": {
+      "totalCount": 1,
+      "senses": {
+        "then_default": {
+          "count": 1,
+          "lemma": "then",
+          "partOfSpeech": "adverb",
+          "meaningPt": "então",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "there": {
+      "totalCount": 1,
+      "senses": {
+        "there_default": {
+          "count": 1,
+          "lemma": "there",
+          "partOfSpeech": "adverb",
+          "meaningPt": "lá / ali",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "this": {
+      "totalCount": 1,
+      "senses": {
+        "this_default": {
+          "count": 1,
+          "lemma": "this",
+          "partOfSpeech": "determiner",
+          "meaningPt": "este / esta",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "today": {
+      "totalCount": 1,
+      "senses": {
+        "today_default": {
+          "count": 1,
+          "lemma": "today",
+          "partOfSpeech": "adverb",
+          "meaningPt": "hoje",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "today's": {
+      "totalCount": 1,
+      "senses": {
+        "today_default": {
+          "count": 1,
+          "lemma": "today",
+          "partOfSpeech": "determiner",
+          "meaningPt": "de hoje",
+          "grammarPt": "Forma possessiva de today; funciona como de hoje.",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "took": {
+      "totalCount": 1,
+      "senses": {
+        "take_default": {
+          "count": 1,
+          "lemma": "take",
+          "partOfSpeech": "verb",
+          "meaningPt": "tirei / peguei",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "toward": {
+      "totalCount": 1,
+      "senses": {
+        "toward_default": {
+          "count": 1,
+          "lemma": "toward",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em direção a",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "tried": {
+      "totalCount": 1,
+      "senses": {
+        "try_default": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "tentei / experimentei",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "understood": {
+      "totalCount": 1,
+      "senses": {
+        "understand_default": {
+          "count": 1,
+          "lemma": "understand",
+          "partOfSpeech": "verb",
+          "meaningPt": "entendeu",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "until": {
+      "totalCount": 1,
+      "senses": {
+        "until_default": {
+          "count": 1,
+          "lemma": "until",
+          "partOfSpeech": "preposition",
+          "meaningPt": "até",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "up": {
+      "totalCount": 1,
+      "senses": {
+        "up_default": {
+          "count": 1,
+          "lemma": "up",
+          "partOfSpeech": "particle",
+          "meaningPt": "completamente / para cima",
+          "notePt": "Em mixed up, faz parte do phrasal verb que significa confundir.",
+          "examples": [
+            "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+          ]
+        }
+      }
+    },
+    "useful": {
+      "totalCount": 1,
+      "senses": {
+        "useful_default": {
+          "count": 1,
+          "lemma": "useful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "útil",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "very": {
+      "totalCount": 1,
+      "senses": {
+        "very_default": {
+          "count": 1,
+          "lemma": "very",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "vocabulary": {
+      "totalCount": 1,
+      "senses": {
+        "vocabulary_default": {
+          "count": 1,
+          "lemma": "vocabulary",
+          "partOfSpeech": "noun",
+          "meaningPt": "vocabulário",
+          "examples": [
+            "Useful! So today's vocabulary is bus stop, wrong direction, beach, and staying calm."
+          ]
+        }
+      }
+    },
+    "wait": {
+      "totalCount": 1,
+      "senses": {
+        "wait_default": {
+          "count": 1,
+          "lemma": "wait",
+          "partOfSpeech": "verb",
+          "meaningPt": "esperar",
+          "examples": [
+            "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+          ]
+        }
+      }
+    },
+    "water": {
+      "totalCount": 1,
+      "senses": {
+        "water_default": {
+          "count": 1,
+          "lemma": "water",
+          "partOfSpeech": "noun",
+          "meaningPt": "água",
+          "examples": [
+            "Exactly. I got off near a small market, bought water, and followed people carrying surfboards toward the beach."
+          ]
+        }
+      }
+    },
+    "waves": {
+      "totalCount": 1,
+      "senses": {
+        "wave_default": {
+          "count": 1,
+          "lemma": "wave",
+          "partOfSpeech": "noun",
+          "meaningPt": "ondas",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "were": {
+      "totalCount": 1,
+      "senses": {
+        "be_default": {
+          "count": 1,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estavam / eram",
+          "grammarPt": "Passado do verbo be.",
+          "examples": [
+            "Did you practice Portuguese again, or were you too busy recovering from the bus adventure?"
+          ]
+        }
+      }
+    },
+    "what": {
+      "totalCount": 1,
+      "senses": {
+        "what_default": {
+          "count": 1,
+          "lemma": "what",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "o que",
+          "examples": [
+            "What did you do then? Did you ask someone, or did you just ride until the end?"
+          ]
+        }
+      }
+    },
+    "where": {
+      "totalCount": 1,
+      "senses": {
+        "where_default": {
+          "count": 1,
+          "lemma": "where",
+          "partOfSpeech": "adverb",
+          "meaningPt": "onde",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "white": {
+      "totalCount": 1,
+      "senses": {
+        "white_default": {
+          "count": 1,
+          "lemma": "white",
+          "partOfSpeech": "adjective",
+          "meaningPt": "branco / branca",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "wider": {
+      "totalCount": 1,
+      "senses": {
+        "wide_default": {
+          "count": 1,
+          "lemma": "wide",
+          "partOfSpeech": "adjective",
+          "meaningPt": "mais largo / mais larga",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "wilder": {
+      "totalCount": 1,
+      "senses": {
+        "wild_default": {
+          "count": 1,
+          "lemma": "wild",
+          "partOfSpeech": "adjective",
+          "meaningPt": "mais selvagem",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "wind": {
+      "totalCount": 1,
+      "senses": {
+        "wind_default": {
+          "count": 1,
+          "lemma": "wind",
+          "partOfSpeech": "noun",
+          "meaningPt": "vento",
+          "examples": [
+            "It felt wider and wilder. There was wind, white sand, and a long line of waves, but it was not too crowded."
+          ]
+        }
+      }
+    },
+    "window": {
+      "totalCount": 1,
+      "senses": {
+        "window_default": {
+          "count": 1,
+          "lemma": "window",
+          "partOfSpeech": "noun",
+          "meaningPt": "janela",
+          "examples": [
+            "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+          ]
+        }
+      }
+    },
+    "with": {
+      "totalCount": 1,
+      "senses": {
+        "with_default": {
+          "count": 1,
+          "lemma": "with",
+          "partOfSpeech": "preposition",
+          "meaningPt": "com",
+          "examples": [
+            "How was the beach compared with the places you already saw?"
+          ]
+        }
+      }
+    },
+    "woman": {
+      "totalCount": 1,
+      "senses": {
+        "woman_default": {
+          "count": 1,
+          "lemma": "woman",
+          "partOfSpeech": "noun",
+          "meaningPt": "mulher",
+          "examples": [
+            "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+          ]
+        }
+      }
+    },
+    "word": {
+      "totalCount": 1,
+      "senses": {
+        "word_default": {
+          "count": 1,
+          "lemma": "word",
+          "partOfSpeech": "noun",
+          "meaningPt": "palavra",
+          "examples": [
+            "At least you understood the important word. Did you know where Campeche was?"
+          ]
+        }
+      }
+    },
+    "yes": {
+      "totalCount": 1,
+      "senses": {
+        "yes_default": {
+          "count": 1,
+          "lemma": "yes",
+          "partOfSpeech": "interjection",
+          "meaningPt": "sim",
+          "examples": [
+            "Yes, and I learned that perdido means lost. I was not completely lost, but I was definitely temporarily confused."
+          ]
+        }
+      }
+    }
+  },
+  "postId": "day-3"
+}

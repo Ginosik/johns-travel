@@ -16,6 +16,10 @@ export const feedTranslations = {
     day2PostSubtitle: "Day 2 - Exploring Lagoa da Conceição",
     day2PostCopy: "A busy lagoon, a new neighborhood, and John's first Portuguese order.",
     day2CoverAlt: "Coastal view representing Lagoa da Conceição",
+    day3PostAria: "Open John's third day in Campeche",
+    day3PostSubtitle: "Day 3 - Wrong Bus to the Right Beach",
+    day3PostCopy: "A wrong bus, a useful direction question, and an unexpected beach in Campeche.",
+    day3CoverAlt: "Bus stop near a sandy path leading to Campeche beach",
     openPost: "Open post",
     toggle: "Portuguese"
   },
@@ -36,6 +40,10 @@ export const feedTranslations = {
     day2PostSubtitle: "Dia 2 - Explorando a Lagoa da Conceição",
     day2PostCopy: "Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em português.",
     day2CoverAlt: "Vista costeira representando a Lagoa da Conceição",
+    day3PostAria: "Abrir o terceiro dia de John em Campeche",
+    day3PostSubtitle: "Dia 3 - O \u00f4nibus errado para a praia certa",
+    day3PostCopy: "Um \u00f4nibus errado, uma pergunta \u00fatil de dire\u00e7\u00e3o e uma praia inesperada em Campeche.",
+    day3CoverAlt: "Ponto de \u00f4nibus perto de um caminho de areia que leva \u00e0 praia de Campeche",
     openPost: "Abrir post",
     toggle: "English"
   }

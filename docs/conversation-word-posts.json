@@ -10,5 +10,11 @@
     "module": "../src/data/day2Content.js",
     "conversationExport": "day2Conversation",
     "wordTranslationsExport": "day2WordTranslations"
+  },
+  {
+    "id": "day-3",
+    "module": "../src/data/day3Content.js",
+    "conversationExport": "day3Conversation",
+    "wordTranslationsExport": "day3WordTranslations"
   }
 ]

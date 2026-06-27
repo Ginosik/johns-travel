@@ -14,6 +14,7 @@ export const day2Translations = {
     progressOf: "of",
     complete: "Conversation complete",
     continue: "Continue",
+    startConversation: "Start conversation",
     hideTranslation: "Hide translation",
     nextStory: "Next story",
     previousStory: "Previous story",
@@ -21,6 +22,8 @@ export const day2Translations = {
     storyNavigationLabel: "Travel story navigation",
     translationTitle: "Portuguese translation",
     languageNoteLabel: "Language note",
+    languageNoteMoreLabel: "More?",
+    languageNoteLessLabel: "Less",
     translationMissing: "Translation unavailable for this message.",
     translationWaiting: "The translation will appear here as the conversation unfolds.",
     toggle: "Portuguese"
@@ -40,6 +43,7 @@ export const day2Translations = {
     progressOf: "de",
     complete: "Conversa completa",
     continue: "Continuar",
+    startConversation: "Come\u00e7ar conversa",
     hideTranslation: "Ocultar tradução",
     nextStory: "Próxima história",
     previousStory: "História anterior",
@@ -47,6 +51,8 @@ export const day2Translations = {
     storyNavigationLabel: "Navegação entre histórias da viagem",
     translationTitle: "Tradução em português",
     languageNoteLabel: "Nota de idioma",
+    languageNoteMoreLabel: "Mais?",
+    languageNoteLessLabel: "Menos",
     translationMissing: "Tradução indisponível para esta mensagem.",
     translationWaiting: "A tradução aparecerá aqui conforme a conversa avançar.",
     toggle: "English"
@@ -87,22 +93,75 @@ export const day2ConversationTranslations = [
   "Isso parece um segundo dia muito bom, com comida, prática, água, palavras novas e um pouco de confiança real."
 ];
 
-export const day2ConversationLanguageNotes = [
-  "Finally marca que algo esperado aconteceu depois de algum tempo.",
-  "Lake or neighborhood? mostra duas possibilidades com or.",
-  "It is both quer dizer que as duas opções estão corretas.",
-  "Did it feel...? pergunta qual foi a impressão causada por um lugar ou situação.",
-  "Not at all significa nem um pouco.",
-  "What did you do first? usa did para fazer uma pergunta no passado.",
-  "Near the water quer dizer perto da água.",
-  "Practice Portuguese usa practice como verbo principal: praticar português.",
-  "By myself significa sozinho, sem ajuda de outra pessoa.",
-  "Did they understand you? pergunta se outras pessoas entenderam você.",
-  "They did substitui a resposta completa they understood me.",
-  "That still counts quer dizer que aquilo ainda vale ou ainda conta como progresso.",
-  "Means é usado para explicar o significado de uma palavra.",
-  "Sounds like significa parece, ao reagir a uma descrição."
-];
+export const day2ConversationLanguageNotes = {
+  "en": [
+    "Finally marks that something expected happened after some time.",
+    "Lake or neighborhood? shows two possibilities with or.",
+    "It is both means the two options are both correct.",
+    "Did it feel...? asks about the impression caused by a place or situation.",
+    "Not at all means definitely not or not even a little.",
+    "What did you do first? uses did to ask a question in the past.",
+    "Near the water means close to the water.",
+    "Practice Portuguese uses practice as the main verb: to practice Portuguese.",
+    "By myself means alone, without help from another person.",
+    "Did they understand you? asks whether other people understood your message.",
+    "They did replaces the full answer they understood me.",
+    "That still counts means the effort is still valid or still counts as progress.",
+    "Means is used to explain the meaning of a word.",
+    "Sounds like means it seems like, when reacting to a description."
+  ],
+  "pt": [
+    "Finally marca que algo esperado aconteceu depois de algum tempo.",
+    "Lake or neighborhood? mostra duas possibilidades com or.",
+    "It is both quer dizer que as duas opções estão corretas.",
+    "Did it feel...? pergunta qual foi a impressão causada por um lugar ou situação.",
+    "Not at all significa nem um pouco.",
+    "What did you do first? usa did para fazer uma pergunta no passado.",
+    "Near the water quer dizer perto da água.",
+    "Practice Portuguese usa practice como verbo principal: praticar português.",
+    "By myself significa sozinho, sem ajuda de outra pessoa.",
+    "Did they understand you? pergunta se outras pessoas entenderam você.",
+    "They did substitui a resposta completa they understood me.",
+    "That still counts quer dizer que aquilo ainda vale ou ainda conta como progresso.",
+    "Means é usado para explicar o significado de uma palavra.",
+    "Sounds like significa parece, ao reagir a uma descrição."
+  ]
+};
+
+export const day2ConversationLanguageNoteDetails = {
+  "en": [
+    "Finally suggests John had been waiting or wanting to visit Lagoa da Conceicao before this moment. It gives the sentence a feeling of progress.",
+    "The or structure presents alternatives. Nicky is checking whether Lagoa da Conceicao is one category, another category, or both.",
+    "Both answers two alternatives at once. John uses it to explain that the place is a lagoon and also a neighborhood.",
+    "Feel can describe the atmosphere of a place. Nicky is not asking about physical touch, but about John's impression.",
+    "Not at all is a strong negative answer. John uses it to say the place was definitely not quiet.",
+    "Questions in the simple past often use did plus the base verb. That is why the sentence says did you do, not did you did.",
+    "Near means close to something but not necessarily touching it. It is useful for describing where you walked or stayed.",
+    "Practice is the action of doing something repeatedly to improve. Here Portuguese is the skill John is practicing.",
+    "By myself emphasizes independence. John ordered without help, which matters because he is learning in a real situation.",
+    "Understand you asks whether John's message was clear to other people. It is a practical question for language learners.",
+    "They did avoids repeating the full verb phrase. It means they understood me, and this kind of short answer is very common.",
+    "That still counts means the effort is valid even if it was imperfect. It is a supportive phrase for small progress.",
+    "Means is useful for defining vocabulary. John uses English to explain Portuguese words he learned during the trip.",
+    "Sounds like reacts to a description. Nicky is saying John's day appears or seems very good based on what he told her."
+  ],
+  "pt": [
+    "Finally sugere que John ja queria visitar a Lagoa da Conceicao havia algum tempo. A palavra da a frase uma sensacao de progresso.",
+    "A estrutura com or apresenta alternativas. Nicky esta tentando entender se a Lagoa da Conceicao e uma coisa, outra, ou as duas.",
+    "Both responde duas alternativas ao mesmo tempo. John usa a palavra para explicar que o lugar e lagoa e tambem bairro.",
+    "Feel pode descrever a atmosfera de um lugar. Nicky nao esta falando de toque fisico, mas da impressao que o lugar causou.",
+    "Not at all e uma resposta negativa forte. John usa para dizer que o lugar definitivamente nao estava tranquilo.",
+    "Perguntas no passado simples costumam usar did mais o verbo base. Por isso a frase diz did you do, nao did you did.",
+    "Near significa perto de algo, mas nao necessariamente encostado. E util para descrever onde voce caminhou ou ficou.",
+    "Practice e a acao de fazer algo repetidamente para melhorar. Aqui Portuguese e a habilidade que John esta praticando.",
+    "By myself enfatiza independencia. John pediu sem ajuda, o que importa porque ele esta aprendendo em uma situacao real.",
+    "Understand you pergunta se a mensagem de John ficou clara para outras pessoas. E uma pergunta muito pratica para quem aprende idiomas.",
+    "They did evita repetir a frase inteira. Significa they understood me, e esse tipo de resposta curta e muito comum.",
+    "That still counts significa que o esforco vale mesmo se nao foi perfeito. E uma frase de apoio para reconhecer pequenos progressos.",
+    "Means e muito util para definir vocabulario. John usa ingles para explicar palavras em portugues que aprendeu durante a viagem.",
+    "Sounds like reage a uma descricao. Nicky esta dizendo que o dia de John parece muito bom com base no que ele contou."
+  ]
+};
 
 export const day2WordTranslations = {
   a: "um / uma",

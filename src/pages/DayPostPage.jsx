@@ -10,11 +10,17 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 
 const TRANSLATION_PREFERENCE_KEY = "johns-travel:translation-open";
 
+function getLocalizedStoryArray(value, language) {
+  if (Array.isArray(value)) return value;
+  return value?.[language] ?? value?.pt ?? value?.en ?? [];
+}
+
 function getInitialTranslationPreference() {
   try {
-    return window.sessionStorage.getItem(TRANSLATION_PREFERENCE_KEY) === "true";
+    const savedPreference = window.sessionStorage.getItem(TRANSLATION_PREFERENCE_KEY);
+    return savedPreference === null ? true : savedPreference === "true";
   } catch {
-    return false;
+    return true;
   }
 }
 
@@ -31,8 +37,11 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   const { audioState, playMessageAudio, playMessageAudioWhenPossible, playingPath } = useMessageAudio(initialPlayback);
   const isComplete = nextMessageIndex >= story.conversation.length;
   const visibleMessages = story.conversation.slice(0, nextMessageIndex);
+  const languageNotes = getLocalizedStoryArray(story.languageNotes, language);
+  const languageNoteDetails = getLocalizedStoryArray(story.languageNoteDetails, language);
   const nextTypingMessage = hasStarted && !isComplete ? story.conversation[nextMessageIndex] : null;
   const nextTypingAvatar = nextTypingMessage ? story.avatars[nextTypingMessage.speaker] : null;
+  const continueButtonLabel = isComplete ? strings.complete : hasStarted ? strings.continue : strings.startConversation;
 
   useEffect(() => {
     try {
@@ -196,7 +205,10 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
                       isNew={index === visibleMessages.length - 1}
                       message={message}
                       missingText={strings.translationMissing}
-                      note={story.languageNotes?.[index]}
+                      moreLabel={strings.languageNoteMoreLabel}
+                      lessLabel={strings.languageNoteLessLabel}
+                      detail={languageNoteDetails[index]}
+                      note={languageNotes[index]}
                       noteLabel={strings.languageNoteLabel}
                       translation={story.conversationTranslations[index]}
                     />
@@ -223,7 +235,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
                 disabled={isComplete}
                 onClick={advanceConversation}
               >
-                {isComplete ? strings.complete : strings.continue}
+                {continueButtonLabel}
               </button>
             </div>
           </div>

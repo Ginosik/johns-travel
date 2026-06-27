@@ -1,18 +1,12 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { conversation as day1Conversation } from "../src/data/day1Content.js";
-import { day2Conversation } from "../src/data/day2Content.js";
 
 const API_BASE_URL = "https://api.elevenlabs.io/v1";
 const speakerVoiceEnv = {
   John: "ELEVENLABS_VOICE_JOHN",
   Nicky: "ELEVENLABS_VOICE_NICKY"
 };
-const posts = new Map([
-  ["day-1", { id: "day-1", day: 1, conversation: day1Conversation }],
-  ["day-2", { id: "day-2", day: 2, conversation: day2Conversation }]
-]);
 
 function readOption(name, fallback = null) {
   const prefix = `--${name}=`;
@@ -95,7 +89,35 @@ function wrapPcmAsWav(pcmBuffer, sampleRate) {
   return Buffer.concat([header, pcmBuffer]);
 }
 
-function resolvePost(postId) {
+function getDayFromPostId(postId) {
+  const match = postId.match(/^day-(\d+)$/);
+  return match ? Number(match[1]) : null;
+}
+
+async function loadPosts() {
+  const manifest = JSON.parse(await readFile("docs/conversation-word-posts.json", "utf8"));
+  const posts = new Map();
+
+  for (const entry of manifest) {
+    const contentModule = await import(new URL(entry.module, import.meta.url));
+    const conversation = contentModule[entry.conversationExport];
+
+    if (!Array.isArray(conversation)) {
+      throw new Error(`Post ${entry.id} has no conversation export named ${entry.conversationExport}.`);
+    }
+
+    posts.set(entry.id, {
+      id: entry.id,
+      day: entry.day ?? getDayFromPostId(entry.id),
+      conversation
+    });
+  }
+
+  return posts;
+}
+
+async function resolvePost(postId) {
+  const posts = await loadPosts();
   const normalized = postId.startsWith("day-") ? postId : `day-${postId}`;
   const post = posts.get(normalized);
   if (!post) {
@@ -168,7 +190,7 @@ const extension = readOption("extension", getOutputExtension(outputFormat));
 const modelId = readOption("model", process.env.ELEVENLABS_MODEL_ID ?? "eleven_multilingual_v2");
 const dryRun = hasFlag("dry-run");
 const skipAssets = hasFlag("skip-assets");
-const post = resolvePost(postId);
+const post = await resolvePost(postId);
 const apiKey = dryRun ? process.env.ELEVENLABS_API_KEY : getRequiredEnv("ELEVENLABS_API_KEY");
 const voiceSettings = {
   stability: Number(readOption("stability", process.env.ELEVENLABS_STABILITY ?? "0.52")),

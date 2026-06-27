@@ -1277,6 +1277,480 @@
       "meaningPt": "Conceição",
       "languageTag": "pt-BR",
       "languageName": "Portuguese"
+    },
+    "joaquina": {
+      "lemma": "Joaquina",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Joaquina",
+      "notePt": "Nome de lugar em Florianópolis.",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "wrong": {
+      "lemma": "wrong",
+      "partOfSpeech": "adjective",
+      "meaningPt": "errado / errada"
+    },
+    "bus": {
+      "lemma": "bus",
+      "partOfSpeech": "noun",
+      "meaningPt": "ônibus"
+    },
+    "ended": {
+      "lemma": "end",
+      "partOfSpeech": "verb",
+      "meaningPt": "acabou"
+    },
+    "campeche": {
+      "lemma": "Campeche",
+      "partOfSpeech": "proper noun",
+      "meaningPt": "Campeche",
+      "notePt": "Nome de lugar em Florianópolis.",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "instead": {
+      "lemma": "instead",
+      "partOfSpeech": "adverb",
+      "meaningPt": "em vez disso"
+    },
+    "found": {
+      "lemma": "find",
+      "partOfSpeech": "verb",
+      "meaningPt": "encontrou / encontrei"
+    },
+    "lucky": {
+      "lemma": "lucky",
+      "partOfSpeech": "adjective",
+      "meaningPt": "sortudo / com sorte"
+    },
+    "mistake": {
+      "lemma": "mistake",
+      "partOfSpeech": "noun",
+      "meaningPt": "erro"
+    },
+    "panic": {
+      "lemma": "panic",
+      "partOfSpeech": "noun",
+      "meaningPt": "pânico"
+    },
+    "passed": {
+      "lemma": "pass",
+      "partOfSpeech": "verb",
+      "meaningPt": "passou"
+    },
+    "looked": {
+      "lemma": "look",
+      "partOfSpeech": "verb",
+      "meaningPt": "olhei"
+    },
+    "out": {
+      "lemma": "out",
+      "partOfSpeech": "particle",
+      "meaningPt": "fora"
+    },
+    "window": {
+      "lemma": "window",
+      "partOfSpeech": "noun",
+      "meaningPt": "janela"
+    },
+    "realized": {
+      "lemma": "realize",
+      "partOfSpeech": "verb",
+      "meaningPt": "percebi"
+    },
+    "signs": {
+      "lemma": "sign",
+      "partOfSpeech": "noun",
+      "meaningPt": "placas"
+    },
+    "match": {
+      "lemma": "match",
+      "partOfSpeech": "verb",
+      "meaningPt": "combinar"
+    },
+    "map": {
+      "lemma": "map",
+      "partOfSpeech": "noun",
+      "meaningPt": "mapa"
+    },
+    "ask": {
+      "lemma": "ask",
+      "partOfSpeech": "verb",
+      "meaningPt": "perguntar"
+    },
+    "someone": {
+      "lemma": "someone",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "alguém"
+    },
+    "ride": {
+      "lemma": "ride",
+      "partOfSpeech": "verb",
+      "meaningPt": "andar / ir de transporte"
+    },
+    "until": {
+      "lemma": "until",
+      "partOfSpeech": "preposition",
+      "meaningPt": "até"
+    },
+    "end": {
+      "lemma": "end",
+      "partOfSpeech": "noun",
+      "meaningPt": "fim / final"
+    },
+    "asked": {
+      "lemma": "ask",
+      "partOfSpeech": "verb",
+      "meaningPt": "perguntei"
+    },
+    "woman": {
+      "lemma": "woman",
+      "partOfSpeech": "noun",
+      "meaningPt": "mulher"
+    },
+    "door": {
+      "lemma": "door",
+      "partOfSpeech": "noun",
+      "meaningPt": "porta"
+    },
+    "going": {
+      "lemma": "go",
+      "partOfSpeech": "verb",
+      "meaningPt": "indo"
+    },
+    "she": {
+      "lemma": "she",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "ela"
+    },
+    "said": {
+      "lemma": "say",
+      "partOfSpeech": "verb",
+      "meaningPt": "disse"
+    },
+    "no": {
+      "lemma": "no",
+      "partOfSpeech": "interjection",
+      "meaningPt": "não"
+    },
+    "least": {
+      "lemma": "least",
+      "partOfSpeech": "adverb",
+      "meaningPt": "menos"
+    },
+    "understood": {
+      "lemma": "understand",
+      "partOfSpeech": "verb",
+      "meaningPt": "entendeu"
+    },
+    "important": {
+      "lemma": "important",
+      "partOfSpeech": "adjective",
+      "meaningPt": "importante"
+    },
+    "checked": {
+      "lemma": "check",
+      "partOfSpeech": "verb",
+      "meaningPt": "conferi / chequei"
+    },
+    "phone": {
+      "lemma": "phone",
+      "partOfSpeech": "noun",
+      "meaningPt": "celular"
+    },
+    "ocean": {
+      "lemma": "ocean",
+      "partOfSpeech": "noun",
+      "meaningPt": "oceano"
+    },
+    "decided": {
+      "lemma": "decide",
+      "partOfSpeech": "verb",
+      "meaningPt": "decidi"
+    },
+    "fight": {
+      "lemma": "fight",
+      "partOfSpeech": "verb",
+      "meaningPt": "lutar / brigar"
+    },
+    "rule": {
+      "lemma": "rule",
+      "partOfSpeech": "noun",
+      "meaningPt": "regra"
+    },
+    "if": {
+      "lemma": "if",
+      "partOfSpeech": "conjunction",
+      "meaningPt": "se"
+    },
+    "takes": {
+      "lemma": "take",
+      "partOfSpeech": "verb",
+      "meaningPt": "leva / pega"
+    },
+    "maybe": {
+      "lemma": "maybe",
+      "partOfSpeech": "adverb",
+      "meaningPt": "talvez"
+    },
+    "accept": {
+      "lemma": "accept",
+      "partOfSpeech": "verb",
+      "meaningPt": "aceitar"
+    },
+    "gift": {
+      "lemma": "gift",
+      "partOfSpeech": "noun",
+      "meaningPt": "presente"
+    },
+    "exactly": {
+      "lemma": "exactly",
+      "partOfSpeech": "adverb",
+      "meaningPt": "exatamente"
+    },
+    "off": {
+      "lemma": "off",
+      "partOfSpeech": "particle",
+      "meaningPt": "fora / descer"
+    },
+    "market": {
+      "lemma": "market",
+      "partOfSpeech": "noun",
+      "meaningPt": "mercado / mercadinho"
+    },
+    "bought": {
+      "lemma": "buy",
+      "partOfSpeech": "verb",
+      "meaningPt": "comprei"
+    },
+    "followed": {
+      "lemma": "follow",
+      "partOfSpeech": "verb",
+      "meaningPt": "segui"
+    },
+    "carrying": {
+      "lemma": "carry",
+      "partOfSpeech": "verb",
+      "meaningPt": "carregando"
+    },
+    "surfboards": {
+      "lemma": "surfboard",
+      "partOfSpeech": "noun",
+      "meaningPt": "pranchas de surfe"
+    },
+    "toward": {
+      "lemma": "toward",
+      "partOfSpeech": "preposition",
+      "meaningPt": "em direção a"
+    },
+    "compared": {
+      "lemma": "compare",
+      "partOfSpeech": "verb",
+      "meaningPt": "comparado"
+    },
+    "already": {
+      "lemma": "already",
+      "partOfSpeech": "adverb",
+      "meaningPt": "já"
+    },
+    "wider": {
+      "lemma": "wide",
+      "partOfSpeech": "adjective",
+      "meaningPt": "mais largo / mais larga"
+    },
+    "wilder": {
+      "lemma": "wild",
+      "partOfSpeech": "adjective",
+      "meaningPt": "mais selvagem"
+    },
+    "wind": {
+      "lemma": "wind",
+      "partOfSpeech": "noun",
+      "meaningPt": "vento"
+    },
+    "white": {
+      "lemma": "white",
+      "partOfSpeech": "adjective",
+      "meaningPt": "branco / branca"
+    },
+    "sand": {
+      "lemma": "sand",
+      "partOfSpeech": "noun",
+      "meaningPt": "areia"
+    },
+    "long": {
+      "lemma": "long",
+      "partOfSpeech": "adjective",
+      "meaningPt": "longo / longa"
+    },
+    "line": {
+      "lemma": "line",
+      "partOfSpeech": "noun",
+      "meaningPt": "linha"
+    },
+    "waves": {
+      "lemma": "wave",
+      "partOfSpeech": "noun",
+      "meaningPt": "ondas"
+    },
+    "crowded": {
+      "lemma": "crowded",
+      "partOfSpeech": "adjective",
+      "meaningPt": "cheio / lotado"
+    },
+    "again": {
+      "lemma": "again",
+      "partOfSpeech": "adverb",
+      "meaningPt": "de novo"
+    },
+    "recovering": {
+      "lemma": "recover",
+      "partOfSpeech": "verb",
+      "meaningPt": "se recuperando"
+    },
+    "from": {
+      "lemma": "from",
+      "partOfSpeech": "preposition",
+      "meaningPt": "de"
+    },
+    "adventure": {
+      "lemma": "adventure",
+      "partOfSpeech": "noun",
+      "meaningPt": "aventura"
+    },
+    "practiced": {
+      "lemma": "practice",
+      "partOfSpeech": "verb",
+      "meaningPt": "pratiquei"
+    },
+    "onde": {
+      "lemma": "onde",
+      "partOfSpeech": "adverb",
+      "meaningPt": "onde",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "fica": {
+      "lemma": "ficar",
+      "partOfSpeech": "verb",
+      "meaningPt": "fica",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "o": {
+      "lemma": "o",
+      "partOfSpeech": "article",
+      "meaningPt": "o",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "ponto": {
+      "lemma": "ponto",
+      "partOfSpeech": "noun",
+      "meaningPt": "ponto",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "man": {
+      "lemma": "man",
+      "partOfSpeech": "noun",
+      "meaningPt": "homem"
+    },
+    "pointed": {
+      "lemma": "point",
+      "partOfSpeech": "verb",
+      "meaningPt": "apontou / indicou"
+    },
+    "me": {
+      "lemma": "me",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "me / mim"
+    },
+    "back": {
+      "lemma": "back",
+      "partOfSpeech": "adverb",
+      "meaningPt": "de volta"
+    },
+    "correct": {
+      "lemma": "correct",
+      "partOfSpeech": "adjective",
+      "meaningPt": "correto / certo"
+    },
+    "today's": {
+      "lemma": "today",
+      "partOfSpeech": "determiner",
+      "meaningPt": "de hoje",
+      "grammarPt": "Forma possessiva de today; funciona como de hoje."
+    },
+    "vocabulary": {
+      "lemma": "vocabulary",
+      "partOfSpeech": "noun",
+      "meaningPt": "vocabulário"
+    },
+    "direction": {
+      "lemma": "direction",
+      "partOfSpeech": "noun",
+      "meaningPt": "direção"
+    },
+    "staying": {
+      "lemma": "stay",
+      "partOfSpeech": "verb",
+      "meaningPt": "mantendo / ficando"
+    },
+    "learned": {
+      "lemma": "learn",
+      "partOfSpeech": "verb",
+      "meaningPt": "aprendi"
+    },
+    "perdido": {
+      "lemma": "perdido",
+      "partOfSpeech": "adjective",
+      "meaningPt": "perdido",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "lost": {
+      "lemma": "lost",
+      "partOfSpeech": "adjective",
+      "meaningPt": "perdido"
+    },
+    "completely": {
+      "lemma": "completely",
+      "partOfSpeech": "adverb",
+      "meaningPt": "completamente"
+    },
+    "definitely": {
+      "lemma": "definitely",
+      "partOfSpeech": "adverb",
+      "meaningPt": "definitivamente"
+    },
+    "temporarily": {
+      "lemma": "temporarily",
+      "partOfSpeech": "adverb",
+      "meaningPt": "temporariamente"
+    },
+    "confused": {
+      "lemma": "confused",
+      "partOfSpeech": "adjective",
+      "meaningPt": "confuso"
+    },
+    "beautiful": {
+      "lemma": "beautiful",
+      "partOfSpeech": "adjective",
+      "meaningPt": "bonito / linda"
+    },
+    "category": {
+      "lemma": "category",
+      "partOfSpeech": "noun",
+      "meaningPt": "categoria"
+    },
+    "ônibus": {
+      "lemma": "ônibus",
+      "partOfSpeech": "noun",
+      "meaningPt": "ônibus",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
     }
   },
   "pronunciations": {

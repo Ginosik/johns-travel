@@ -4,7 +4,9 @@ import { storyIdeas } from "./storyIdeas.js";
 export const tripFlowTypes = ["day", "location", "conversation", "audio", "draft"];
 export const tripFlowStatuses = ["planned", "written", "audio-needed", "recorded", "published"];
 
-const plannedStories = storyIdeas.map((idea) => ({
+const publishedDays = new Set(posts.map((post) => post.day));
+
+const plannedStories = storyIdeas.filter((idea) => !publishedDays.has(idea.day)).map((idea) => ({
   id: idea.id,
   day: idea.day,
   label: idea.title,

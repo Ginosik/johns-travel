@@ -80,7 +80,7 @@ test("preserves feed scroll and conversation progress on mobile navigation", asy
   }).toBe(true);
 
   await page.goto("/day/1");
-  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.getByRole("button", { name: "Come\u00e7ar conversa" }).click();
   await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page.locator(".conversation-record .speech:not(.typing-speech)")).toHaveCount(2);
   await page.setViewportSize({ width: 844, height: 390 });

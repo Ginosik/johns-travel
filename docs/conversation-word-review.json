@@ -3,6 +3,7 @@
     "staleOverrides": 0,
     "countMismatches": 0,
     "missingMeanings": 0,
+    "missingLanguageMetadata": 0,
     "unknownPartsOfSpeech": 0
   },
   "workflow": [
@@ -18,6 +19,7 @@
   },
   "reviewNeeded": {
     "missingMeanings": [],
+    "missingLanguageMetadata": [],
     "unknownPartsOfSpeech": []
   }
 }

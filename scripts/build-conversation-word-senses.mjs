@@ -120,6 +120,8 @@ function createDefaultSense(word, wordTranslations, defaults) {
     meaningPt: details.meaningPt ?? wordTranslations[word] ?? null,
     grammarPt: details.grammarPt ?? null,
     notePt: details.notePt ?? null,
+    languageTag: details.languageTag ?? null,
+    languageName: details.languageName ?? null,
     ...pronunciation
   };
 }
@@ -185,6 +187,7 @@ function createPlainCounts(sortedCounts) {
 const normalization = "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.";
 const annotation = "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.";
 const generatedHierarchy = "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.";
+const NON_ASCII_PATTERN = /[^\u0000-\u007f]/;
 
 function createSource(posts) {
   return `Dialog text only from ${posts.map((post) => post.id).join(", ")} content modules listed in docs/conversation-word-posts.json`;
@@ -243,6 +246,7 @@ function createSensesOutput({ postId = null, sortedCounts, byPostCounts = null, 
 function createReviewReport({ occurrences, overrideProblems, sortedByPost }) {
   const unknownPartsOfSpeech = new Map();
   const missingMeanings = new Map();
+  const missingLanguageMetadata = new Map();
   const countMismatches = [];
 
   for (const occurrence of occurrences) {
@@ -262,10 +266,14 @@ function createReviewReport({ occurrences, overrideProblems, sortedByPost }) {
     if (!occurrence.meaningPt && !missingMeanings.has(reviewKey)) {
       missingMeanings.set(reviewKey, item);
     }
+    if (NON_ASCII_PATTERN.test(occurrence.word) && !occurrence.languageTag && !missingLanguageMetadata.has(reviewKey)) {
+      missingLanguageMetadata.set(reviewKey, item);
+    }
   }
 
   const unknownPartOfSpeechItems = [...unknownPartsOfSpeech.values()];
   const missingMeaningItems = [...missingMeanings.values()];
+  const missingLanguageMetadataItems = [...missingLanguageMetadata.values()];
 
   for (const [postId, postCounts] of Object.entries(sortedByPost)) {
     for (const [word, entry] of Object.entries(postCounts)) {
@@ -281,6 +289,7 @@ function createReviewReport({ occurrences, overrideProblems, sortedByPost }) {
       staleOverrides: overrideProblems.length,
       countMismatches: countMismatches.length,
       missingMeanings: missingMeaningItems.length,
+      missingLanguageMetadata: missingLanguageMetadataItems.length,
       unknownPartsOfSpeech: unknownPartOfSpeechItems.length
     },
     workflow: [
@@ -296,6 +305,7 @@ function createReviewReport({ occurrences, overrideProblems, sortedByPost }) {
     },
     reviewNeeded: {
       missingMeanings: missingMeaningItems,
+      missingLanguageMetadata: missingLanguageMetadataItems,
       unknownPartsOfSpeech: unknownPartOfSpeechItems
     }
   };
@@ -374,3 +384,4 @@ const { summary } = reviewReport;
 console.log(
   `Vocabulary data generated. Review: ${summary.staleOverrides} stale overrides, ${summary.countMismatches} count mismatches, ${summary.missingMeanings} missing meanings, ${summary.unknownPartsOfSpeech} unknown parts of speech.`
 );
+
