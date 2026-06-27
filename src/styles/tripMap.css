@@ -1,10 +1,10 @@
 .trip-map-page {
   --trip-map-accent: var(--blue);
-  --trip-map-border: rgba(24, 119, 242, .22);
+  --trip-map-border: rgba(10, 201, 198, .25);
   --trip-map-card-bg: var(--panel);
   --trip-map-card-text: var(--text);
-  --trip-map-panel-bg: linear-gradient(180deg, rgba(255, 255, 255, .97), rgba(243, 245, 247, .97));
-  --trip-map-shadow: 0 10px 28px rgba(22, 30, 46, .12);
+  --trip-map-panel-bg: linear-gradient(180deg, rgba(255, 255, 255, .97), rgba(250, 247, 242, .97));
+  --trip-map-shadow: 0 10px 28px rgba(4, 31, 73, .12);
   min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
@@ -13,23 +13,23 @@
 }
 
 .trip-map-theme-blueprint {
-  --trip-map-accent: #1877f2;
-  --trip-map-border: rgba(24, 119, 242, .34);
-  --trip-map-card-bg: #f8fbff;
-  --trip-map-card-text: #15365f;
-  --trip-map-panel-bg: linear-gradient(180deg, #f8fbff, #eaf3ff);
-  --trip-map-shadow: 0 12px 30px rgba(24, 119, 242, .14);
+  --trip-map-accent: #041F49;
+  --trip-map-border: rgba(10, 201, 198, .34);
+  --trip-map-card-bg: #DDF9F7;
+  --trip-map-card-text: #041F49;
+  --trip-map-panel-bg: linear-gradient(180deg, #DDF9F7, #DDF9F7);
+  --trip-map-shadow: 0 12px 30px rgba(10, 201, 198, .16);
 }
 
 .trip-map-theme-night {
   --trip-map-accent: #7cc4ff;
   --trip-map-border: rgba(124, 196, 255, .34);
   --trip-map-card-bg: #192231;
-  --trip-map-card-text: #eef6ff;
-  --trip-map-panel-bg: linear-gradient(180deg, #101722, #182233);
+  --trip-map-card-text: #DDF9F7;
+  --trip-map-panel-bg: linear-gradient(180deg, #041F49, #182233);
   --trip-map-shadow: 0 16px 36px rgba(0, 0, 0, .24);
-  color: #eef6ff;
-  background: #101722;
+  color: #DDF9F7;
+  background: #041F49;
 }
 
 .trip-map-page-actions {
@@ -89,7 +89,7 @@
   padding: 3px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: #eef1f5;
+  background: #EFE7DA;
 }
 
 .trip-map-segmented button,
@@ -129,7 +129,7 @@
 
 .trip-map-filter-options button {
   border: 1px solid var(--line);
-  background: #f5f7fa;
+  background: #FAF7F2;
 }
 
 .trip-map-theme-night .trip-map-workbench,
@@ -141,20 +141,20 @@
 .trip-map-theme-night .trip-map-segmented,
 .trip-map-theme-night .trip-map-filter-options button {
   border-color: rgba(124, 196, 255, .22);
-  background: #101722;
+  background: #041F49;
 }
 
 .trip-map-theme-night .trip-map-segmented button:hover,
 .trip-map-theme-night .trip-map-segmented button:focus-visible,
 .trip-map-theme-night .trip-map-filter-options button:hover,
 .trip-map-theme-night .trip-map-filter-options button:focus-visible {
-  color: #eef6ff;
+  color: #DDF9F7;
   background: rgba(124, 196, 255, .12);
 }
 
 .trip-map-theme-night .trip-map-segmented button.is-active,
 .trip-map-theme-night .trip-map-filter-options button.is-active {
-  color: #101722;
+  color: #041F49;
   background: var(--trip-map-accent);
 }
 
@@ -195,7 +195,7 @@
 }
 
 .trip-map-panel .react-flow__node:focus-visible {
-  outline: 3px solid rgba(24, 119, 242, .38);
+  outline: 3px solid rgba(10, 201, 198, .38);
   outline-offset: 3px;
 }
 
@@ -218,12 +218,12 @@
 
 .trip-flow-node:hover {
   border-color: var(--node-accent);
-  box-shadow: 0 14px 32px rgba(22, 30, 46, .18);
+  box-shadow: 0 14px 32px rgba(4, 31, 73, .18);
   transform: translateY(-1px);
 }
 
-.trip-flow-node--location { --node-accent: #2a8d78; }
-.trip-flow-node--conversation { --node-accent: #d18a16; }
+.trip-flow-node--location { --node-accent: #0A8F8C; }
+.trip-flow-node--conversation { --node-accent: #F4654C; }
 .trip-flow-node--audio { --node-accent: #8b5dc1; }
 .trip-flow-node--draft { --node-accent: #7b61a8; }
 
@@ -267,18 +267,18 @@
   min-height: 20px;
   padding: 3px 8px;
   border-radius: 999px;
-  color: #3c4758;
-  background: #e8ebf0;
+  color: #61728F;
+  background: #E5DED2;
   font-size: 10px;
   font-weight: 900;
 }
 
 .trip-flow-node--published .trip-flow-status,
-.inspector-status--published { color: #1456a9; background: #dfedff; }
+.inspector-status--published { color: #1456a9; background: #DDF9F7; }
 .trip-flow-node--written .trip-flow-status,
 .inspector-status--written { color: #80520b; background: #fff0ca; }
 .trip-flow-node--recorded .trip-flow-status,
-.inspector-status--recorded { color: #1f684b; background: #dff3e9; }
+.inspector-status--recorded { color: #0A8F8C; background: #dff3e9; }
 .trip-flow-node--planned .trip-flow-status,
 .inspector-status--planned { color: #604486; background: #eee4fa; }
 .trip-flow-node--audio-needed .trip-flow-status,
@@ -382,7 +382,7 @@
   height: 32px;
   border-radius: 50%;
   color: var(--muted);
-  background: #eef1f5;
+  background: #EFE7DA;
   font-size: 20px;
 }
 
@@ -419,7 +419,7 @@
 .trip-map-inspector-notes {
   padding: 11px;
   border-radius: var(--radius);
-  background: #f5f7fa;
+  background: #FAF7F2;
 }
 
 .trip-map-inspector-notes h3 {
@@ -446,8 +446,8 @@
 
 .trip-map-theme-night .trip-map-inspector-notes,
 .trip-map-theme-night .trip-map-inspector-heading button {
-  color: #eef6ff;
-  background: #101722;
+  color: #DDF9F7;
+  background: #041F49;
 }
 
 @media (max-width: 940px) {

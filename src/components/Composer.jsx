@@ -9,7 +9,7 @@ function Composer({ avatar, isDrafting, onStartDraft, photoLabel, prompt }) {
           className="composer-input"
           type="button"
           onClick={onStartDraft}
-          style={isDrafting ? { color: "#1d2129" } : undefined}
+          style={isDrafting ? { color: "var(--text)" } : undefined}
         >
           {prompt}
         </button>

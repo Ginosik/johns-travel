@@ -26,7 +26,7 @@ function FeedPage({ onOpenPost }) {
       isPortuguese={language === "pt"}
       onToggleLanguage={toggleLanguage}
       profileAvatar={profileAvatar}
-      profileName={strings.profileName}
+      profileName={strings.siteName}
       toggleLabel={strings.toggle}
     >
       <section className="feed-intro" aria-labelledby="feed-title">

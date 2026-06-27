@@ -1,15 +1,29 @@
 import { expect, test } from "@playwright/test";
 
+const pt = {
+  feedTitle: "Leia hist\u00f3rias de viagem e aprenda ingl\u00eas pelo contexto.",
+  vocabulary: "Vocabul\u00e1rio em contexto",
+  day1Subtitle: "Dia 1 - Primeiro dia de viagem",
+  day2Subtitle: "Dia 2 - Explorando a Lagoa da Concei\u00e7\u00e3o",
+  day2Copy: "Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em portugu\u00eas.",
+  florianopolisIntro: /Florian\u00f3polis, Brasil, portugu\u00eas/,
+  olaSelector: '.word[data-translation="ol\u00e1"]',
+  firstTranslation: "Ol\u00e1! Como voc\u00ea est\u00e1?",
+  nextStory: /Pr\u00f3xima hist\u00f3ria/,
+  previousStory: /Hist\u00f3ria anterior/
+};
+
 const publishedStories = [
-  { href: "/day/1", subtitle: "Day 1 - First day traveling" },
-  { href: "/day/2", subtitle: "Day 2 - Exploring Lagoa da Conceição" }
+  { href: "/day/1", subtitle: pt.day1Subtitle },
+  { href: "/day/2", subtitle: pt.day2Subtitle }
 ];
 
-test("renders the public story library and every published preview", async ({ page }) => {
+test("renders the public story library in Portuguese by default", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page.getByRole("heading", { name: "Read travel stories and learn English from context." })).toBeVisible();
-  await expect(page.getByText("Vocabulary in context", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: pt.feedTitle })).toBeVisible();
+  await expect(page.getByText(pt.vocabulary, { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
 
   for (const story of publishedStories) {
     await expect(page.locator(`a.post-preview[href="${story.href}"]`)).toBeVisible();
@@ -24,14 +38,14 @@ for (const story of publishedStories) {
 
     await expect(page).toHaveURL(new RegExp(`${story.href.replaceAll("/", "\\/")}$`));
     await expect(page.getByText(story.subtitle, { exact: true })).toBeVisible();
-    await expect(page.getByRole("button", { name: "Continue" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Continuar" })).toBeVisible();
   });
 }
 
 test("supports direct story visits, legacy redirects, and unknown stories", async ({ page }) => {
   await page.goto("/day/1");
   await expect(page.locator(".conversation-message")).toHaveCount(0);
-  await page.getByRole("button", { name: "Continue" }).click();
+  await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page.getByText("Hello! How are you doing?", { exact: true })).toBeVisible();
 
   await page.goto("/day1.html");
@@ -41,11 +55,10 @@ test("supports direct story visits, legacy redirects, and unknown stories", asyn
   await expect(page.getByRole("heading", { name: "Story not found" })).toBeVisible();
 });
 
-test("persists the language choice across routes and refreshes", async ({ page }) => {
+test("persists the default Portuguese language across routes and refreshes", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Portuguese" }).click();
   await expect(page.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("heading", { name: "Leia histórias de viagem e aprenda inglês pelo contexto." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: pt.feedTitle })).toBeVisible();
 
   await page.goto("/day/1");
   await expect(page.getByRole("button", { name: "Continuar" })).toBeVisible();
@@ -53,30 +66,49 @@ test("persists the language choice across routes and refreshes", async ({ page }
   await expect(page.getByRole("button", { name: "Continuar" })).toBeVisible();
 });
 
-test("renders Portuguese diacritics across the feed, stories, and vocabulary hints", async ({ page }) => {
+test("keeps the explicit English choice across routes during the current session", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Portuguese" }).click();
-  await expect(page.getByRole("heading", { name: "Leia histórias de viagem e aprenda inglês pelo contexto." })).toBeVisible();
-  await expect(page.getByText("Dia 2 - Explorando a Lagoa da Conceição", { exact: true })).toBeVisible();
-  await expect(page.getByText("Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em português.", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "English" }).click();
+  await expect(page.getByRole("button", { name: "Portuguese" })).toHaveAttribute("aria-pressed", "false");
+  await expect(page.getByRole("heading", { name: "Read travel stories and learn English from context." })).toBeVisible();
 
   await page.goto("/day/1");
-  await expect(page.getByText(/Florianópolis, Brasil, português/)).toBeVisible();
+  await expect(page.getByRole("button", { name: "Continue" })).toBeVisible();
+});
+
+test("starts in Portuguese after a refresh even when English was selected", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "English" }).click();
+  await expect(page.getByRole("heading", { name: "Read travel stories and learn English from context." })).toBeVisible();
+
+  await page.reload();
+  await expect(page.getByRole("heading", { name: pt.feedTitle })).toBeVisible();
+  await expect(page.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
+});
+
+test("renders Portuguese diacritics across the feed, stories, and vocabulary hints", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("heading", { name: pt.feedTitle })).toBeVisible();
+  await expect(page.getByText(pt.day2Subtitle, { exact: true })).toBeVisible();
+  await expect(page.getByText(pt.day2Copy, { exact: true })).toBeVisible();
+
+  await page.goto("/day/1");
+  await expect(page.getByText(pt.florianopolisIntro)).toBeVisible();
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page.locator('.word[data-translation="olá"]')).toHaveCount(1);
+  await expect(page.locator(pt.olaSelector)).toHaveCount(1);
   const translationToggle = page.locator(".translation-toggle");
   if (await translationToggle.getAttribute("aria-expanded") === "false") await translationToggle.click();
-  await expect(page.getByText("Olá! Como você está?", { exact: true })).toBeVisible();
+  await expect(page.getByText(pt.firstTranslation, { exact: true })).toBeVisible();
 
   await page.goto("/day/2");
-  await expect(page.getByText("Dia 2 - Explorando a Lagoa da Conceição", { exact: true })).toBeVisible();
+  await expect(page.getByText(pt.day2Subtitle, { exact: true })).toBeVisible();
 });
 
 test("provides data-driven previous and next story links", async ({ page }) => {
   await page.goto("/day/1");
-  await expect(page.getByRole("link", { name: /Next story/ })).toHaveAttribute("href", "/day/2");
+  await expect(page.getByRole("link", { name: pt.nextStory })).toHaveAttribute("href", "/day/2");
 
-  await page.getByRole("link", { name: /Next story/ }).click();
+  await page.getByRole("link", { name: pt.nextStory }).click();
   await expect(page).toHaveURL(/\/day\/2$/);
-  await expect(page.getByRole("link", { name: /Previous story/ })).toHaveAttribute("href", "/day/1");
+  await expect(page.getByRole("link", { name: pt.previousStory })).toHaveAttribute("href", "/day/1");
 });

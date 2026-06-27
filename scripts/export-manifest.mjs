@@ -92,7 +92,7 @@ export async function getConversationExportManifest(post) {
       messages: createMessages(
         day2Conversation,
         day2ConversationTranslations,
-        (message, sequence) => `/audio/day2/${message.speaker}-${String(sequence).padStart(2, "0")}.wav`
+        (message, sequence) => `/audio/day2/${message.speaker}-${String(sequence).padStart(2, "0")}.mp3`
       )
     };
   }

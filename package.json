@@ -21,7 +21,11 @@
     "test:ui": "node scripts/run-playwright.mjs --ui",
     "test:headed": "node scripts/run-playwright.mjs --headed",
     "test:debug": "node scripts/run-playwright.mjs --debug",
-    "test:report": "node node_modules/@playwright/test/cli.js show-report"
+    "test:report": "node node_modules/@playwright/test/cli.js show-report",
+    "audio:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs",
+    "audio:day1:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-1 --output-format mp3_44100_128",
+    "audio:day2:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-2 --output-format mp3_44100_128",
+    "audio:elevenlabs:voices": "node scripts/list-elevenlabs-voices.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

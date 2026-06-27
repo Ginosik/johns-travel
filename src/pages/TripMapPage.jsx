@@ -36,11 +36,11 @@ const layoutOptions = [
 ];
 
 const statusColors = {
-  planned: "#7b61a8",
-  written: "#d18a16",
-  "audio-needed": "#cf4a4a",
-  recorded: "#237a57",
-  published: "#1877f2"
+  planned: "#61728F",
+  written: "#F4654C",
+  "audio-needed": "#C94F43",
+  recorded: "#0AC9C6",
+  published: "#041F49"
 };
 
 function DesignOptionGroup({ label, options, value, onChange }) {
@@ -214,7 +214,7 @@ function TripMapPage({ onOpenPost }) {
           >
             <Background />
             <MiniMap
-              nodeColor={(node) => statusColors[node.data.status] ?? "#8a93a3"}
+              nodeColor={(node) => statusColors[node.data.status] ?? "#61728F"}
               pannable={false}
               zoomable={false}
             />

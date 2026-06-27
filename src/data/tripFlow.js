@@ -1,19 +1,22 @@
 import { posts } from "./posts.js";
+import { storyIdeas } from "./storyIdeas.js";
 
 export const tripFlowTypes = ["day", "location", "conversation", "audio", "draft"];
 export const tripFlowStatuses = ["planned", "written", "audio-needed", "recorded", "published"];
 
-const plannedStories = [
-  {
-    id: "day-3-draft",
-    day: 3,
-    label: "Day 3 - Joaquina and the Dunes",
-    location: "Praia da Joaquina",
-    status: "planned",
-    audioStatus: "audio-needed",
-    notes: "Draft idea: surf, dunes, and a sandboarding misunderstanding."
-  }
-];
+const plannedStories = storyIdeas.map((idea) => ({
+  id: idea.id,
+  day: idea.day,
+  label: idea.title,
+  location: idea.location,
+  status: "planned",
+  audioStatus: "audio-needed",
+  activity: idea.activity,
+  languageFocus: idea.languageFocus,
+  vocabularyTheme: idea.vocabularyTheme,
+  conversationConflict: idea.conversationConflict,
+  notes: idea.notes
+}));
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -27,7 +30,11 @@ function buildGraphModel() {
     ...plannedStories.map((draft) => ({ kind: "draft", draft }))
   ];
 
-  storyGroups.forEach((group, groupIndex) => {
+  const columns = 5;
+
+  storyGroups.forEach((group, storyIndex) => {
+    const groupIndex = storyIndex % columns;
+    const groupRow = Math.floor(storyIndex / columns);
     const isPublished = group.kind === "published";
     const item = isPublished ? group.post : group.draft;
     const locationName = isPublished ? item.location.name : item.location;
@@ -42,6 +49,8 @@ function buildGraphModel() {
         type: "location",
         role: "location",
         groupIndex,
+
+        groupRow,
         data: {
           icon: "⌖",
           kind: "Location",
@@ -58,37 +67,46 @@ function buildGraphModel() {
       type: isPublished ? "day" : "draft",
       role: "primary",
       groupIndex,
+
+      groupRow,
       data: {
         icon: isPublished ? "☀" : "✎",
         kind: isPublished ? "Day" : "Draft",
         label: isPublished ? item.tripLabel : item.label,
-        summary: isPublished ? `${item.story.conversation.length} messages` : "Story outline",
+        summary: isPublished ? `${item.story.conversation.length} messages` : item.vocabularyTheme,
         status: item.status,
         route: isPublished ? item.href : null,
         postId: isPublished ? item.id : null,
         location: locationName,
         audioStatus: isPublished ? item.workflow.audioStatus : item.audioStatus,
-        notes: isPublished ? item.workflow.notes : item.notes,
+        notes: isPublished ? item.workflow.notes : `Activity: ${item.activity} Language focus: ${item.languageFocus} Vocabulary: ${item.vocabularyTheme} Conflict: ${item.conversationConflict} Notes: ${item.notes}`,
         messageCount: isPublished ? item.story.conversation.length : null
       }
     });
+
+    if (!isPublished) {
+      edges.push({ id: `${locationId}-${primaryId}`, source: locationId, target: primaryId });
+      return;
+    }
 
     nodes.push({
       id: conversationId,
       type: "conversation",
       role: "conversation",
       groupIndex,
+
+      groupRow,
       data: {
         icon: "◌",
         kind: "Conversation",
-        label: isPublished ? `${item.story.conversation.length} message script` : "Conversation outline",
-        summary: isPublished ? `${item.story.conversationTranslations.length} translations` : "Not written",
+        label: isPublished ? `${item.story.conversation.length} message script` : item.conversationConflict,
+        summary: isPublished ? `${item.story.conversationTranslations.length} translations` : item.languageFocus,
         status: isPublished ? item.workflow.writingStatus : "planned",
         route: isPublished ? item.href : null,
         postId: isPublished ? item.id : null,
         location: locationName,
         audioStatus: isPublished ? item.workflow.audioStatus : item.audioStatus,
-        notes: isPublished ? "English script and Portuguese sentence translations." : "Define the Day 3 conversation beat."
+        notes: isPublished ? "English script and Portuguese sentence translations." : item.conversationConflict
       }
     });
 
@@ -97,6 +115,8 @@ function buildGraphModel() {
       type: "audio",
       role: "audio",
       groupIndex,
+
+      groupRow,
       data: {
         icon: "▶",
         kind: "Audio",
@@ -123,25 +143,27 @@ function buildGraphModel() {
 
 function getNodePosition(node, layoutMode) {
   const x = node.groupIndex * 390;
+  const rowOffset = (node.groupRow ?? 0) * 760;
 
   if (layoutMode === "location") {
     const yByRole = { location: 0, primary: 190, conversation: 380, audio: 570 };
-    return { x, y: yByRole[node.role] };
+    return { x, y: rowOffset + yByRole[node.role] };
   }
 
   if (layoutMode === "branching") {
     const offsets = { location: 0, primary: 0, conversation: -120, audio: 140 };
     const yByRole = { location: 0, primary: 190, conversation: 390, audio: 390 };
-    return { x: x + offsets[node.role], y: yByRole[node.role] };
+    return { x: x + offsets[node.role], y: rowOffset + yByRole[node.role] };
   }
 
   const offsets = { location: 0, primary: 0, conversation: -100, audio: 130 };
   const yByRole = { location: 0, primary: 160, conversation: 340, audio: 340 };
-  return { x: x + offsets[node.role], y: yByRole[node.role] };
+  return { x: x + offsets[node.role], y: rowOffset + yByRole[node.role] };
 }
 
 export function createTripFlow(layoutMode = "timeline") {
   const graph = buildGraphModel();
+  const nodeById = new Map(graph.nodes.map((node) => [node.id, node]));
 
   return {
     nodes: graph.nodes.map((node) => ({
@@ -152,7 +174,7 @@ export function createTripFlow(layoutMode = "timeline") {
     })),
     edges: graph.edges.map((edge) => ({
       ...edge,
-      animated: edge.target.endsWith("-audio") && !edge.target.startsWith("day-3")
+      animated: edge.target.endsWith("-audio") && nodeById.get(edge.target)?.data.status === "recorded"
     }))
   };
 }

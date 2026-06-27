@@ -1,3 +1,4 @@
+import conversanteLogo from "../../assets/conversante-logo.png";
 import Avatar from "./Avatar.jsx";
 import LanguageToggle from "./LanguageToggle.jsx";
 
@@ -5,8 +6,7 @@ function TopBar({ isPortuguese, onToggleLanguage, profileAvatar, profileName, to
   return (
     <header className="topbar">
       <div className="brand-area">
-        <div className="brand" aria-hidden="true">JT</div>
-        <strong className="brand-name">{profileName}</strong>
+        <img className="brand-logo" src={conversanteLogo} alt={profileName} />
       </div>
 
       <div className="quick-actions">

@@ -1,5 +1,6 @@
 import johnAvatar from "../../assets/John-mobile.jpg";
 import nickyAvatar from "../../assets/Nicky-mobile.jpg";
+import day1Cover from "../../assets/feed-day1-cover.jpg";
 import lagoaCover from "../../assets/feed-coast-mobile.jpg";
 import { createSpeakerSequenceAudioPathGetter } from "../utils/messageAudio.js";
 import { validatePosts } from "../utils/validatePosts.js";
@@ -24,7 +25,7 @@ const getDay1AudioPath = createSpeakerSequenceAudioPathGetter(
 
 const getDay2AudioPath = createSpeakerSequenceAudioPathGetter(
   day2Conversation,
-  ({ message, paddedSequence }) => `/audio/day2/${message.speaker}-${paddedSequence}.wav`
+  ({ message, paddedSequence }) => `/audio/day2/${message.speaker}-${paddedSequence}.mp3`
 );
 
 export const posts = validatePosts([
@@ -52,6 +53,8 @@ export const posts = validatePosts([
       authorNameKey: "profileName",
       ariaLabelKey: "postAria",
       copyKey: "postCopy",
+      coverAltKey: "day1CoverAlt",
+      coverImage: day1Cover,
       openLabelKey: "openPost",
       subtitleKey: "postSubtitle"
     },

@@ -1,7 +1,7 @@
 .word-dashboard-page {
   min-height: 100vh;
   padding: 22px;
-  background: #f3f5f7;
+  background: #FAF7F2;
 }
 
 .word-dashboard-actions {
@@ -22,8 +22,8 @@
 .word-dashboard-badge {
   padding: 5px 8px;
   border-radius: 999px;
-  color: #215946;
-  background: #dff4ea;
+  color: #0A6F6D;
+  background: #DDF9F7;
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
@@ -45,7 +45,7 @@
 
 .word-dashboard-header p {
   margin: 0 0 5px;
-  color: #6d5b18;
+  color: #F4654C;
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
@@ -69,10 +69,10 @@
   gap: 2px;
   min-width: 116px;
   padding: 10px 12px;
-  border: 1px solid #d9dee6;
+  border: 1px solid #E5DED2;
   border-radius: var(--radius);
   color: var(--muted);
-  background: #f8fafc;
+  background: #FFFFFF;
   font-size: 12px;
 }
 
@@ -121,7 +121,7 @@
   border: 1px solid var(--line);
   border-radius: 7px;
   color: var(--muted);
-  background: #f8fafc;
+  background: #FFFFFF;
   font-size: 12px;
   font-weight: 800;
 }
@@ -158,7 +158,7 @@
   border: 1px solid var(--line);
   border-radius: 7px;
   color: var(--text);
-  background: #f8fafc;
+  background: #FFFFFF;
 }
 
 .word-dashboard-controls input[type="search"] {
@@ -171,7 +171,7 @@
 
 .word-dashboard-controls input:focus,
 .word-dashboard-controls select:focus {
-  outline: 3px solid rgba(24, 119, 242, .22);
+  outline: 3px solid rgba(10, 201, 198, .25);
   border-color: var(--blue);
   background: white;
 }
@@ -184,7 +184,7 @@
   padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 7px;
-  background: #f8fafc;
+  background: #FFFFFF;
 }
 
 .word-dashboard-check input {
@@ -229,7 +229,7 @@
 .word-dashboard-table th,
 .word-dashboard-table td {
   padding: 12px;
-  border-bottom: 1px solid #e7ebf0;
+  border-bottom: 1px solid #E5DED2;
   text-align: left;
   vertical-align: top;
 }
@@ -238,8 +238,8 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  color: #3f4a59;
-  background: #eef3f8;
+  color: #61728F;
+  background: #EFE7DA;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -269,8 +269,8 @@
   display: inline-block;
   padding: 4px 7px;
   border-radius: 999px;
-  color: #5e4816;
-  background: #fff2ce;
+  color: #041F49;
+  background: #EFE7DA;
   font-size: 12px;
   font-weight: 800;
 }
@@ -280,14 +280,14 @@
   gap: 2px;
   padding: 5px 8px;
   border-radius: 7px;
-  color: #174f6f;
-  background: #e4f4ff;
+  color: #041F49;
+  background: #DDF9F7;
   font-size: 12px;
   font-weight: 800;
 }
 
 .word-dashboard-language strong {
-  color: #0d6aa3;
+  color: #0A8F8C;
   font-size: 11px;
 }
 
@@ -297,12 +297,12 @@
 }
 
 .word-dashboard-empty {
-  color: #a13d3d;
+  color: #C94F43;
   font-weight: 800;
 }
 
 .word-dashboard-count-cell {
-  color: #1d5f47;
+  color: #0A8F8C;
   font-weight: 900;
 }
 
@@ -317,10 +317,10 @@
   gap: 4px;
   margin-top: 8px;
   padding: 8px;
-  border: 1px solid #d8e7f2;
+  border: 1px solid #DDF9F7;
   border-radius: 7px;
-  background: #f4faff;
-  color: #284253;
+  background: #DDF9F7;
+  color: #61728F;
   font-size: 12px;
 }
 
@@ -331,7 +331,7 @@
   padding: 3px 5px;
   border-radius: 5px;
   background: white;
-  color: #0f4261;
+  color: #041F49;
   white-space: normal;
 }
 
@@ -347,7 +347,7 @@
 .word-dashboard-empty-state {
   margin-top: 12px;
   padding: 28px;
-  border: 1px dashed #b7c0cc;
+  border: 1px dashed #E5DED2;
   border-radius: var(--radius);
   background: var(--panel);
   text-align: center;
@@ -444,7 +444,7 @@
   }
 
   .word-dashboard-card-head strong {
-    color: #1d5f47;
+    color: #0A8F8C;
     font-size: 20px;
   }
 
