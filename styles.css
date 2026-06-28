@@ -1,4 +1,4 @@
-﻿    :root {
+    :root {
       --bg: #FAF7F2;
       --panel: #FFFFFF;
       --text: #041F49;
@@ -524,7 +524,9 @@
       flex-direction: column;
       justify-content: center;
       min-width: 0;
+      max-width: 100%;
       min-height: 100%;
+      overflow: hidden;
       padding: 12px 14px;
       border: 1px solid var(--line);
       border-radius: 14px;
@@ -557,13 +559,19 @@
 
     .translation-line p,
     .translation-waiting {
+      min-width: 0;
+      max-width: 100%;
       margin: 0;
       line-height: 1.42;
       font-size: 14px;
       overflow-wrap: anywhere;
+      word-break: normal;
+      hyphens: auto;
     }
 
     .translation-note {
+      min-width: 0;
+      max-width: 100%;
       margin-top: 8px !important;
       padding-top: 8px;
       border-top: 1px solid rgba(10, 201, 198, .18);
@@ -579,6 +587,44 @@
       font-weight: 900;
       letter-spacing: 0;
       text-transform: uppercase;
+    }
+
+    .translation-note strong {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      color: inherit;
+      background: transparent;
+      font-size: inherit;
+    }
+
+    .translation-note-more {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      min-height: 30px;
+      margin-top: 7px;
+      padding: 4px 9px;
+      border: 1px solid rgba(4, 31, 73, .16);
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(255, 255, 255, .64);
+      font: inherit;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+      cursor: pointer;
+    }
+
+    .translation-note-more:hover,
+    .translation-note-more:focus-visible {
+      border-color: var(--blue);
+      color: white;
+      background: var(--blue);
+    }
+
+    .translation-note-detail {
+      margin-top: 7px !important;
     }
 
     .translation-waiting {

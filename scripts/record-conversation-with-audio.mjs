@@ -130,7 +130,7 @@ async function recordFormat(manifest, format, outputDir) {
     const messages = await Promise.all(sourceMessages.map(decodeAudio));
     function getPauseAfterMs(message) {
       const textLength = Math.max(message.text.length, message.translation?.length ?? 0);
-      if (/[.!?][”"]?$/.test(message.text) && textLength > 90) return pace.longPauseMs;
+      if (/[.!?]["\u201d]?$/.test(message.text) && textLength > 90) return pace.longPauseMs;
       if (textLength > 130) return Math.round(pace.longPauseMs * 1.4);
       return 0;
     }
@@ -297,11 +297,14 @@ async function recordFormat(manifest, format, outputDir) {
 
     function getCaptionRows(message) {
       if (!message || manifest.captionMode === "none") return [];
-      if (manifest.captionMode === "source") return [{ kind: "source", label: manifest.translationPanel?.heading ?? "Source", text: message.text }];
+      if (manifest.captionMode === "source") return [{ kind: "source", label: "English", text: message.text }];
       if (manifest.translationPanel) {
         const rows = [];
         if (manifest.captionMode === "both") {
           rows.push({ kind: "source", label: manifest.translationPanel.heading, text: message.text });
+        }
+        if (message.translation) {
+          rows.push({ kind: "translation", label: "Portuguese", text: message.translation });
         }
         if (message.transliteration) {
           rows.push({
@@ -328,49 +331,104 @@ async function recordFormat(manifest, format, outputDir) {
       return message.translation ? [{ kind: "translation", label: "Portuguese", text: message.translation }] : [];
     }
 
-    function getCaptionHeight(activeMessage, captionWidth) {
+    function getCaptionStyle(row, layout) {
+      if (layout.isTranslationOnly) {
+        return {
+          color: "#041F49",
+          font: `900 ${layout.captionFontSize}px Arial, sans-serif`,
+          measureFont: `900 ${layout.captionFontSize}px Arial, sans-serif`
+        };
+      }
+
+      const weight = row.kind === "source" ? 800 : 750;
+      return {
+        color: row.kind === "meaning" ? "#344054" : "#17212f",
+        font: `${weight} ${layout.captionFontSize}px Arial, sans-serif`,
+        measureFont: `${weight} ${layout.captionFontSize}px Arial, sans-serif`
+      };
+    }
+
+    function createCaptionLayout(activeMessage, captionWidth) {
       const rows = getCaptionRows(activeMessage);
-      if (rows.length === 0) return 0;
+      if (rows.length === 0) return null;
 
-      const captionFontSize = Math.max(24, Math.round(canvas.width * 0.019));
-      const labelFontSize = Math.max(13, Math.round(canvas.width * 0.01));
-      const chipSize = Math.max(34, Math.round(canvas.width * 0.026));
-      const rowGap = Math.max(10, Math.round(canvas.height * 0.008));
-      const innerWidth = captionWidth - 60 - chipSize - 16;
-      let textHeight = 0;
+      const isTranslationOnly = manifest.captionMode === "translation" && rows.length === 1 && rows[0].kind === "translation";
+      const chipSize = isTranslationOnly ? 0 : Math.max(34, Math.round(canvas.width * 0.026));
+      const avatarGap = isTranslationOnly ? 0 : Math.max(14, Math.round(canvas.width * 0.013));
+      const horizontalPadding = isTranslationOnly
+        ? Math.max(34, Math.round(captionWidth * 0.045))
+        : Math.max(42, Math.round(captionWidth * 0.038));
+      const innerWidth = Math.max(120, captionWidth - horizontalPadding * 2 - chipSize - avatarGap);
+      const maxHeightRatio = isTranslationOnly ? 0.24 : manifest.captionMode === "both" ? 0.34 : 0.28;
+      const maxHeight = Math.round(canvas.height * maxHeightRatio);
+      const minFontSize = isTranslationOnly ? 30 : manifest.captionMode === "both" ? 22 : 24;
+      const maxFontSize = Math.max(
+        minFontSize,
+        Math.round(canvas.width * (isTranslationOnly ? 0.035 : manifest.captionMode === "both" ? 0.017 : 0.023))
+      );
 
-      rows.forEach((row) => {
-        const lines = wrapText(row.text, innerWidth, `700 ${captionFontSize}px Arial, sans-serif`);
-        textHeight += labelFontSize + 8 + lines.length * Math.round(captionFontSize * 1.26) + rowGap;
-      });
+      for (let captionFontSize = maxFontSize; captionFontSize >= minFontSize; captionFontSize -= 1) {
+        const labelFontSize = Math.max(12, Math.round(captionFontSize * (isTranslationOnly ? 0.42 : 0.48)));
+        const lineHeight = Math.round(captionFontSize * (isTranslationOnly ? 1.18 : 1.22));
+        const rowGap = Math.max(8, Math.round(captionFontSize * (isTranslationOnly ? 0.24 : 0.36)));
+        const topPadding = Math.max(22, Math.round(captionFontSize * (isTranslationOnly ? 0.72 : 0.86)));
+        const bottomPadding = Math.max(24, Math.round(captionFontSize * (isTranslationOnly ? 0.72 : 0.8)));
+        const shellHeight = topPadding + bottomPadding + (isTranslationOnly ? labelFontSize + 10 : 0);
+        const partialLayout = { captionFontSize, isTranslationOnly };
+        const measuredRows = rows.map((row) => {
+          const style = getCaptionStyle(row, partialLayout);
+          return {
+            ...row,
+            lines: wrapText(row.text.replace(/\s+/g, " ").trim(), innerWidth, style.measureFont)
+          };
+        });
+        const contentHeight = measuredRows.reduce((total, row, index) => (
+          total + (isTranslationOnly ? 0 : labelFontSize + 7) + row.lines.length * lineHeight + (index < measuredRows.length - 1 ? rowGap : 0)
+        ), 0);
+        const height = Math.max(isTranslationOnly ? 132 : 112, shellHeight + contentHeight);
 
-      return Math.max(112, textHeight + 48);
+        if (height <= maxHeight || captionFontSize === minFontSize) {
+          return {
+            avatarGap,
+            bottomPadding,
+            captionFontSize,
+            chipSize,
+            height: Math.min(height, maxHeight),
+            horizontalPadding,
+            innerWidth,
+            isTranslationOnly,
+            labelFontSize,
+            lineHeight,
+            maxHeight,
+            rows: measuredRows,
+            rowGap,
+            topPadding
+          };
+        }
+      }
+
+      return null;
     }
 
     function getCaptionBand(activeMessage, padding) {
       const width = canvas.width - padding * 2;
-      const height = getCaptionHeight(activeMessage, width);
-      if (!height) return null;
+      const layout = createCaptionLayout(activeMessage, width);
+      if (!layout) return null;
 
       return {
-        height,
+        height: layout.height,
+        layout,
         width,
         x: padding,
-        y: canvas.height - padding - height
+        y: canvas.height - padding - layout.height
       };
     }
 
     function drawCaption(activeMessage, padding, elapsedMs, captionBand) {
-      const rows = getCaptionRows(activeMessage);
-      if (rows.length === 0 || !captionBand) return;
+      if (!captionBand) return;
 
-      const { height, width, x, y } = captionBand;
-      const chipSize = Math.max(34, Math.round(canvas.width * 0.026));
-      const captionFontSize = Math.max(24, Math.round(canvas.width * 0.019));
-      const labelFontSize = Math.max(13, Math.round(canvas.width * 0.01));
-      const lineHeight = Math.round(captionFontSize * 1.26);
-      const innerX = x + 30 + chipSize + 16;
-      const innerWidth = width - 60 - chipSize - 16;
+      const { height, layout, width, x, y } = captionBand;
+      const innerX = x + layout.horizontalPadding + layout.chipSize + layout.avatarGap;
       const revealProgress = Math.min(1, Math.max(0, (elapsedMs - activeMessage.startMs) / 360));
       const eased = 1 - Math.pow(1 - revealProgress, 3);
 
@@ -380,42 +438,60 @@ async function recordFormat(manifest, format, outputDir) {
       ctx.shadowColor = "rgba(17, 24, 39, .16)";
       ctx.shadowBlur = 30;
       ctx.shadowOffsetY = 16;
-      roundRect(x, y, width, height, 26);
-      ctx.fillStyle = "rgba(255, 255, 255, .92)";
+      roundRect(x, y, width, height, layout.isTranslationOnly ? 30 : 26);
+      ctx.fillStyle = layout.isTranslationOnly ? "rgba(255, 255, 255, .96)" : "rgba(255, 255, 255, .94)";
       ctx.fill();
       ctx.shadowColor = "transparent";
-      ctx.strokeStyle = "rgba(24, 119, 242, .22)";
+      ctx.strokeStyle = layout.isTranslationOnly ? "rgba(10, 201, 198, .38)" : "rgba(24, 119, 242, .22)";
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      drawAvatar(
-        images[activeMessage.speaker],
-        x + 30 + chipSize / 2,
-        y + 30 + chipSize / 2,
-        chipSize / 2,
-        activeMessage.side === "right" ? "#1877f2" : "#2e9d62"
-      );
+      if (!layout.isTranslationOnly) {
+        drawAvatar(
+          images[activeMessage.speaker],
+          x + layout.horizontalPadding + layout.chipSize / 2,
+          y + layout.topPadding + layout.chipSize / 2,
+          layout.chipSize / 2,
+          activeMessage.side === "right" ? "#1877f2" : "#2e9d62"
+        );
+      }
 
+      ctx.beginPath();
+      roundRect(x, y, width, height, layout.isTranslationOnly ? 30 : 26);
+      ctx.clip();
       ctx.textBaseline = "top";
-      ctx.fillStyle = "#667085";
-      ctx.font = `800 ${labelFontSize}px Arial, sans-serif`;
-      ctx.fillText(activeMessage.speaker.toLocaleUpperCase(), innerX, y + 22);
 
-      let cursorY = y + 42;
-      rows.forEach((row, rowIndex) => {
-        const lines = wrapText(row.text, innerWidth, `700 ${captionFontSize}px Arial, sans-serif`);
-        ctx.fillStyle = row.kind === "meaning" ? "#2e9d62" : "#1877f2";
-        ctx.font = `800 ${labelFontSize}px Arial, sans-serif`;
-        ctx.fillText(row.label.toLocaleUpperCase(), innerX, cursorY);
-        cursorY += labelFontSize + 8;
+      let cursorY = y + layout.topPadding;
+      if (layout.isTranslationOnly) {
+        ctx.fillStyle = "#0AC9C6";
+        ctx.font = `900 ${layout.labelFontSize}px Arial, sans-serif`;
+        ctx.fillText("PORTUGU\u00caS", innerX, cursorY);
+        cursorY += layout.labelFontSize + 10;
+      } else {
+        ctx.fillStyle = "#667085";
+        ctx.font = `800 ${layout.labelFontSize}px Arial, sans-serif`;
+        ctx.fillText(activeMessage.speaker.toLocaleUpperCase(), innerX, y + Math.max(18, layout.topPadding - 4));
+        cursorY += layout.labelFontSize + 12;
+      }
 
-        ctx.fillStyle = row.kind === "meaning" ? "#344054" : "#17212f";
-        ctx.font = `${row.kind === "source" ? 800 : 700} ${captionFontSize}px Arial, sans-serif`;
-        lines.forEach((line) => {
-          ctx.fillText(line, innerX, cursorY);
-          cursorY += lineHeight;
+      layout.rows.forEach((row, rowIndex) => {
+        if (!layout.isTranslationOnly) {
+          ctx.fillStyle = row.kind === "meaning" ? "#2e9d62" : "#1877f2";
+          ctx.font = `800 ${layout.labelFontSize}px Arial, sans-serif`;
+          ctx.fillText(row.label.toLocaleUpperCase(), innerX, cursorY);
+          cursorY += layout.labelFontSize + 7;
+        }
+
+        const style = getCaptionStyle(row, layout);
+        ctx.fillStyle = style.color;
+        ctx.font = style.font;
+        row.lines.forEach((line) => {
+          if (cursorY + layout.lineHeight <= y + height - layout.bottomPadding + 2) {
+            ctx.fillText(line, innerX, cursorY);
+          }
+          cursorY += layout.lineHeight;
         });
-        cursorY += 12;
+        if (rowIndex < layout.rows.length - 1) cursorY += layout.rowGap;
       });
       ctx.restore();
     }

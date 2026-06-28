@@ -61,7 +61,7 @@ function parseDataUrl(dataUrl) {
   return Buffer.from(dataUrl.split(",")[1], "base64");
 }
 
-const videoPath = path.resolve(readOption("video") ?? "videos/day-1-audio/youtube-16x9-audio.webm");
+const videoPath = path.resolve(readOption("video") ?? readOption("input") ?? "videos/day-1-audio/youtube-16x9-audio.webm");
 const outputDir = path.resolve(readOption("output") ?? path.join(path.dirname(videoPath), "review"));
 const videoStats = await stat(videoPath);
 await mkdir(outputDir, { recursive: true });

@@ -16,7 +16,13 @@ const postAliases = new Map([
   ["1", "/day/1"],
   ["day-2", "/day/2"],
   ["day2", "/day/2"],
-  ["2", "/day/2"]
+  ["2", "/day/2"],
+  ["day-3", "/day/3"],
+  ["day3", "/day/3"],
+  ["3", "/day/3"],
+  ["day-4", "/day/4"],
+  ["day4", "/day/4"],
+  ["4", "/day/4"]
 ]);
 
 const formats = [
