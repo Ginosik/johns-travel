@@ -20,6 +20,10 @@ export const feedTranslations = {
     day3PostSubtitle: "Day 3 - Wrong Bus to the Right Beach",
     day3PostCopy: "A wrong bus, a useful direction question, and an unexpected beach in Campeche.",
     day3CoverAlt: "Bus stop near a sandy path leading to Campeche beach",
+    day4PostAria: "Open John's fourth day at a street market",
+    day4PostSubtitle: "Day 4 - Buying Fruit at a Street Market",
+    day4PostCopy: "A fruit stall, polite price questions, and the mystery of buying one piece or a kilo.",
+    day4CoverAlt: "Colorful fruit stall at a Brazilian street market with a vendor scale",
     openPost: "Open post",
     toggle: "Portuguese"
   },
@@ -44,6 +48,10 @@ export const feedTranslations = {
     day3PostSubtitle: "Dia 3 - O \u00f4nibus errado para a praia certa",
     day3PostCopy: "Um \u00f4nibus errado, uma pergunta \u00fatil de dire\u00e7\u00e3o e uma praia inesperada em Campeche.",
     day3CoverAlt: "Ponto de \u00f4nibus perto de um caminho de areia que leva \u00e0 praia de Campeche",
+    day4PostAria: "Abrir o quarto dia de John na feira",
+    day4PostSubtitle: "Dia 4 - Comprando frutas na feira",
+    day4PostCopy: "Uma barraca de frutas, perguntas educadas sobre preços e a dúvida entre comprar uma unidade ou um quilo.",
+    day4CoverAlt: "Barraca colorida de frutas em uma feira brasileira com uma balança de vendedor",
     openPost: "Abrir post",
     toggle: "English"
   }

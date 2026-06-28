@@ -1,0 +1,2075 @@
+{
+  "source": "Dialog text only from day-1, day-2, day-3, day-4 content modules listed in docs/conversation-word-posts.json",
+  "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
+  "annotation": "Default senses come from docs/word-sense-defaults.json. Context-sensitive words use post-level sense-overrides.json files keyed by message index and token index.",
+  "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
+  "totals": {
+    "occurrences": 258,
+    "uniqueSurfaceWords": 142,
+    "uniqueSenses": 142
+  },
+  "counts": {
+    "i": {
+      "totalCount": 15,
+      "senses": {
+        "i_default": {
+          "count": 15,
+          "lemma": "I",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "eu",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "a": {
+      "totalCount": 14,
+      "senses": {
+        "a_default": {
+          "count": 14,
+          "lemma": "a",
+          "partOfSpeech": "article",
+          "meaningPt": "um / uma",
+          "notePt": "Artigo indefinido.",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "That sounds dramatic. What happened, did a mango give you directions?",
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "and": {
+      "totalCount": 10,
+      "senses": {
+        "and_default": {
+          "count": 10,
+          "lemma": "and",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "e",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "fruit": {
+      "totalCount": 8,
+      "senses": {
+        "fruit_default": {
+          "count": 8,
+          "lemma": "fruit",
+          "partOfSpeech": "noun",
+          "meaningPt": "fruta",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "Passion fruit! Did you buy one?"
+          ]
+        }
+      }
+    },
+    "did": {
+      "totalCount": 7,
+      "senses": {
+        "do_default": {
+          "count": 7,
+          "lemma": "do",
+          "partOfSpeech": "auxiliary verb",
+          "meaningPt": "marcador de pergunta no passado",
+          "grammarPt": "Auxiliar usado em perguntas no passado.",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?",
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "Classic traveler face. Did you ask what it was?"
+          ]
+        }
+      }
+    },
+    "was": {
+      "totalCount": 6,
+      "senses": {
+        "be_default": {
+          "count": 6,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "estava / era / foi",
+          "grammarPt": "Passado do verbo be.",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "you": {
+      "totalCount": 6,
+      "senses": {
+        "you_default": {
+          "count": 6,
+          "lemma": "you",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "você / vocês",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?",
+            "Classic traveler face. Did you ask what it was?",
+            "Passion fruit! Did you buy one?"
+          ]
+        }
+      }
+    },
+    "is": {
+      "totalCount": 5,
+      "senses": {
+        "be_default": {
+          "count": 5,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "é / está",
+          "grammarPt": "Presente do verbo be.",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total.",
+            "That is a kind vendor. Did you try anything before buying?"
+          ]
+        }
+      }
+    },
+    "that": {
+      "totalCount": 5,
+      "senses": {
+        "that_default": {
+          "count": 5,
+          "lemma": "that",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / essa coisa",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "That sounds dramatic. What happened, did a mango give you directions?",
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "the": {
+      "totalCount": 5,
+      "senses": {
+        "the_default": {
+          "count": 5,
+          "lemma": "the",
+          "partOfSpeech": "article",
+          "meaningPt": "o / a / os / as",
+          "notePt": "Artigo definido.",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "vendor": {
+      "totalCount": 5,
+      "senses": {
+        "vendor_default": {
+          "count": 5,
+          "lemma": "vendor",
+          "partOfSpeech": "noun",
+          "meaningPt": "vendedor / vendedora",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "it": {
+      "totalCount": 4,
+      "senses": {
+        "it_default": {
+          "count": 4,
+          "lemma": "it",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "isso / ele / ela",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "market": {
+      "totalCount": 4,
+      "senses": {
+        "market_default": {
+          "count": 4,
+          "lemma": "market",
+          "partOfSpeech": "noun",
+          "meaningPt": "mercado / mercadinho",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "Useful confusion. You needed market grammar, not just fruit vocabulary.",
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "one": {
+      "totalCount": 4,
+      "senses": {
+        "one_default": {
+          "count": 4,
+          "lemma": "one",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "um / uma",
+          "examples": [
+            "Passion fruit! Did you buy one?",
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "said": {
+      "totalCount": 4,
+      "senses": {
+        "say_default": {
+          "count": 4,
+          "lemma": "say",
+          "partOfSpeech": "verb",
+          "meaningPt": "disse",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "not": {
+      "totalCount": 3,
+      "senses": {
+        "not_default": {
+          "count": 3,
+          "lemma": "not",
+          "partOfSpeech": "adverb",
+          "meaningPt": "não",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag.",
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "sweet": {
+      "totalCount": 3,
+      "senses": {
+        "sweet_default": {
+          "count": 3,
+          "lemma": "sweet",
+          "partOfSpeech": "adjective",
+          "meaningPt": "doce",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce.",
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "then": {
+      "totalCount": 3,
+      "senses": {
+        "then_default": {
+          "count": 3,
+          "lemma": "then",
+          "partOfSpeech": "adverb",
+          "meaningPt": "então",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total.",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "what": {
+      "totalCount": 3,
+      "senses": {
+        "what_default": {
+          "count": 3,
+          "lemma": "what",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "o que",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?",
+            "Classic traveler face. Did you ask what it was?",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "almost": {
+      "totalCount": 2,
+      "senses": {
+        "almost_default": {
+          "count": 2,
+          "lemma": "almost",
+          "partOfSpeech": "adverb",
+          "meaningPt": "quase",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "asked": {
+      "totalCount": 2,
+      "senses": {
+        "ask_default": {
+          "count": 2,
+          "lemma": "ask",
+          "partOfSpeech": "verb",
+          "meaningPt": "perguntei",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá.",
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "bananas": {
+      "totalCount": 2,
+      "senses": {
+        "banana_default": {
+          "count": 2,
+          "lemma": "banana",
+          "partOfSpeech": "noun",
+          "meaningPt": "bananas",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet.",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "because": {
+      "totalCount": 2,
+      "senses": {
+        "because_default": {
+          "count": 2,
+          "lemma": "because",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "porque",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce.",
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "before": {
+      "totalCount": 2,
+      "senses": {
+        "before_default": {
+          "count": 2,
+          "lemma": "before",
+          "partOfSpeech": "preposition",
+          "meaningPt": "antes",
+          "examples": [
+            "That is a kind vendor. Did you try anything before buying?",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "bought": {
+      "totalCount": 2,
+      "senses": {
+        "buy_default": {
+          "count": 2,
+          "lemma": "buy",
+          "partOfSpeech": "verb",
+          "meaningPt": "comprei",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet.",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "doce": {
+      "totalCount": 2,
+      "senses": {
+        "doce_default": {
+          "count": 2,
+          "lemma": "doce",
+          "partOfSpeech": "adjective",
+          "meaningPt": "doce",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce.",
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "expensive": {
+      "totalCount": 2,
+      "senses": {
+        "expensive_default": {
+          "count": 2,
+          "lemma": "expensive",
+          "partOfSpeech": "adjective",
+          "meaningPt": "caro",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "for": {
+      "totalCount": 2,
+      "senses": {
+        "for_default": {
+          "count": 2,
+          "lemma": "for",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag.",
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "learned": {
+      "totalCount": 2,
+      "senses": {
+        "learn_default": {
+          "count": 2,
+          "lemma": "learn",
+          "partOfSpeech": "verb",
+          "meaningPt": "aprendi",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "me": {
+      "totalCount": 2,
+      "senses": {
+        "me_default": {
+          "count": 2,
+          "lemma": "me",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "me / mim",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total.",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "normal": {
+      "totalCount": 2,
+      "senses": {
+        "normal_default": {
+          "count": 2,
+          "lemma": "normal",
+          "partOfSpeech": "adjective",
+          "meaningPt": "normal",
+          "examples": [
+            "So did you leave with a normal amount of fruit?",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "of": {
+      "totalCount": 2,
+      "senses": {
+        "of_default": {
+          "count": 2,
+          "lemma": "of",
+          "partOfSpeech": "preposition",
+          "meaningPt": "de",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce.",
+            "So did you leave with a normal amount of fruit?"
+          ]
+        }
+      }
+    },
+    "passion": {
+      "totalCount": 2,
+      "senses": {
+        "passion_default": {
+          "count": 2,
+          "lemma": "passion",
+          "partOfSpeech": "noun",
+          "meaningPt": "paixão",
+          "examples": [
+            "Passion fruit! Did you buy one?",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "pineapple": {
+      "totalCount": 2,
+      "senses": {
+        "pineapple_default": {
+          "count": 2,
+          "lemma": "pineapple",
+          "partOfSpeech": "noun",
+          "meaningPt": "abacaxi",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce.",
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "smiled": {
+      "totalCount": 2,
+      "senses": {
+        "smile_default": {
+          "count": 2,
+          "lemma": "smile",
+          "partOfSpeech": "verb",
+          "meaningPt": "sorri",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "so": {
+      "totalCount": 2,
+      "senses": {
+        "so_default": {
+          "count": 2,
+          "lemma": "so",
+          "partOfSpeech": "adverb",
+          "meaningPt": "tão / então",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "So did you leave with a normal amount of fruit?"
+          ]
+        }
+      }
+    },
+    "this": {
+      "totalCount": 2,
+      "senses": {
+        "this_default": {
+          "count": 2,
+          "lemma": "this",
+          "partOfSpeech": "determiner",
+          "meaningPt": "este / esta",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "to": {
+      "totalCount": 2,
+      "senses": {
+        "to_default": {
+          "count": 2,
+          "lemma": "to",
+          "partOfSpeech": "preposition",
+          "meaningPt": "para",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "understood": {
+      "totalCount": 2,
+      "senses": {
+        "understand_default": {
+          "count": 2,
+          "lemma": "understand",
+          "partOfSpeech": "verb",
+          "meaningPt": "entendeu",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.",
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "watermelon": {
+      "totalCount": 2,
+      "senses": {
+        "watermelon_default": {
+          "count": 2,
+          "lemma": "watermelon",
+          "partOfSpeech": "noun",
+          "meaningPt": "melancia",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon.",
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "accidental": {
+      "totalCount": 1,
+      "senses": {
+        "accidental_default": {
+          "count": 1,
+          "lemma": "accidental",
+          "partOfSpeech": "adjective",
+          "meaningPt": "acidental",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "amount": {
+      "totalCount": 1,
+      "senses": {
+        "amount_default": {
+          "count": 1,
+          "lemma": "amount",
+          "partOfSpeech": "noun",
+          "meaningPt": "quantidade",
+          "examples": [
+            "So did you leave with a normal amount of fruit?"
+          ]
+        }
+      }
+    },
+    "another": {
+      "totalCount": 1,
+      "senses": {
+        "another_default": {
+          "count": 1,
+          "lemma": "another",
+          "partOfSpeech": "determiner",
+          "meaningPt": "outro / outra",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "answered": {
+      "totalCount": 1,
+      "senses": {
+        "answer_default": {
+          "count": 1,
+          "lemma": "answer",
+          "partOfSpeech": "verb",
+          "meaningPt": "respondeu",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "anyone": {
+      "totalCount": 1,
+      "senses": {
+        "anyone_default": {
+          "count": 1,
+          "lemma": "anyone",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "alguém",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "anything": {
+      "totalCount": 1,
+      "senses": {
+        "anything_default": {
+          "count": 1,
+          "lemma": "anything",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "alguma coisa",
+          "examples": [
+            "That is a kind vendor. Did you try anything before buying?"
+          ]
+        }
+      }
+    },
+    "ask": {
+      "totalCount": 1,
+      "senses": {
+        "ask_default": {
+          "count": 1,
+          "lemma": "ask",
+          "partOfSpeech": "verb",
+          "meaningPt": "perguntar",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?"
+          ]
+        }
+      }
+    },
+    "at": {
+      "totalCount": 1,
+      "senses": {
+        "at_default": {
+          "count": 1,
+          "lemma": "at",
+          "partOfSpeech": "preposition",
+          "meaningPt": "em",
+          "examples": [
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "away": {
+      "totalCount": 1,
+      "senses": {
+        "away_default": {
+          "count": 1,
+          "lemma": "away",
+          "partOfSpeech": "adverb",
+          "meaningPt": "embora / para longe",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "bag": {
+      "totalCount": 1,
+      "senses": {
+        "bag_default": {
+          "count": 1,
+          "lemma": "bag",
+          "partOfSpeech": "noun",
+          "meaningPt": "sacola / bolsa",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "be": {
+      "totalCount": 1,
+      "senses": {
+        "be_default": {
+          "count": 1,
+          "lemma": "be",
+          "partOfSpeech": "verb",
+          "meaningPt": "ser / estar",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "beautiful": {
+      "totalCount": 1,
+      "senses": {
+        "beautiful_default": {
+          "count": 1,
+          "lemma": "beautiful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bonito / linda",
+          "examples": [
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "breakfast": {
+      "totalCount": 1,
+      "senses": {
+        "breakfast_default": {
+          "count": 1,
+          "lemma": "breakfast",
+          "partOfSpeech": "noun",
+          "meaningPt": "café da manhã",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "buffet": {
+      "totalCount": 1,
+      "senses": {
+        "buffet_default": {
+          "count": 1,
+          "lemma": "buffet",
+          "partOfSpeech": "noun",
+          "meaningPt": "buffet",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "bus": {
+      "totalCount": 1,
+      "senses": {
+        "bus_default": {
+          "count": 1,
+          "lemma": "bus",
+          "partOfSpeech": "noun",
+          "meaningPt": "ônibus",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "buy": {
+      "totalCount": 1,
+      "senses": {
+        "buy_default": {
+          "count": 1,
+          "lemma": "buy",
+          "partOfSpeech": "verb",
+          "meaningPt": "comprar",
+          "examples": [
+            "Passion fruit! Did you buy one?"
+          ]
+        }
+      }
+    },
+    "buying": {
+      "totalCount": 1,
+      "senses": {
+        "buy_default": {
+          "count": 1,
+          "lemma": "buy",
+          "partOfSpeech": "verb",
+          "meaningPt": "comprando",
+          "examples": [
+            "That is a kind vendor. Did you try anything before buying?"
+          ]
+        }
+      }
+    },
+    "called": {
+      "totalCount": 1,
+      "senses": {
+        "call_default": {
+          "count": 1,
+          "lemma": "call",
+          "partOfSpeech": "verb",
+          "meaningPt": "chamado / chamada",
+          "grammarPt": "Past participle used after celebration.",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "can": {
+      "totalCount": 1,
+      "senses": {
+        "can_default": {
+          "count": 1,
+          "lemma": "can",
+          "partOfSpeech": "modal verb",
+          "meaningPt": "pode",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "chama": {
+      "totalCount": 1,
+      "senses": {
+        "chamar_default": {
+          "count": 1,
+          "lemma": "chamar",
+          "partOfSpeech": "verb",
+          "meaningPt": "chama",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "classic": {
+      "totalCount": 1,
+      "senses": {
+        "classic_default": {
+          "count": 1,
+          "lemma": "classic",
+          "partOfSpeech": "adjective",
+          "meaningPt": "clássico / clássica",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?"
+          ]
+        }
+      }
+    },
+    "como": {
+      "totalCount": 1,
+      "senses": {
+        "como_default": {
+          "count": 1,
+          "lemma": "como",
+          "partOfSpeech": "adverb",
+          "meaningPt": "como",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "confusing": {
+      "totalCount": 1,
+      "senses": {
+        "confusing_default": {
+          "count": 1,
+          "lemma": "confusing",
+          "partOfSpeech": "adjective",
+          "meaningPt": "confuso",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "confusion": {
+      "totalCount": 1,
+      "senses": {
+        "confusion_default": {
+          "count": 1,
+          "lemma": "confusion",
+          "partOfSpeech": "noun",
+          "meaningPt": "confusão",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "could": {
+      "totalCount": 1,
+      "senses": {
+        "can_default": {
+          "count": 1,
+          "lemma": "can",
+          "partOfSpeech": "modal verb",
+          "meaningPt": "poderia / pudesse",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "directions": {
+      "totalCount": 1,
+      "senses": {
+        "direction_default": {
+          "count": 1,
+          "lemma": "direction",
+          "partOfSpeech": "noun",
+          "meaningPt": "direções",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "dramatic": {
+      "totalCount": 1,
+      "senses": {
+        "dramatic_default": {
+          "count": 1,
+          "lemma": "dramatic",
+          "partOfSpeech": "adjective",
+          "meaningPt": "dramático",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "enough": {
+      "totalCount": 1,
+      "senses": {
+        "enough_default": {
+          "count": 1,
+          "lemma": "enough",
+          "partOfSpeech": "adverb",
+          "meaningPt": "suficientemente / tudo bem",
+          "notePt": "Em fair enough, a expressão significa tudo bem ou justo.",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "everything": {
+      "totalCount": 1,
+      "senses": {
+        "everything_default": {
+          "count": 1,
+          "lemma": "everything",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "tudo",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "exactly": {
+      "totalCount": 1,
+      "senses": {
+        "exactly_default": {
+          "count": 1,
+          "lemma": "exactly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "exatamente",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "excellent": {
+      "totalCount": 1,
+      "senses": {
+        "excellent_default": {
+          "count": 1,
+          "lemma": "excellent",
+          "partOfSpeech": "adjective",
+          "meaningPt": "excelente",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "face": {
+      "totalCount": 1,
+      "senses": {
+        "face_default": {
+          "count": 1,
+          "lemma": "face",
+          "partOfSpeech": "noun",
+          "meaningPt": "cara / rosto",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?"
+          ]
+        }
+      }
+    },
+    "fruits": {
+      "totalCount": 1,
+      "senses": {
+        "fruit_default": {
+          "count": 1,
+          "lemma": "fruit",
+          "partOfSpeech": "noun",
+          "meaningPt": "frutas",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "give": {
+      "totalCount": 1,
+      "senses": {
+        "give_default": {
+          "count": 1,
+          "lemma": "give",
+          "partOfSpeech": "verb",
+          "meaningPt": "dar",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "grammar": {
+      "totalCount": 1,
+      "senses": {
+        "grammar_default": {
+          "count": 1,
+          "lemma": "grammar",
+          "partOfSpeech": "noun",
+          "meaningPt": "gramática",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "happened": {
+      "totalCount": 1,
+      "senses": {
+        "happen_default": {
+          "count": 1,
+          "lemma": "happen",
+          "partOfSpeech": "verb",
+          "meaningPt": "aconteceu",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "he": {
+      "totalCount": 1,
+      "senses": {
+        "he_default": {
+          "count": 1,
+          "lemma": "he",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "ele",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "held": {
+      "totalCount": 1,
+      "senses": {
+        "hold_default": {
+          "count": 1,
+          "lemma": "hold",
+          "partOfSpeech": "verb",
+          "meaningPt": "segurou / levantou",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "helped": {
+      "totalCount": 1,
+      "senses": {
+        "help_default": {
+          "count": 1,
+          "lemma": "help",
+          "partOfSpeech": "verb",
+          "meaningPt": "ajudou",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "hotel": {
+      "totalCount": 1,
+      "senses": {
+        "hotel_default": {
+          "count": 1,
+          "lemma": "hotel",
+          "partOfSpeech": "noun",
+          "meaningPt": "hotel",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "how": {
+      "totalCount": 1,
+      "senses": {
+        "how_default": {
+          "count": 1,
+          "lemma": "how",
+          "partOfSpeech": "adverb",
+          "meaningPt": "como",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "if": {
+      "totalCount": 1,
+      "senses": {
+        "if_default": {
+          "count": 1,
+          "lemma": "if",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "se",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "important": {
+      "totalCount": 1,
+      "senses": {
+        "important_default": {
+          "count": 1,
+          "lemma": "important",
+          "partOfSpeech": "adjective",
+          "meaningPt": "importante",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "just": {
+      "totalCount": 1,
+      "senses": {
+        "just_default": {
+          "count": 1,
+          "lemma": "just",
+          "partOfSpeech": "adverb",
+          "meaningPt": "apenas / só",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "kilo": {
+      "totalCount": 1,
+      "senses": {
+        "kilo_default": {
+          "count": 1,
+          "lemma": "kilo",
+          "partOfSpeech": "noun",
+          "meaningPt": "quilo",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "kind": {
+      "totalCount": 1,
+      "senses": {
+        "kind_default": {
+          "count": 1,
+          "lemma": "kind",
+          "partOfSpeech": "adjective",
+          "meaningPt": "gentil",
+          "examples": [
+            "That is a kind vendor. Did you try anything before buying?"
+          ]
+        }
+      }
+    },
+    "know": {
+      "totalCount": 1,
+      "senses": {
+        "know_default": {
+          "count": 1,
+          "lemma": "know",
+          "partOfSpeech": "verb",
+          "meaningPt": "saber / conhecer",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "leave": {
+      "totalCount": 1,
+      "senses": {
+        "leave_default": {
+          "count": 1,
+          "lemma": "leave",
+          "partOfSpeech": "verb",
+          "meaningPt": "sair / ir embora",
+          "examples": [
+            "So did you leave with a normal amount of fruit?"
+          ]
+        }
+      }
+    },
+    "lesson": {
+      "totalCount": 1,
+      "senses": {
+        "lesson_default": {
+          "count": 1,
+          "lemma": "lesson",
+          "partOfSpeech": "noun",
+          "meaningPt": "aula / lição",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "like": {
+      "totalCount": 1,
+      "senses": {
+        "like_default": {
+          "count": 1,
+          "lemma": "like",
+          "partOfSpeech": "preposition",
+          "meaningPt": "como / parecido com",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "mango": {
+      "totalCount": 1,
+      "senses": {
+        "mango_default": {
+          "count": 1,
+          "lemma": "mango",
+          "partOfSpeech": "noun",
+          "meaningPt": "manga",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "maracujá": {
+      "totalCount": 1,
+      "senses": {
+        "maracuj__default": {
+          "count": 1,
+          "lemma": "maracujá",
+          "partOfSpeech": "noun",
+          "meaningPt": "maracujá",
+          "languageTag": "pt-BR",
+          "languageName": "Portuguese",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "more": {
+      "totalCount": 1,
+      "senses": {
+        "more_default": {
+          "count": 1,
+          "lemma": "more",
+          "partOfSpeech": "adverb",
+          "meaningPt": "mais",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "morning": {
+      "totalCount": 1,
+      "senses": {
+        "morning_default": {
+          "count": 1,
+          "lemma": "morning",
+          "partOfSpeech": "noun",
+          "meaningPt": "manhã",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "mostly": {
+      "totalCount": 1,
+      "senses": {
+        "mostly_default": {
+          "count": 1,
+          "lemma": "mostly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "principalmente",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "much": {
+      "totalCount": 1,
+      "senses": {
+        "much_default": {
+          "count": 1,
+          "lemma": "much",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "name": {
+      "totalCount": 1,
+      "senses": {
+        "name_default": {
+          "count": 1,
+          "lemma": "name",
+          "partOfSpeech": "noun",
+          "meaningPt": "nome",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "needed": {
+      "totalCount": 1,
+      "senses": {
+        "need_default": {
+          "count": 1,
+          "lemma": "need",
+          "partOfSpeech": "verb",
+          "meaningPt": "precisava / precisou",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "new": {
+      "totalCount": 1,
+      "senses": {
+        "new_default": {
+          "count": 1,
+          "lemma": "new",
+          "partOfSpeech": "adjective",
+          "meaningPt": "novo / nova",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "no": {
+      "totalCount": 1,
+      "senses": {
+        "no_default": {
+          "count": 1,
+          "lemma": "no",
+          "partOfSpeech": "interjection",
+          "meaningPt": "não",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "offer": {
+      "totalCount": 1,
+      "senses": {
+        "offer_default": {
+          "count": 1,
+          "lemma": "offer",
+          "partOfSpeech": "verb",
+          "meaningPt": "oferecer",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "offered": {
+      "totalCount": 1,
+      "senses": {
+        "offer_default": {
+          "count": 1,
+          "lemma": "offer",
+          "partOfSpeech": "verb",
+          "meaningPt": "ofereceu",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "or": {
+      "totalCount": 1,
+      "senses": {
+        "or_default": {
+          "count": 1,
+          "lemma": "or",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "ou",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "piece": {
+      "totalCount": 1,
+      "senses": {
+        "piece_default": {
+          "count": 1,
+          "lemma": "piece",
+          "partOfSpeech": "noun",
+          "meaningPt": "pedaço",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "pointed": {
+      "totalCount": 1,
+      "senses": {
+        "point_default": {
+          "count": 1,
+          "lemma": "point",
+          "partOfSpeech": "verb",
+          "meaningPt": "apontou / indicou",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "polite": {
+      "totalCount": 1,
+      "senses": {
+        "polite_default": {
+          "count": 1,
+          "lemma": "polite",
+          "partOfSpeech": "adjective",
+          "meaningPt": "educado / educada",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "price": {
+      "totalCount": 1,
+      "senses": {
+        "price_default": {
+          "count": 1,
+          "lemma": "price",
+          "partOfSpeech": "noun",
+          "meaningPt": "preço",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "problem": {
+      "totalCount": 1,
+      "senses": {
+        "problem_default": {
+          "count": 1,
+          "lemma": "problem",
+          "partOfSpeech": "noun",
+          "meaningPt": "problema",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "progress": {
+      "totalCount": 1,
+      "senses": {
+        "progress_default": {
+          "count": 1,
+          "lemma": "progress",
+          "partOfSpeech": "noun",
+          "meaningPt": "progresso",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "questions": {
+      "totalCount": 1,
+      "senses": {
+        "question_default": {
+          "count": 1,
+          "lemma": "question",
+          "partOfSpeech": "noun",
+          "meaningPt": "perguntas",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "recognize": {
+      "totalCount": 1,
+      "senses": {
+        "recognize_default": {
+          "count": 1,
+          "lemma": "recognize",
+          "partOfSpeech": "verb",
+          "meaningPt": "reconhecer",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "repeated": {
+      "totalCount": 1,
+      "senses": {
+        "repeat_default": {
+          "count": 1,
+          "lemma": "repeat",
+          "partOfSpeech": "verb",
+          "meaningPt": "repeti",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "ripe": {
+      "totalCount": 1,
+      "senses": {
+        "ripe_default": {
+          "count": 1,
+          "lemma": "ripe",
+          "partOfSpeech": "adjective",
+          "meaningPt": "maduro",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "routes": {
+      "totalCount": 1,
+      "senses": {
+        "route_default": {
+          "count": 1,
+          "lemma": "route",
+          "partOfSpeech": "noun",
+          "meaningPt": "rotas",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "she": {
+      "totalCount": 1,
+      "senses": {
+        "she_default": {
+          "count": 1,
+          "lemma": "she",
+          "partOfSpeech": "pronoun",
+          "meaningPt": "ela",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "showed": {
+      "totalCount": 1,
+      "senses": {
+        "show_default": {
+          "count": 1,
+          "lemma": "show",
+          "partOfSpeech": "verb",
+          "meaningPt": "mostrou",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "slowly": {
+      "totalCount": 1,
+      "senses": {
+        "slowly_default": {
+          "count": 1,
+          "lemma": "slowly",
+          "partOfSpeech": "adverb",
+          "meaningPt": "devagar",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "small": {
+      "totalCount": 1,
+      "senses": {
+        "small_default": {
+          "count": 1,
+          "lemma": "small",
+          "partOfSpeech": "adjective",
+          "meaningPt": "pequeno / pequena",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "sounds": {
+      "totalCount": 1,
+      "senses": {
+        "sound_default": {
+          "count": 1,
+          "lemma": "sound",
+          "partOfSpeech": "verb",
+          "meaningPt": "soa / parece",
+          "examples": [
+            "That sounds dramatic. What happened, did a mango give you directions?"
+          ]
+        }
+      }
+    },
+    "sour": {
+      "totalCount": 1,
+      "senses": {
+        "sour_default": {
+          "count": 1,
+          "lemma": "sour",
+          "partOfSpeech": "adjective",
+          "meaningPt": "azedo",
+          "examples": [
+            "It helped. I learned sweet, sour, ripe, and expensive. Expensive was important because I almost bought enough bananas for a hotel breakfast buffet."
+          ]
+        }
+      }
+    },
+    "street": {
+      "totalCount": 1,
+      "senses": {
+        "street_default": {
+          "count": 1,
+          "lemma": "street",
+          "partOfSpeech": "noun",
+          "meaningPt": "rua",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "successful": {
+      "totalCount": 1,
+      "senses": {
+        "successful_default": {
+          "count": 1,
+          "lemma": "successful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "bem-sucedido",
+          "examples": [
+            "Excellent progress: polite questions, new fruit, and no accidental watermelon. That is a successful market lesson."
+          ]
+        }
+      }
+    },
+    "than": {
+      "totalCount": 1,
+      "senses": {
+        "than_default": {
+          "count": 1,
+          "lemma": "than",
+          "partOfSpeech": "conjunction",
+          "meaningPt": "do que",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "three": {
+      "totalCount": 1,
+      "senses": {
+        "three_default": {
+          "count": 1,
+          "lemma": "three",
+          "partOfSpeech": "number",
+          "meaningPt": "três",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "total": {
+      "totalCount": 1,
+      "senses": {
+        "total_default": {
+          "count": 1,
+          "lemma": "total",
+          "partOfSpeech": "noun",
+          "meaningPt": "total",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "traveler": {
+      "totalCount": 1,
+      "senses": {
+        "traveler_default": {
+          "count": 1,
+          "lemma": "traveler",
+          "partOfSpeech": "noun",
+          "meaningPt": "viajante",
+          "examples": [
+            "Classic traveler face. Did you ask what it was?"
+          ]
+        }
+      }
+    },
+    "tried": {
+      "totalCount": 1,
+      "senses": {
+        "try_default": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "tentei / experimentei",
+          "examples": [
+            "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+          ]
+        }
+      }
+    },
+    "try": {
+      "totalCount": 1,
+      "senses": {
+        "try_default": {
+          "count": 1,
+          "lemma": "try",
+          "partOfSpeech": "verb",
+          "meaningPt": "experimentar / tentar",
+          "examples": [
+            "That is a kind vendor. Did you try anything before buying?"
+          ]
+        }
+      }
+    },
+    "two": {
+      "totalCount": 1,
+      "senses": {
+        "two_default": {
+          "count": 1,
+          "lemma": "two",
+          "partOfSpeech": "number",
+          "meaningPt": "dois / duas",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "understand": {
+      "totalCount": 1,
+      "senses": {
+        "understand_default": {
+          "count": 1,
+          "lemma": "understand",
+          "partOfSpeech": "verb",
+          "meaningPt": "entender",
+          "examples": [
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "up": {
+      "totalCount": 1,
+      "senses": {
+        "up_default": {
+          "count": 1,
+          "lemma": "up",
+          "partOfSpeech": "particle",
+          "meaningPt": "completamente / para cima",
+          "notePt": "Em mixed up, faz parte do phrasal verb que significa confundir.",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "useful": {
+      "totalCount": 1,
+      "senses": {
+        "useful_default": {
+          "count": 1,
+          "lemma": "useful",
+          "partOfSpeech": "adjective",
+          "meaningPt": "útil",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "very": {
+      "totalCount": 1,
+      "senses": {
+        "very_default": {
+          "count": 1,
+          "lemma": "very",
+          "partOfSpeech": "adverb",
+          "meaningPt": "muito",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    },
+    "vocabulary": {
+      "totalCount": 1,
+      "senses": {
+        "vocabulary_default": {
+          "count": 1,
+          "lemma": "vocabulary",
+          "partOfSpeech": "noun",
+          "meaningPt": "vocabulário",
+          "examples": [
+            "Useful confusion. You needed market grammar, not just fruit vocabulary."
+          ]
+        }
+      }
+    },
+    "walked": {
+      "totalCount": 1,
+      "senses": {
+        "walk_default": {
+          "count": 1,
+          "lemma": "walk",
+          "partOfSpeech": "verb",
+          "meaningPt": "caminhei",
+          "examples": [
+            "Mostly normal. I bought passion fruit, pineapple, and two bananas, then I walked away before anyone could offer me a watermelon."
+          ]
+        }
+      }
+    },
+    "weighed": {
+      "totalCount": 1,
+      "senses": {
+        "weigh_default": {
+          "count": 1,
+          "lemma": "weigh",
+          "partOfSpeech": "verb",
+          "meaningPt": "pesou",
+          "examples": [
+            "Exactly. I asked, 'How much is one?' and the vendor answered slowly. Then he weighed three fruits and showed me the total."
+          ]
+        }
+      }
+    },
+    "went": {
+      "totalCount": 1,
+      "senses": {
+        "go_default": {
+          "count": 1,
+          "lemma": "go",
+          "partOfSpeech": "verb",
+          "meaningPt": "fui / foi",
+          "examples": [
+            "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+          ]
+        }
+      }
+    },
+    "whole": {
+      "totalCount": 1,
+      "senses": {
+        "whole_default": {
+          "count": 1,
+          "lemma": "whole",
+          "partOfSpeech": "adjective",
+          "meaningPt": "inteiro / toda",
+          "examples": [
+            "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+          ]
+        }
+      }
+    },
+    "with": {
+      "totalCount": 1,
+      "senses": {
+        "with_default": {
+          "count": 1,
+          "lemma": "with",
+          "partOfSpeech": "preposition",
+          "meaningPt": "com",
+          "examples": [
+            "So did you leave with a normal amount of fruit?"
+          ]
+        }
+      }
+    },
+    "word": {
+      "totalCount": 1,
+      "senses": {
+        "word_default": {
+          "count": 1,
+          "lemma": "word",
+          "partOfSpeech": "noun",
+          "meaningPt": "palavra",
+          "examples": [
+            "Doce is a beautiful word to understand at a market."
+          ]
+        }
+      }
+    },
+    "yellow": {
+      "totalCount": 1,
+      "senses": {
+        "yellow_default": {
+          "count": 1,
+          "lemma": "yellow",
+          "partOfSpeech": "adjective",
+          "meaningPt": "amarelo / amarela",
+          "examples": [
+            "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+          ]
+        }
+      }
+    },
+    "yes": {
+      "totalCount": 1,
+      "senses": {
+        "yes_default": {
+          "count": 1,
+          "lemma": "yes",
+          "partOfSpeech": "interjection",
+          "meaningPt": "sim",
+          "examples": [
+            "Yes. Another vendor offered a small piece of pineapple and said it was very sweet. I understood sweet because she smiled and repeated doce."
+          ]
+        }
+      }
+    }
+  },
+  "postId": "day-4"
+}

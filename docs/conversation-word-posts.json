@@ -16,5 +16,11 @@
     "module": "../src/data/day3Content.js",
     "conversationExport": "day3Conversation",
     "wordTranslationsExport": "day3WordTranslations"
+  },
+  {
+    "id": "day-4",
+    "module": "../src/data/day4Content.js",
+    "conversationExport": "day4Conversation",
+    "wordTranslationsExport": "day4WordTranslations"
   }
 ]

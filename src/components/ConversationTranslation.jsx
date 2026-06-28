@@ -1,5 +1,26 @@
 import { useState } from "react";
 
+function FormattedNoteText({ children, className }) {
+  const value = String(children ?? "");
+  const parts = value.split(/(\*\*\*[^*]+\*\*\*)/g);
+
+  return (
+    <p className={className}>
+      {parts.map((part, index) => {
+        if (part.startsWith("***") && part.endsWith("***")) {
+          return (
+            <strong key={index}>
+              <em>{part.slice(3, -3)}</em>
+            </strong>
+          );
+        }
+
+        return part;
+      })}
+    </p>
+  );
+}
+
 function ConversationTranslation({ detail, isNew, lessLabel = "Less", message, missingText, moreLabel = "More?", note, noteLabel, translation }) {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const showDetail = detail && isDetailOpen;
@@ -15,7 +36,7 @@ function ConversationTranslation({ detail, isNew, lessLabel = "Less", message, m
       {note && (
         <div className="translation-note">
           <span>{noteLabel}</span>
-          <p>{note}</p>
+          <FormattedNoteText>{note}</FormattedNoteText>
           {detail && (
             <>
               <button
@@ -26,7 +47,7 @@ function ConversationTranslation({ detail, isNew, lessLabel = "Less", message, m
               >
                 {isDetailOpen ? lessLabel : moreLabel}
               </button>
-              {showDetail && <p className="translation-note-detail">{detail}</p>}
+              {showDetail && <FormattedNoteText className="translation-note-detail">{detail}</FormattedNoteText>}
             </>
           )}
         </div>

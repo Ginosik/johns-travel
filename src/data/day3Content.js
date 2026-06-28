@@ -117,22 +117,22 @@ export const day3ConversationLanguageNotes = {
     "Just softens the situation: he was not truly lost, only confused."
   ],
   pt: [
-    "Ended up significa acabar em algum lugar por acidente ou depois de uma situação inesperada.",
-    "Still found mostra que algo bom aconteceu apesar do erro.",
-    "At first introduz o primeiro momento antes de a situação mudar.",
-    "Did you ask...? usa did mais o verbo base para perguntar sobre o passado.",
-    "Going to pergunta sobre destino, especialmente em ônibus ou rotas.",
-    "At least aponta a parte positiva de uma situação imperfeita.",
-    "Not really significa não, mas de um jeito mais suave ou menos absoluto.",
-    "If introduz uma condição: uma coisa pode acontecer quando outra é verdadeira.",
-    "Got off significa descer de um ônibus, trem ou outro transporte.",
-    "Compared with pergunta como duas coisas são parecidas ou diferentes.",
-    "Too crowded significa mais cheio do que o desejado ou confortável.",
-    "Recovering from significa voltar ao normal depois de algo estressante.",
-    "Onde fica...? é uma pergunta em português para saber a localização de algo.",
-    "Vocabulary é um grupo de palavras ligado a um tema.",
-    "Means explica a definição ou tradução de uma palavra.",
-    "Just suaviza a situação: ele não estava realmente perdido, só confuso."
+    "***Ended up*** significa acabar em algum lugar por acidente ou depois de uma situação inesperada.",
+    "***Still found*** mostra que algo bom aconteceu apesar do erro.",
+    "***At first*** introduz o primeiro momento antes de a situação mudar.",
+    "***Did you ask...?*** usa ***did*** mais o verbo base para perguntar sobre o passado.",
+    "***Going to*** pergunta sobre destino, especialmente em ônibus ou rotas.",
+    "***At least*** aponta a parte positiva de uma situação imperfeita.",
+    "***Not really*** significa não, mas de um jeito mais suave ou menos absoluto.",
+    "***If*** introduz uma condição: uma coisa pode acontecer quando outra é verdadeira.",
+    "***Got off*** significa descer de um ônibus, trem ou outro transporte.",
+    "***Compared with*** pergunta como duas coisas são parecidas ou diferentes.",
+    "***Too crowded*** significa mais cheio do que o desejado ou confortável.",
+    "***Recovering from*** significa voltar ao normal depois de algo estressante.",
+    "***Onde fica...?*** é uma pergunta em português para saber a localização de algo.",
+    "***Vocabulary*** é um grupo de palavras ligado a um tema.",
+    "***Means*** explica a definição ou tradução de uma palavra.",
+    "***Just*** suaviza a situação: ele não estava realmente ***perdido***, só confuso."
   ]
 };
 
@@ -156,22 +156,22 @@ export const day3ConversationLanguageNoteDetails = {
     "Just can reduce drama. Nicky reframes John's confusion as temporary and harmless, which makes the story playful."
   ],
   pt: [
-    "End up é comum em histórias de viagem porque planos mudam. John não planejou ir para Campeche, mas a rota do ônibus criou esse resultado.",
-    "Still pode significar mesmo assim ou apesar disso. Nicky fica surpresa porque o erro não estragou o dia.",
-    "At first ajuda a organizar uma história no tempo. A expressão mostra o que John sentiu antes de entender melhor a situação.",
-    "Em perguntas no passado com did, o verbo principal fica na forma base: ask, não asked. Esse padrão serve para muitas perguntas de viagem.",
-    "Going to é muito prático em transporte. Você pode perguntar Is this bus going to...? quando precisa confirmar um destino.",
-    "At least é útil quando a situação não é perfeita. Nicky destaca que John entendeu a palavra principal, mesmo com a rota errada.",
-    "Not really é mais suave do que um no direto. John usa porque tinha uma ideia geral, mas não entendia claramente o lugar.",
-    "If cria uma condição e pode introduzir uma reação possível. Aqui, Nicky transforma um erro em regra de viagem.",
-    "Get off é um phrasal verb para sair de transporte público. No passado, vira got off.",
-    "Compared with convida a fazer contraste. Nicky quer que John descreva Campeche em relação às praias ou lugares que ele já visitou.",
-    "Too antes de um adjetivo significa mais do que é bom. Not too crowded quer dizer que havia gente, mas não em quantidade desconfortável.",
-    "Recovering from pode ser literal ou emocional. Nicky brinca que o erro do ônibus foi estressante o bastante para exigir recuperação.",
-    "Onde fica o ponto de ônibus? significa Where is the bus stop? É uma frase prática que estudantes podem reutilizar no Brasil.",
-    "Vocabulary pode descrever um conjunto de palavras de um tema, como vocabulário de ônibus ou de praia. Isso ajuda a agrupar palavras por situação.",
-    "Means é um dos verbos mais úteis para estudantes. John usa para conectar perdido com a tradução em inglês, lost.",
-    "Just pode diminuir o drama. Nicky reformula a confusão de John como temporária e inofensiva, deixando a história mais leve."
+    "***End up*** é comum em histórias de viagem porque planos mudam. John não planejou ir para Campeche, mas a rota do ônibus criou esse resultado.",
+    "***Still*** pode significar mesmo assim ou apesar disso. Nicky fica surpresa porque o erro não estragou o dia.",
+    "***At first*** ajuda a organizar uma história no tempo. A expressão mostra o que John sentiu antes de entender melhor a situação.",
+    "Em perguntas no passado com ***did***, o verbo principal fica na forma base: ***ask***, não ***asked***. Esse padrão serve para muitas perguntas de viagem.",
+    "***Going to*** é muito prático em transporte. Você pode perguntar ***Is this bus going to...?*** quando precisa confirmar um destino.",
+    "***At least*** é útil quando a situação não é perfeita. Nicky destaca que John entendeu a palavra principal, mesmo com a rota errada.",
+    "***Not really*** é mais suave do que um ***no*** direto. John usa porque tinha uma ideia geral, mas não entendia claramente o lugar.",
+    "***If*** cria uma condição e pode introduzir uma reação possível. Aqui, Nicky transforma um erro em regra de viagem.",
+    "***Get off*** é um phrasal verb para sair de transporte público. No passado, vira ***got off***.",
+    "***Compared with*** convida a fazer contraste. Nicky quer que John descreva Campeche em relação às praias ou lugares que ele já visitou.",
+    "***Too*** antes de um adjetivo significa mais do que é bom. ***Not too crowded*** quer dizer que havia gente, mas não em quantidade desconfortável.",
+    "***Recovering from*** pode ser literal ou emocional. Nicky brinca que o erro do ônibus foi estressante o bastante para exigir recuperação.",
+    "***Onde fica o ponto de ônibus?*** significa ***Where is the bus stop?*** É uma frase prática que estudantes podem reutilizar no Brasil.",
+    "***Vocabulary*** pode descrever um conjunto de palavras de um tema, como vocabulário de ônibus ou de praia. Isso ajuda a agrupar palavras por situação.",
+    "***Means*** é um dos verbos mais úteis para estudantes. John usa para conectar ***perdido*** com a tradução em inglês, ***lost***.",
+    "***Just*** pode diminuir o drama. Nicky reformula a confusão de John como temporária e inofensiva, deixando a história mais leve."
   ]
 };
 

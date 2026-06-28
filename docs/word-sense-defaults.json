@@ -1751,6 +1751,379 @@
       "meaningPt": "ônibus",
       "languageTag": "pt-BR",
       "languageName": "Portuguese"
+    },
+    "went": {
+      "lemma": "go",
+      "partOfSpeech": "verb",
+      "meaningPt": "fui / foi"
+    },
+    "street": {
+      "lemma": "street",
+      "partOfSpeech": "noun",
+      "meaningPt": "rua"
+    },
+    "morning": {
+      "lemma": "morning",
+      "partOfSpeech": "noun",
+      "meaningPt": "manhã"
+    },
+    "fruit": {
+      "lemma": "fruit",
+      "partOfSpeech": "noun",
+      "meaningPt": "fruta"
+    },
+    "can": {
+      "lemma": "can",
+      "partOfSpeech": "modal verb",
+      "meaningPt": "pode"
+    },
+    "be": {
+      "lemma": "be",
+      "partOfSpeech": "verb",
+      "meaningPt": "ser / estar"
+    },
+    "confusing": {
+      "lemma": "confusing",
+      "partOfSpeech": "adjective",
+      "meaningPt": "confuso"
+    },
+    "routes": {
+      "lemma": "route",
+      "partOfSpeech": "noun",
+      "meaningPt": "rotas"
+    },
+    "dramatic": {
+      "lemma": "dramatic",
+      "partOfSpeech": "adjective",
+      "meaningPt": "dramático"
+    },
+    "happened": {
+      "lemma": "happen",
+      "partOfSpeech": "verb",
+      "meaningPt": "aconteceu"
+    },
+    "mango": {
+      "lemma": "mango",
+      "partOfSpeech": "noun",
+      "meaningPt": "manga"
+    },
+    "give": {
+      "lemma": "give",
+      "partOfSpeech": "verb",
+      "meaningPt": "dar"
+    },
+    "directions": {
+      "lemma": "direction",
+      "partOfSpeech": "noun",
+      "meaningPt": "direções"
+    },
+    "almost": {
+      "lemma": "almost",
+      "partOfSpeech": "adverb",
+      "meaningPt": "quase"
+    },
+    "vendor": {
+      "lemma": "vendor",
+      "partOfSpeech": "noun",
+      "meaningPt": "vendedor / vendedora"
+    },
+    "held": {
+      "lemma": "hold",
+      "partOfSpeech": "verb",
+      "meaningPt": "segurou / levantou"
+    },
+    "yellow": {
+      "lemma": "yellow",
+      "partOfSpeech": "adjective",
+      "meaningPt": "amarelo / amarela"
+    },
+    "name": {
+      "lemma": "name",
+      "partOfSpeech": "noun",
+      "meaningPt": "nome"
+    },
+    "recognize": {
+      "lemma": "recognize",
+      "partOfSpeech": "verb",
+      "meaningPt": "reconhecer"
+    },
+    "classic": {
+      "lemma": "classic",
+      "partOfSpeech": "adjective",
+      "meaningPt": "clássico / clássica"
+    },
+    "traveler": {
+      "lemma": "traveler",
+      "partOfSpeech": "noun",
+      "meaningPt": "viajante"
+    },
+    "face": {
+      "lemma": "face",
+      "partOfSpeech": "noun",
+      "meaningPt": "cara / rosto"
+    },
+    "como": {
+      "lemma": "como",
+      "partOfSpeech": "adverb",
+      "meaningPt": "como",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "chama": {
+      "lemma": "chamar",
+      "partOfSpeech": "verb",
+      "meaningPt": "chama",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "maracujá": {
+      "lemma": "maracujá",
+      "partOfSpeech": "noun",
+      "meaningPt": "maracujá",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "passion": {
+      "lemma": "passion",
+      "partOfSpeech": "noun",
+      "meaningPt": "paixão"
+    },
+    "buy": {
+      "lemma": "buy",
+      "partOfSpeech": "verb",
+      "meaningPt": "comprar"
+    },
+    "problem": {
+      "lemma": "problem",
+      "partOfSpeech": "noun",
+      "meaningPt": "problema"
+    },
+    "price": {
+      "lemma": "price",
+      "partOfSpeech": "noun",
+      "meaningPt": "preço"
+    },
+    "kilo": {
+      "lemma": "kilo",
+      "partOfSpeech": "noun",
+      "meaningPt": "quilo"
+    },
+    "bag": {
+      "lemma": "bag",
+      "partOfSpeech": "noun",
+      "meaningPt": "sacola / bolsa"
+    },
+    "confusion": {
+      "lemma": "confusion",
+      "partOfSpeech": "noun",
+      "meaningPt": "confusão"
+    },
+    "needed": {
+      "lemma": "need",
+      "partOfSpeech": "verb",
+      "meaningPt": "precisava / precisou"
+    },
+    "grammar": {
+      "lemma": "grammar",
+      "partOfSpeech": "noun",
+      "meaningPt": "gramática"
+    },
+    "he": {
+      "lemma": "he",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "ele"
+    },
+    "weighed": {
+      "lemma": "weigh",
+      "partOfSpeech": "verb",
+      "meaningPt": "pesou"
+    },
+    "three": {
+      "lemma": "three",
+      "partOfSpeech": "number",
+      "meaningPt": "três"
+    },
+    "fruits": {
+      "lemma": "fruit",
+      "partOfSpeech": "noun",
+      "meaningPt": "frutas"
+    },
+    "showed": {
+      "lemma": "show",
+      "partOfSpeech": "verb",
+      "meaningPt": "mostrou"
+    },
+    "total": {
+      "lemma": "total",
+      "partOfSpeech": "noun",
+      "meaningPt": "total"
+    },
+    "kind": {
+      "lemma": "kind",
+      "partOfSpeech": "adjective",
+      "meaningPt": "gentil"
+    },
+    "try": {
+      "lemma": "try",
+      "partOfSpeech": "verb",
+      "meaningPt": "experimentar / tentar"
+    },
+    "anything": {
+      "lemma": "anything",
+      "partOfSpeech": "pronoun",
+      "meaningPt": "alguma coisa"
+    },
+    "before": {
+      "lemma": "before",
+      "partOfSpeech": "preposition",
+      "meaningPt": "antes"
+    },
+    "buying": {
+      "lemma": "buy",
+      "partOfSpeech": "verb",
+      "meaningPt": "comprando"
+    },
+    "another": {
+      "lemma": "another",
+      "partOfSpeech": "determiner",
+      "meaningPt": "outro / outra"
+    },
+    "offered": {
+      "lemma": "offer",
+      "partOfSpeech": "verb",
+      "meaningPt": "ofereceu"
+    },
+    "piece": {
+      "lemma": "piece",
+      "partOfSpeech": "noun",
+      "meaningPt": "pedaço"
+    },
+    "pineapple": {
+      "lemma": "pineapple",
+      "partOfSpeech": "noun",
+      "meaningPt": "abacaxi"
+    },
+    "sweet": {
+      "lemma": "sweet",
+      "partOfSpeech": "adjective",
+      "meaningPt": "doce"
+    },
+    "doce": {
+      "lemma": "doce",
+      "partOfSpeech": "adjective",
+      "meaningPt": "doce",
+      "languageTag": "pt-BR",
+      "languageName": "Portuguese"
+    },
+    "helped": {
+      "lemma": "help",
+      "partOfSpeech": "verb",
+      "meaningPt": "ajudou"
+    },
+    "sour": {
+      "lemma": "sour",
+      "partOfSpeech": "adjective",
+      "meaningPt": "azedo"
+    },
+    "ripe": {
+      "lemma": "ripe",
+      "partOfSpeech": "adjective",
+      "meaningPt": "maduro"
+    },
+    "expensive": {
+      "lemma": "expensive",
+      "partOfSpeech": "adjective",
+      "meaningPt": "caro"
+    },
+    "bananas": {
+      "lemma": "banana",
+      "partOfSpeech": "noun",
+      "meaningPt": "bananas"
+    },
+    "hotel": {
+      "lemma": "hotel",
+      "partOfSpeech": "noun",
+      "meaningPt": "hotel"
+    },
+    "breakfast": {
+      "lemma": "breakfast",
+      "partOfSpeech": "noun",
+      "meaningPt": "café da manhã"
+    },
+    "buffet": {
+      "lemma": "buffet",
+      "partOfSpeech": "noun",
+      "meaningPt": "buffet"
+    },
+    "leave": {
+      "lemma": "leave",
+      "partOfSpeech": "verb",
+      "meaningPt": "sair / ir embora"
+    },
+    "normal": {
+      "lemma": "normal",
+      "partOfSpeech": "adjective",
+      "meaningPt": "normal"
+    },
+    "amount": {
+      "lemma": "amount",
+      "partOfSpeech": "noun",
+      "meaningPt": "quantidade"
+    },
+    "two": {
+      "lemma": "two",
+      "partOfSpeech": "number",
+      "meaningPt": "dois / duas"
+    },
+    "away": {
+      "lemma": "away",
+      "partOfSpeech": "adverb",
+      "meaningPt": "embora / para longe"
+    },
+    "offer": {
+      "lemma": "offer",
+      "partOfSpeech": "verb",
+      "meaningPt": "oferecer"
+    },
+    "watermelon": {
+      "lemma": "watermelon",
+      "partOfSpeech": "noun",
+      "meaningPt": "melancia"
+    },
+    "excellent": {
+      "lemma": "excellent",
+      "partOfSpeech": "adjective",
+      "meaningPt": "excelente"
+    },
+    "progress": {
+      "lemma": "progress",
+      "partOfSpeech": "noun",
+      "meaningPt": "progresso"
+    },
+    "polite": {
+      "lemma": "polite",
+      "partOfSpeech": "adjective",
+      "meaningPt": "educado / educada"
+    },
+    "questions": {
+      "lemma": "question",
+      "partOfSpeech": "noun",
+      "meaningPt": "perguntas"
+    },
+    "accidental": {
+      "lemma": "accidental",
+      "partOfSpeech": "adjective",
+      "meaningPt": "acidental"
+    },
+    "successful": {
+      "lemma": "successful",
+      "partOfSpeech": "adjective",
+      "meaningPt": "bem-sucedido"
+    },
+    "lesson": {
+      "lemma": "lesson",
+      "partOfSpeech": "noun",
+      "meaningPt": "aula / lição"
     }
   },
   "pronunciations": {

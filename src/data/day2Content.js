@@ -111,20 +111,20 @@ export const day2ConversationLanguageNotes = {
     "Sounds like means it seems like, when reacting to a description."
   ],
   "pt": [
-    "Finally marca que algo esperado aconteceu depois de algum tempo.",
-    "Lake or neighborhood? mostra duas possibilidades com or.",
-    "It is both quer dizer que as duas opções estão corretas.",
-    "Did it feel...? pergunta qual foi a impressão causada por um lugar ou situação.",
-    "Not at all significa nem um pouco.",
-    "What did you do first? usa did para fazer uma pergunta no passado.",
-    "Near the water quer dizer perto da água.",
-    "Practice Portuguese usa practice como verbo principal: praticar português.",
-    "By myself significa sozinho, sem ajuda de outra pessoa.",
-    "Did they understand you? pergunta se outras pessoas entenderam você.",
-    "They did substitui a resposta completa they understood me.",
-    "That still counts quer dizer que aquilo ainda vale ou ainda conta como progresso.",
-    "Means é usado para explicar o significado de uma palavra.",
-    "Sounds like significa parece, ao reagir a uma descrição."
+    "***Finally*** marca que algo esperado aconteceu depois de algum tempo.",
+    "***Lake or neighborhood?*** mostra duas possibilidades com ***or***.",
+    "***It is both*** quer dizer que as duas opções estão corretas.",
+    "***Did it feel...?*** pergunta qual foi a impressão causada por um lugar ou situação.",
+    "***Not at all*** significa nem um pouco.",
+    "***What did you do first?*** usa ***did*** para fazer uma pergunta no passado.",
+    "***Near the water*** quer dizer perto da água.",
+    "***Practice Portuguese*** usa practice como verbo principal: praticar português.",
+    "***By myself*** significa sozinho, sem ajuda de outra pessoa.",
+    "***Did they understand you?*** pergunta se outras pessoas entenderam você.",
+    "***They did*** substitui a resposta completa ***they understood me***.",
+    "***That still counts*** quer dizer que aquilo ainda vale ou ainda conta como progresso.",
+    "***Means*** é usado para explicar o significado de uma palavra.",
+    "***Sounds like*** significa parece, ao reagir a uma descrição."
   ]
 };
 
@@ -146,20 +146,20 @@ export const day2ConversationLanguageNoteDetails = {
     "Sounds like reacts to a description. Nicky is saying John's day appears or seems very good based on what he told her."
   ],
   "pt": [
-    "Finally sugere que John ja queria visitar a Lagoa da Conceicao havia algum tempo. A palavra da a frase uma sensacao de progresso.",
-    "A estrutura com or apresenta alternativas. Nicky esta tentando entender se a Lagoa da Conceicao e uma coisa, outra, ou as duas.",
-    "Both responde duas alternativas ao mesmo tempo. John usa a palavra para explicar que o lugar e lagoa e tambem bairro.",
-    "Feel pode descrever a atmosfera de um lugar. Nicky nao esta falando de toque fisico, mas da impressao que o lugar causou.",
-    "Not at all e uma resposta negativa forte. John usa para dizer que o lugar definitivamente nao estava tranquilo.",
-    "Perguntas no passado simples costumam usar did mais o verbo base. Por isso a frase diz did you do, nao did you did.",
-    "Near significa perto de algo, mas nao necessariamente encostado. E util para descrever onde voce caminhou ou ficou.",
-    "Practice e a acao de fazer algo repetidamente para melhorar. Aqui Portuguese e a habilidade que John esta praticando.",
-    "By myself enfatiza independencia. John pediu sem ajuda, o que importa porque ele esta aprendendo em uma situacao real.",
-    "Understand you pergunta se a mensagem de John ficou clara para outras pessoas. E uma pergunta muito pratica para quem aprende idiomas.",
-    "They did evita repetir a frase inteira. Significa they understood me, e esse tipo de resposta curta e muito comum.",
-    "That still counts significa que o esforco vale mesmo se nao foi perfeito. E uma frase de apoio para reconhecer pequenos progressos.",
-    "Means e muito util para definir vocabulario. John usa ingles para explicar palavras em portugues que aprendeu durante a viagem.",
-    "Sounds like reage a uma descricao. Nicky esta dizendo que o dia de John parece muito bom com base no que ele contou."
+    "***Finally*** sugere que John ja queria visitar a Lagoa da Conceicao havia algum tempo. A palavra da a frase uma sensacao de progresso.",
+    "A estrutura com ***or*** apresenta alternativas. Nicky esta tentando entender se a Lagoa da Conceicao e uma coisa, outra, ou as duas.",
+    "***Both*** responde duas alternativas ao mesmo tempo. John usa a palavra para explicar que o lugar e lagoa e tambem bairro.",
+    "***Feel*** pode descrever a atmosfera de um lugar. Nicky nao esta falando de toque fisico, mas da impressao que o lugar causou.",
+    "***Not at all*** e uma resposta negativa forte. John usa para dizer que o lugar definitivamente nao estava tranquilo.",
+    "Perguntas no passado simples costumam usar ***did*** mais o verbo base. Por isso a frase diz ***did you do***, nao ***did you did***.",
+    "***Near*** significa perto de algo, mas nao necessariamente encostado. E util para descrever onde voce caminhou ou ficou.",
+    "***Practice*** e a acao de fazer algo repetidamente para melhorar. Aqui ***Portuguese*** e a habilidade que John esta praticando.",
+    "***By myself*** enfatiza independencia. John pediu sem ajuda, o que importa porque ele esta aprendendo em uma situacao real.",
+    "***Understand you*** pergunta se a mensagem de John ficou clara para outras pessoas. E uma pergunta muito pratica para quem aprende idiomas.",
+    "***They did*** evita repetir a frase inteira. Significa ***they understood me***, e esse tipo de resposta curta e muito comum.",
+    "***That still counts*** significa que o esforco vale mesmo se nao foi perfeito. E uma frase de apoio para reconhecer pequenos progressos.",
+    "***Means*** e muito util para definir vocabulario. John usa ingles para explicar palavras em portugues que aprendeu durante a viagem.",
+    "***Sounds like*** reage a uma descricao. Nicky esta dizendo que o dia de John parece muito bom com base no que ele contou."
   ]
 };
 

@@ -7,6 +7,8 @@ const pt = {
   day2Subtitle: "Dia 2 - Explorando a Lagoa da Concei\u00e7\u00e3o",
   day2Copy: "Uma lagoa movimentada, um bairro novo e o primeiro pedido de John em portugu\u00eas.",
   day3Subtitle: "Dia 3 - O \u00f4nibus errado para a praia certa",
+  day4Subtitle: "Dia 4 - Comprando frutas na feira",
+  day4FirstMessage: "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.",
   day3FirstMessage: "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.",
   florianopolisIntro: /Florian\u00f3polis, Brasil, portugu\u00eas/,
   olaSelector: '.word[data-translation="ol\u00e1"]',
@@ -18,7 +20,8 @@ const pt = {
 const publishedStories = [
   { href: "/day/1", subtitle: pt.day1Subtitle, firstMessage: "Hello! How are you doing?" },
   { href: "/day/2", subtitle: pt.day2Subtitle, firstMessage: "I finally explored Lagoa da Concei\u00e7\u00e3o today, and I stayed there for most of the afternoon because the place felt alive." },
-  { href: "/day/3", subtitle: pt.day3Subtitle, firstMessage: pt.day3FirstMessage }
+  { href: "/day/3", subtitle: pt.day3Subtitle, firstMessage: pt.day3FirstMessage },
+  { href: "/day/4", subtitle: pt.day4Subtitle, firstMessage: pt.day4FirstMessage }
 ];
 
 test("renders the public story library in Portuguese by default", async ({ page }) => {
@@ -118,4 +121,10 @@ test("provides data-driven previous and next story links", async ({ page }) => {
   await page.getByRole("link", { name: pt.nextStory }).click();
   await expect(page).toHaveURL(/\/day\/2$/);
   await expect(page.getByRole("link", { name: pt.previousStory })).toHaveAttribute("href", "/day/1");
+
+  await page.goto("/day/3");
+  await expect(page.getByRole("link", { name: pt.nextStory })).toHaveAttribute("href", "/day/4");
+  await page.getByRole("link", { name: pt.nextStory }).click();
+  await expect(page).toHaveURL(/\/day\/4$/);
+  await expect(page.getByRole("link", { name: pt.previousStory })).toHaveAttribute("href", "/day/3");
 });

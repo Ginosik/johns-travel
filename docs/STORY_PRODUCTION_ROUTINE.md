@@ -85,6 +85,19 @@ export const day3ConversationLanguageNoteDetails = {
 
 The short note should explain the immediate phrase or structure. The detail should add the learner-friendly reason, usage context, contrast, or grammar pattern.
 
+Formatting rule for Portuguese notes:
+
+- When a Portuguese note switches into an English word, phrase, grammar label, or quoted example, wrap that English item in triple asterisks: `***did***`, `***ask***`, `***asked***`. The app renders this as bold italic text.
+- Do not mark Portuguese connector words such as `no`, `na`, `de`, or `para` unless the note is explicitly discussing the English word itself.
+- Prefer marking the full English phrase when possible, then mark individual contrast words only when they are the teaching point.
+
+Example:
+
+~~~js
+"Em perguntas no passado com ***did***, o verbo principal fica na forma base: ***ask***, não ***asked***. Esse padrão serve para muitas perguntas de viagem."
+"***Not really*** é mais suave do que um ***no*** direto."
+~~~
+
 Button labels come from the story UI translations:
 
 ~~~js

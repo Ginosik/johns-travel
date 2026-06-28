@@ -1,5 +1,5 @@
 {
-  "source": "Dialog text only from day-1, day-2, day-3 content modules listed in docs/conversation-word-posts.json",
+  "source": "Dialog text only from day-1, day-2, day-3, day-4 content modules listed in docs/conversation-word-posts.json",
   "normalization": "Case-insensitive; curly apostrophes normalized to straight apostrophes; punctuation excluded; accented words count as one word.",
   "hierarchy": "Per-post study files live in docs/conversation-word-data/<post-id>/conversation-word-counts.json and conversation-word-senses.json.",
   "totals": {
