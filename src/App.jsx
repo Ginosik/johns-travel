@@ -5,6 +5,7 @@ import DayPostPage from "./pages/DayPostPage.jsx";
 import DevWordsPage from "./pages/DevWordsPage.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import MarianaPage from "./pages/MarianaPage.jsx";
 import TripMapPage from "./pages/TripMapPage.jsx";
 import { clearActiveAudio, setActiveAudio, stopActiveAudio } from "./utils/audioController.js";
 
@@ -69,6 +70,7 @@ function App() {
     <Routes>
       <Route path="/" element={<FeedPage onOpenPost={navigateToPost} />} />
       <Route path="/day/:dayNumber" element={<StoryRoute initialPlayback={initialPlayback} />} />
+      <Route path="/mariana" element={<MarianaPage />} />
       <Route path="/day1.html" element={<Navigate to="/day/1" replace />} />
       <Route path="/trip-map" element={<TripMapPage onOpenPost={navigateToPost} />} />
       <Route path="/dev/words" element={<DevWordsPage />} />

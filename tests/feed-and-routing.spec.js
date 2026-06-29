@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 const pt = {
-  feedTitle: "Leia hist\u00f3rias de viagem e aprenda ingl\u00eas pelo contexto.",
+  feedTitle: "Aprenda ingl\u00eas com hist\u00f3rias, personagens e pr\u00e1tica guiada.",
   vocabulary: "Vocabul\u00e1rio em contexto",
   day1Subtitle: "Dia 1 - Primeiro dia de viagem",
   day2Subtitle: "Dia 2 - Explorando a Lagoa da Concei\u00e7\u00e3o",
@@ -29,6 +29,11 @@ test("renders the public story library in Portuguese by default", async ({ page 
 
   await expect(page.getByRole("heading", { name: pt.feedTitle })).toBeVisible();
   await expect(page.getByText(pt.vocabulary, { exact: true })).toBeVisible();
+  await expect(page.locator('.character-rail')).toBeVisible();
+  await expect(page.locator('.character-rail-item[href="/day/1"]')).toHaveAttribute("data-tooltip", "John");
+  await expect(page.locator('.character-rail-item[href="/mariana"]')).toHaveAttribute("data-tooltip", "Mariana");
+  await expect(page.locator('.character-rail-item.is-coming-soon')).toHaveAttribute("data-tooltip", "Em breve");
+  await expect(page.locator('.top-nav-link[href="/mariana"]')).toHaveCount(0);
   await expect(page.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
 
   for (const story of publishedStories) {
@@ -127,4 +132,78 @@ test("provides data-driven previous and next story links", async ({ page }) => {
   await page.getByRole("link", { name: pt.nextStory }).click();
   await expect(page).toHaveURL(/\/day\/4$/);
   await expect(page.getByRole("link", { name: pt.previousStory })).toHaveAttribute("href", "/day/3");
+});
+
+test("opens the Mariana Destrava practice section", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator('a.post-preview.mariana-feed-preview[href="/mariana"]')).toBeVisible();
+  await expect(page.getByText("Mariana Destrava", { exact: true })).toBeVisible();
+
+  await page.locator('a.post-preview.mariana-feed-preview[href="/mariana"]').click();
+  await expect(page).toHaveURL(/\/mariana$/);
+  await expect(page.getByRole("heading", { name: "Na hora de responder, d\u00e1 branco." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Can you repeat that?" })).toBeVisible();
+  await expect(page.getByText("Answer Builder", { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Agendar aula particular" })).toHaveCount(2);
+  await expect(page.locator(".mariana-cta-link")).toHaveAttribute("href", /wa\.me\/5548984844747/);
+  await expect(page.locator(".mariana-cta-link")).toHaveAttribute("href", /Luis/);
+  await expect(page.locator(".mariana-primary-button")).toHaveAttribute("href", /aulas%20particulares%20de%20ingl%C3%AAs%20da%20Conversante/);
+  await expect(page.locator(".mariana-primary-button")).toHaveAttribute("href", /wa\.me\/5548984844747/);
+});
+
+
+test("persists Mariana Answer Builder choices", async ({ page }) => {
+  await page.goto("/mariana");
+  await page.evaluate(() => window.localStorage.removeItem("conversante:mariana-progress"));
+  await page.reload();
+  const naturalAnswer = page.getByRole("button", { name: /Mais natural Sorry, can you repeat that/ });
+  await naturalAnswer.click();
+  await expect(naturalAnswer).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".mariana-progress")).toContainText("Progresso: 1/2");
+  await expect(page.getByText("Fale em voz alta", { exact: true })).toBeVisible();
+  await expect(page.locator(".mariana-say-it-line")).toHaveText("Sorry, can you repeat that?");
+
+  await page.reload();
+  await expect(page.getByRole("button", { name: /Mais natural Sorry, can you repeat that/ })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".mariana-progress")).toContainText("Progresso: 1/2");
+});
+
+test("shows Mariana rescue help and audio controls", async ({ page }) => {
+  await page.goto("/mariana");
+
+  await page.getByRole("button", { name: "Travei. Me ajuda." }).click();
+  await expect(page.locator(".mariana-help-panel").getByText("Could you speak a little slower?", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Esconder frases de resgate" })).toHaveAttribute("aria-expanded", "true");
+
+  await expect(page.getByRole("button", { name: /Ouvir frase: Yes, I can hear you/ })).toBeVisible();
+  await expect(page.getByRole("button", { name: /Ouvir resposta modelo: Can you repeat that, please/ })).toBeVisible();
+});
+
+test("tracks Mariana lead-magnet analytics events", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__conversanteEvents = [];
+    window.addEventListener("conversante:analytics", (event) => {
+      window.__conversanteEvents.push(event.detail);
+    });
+  });
+
+  await page.goto("/mariana");
+  await expect.poll(() => page.evaluate(() => window.__conversanteEvents)).toContainEqual(expect.objectContaining({
+    name: "mariana_opened",
+    properties: expect.objectContaining({ language: "pt", lesson_count: 1 })
+  }));
+
+  await page.evaluate(() => window.localStorage.removeItem("conversante:mariana-progress"));
+  await page.reload();
+  await page.getByRole("button", { name: /Mais natural Sorry, can you repeat that/ }).click();
+  await expect.poll(() => page.evaluate(() => window.__conversanteEvents)).toContainEqual(expect.objectContaining({
+    name: "mariana_activity_completed",
+    properties: expect.objectContaining({ lesson_id: "repeat-that", activity_id: "repeat-safe", selected_level: "natural" })
+  }));
+
+  await page.getByRole("link", { name: "Agendar aula particular" }).first().click();
+  await expect.poll(() => page.evaluate(() => window.__conversanteEvents)).toContainEqual(expect.objectContaining({
+    name: "mariana_cta_clicked",
+    properties: expect.objectContaining({ destination: "whatsapp", language: "pt", location: "hero" })
+  }));
 });

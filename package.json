@@ -25,7 +25,8 @@
     "audio:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs",
     "audio:day1:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-1 --output-format mp3_44100_128",
     "audio:day2:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-2 --output-format mp3_44100_128",
-    "audio:elevenlabs:voices": "node scripts/list-elevenlabs-voices.mjs"
+    "audio:elevenlabs:voices": "node scripts/list-elevenlabs-voices.mjs",
+    "audio:mariana:elevenlabs": "node scripts/generate-mariana-audio.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

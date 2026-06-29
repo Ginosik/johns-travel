@@ -3,6 +3,7 @@ import TopBar from "./TopBar.jsx";
 function FeedLayout({
   children,
   isPortuguese,
+  navLinks,
   onToggleLanguage,
   profileAvatar,
   profileName,
@@ -12,6 +13,7 @@ function FeedLayout({
     <>
       <TopBar
         isPortuguese={isPortuguese}
+        navLinks={navLinks}
         onToggleLanguage={onToggleLanguage}
         profileAvatar={profileAvatar}
         profileName={profileName}

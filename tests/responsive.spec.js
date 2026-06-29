@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const coreRoutes = ["/", "/day/1", "/day/2", "/trip-map"];
+const coreRoutes = ["/", "/day/1", "/day/2", "/mariana", "/trip-map"];
 const viewportMatrix = [
   { name: "phone-320", width: 320, height: 700 },
   { name: "phone-360", width: 360, height: 800 },
