@@ -86,3 +86,19 @@ test("supports keyboard conversation controls and accessible translation updates
   await toggle.press("Enter");
   await expect(toggle).toHaveAttribute("aria-expanded", "false");
 });
+
+test("shows a useful completion state with next and library actions", async ({ page }) => {
+  await page.goto("/day/1");
+  await switchToEnglish(page);
+
+  await page.getByRole("button", { name: "Start conversation" }).click();
+  for (let index = 1; index < 20; index += 1) {
+    await page.getByRole("button", { name: "Continue" }).click();
+  }
+
+  await expect(page.getByRole("heading", { name: "Nice work. You reached the end of this conversation." })).toBeVisible();
+  await expect(page.getByText("You can review any line again, open the next story, or return to the story library.")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Continue to next story" })).toHaveAttribute("href", "/day/2");
+  await expect(page.getByRole("link", { name: "Back to story library" })).toHaveAttribute("href", "/");
+  await expect(page.getByRole("button", { name: "Continue" })).toHaveCount(0);
+});

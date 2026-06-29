@@ -173,7 +173,7 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [ ] Respect reduced-motion preferences for typing and transition effects.
 - [ ] Audit color contrast, semantic headings, labels, and screen-reader announcements.
 - [ ] Test zoom up to 200% without clipped controls or overlapping conversation content.
-- [ ] Add a polished completion state with a route to the next story or back to the feed.
+- [x] Add a polished completion state with a route to the next story or back to the feed.
 - [ ] Preserve reading position when returning from a story to the feed.
 - [ ] Optimize image and audio loading so the feed opens quickly.
 - [ ] Compress remaining oversized desktop imagery without visible quality loss.
@@ -194,7 +194,7 @@ This roadmap turns John's Travel from a single interactive story into a reusable
 - [ ] Add a social preview image for link sharing.
 - [ ] Confirm DNS, hosting target, and canonical `www` behavior for `conversante.net`.
 - [ ] Add visible learning signals to story cards, such as audio availability, vocabulary count, or English level.
-- [ ] Improve the story completion state with a clear next-story path and return-to-library action.
+- [x] Improve the story completion state with a clear next-story path and return-to-library action.
 - [ ] Review the public copy in English and Portuguese for clarity, tone, and launch readiness.
 - [ ] Run a final public-readiness pass on desktop and mobile before deployment.
 

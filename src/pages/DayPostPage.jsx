@@ -41,7 +41,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   const languageNoteDetails = getLocalizedStoryArray(story.languageNoteDetails, language);
   const nextTypingMessage = hasStarted && !isComplete ? story.conversation[nextMessageIndex] : null;
   const nextTypingAvatar = nextTypingMessage ? story.avatars[nextTypingMessage.speaker] : null;
-  const continueButtonLabel = isComplete ? strings.complete : hasStarted ? strings.continue : strings.startConversation;
+  const continueButtonLabel = hasStarted ? strings.continue : strings.startConversation;
 
   useEffect(() => {
     try {
@@ -228,16 +228,33 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
               )}
             </section>
 
-            <div className="conversation-controls">
-              <button
-                className="continue-button"
-                type="button"
-                disabled={isComplete}
-                onClick={advanceConversation}
-              >
-                {continueButtonLabel}
-              </button>
-            </div>
+            {isComplete ? (
+              <section className="story-completion" aria-labelledby="story-completion-title">
+                <p className="story-completion-kicker">{strings.complete}</p>
+                <h2 id="story-completion-title">{strings.completionTitle}</h2>
+                <p>{strings.completionCopy}</p>
+                <div className="story-completion-actions">
+                  {nextPost && (
+                    <Link className="story-completion-link is-primary" to={nextPost.href}>
+                      {strings.completionNextStory}
+                    </Link>
+                  )}
+                  <Link className="story-completion-link" to="/">
+                    {strings.completionBackToFeed}
+                  </Link>
+                </div>
+              </section>
+            ) : (
+              <div className="conversation-controls">
+                <button
+                  className="continue-button"
+                  type="button"
+                  onClick={advanceConversation}
+                >
+                  {continueButtonLabel}
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
