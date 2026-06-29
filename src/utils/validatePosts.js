@@ -7,6 +7,7 @@ const STORY_TRANSLATION_KEYS = [
   "audioReplay",
   "audioRetry",
   "audioWaiting",
+  "advanceHint",
   "backLink",
   "complete",
   "completionBackToFeed",

@@ -24,6 +24,10 @@ function getInitialTranslationPreference() {
   }
 }
 
+function shouldIgnoreAdvanceTap(target) {
+  return target.closest("a, button, input, textarea, select, summary, .word, .translation-line");
+}
+
 function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   const [hasStarted, setHasStarted] = useState(Boolean(initialPlayback));
   const [nextMessageIndex, setNextMessageIndex] = useState(initialPlayback ? 1 : 0);
@@ -132,7 +136,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
   }
 
   return (
-    <main className={`post-page${isTranslationOpen ? " has-translation" : ""}`}>
+    <main className={`post-page${isTranslationOpen ? " has-translation" : ""}${isComplete ? "" : " has-active-controls"}`}>
       <div className="post-page-actions">
         <Link className="back-link" to="/">{strings.backLink}</Link>
         <LanguageToggle
@@ -180,9 +184,13 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
         <div className={`conversation-layout${isTranslationOpen ? " is-translation-open" : ""}`}>
           <div className="conversation-column">
             <section
-              className={`conversation-record${isTranslationOpen ? " has-inline-translations translation-transcript" : ""}`}
+              className={`conversation-record${isComplete ? "" : " is-advance-ready"}${isTranslationOpen ? " has-inline-translations translation-transcript" : ""}`}
               aria-label={strings.conversationLabel ?? "Conversation record"}
               aria-live={isTranslationOpen ? "polite" : undefined}
+              onClick={(event) => {
+                if (isComplete || shouldIgnoreAdvanceTap(event.target)) return;
+                advanceConversation();
+              }}
             >
               {isTranslationOpen && (
                 <aside className="conversation-translation" id="conversation-translation" aria-labelledby="translation-title">
@@ -246,6 +254,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
               </section>
             ) : (
               <div className="conversation-controls">
+                <span className="continue-hint">{strings.advanceHint}</span>
                 <button
                   className="continue-button"
                   type="button"

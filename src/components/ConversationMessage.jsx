@@ -14,7 +14,7 @@ const ConversationMessage = forwardRef(function ConversationMessage({
   wordTranslations
 }, ref) {
   return (
-    <div className={`conversation-message ${message.className}`} ref={ref}>
+    <div className={`conversation-message ${message.className}${isPlaying ? " is-audio-active" : ""}`} ref={ref}>
       <Avatar src={avatarSrc} alt={message.speaker} className={avatarClassName} />
       <div className="message-content">
         <div className="speech">

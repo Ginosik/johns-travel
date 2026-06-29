@@ -87,6 +87,55 @@ test("supports keyboard conversation controls and accessible translation updates
   await expect(toggle).toHaveAttribute("aria-expanded", "false");
 });
 
+test("highlights the chat bubble while its audio is playing", async ({ page }) => {
+  await page.addInitScript(() => {
+    class MockAudio extends EventTarget {
+      constructor(src) {
+        super();
+        this.src = src;
+        this.currentTime = 0;
+        this.paused = true;
+        this.preload = "";
+      }
+
+      play() {
+        this.paused = false;
+        return Promise.resolve();
+      }
+
+      pause() {
+        this.paused = true;
+      }
+    }
+
+    window.Audio = MockAudio;
+  });
+
+  await page.goto("/day/1");
+  await switchToEnglish(page);
+  await page.getByRole("button", { name: "Start conversation" }).click();
+
+  const activeMessage = page.locator(".conversation-message.is-audio-active");
+  await expect(activeMessage).toHaveCount(1);
+  await expect(activeMessage).toContainText("Hello! How are you doing?");
+});
+
+test("keeps the advance action visible and supports tapping the conversation", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/day/1");
+  await switchToEnglish(page);
+
+  const startButton = page.getByRole("button", { name: "Start conversation" });
+  await expect(startButton).toBeInViewport();
+  await expect(page.locator(".continue-hint")).toHaveText("Tap the conversation or press Space.");
+
+  await startButton.click();
+  await expect(page.getByText("Hello! How are you doing?", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Continue" })).toBeInViewport();
+
+  await page.locator(".conversation-record").click({ position: { x: 12, y: 120 } });
+  await expect(page.locator(".conversation-record .speech:not(.typing-speech)")).toHaveCount(2);
+});
 test("shows a useful completion state with next and library actions", async ({ page }) => {
   await page.goto("/day/1");
   await switchToEnglish(page);
