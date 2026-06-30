@@ -168,6 +168,7 @@ function DayPostPage({ initialPlayback = null, nextPost, post, previousPost }) {
           >
             <strong>{visibleMessages.length}</strong> {strings.progressOf} {story.conversation.length}
           </p>
+          <Link className="static-page-link" to={`${post.href}/static`}>{language === "pt" ? "Página estática" : "Static page"}</Link>
           <button
             className="translation-toggle"
             type="button"

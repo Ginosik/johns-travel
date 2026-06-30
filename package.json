@@ -17,6 +17,7 @@
     "review:export": "node scripts/review-export.mjs",
     "words:senses": "node scripts/build-conversation-word-senses.mjs",
     "words:validate": "node scripts/validate-conversation-word-senses.mjs",
+    "anki:generate": "node scripts/generate-anki-decks.mjs",
     "test": "node scripts/run-playwright.mjs",
     "test:ui": "node scripts/run-playwright.mjs --ui",
     "test:headed": "node scripts/run-playwright.mjs --headed",
@@ -26,7 +27,10 @@
     "audio:day1:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-1 --output-format mp3_44100_128",
     "audio:day2:elevenlabs": "node scripts/generate-elevenlabs-audio.mjs --post day-2 --output-format mp3_44100_128",
     "audio:elevenlabs:voices": "node scripts/list-elevenlabs-voices.mjs",
-    "audio:mariana:elevenlabs": "node scripts/generate-mariana-audio.mjs"
+    "audio:mariana:elevenlabs": "node scripts/generate-mariana-audio.mjs",
+    "social:generate": "node scripts/generate-instagram-carousel.mjs",
+    "social:render": "node scripts/render-instagram-carousel.mjs",
+    "social:package": "node scripts/package-instagram-carousel.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

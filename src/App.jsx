@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import { getPostById, getPostByPath, getPublishedPostNeighbors } from "./data/posts.js";
 import DayPostPage from "./pages/DayPostPage.jsx";
+import DevSocialPage from "./pages/DevSocialPage.jsx";
 import DevWordsPage from "./pages/DevWordsPage.jsx";
 import FeedPage from "./pages/FeedPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import MarianaPage from "./pages/MarianaPage.jsx";
+import StaticPostPage from "./pages/StaticPostPage.jsx";
 import TripMapPage from "./pages/TripMapPage.jsx";
 import { clearActiveAudio, setActiveAudio, stopActiveAudio } from "./utils/audioController.js";
 
@@ -25,6 +27,24 @@ function StoryRoute({ initialPlayback }) {
       post={post}
       previousPost={previousPost}
       key={post.id}
+    />
+  );
+}
+
+function StaticStoryRoute() {
+  const { dayNumber } = useParams();
+  const post = getPostByPath(`/day/${dayNumber}`);
+
+  if (!post) return <NotFoundPage />;
+
+  const { previousPost, nextPost } = getPublishedPostNeighbors(post.id);
+
+  return (
+    <StaticPostPage
+      nextPost={nextPost}
+      post={post}
+      previousPost={previousPost}
+      key={`static-${post.id}`}
     />
   );
 }
@@ -70,9 +90,11 @@ function App() {
     <Routes>
       <Route path="/" element={<FeedPage onOpenPost={navigateToPost} />} />
       <Route path="/day/:dayNumber" element={<StoryRoute initialPlayback={initialPlayback} />} />
+      <Route path="/day/:dayNumber/static" element={<StaticStoryRoute />} />
       <Route path="/mariana" element={<MarianaPage />} />
       <Route path="/day1.html" element={<Navigate to="/day/1" replace />} />
       <Route path="/trip-map" element={<TripMapPage onOpenPost={navigateToPost} />} />
+      <Route path="/dev/social" element={<DevSocialPage />} />
       <Route path="/dev/words" element={<DevWordsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

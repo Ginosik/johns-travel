@@ -1,0 +1,123 @@
+{
+  "id": "day-4",
+  "title": "John's Travel - Day 4",
+  "subtitle": "Dia 4 - Comprando frutas na feira",
+  "destinationPath": "/day/4/static",
+  "sourcePostPath": "/day/4",
+  "visualAssetPath": "/social/day-4/art/cover.png",
+  "visualAssetAlt": "Ilustração editorial para Dia 4 - Comprando frutas na feira.",
+  "audience": "Brasileiros aprendendo inglês que querem vocabulário de feira, comida, preço e quantidade em contexto.",
+  "promise": "Pratique inglês para perguntar nomes, preços, quantidades e provar comidas em uma feira.",
+  "hook": "John visita uma feira e descobre que comprar frutas pode ser mais confuso do que parece.",
+  "accounts": {
+    "conversante": {
+      "handle": "@conversante42",
+      "role": "Hub principal",
+      "cta": "Pratique a história completa no Conversante."
+    },
+    "john": {
+      "handle": "Série de viagem do John",
+      "role": "Conta de história de viagem",
+      "cta": "Acompanhe a viagem do John, uma conversa curta por vez."
+    },
+    "mariana": {
+      "handle": "Série de prática da Mariana",
+      "role": "Conta de prática guiada",
+      "cta": "Use os posts da Mariana para praticar fala com foco."
+    }
+  },
+  "contentNotes": [
+    "John prova frutas desconhecidas, faz perguntas e aprende vocabulário útil de feira.",
+    "A conversa foca em nomes, preços, amostras e em como comprar uma quantidade normal de fruta.",
+    "Uma pergunta simples para usar sempre que você não souber o nome de alguma coisa.",
+    "Uma frase prática para explicar dúvida entre opções."
+  ],
+  "featuredLines": [
+    {
+      "speaker": "John",
+      "text": "I went to a street market this morning, and I learned that fruit can be more confusing than bus routes."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "That sounds dramatic. What happened, did a mango give you directions?"
+    },
+    {
+      "speaker": "John",
+      "text": "Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Classic traveler face. Did you ask what it was?"
+    },
+    {
+      "speaker": "John",
+      "text": "I tried. I asked, 'What is this called?' Then I pointed and said, 'Como chama?' The vendor said it was maracujá."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Passion fruit! Did you buy one?"
+    },
+    {
+      "speaker": "John",
+      "text": "That was the problem. I did not know if the price was for one fruit, one kilo, or a whole bag."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Useful confusion. You needed market grammar, not just fruit vocabulary."
+    }
+  ],
+  "slides": [
+    {
+      "number": 1,
+      "type": "hook",
+      "headline": "Dia 4 - Comprando frutas na feira",
+      "body": "John prova frutas desconhecidas, faz perguntas e aprende vocabulário útil de feira. John visita uma feira e descobre que comprar frutas pode ser mais confuso do que parece."
+    },
+    {
+      "number": 2,
+      "type": "story-context",
+      "headline": "Trecho da conversa em inglês",
+      "body": [
+        "John: \"I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.\"",
+        "Nicky: \"That sounds dramatic. What happened, did a mango give you directions?\"",
+        "John: \"Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.\""
+      ]
+    },
+    {
+      "number": 3,
+      "type": "dialogue",
+      "headline": "Frase para praticar",
+      "body": "What is this called?",
+      "note": "Uma pergunta simples para usar sempre que você não souber o nome de alguma coisa."
+    },
+    {
+      "number": 4,
+      "type": "language-point",
+      "headline": "Pequena frase, valor real de viagem",
+      "body": "I did not know if the price was for one fruit, one kilo, or a whole bag.",
+      "note": "Uma frase prática para explicar dúvida entre opções."
+    },
+    {
+      "number": 5,
+      "type": "vocabulary",
+      "headline": "Vocabulário do dia",
+      "body": [
+        "fruit = fruta",
+        "market = feira / mercado",
+        "sweet = doce",
+        "sour = azedo",
+        "ripe = maduro"
+      ]
+    },
+    {
+      "number": 6,
+      "type": "cta",
+      "headline": "Leia, ouça e revise",
+      "body": "Abra a lição completa do Dia 4 - Comprando frutas na feira no Conversante e pratique a conversa linha por linha.",
+      "cta": "conversante.net"
+    }
+  ],
+  "caption": "Dia 4 - Comprando frutas na feira: John visita uma feira e descobre que comprar frutas pode ser mais confuso do que parece.\nCena do dia: John prova frutas desconhecidas, faz perguntas e aprende vocabulário útil de feira.\nTrecho da conversa em inglês:\nJohn: \"I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.\"\nNicky: \"That sounds dramatic. What happened, did a mango give you directions?\"\nJohn: \"Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.\"\nFrase para praticar: \"What is this called?\"\nVocabulário do dia: fruit = fruta, market = feira / mercado, sweet = doce, sour = azedo, ripe = maduro.\nAbra a lição completa no Conversante para ler, ouvir e revisar linha por linha.\n#aprendaingles #ingles #inglesonline #englishpractice #vocabulario #conversante #inglesparabrasileiros",
+  "altText": "Slide 1: Dia 4 - Comprando frutas na feira. John prova frutas desconhecidas, faz perguntas e aprende vocabulário útil de feira. John visita uma feira e descobre que comprar frutas pode ser mais confuso do que parece.\nSlide 2: Trecho da conversa em inglês. John: \"I went to a street market this morning, and I learned that fruit can be more confusing than bus routes.\"; Nicky: \"That sounds dramatic. What happened, did a mango give you directions?\"; John: \"Almost. A vendor held up a yellow fruit and said a name I did not recognize, so I smiled like I understood everything.\"\nSlide 3: Frase para praticar. What is this called?\nSlide 4: Pequena frase, valor real de viagem. I did not know if the price was for one fruit, one kilo, or a whole bag.\nSlide 5: Vocabulário do dia. fruit = fruta; market = feira / mercado; sweet = doce; sour = azedo; ripe = maduro\nSlide 6: Leia, ouça e revise. Abra a lição completa do Dia 4 - Comprando frutas na feira no Conversante e pratique a conversa linha por linha.",
+  "status": "copy-ready"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "day-1",
+    "day": 1,
+    "title": "Conversante - Day 1 - First day traveling",
+    "filename": "day-1.apkg",
+    "cardCount": 134
+  },
+  {
+    "id": "day-2",
+    "day": 2,
+    "title": "Conversante - Day 2 - Exploring Lagoa da Concei\u00e7\u00e3o",
+    "filename": "day-2.apkg",
+    "cardCount": 136
+  },
+  {
+    "id": "day-3",
+    "day": 3,
+    "title": "Conversante - Day 3 - Wrong Bus to the Right Beach",
+    "filename": "day-3.apkg",
+    "cardCount": 152
+  },
+  {
+    "id": "day-4",
+    "day": 4,
+    "title": "Conversante - Day 4 - Buying Fruit at a Street Market",
+    "filename": "day-4.apkg",
+    "cardCount": 69
+  }
+]

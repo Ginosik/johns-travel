@@ -1,0 +1,123 @@
+{
+  "id": "day-2",
+  "title": "John's Travel - Day 2",
+  "subtitle": "Dia 2 - Explorando a Lagoa da Conceição",
+  "destinationPath": "/day/2/static",
+  "sourcePostPath": "/day/2",
+  "visualAssetPath": "/social/day-2/art/cover.png",
+  "visualAssetAlt": "Ilustração editorial para Dia 2 - Explorando a Lagoa da Conceição.",
+  "audience": "Brasileiros aprendendo inglês que querem vocabulário útil de viagem e cidade.",
+  "promise": "Pratique inglês para explorar lugares, pedir comida e aprender palavras locais.",
+  "hook": "John explora a Lagoa da Conceição e tenta usar português no mundo real.",
+  "accounts": {
+    "conversante": {
+      "handle": "@conversante42",
+      "role": "Hub principal",
+      "cta": "Pratique a história completa no Conversante."
+    },
+    "john": {
+      "handle": "Série de viagem do John",
+      "role": "Conta de história de viagem",
+      "cta": "Acompanhe a viagem do John, uma conversa curta por vez."
+    },
+    "mariana": {
+      "handle": "Série de prática da Mariana",
+      "role": "Conta de prática guiada",
+      "cta": "Use os posts da Mariana para praticar fala com foco."
+    }
+  },
+  "contentNotes": [
+    "John passa a tarde perto da lagoa, de cafés, barcos e ruas movimentadas.",
+    "A conversa vai de passeio pela cidade a pedido de café, com palavras locais que aparecem no caminho.",
+    "Uma forma simples de explicar que duas respostas podem estar certas ao mesmo tempo.",
+    "Um momento realista de viagem: entender só uma parte também conta como prática."
+  ],
+  "featuredLines": [
+    {
+      "speaker": "John",
+      "text": "I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?"
+    },
+    {
+      "speaker": "John",
+      "text": "It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Did it feel quiet, or was it busy even though you were close to the water?"
+    },
+    {
+      "speaker": "John",
+      "text": "Not at all. There were cafes, shops, buses, and lots of people, so it felt more like a lively town than a calm beach stop."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "What did you do first, after you arrived and started looking around the area?"
+    },
+    {
+      "speaker": "John",
+      "text": "I walked near the water and watched people on paddleboards, then I crossed a little bridge and took photos of the boats."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Did you practice Portuguese with anyone there, or did you mostly point, smile, and hope for the best?"
+    }
+  ],
+  "slides": [
+    {
+      "number": 1,
+      "type": "hook",
+      "headline": "Dia 2 - Explorando a Lagoa da Conceição",
+      "body": "John passa a tarde perto da lagoa, de cafés, barcos e ruas movimentadas. John explora a Lagoa da Conceição e tenta usar português no mundo real."
+    },
+    {
+      "number": 2,
+      "type": "story-context",
+      "headline": "Trecho da conversa em inglês",
+      "body": [
+        "John: \"I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.\"",
+        "Nicky: \"Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?\"",
+        "John: \"It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.\""
+      ]
+    },
+    {
+      "number": 3,
+      "type": "dialogue",
+      "headline": "Frase para praticar",
+      "body": "It is both. There is a lagoon connected to the sea and a neighborhood around it.",
+      "note": "Uma forma simples de explicar que duas respostas podem estar certas ao mesmo tempo."
+    },
+    {
+      "number": 4,
+      "type": "language-point",
+      "headline": "Pequena frase, valor real de viagem",
+      "body": "The cashier answered so fast that I only smiled, paid, and repeated obrigado.",
+      "note": "Um momento realista de viagem: entender só uma parte também conta como prática."
+    },
+    {
+      "number": 5,
+      "type": "vocabulary",
+      "headline": "Vocabulário do dia",
+      "body": [
+        "lagoon = lagoa",
+        "bridge = ponte",
+        "busy = movimentado",
+        "coffee = café",
+        "water = água"
+      ]
+    },
+    {
+      "number": 6,
+      "type": "cta",
+      "headline": "Leia, ouça e revise",
+      "body": "Abra a lição completa do Dia 2 - Explorando a Lagoa da Conceição no Conversante e pratique a conversa linha por linha.",
+      "cta": "conversante.net"
+    }
+  ],
+  "caption": "Dia 2 - Explorando a Lagoa da Conceição: John explora a Lagoa da Conceição e tenta usar português no mundo real.\nCena do dia: John passa a tarde perto da lagoa, de cafés, barcos e ruas movimentadas.\nTrecho da conversa em inglês:\nJohn: \"I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.\"\nNicky: \"Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?\"\nJohn: \"It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.\"\nFrase para praticar: \"It is both. There is a lagoon connected to the sea and a neighborhood around it.\"\nVocabulário do dia: lagoon = lagoa, bridge = ponte, busy = movimentado, coffee = café, water = água.\nAbra a lição completa no Conversante para ler, ouvir e revisar linha por linha.\n#aprendaingles #ingles #inglesonline #englishpractice #vocabulario #conversante #inglesparabrasileiros",
+  "altText": "Slide 1: Dia 2 - Explorando a Lagoa da Conceição. John passa a tarde perto da lagoa, de cafés, barcos e ruas movimentadas. John explora a Lagoa da Conceição e tenta usar português no mundo real.\nSlide 2: Trecho da conversa em inglês. John: \"I finally explored Lagoa da Conceição today, and I stayed there for most of the afternoon because the place felt alive.\"; Nicky: \"Nice! Is it a lake or a neighborhood, or is it one of those places where everything blends together?\"; John: \"It is both. There is a lagoon connected to the sea and a neighborhood around it, with hills, small streets, restaurants, and people walking everywhere.\"\nSlide 3: Frase para praticar. It is both. There is a lagoon connected to the sea and a neighborhood around it.\nSlide 4: Pequena frase, valor real de viagem. The cashier answered so fast that I only smiled, paid, and repeated obrigado.\nSlide 5: Vocabulário do dia. lagoon = lagoa; bridge = ponte; busy = movimentado; coffee = café; water = água\nSlide 6: Leia, ouça e revise. Abra a lição completa do Dia 2 - Explorando a Lagoa da Conceição no Conversante e pratique a conversa linha por linha.",
+  "status": "copy-ready"
+}

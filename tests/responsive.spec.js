@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const coreRoutes = ["/", "/day/1", "/day/2", "/mariana", "/trip-map"];
+const coreRoutes = ["/", "/day/1", "/day/1/static", "/day/2", "/mariana", "/trip-map"];
 const viewportMatrix = [
   { name: "phone-320", width: 320, height: 700 },
   { name: "phone-360", width: 360, height: 800 },
@@ -50,7 +50,7 @@ test("has no horizontal page overflow at supported widths", async ({ page }, tes
         await page.goto(route);
         if (route.startsWith("/day/")) {
           const translationToggle = page.locator(".translation-toggle");
-          if (await translationToggle.getAttribute("aria-expanded") === "false") {
+          if (await translationToggle.count() && await translationToggle.getAttribute("aria-expanded") === "false") {
             await translationToggle.click();
           }
         }

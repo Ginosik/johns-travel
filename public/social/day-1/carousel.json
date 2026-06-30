@@ -1,0 +1,123 @@
+{
+  "id": "day-1",
+  "title": "John's Travel - Day 1",
+  "subtitle": "Dia 1 - Primeiro dia de viagem",
+  "destinationPath": "/day/1/static",
+  "sourcePostPath": "/day/1",
+  "visualAssetPath": "/social/day-1/art/cover.png",
+  "visualAssetAlt": "Ilustração editorial para Dia 1 - Primeiro dia de viagem.",
+  "audience": "Brasileiros aprendendo inglês que gostam de praticar com histórias curtas.",
+  "promise": "Pratique inglês de viagem com uma conversa simples sobre o Brasil.",
+  "hook": "Uma conversa curta em inglês antes da viagem de John ao Brasil.",
+  "accounts": {
+    "conversante": {
+      "handle": "@conversante42",
+      "role": "Hub principal",
+      "cta": "Pratique a história completa no Conversante."
+    },
+    "john": {
+      "handle": "Série de viagem do John",
+      "role": "Conta de história de viagem",
+      "cta": "Acompanhe a viagem do John, uma conversa curta por vez."
+    },
+    "mariana": {
+      "handle": "Série de prática da Mariana",
+      "role": "Conta de prática guiada",
+      "cta": "Use os posts da Mariana para praticar fala com foco."
+    }
+  },
+  "contentNotes": [
+    "John está se preparando para viajar ao Brasil.",
+    "John conta para Nicky que vai viajar para Florianópolis. Nicky reage, faz perguntas e a conversa continua de um jeito natural.",
+    "Uma forma natural de reagir com entusiasmo e confirmar uma informação ao mesmo tempo.",
+    "Direto, claro e ainda amigável."
+  ],
+  "featuredLines": [
+    {
+      "speaker": "John",
+      "text": "Hello! How are you doing?"
+    },
+    {
+      "speaker": "Nicky",
+      "text": "I'm doing alright. What about you?"
+    },
+    {
+      "speaker": "John",
+      "text": "I'm fine. I'll travel to Florianópolis this month."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "That sounds exciting. That's in Brazil, right?"
+    },
+    {
+      "speaker": "John",
+      "text": "Yes, in the south of Brazil. I heard that people there speak very fast."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Oh, really? Do you think you'll learn Spanish?"
+    },
+    {
+      "speaker": "John",
+      "text": "They don't speak Spanish in Brazil. They speak Portuguese."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "I see. I got it mixed up with other South American countries, then."
+    }
+  ],
+  "slides": [
+    {
+      "number": 1,
+      "type": "hook",
+      "headline": "Dia 1 - Primeiro dia de viagem",
+      "body": "John está se preparando para viajar ao Brasil. Uma conversa curta em inglês antes da viagem de John ao Brasil."
+    },
+    {
+      "number": 2,
+      "type": "story-context",
+      "headline": "Trecho da conversa em inglês",
+      "body": [
+        "John: \"Hello! How are you doing?\"",
+        "Nicky: \"I'm doing alright. What about you?\"",
+        "John: \"I'm fine. I'll travel to Florianópolis this month.\""
+      ]
+    },
+    {
+      "number": 3,
+      "type": "dialogue",
+      "headline": "Frase para praticar",
+      "body": "That sounds exciting. That's in Brazil, right?",
+      "note": "Uma forma natural de reagir com entusiasmo e confirmar uma informação ao mesmo tempo."
+    },
+    {
+      "number": 4,
+      "type": "language-point",
+      "headline": "Pequena frase, valor real de viagem",
+      "body": "They don't speak Spanish in Brazil. They speak Portuguese.",
+      "note": "Direto, claro e ainda amigável."
+    },
+    {
+      "number": 5,
+      "type": "vocabulary",
+      "headline": "Vocabulário do dia",
+      "body": [
+        "travel = viajar",
+        "exciting = empolgante",
+        "Brazil = Brasil",
+        "Portuguese = português",
+        "food = comida"
+      ]
+    },
+    {
+      "number": 6,
+      "type": "cta",
+      "headline": "Leia, ouça e revise",
+      "body": "Abra a lição completa do Dia 1 - Primeiro dia de viagem no Conversante e pratique a conversa linha por linha.",
+      "cta": "conversante.net"
+    }
+  ],
+  "caption": "Dia 1 - Primeiro dia de viagem: Uma conversa curta em inglês antes da viagem de John ao Brasil.\nCena do dia: John está se preparando para viajar ao Brasil.\nTrecho da conversa em inglês:\nJohn: \"Hello! How are you doing?\"\nNicky: \"I'm doing alright. What about you?\"\nJohn: \"I'm fine. I'll travel to Florianópolis this month.\"\nFrase para praticar: \"That sounds exciting. That's in Brazil, right?\"\nVocabulário do dia: travel = viajar, exciting = empolgante, Brazil = Brasil, Portuguese = português, food = comida.\nAbra a lição completa no Conversante para ler, ouvir e revisar linha por linha.\n#aprendaingles #ingles #inglesonline #englishpractice #vocabulario #conversante #inglesparabrasileiros",
+  "altText": "Slide 1: Dia 1 - Primeiro dia de viagem. John está se preparando para viajar ao Brasil. Uma conversa curta em inglês antes da viagem de John ao Brasil.\nSlide 2: Trecho da conversa em inglês. John: \"Hello! How are you doing?\"; Nicky: \"I'm doing alright. What about you?\"; John: \"I'm fine. I'll travel to Florianópolis this month.\"\nSlide 3: Frase para praticar. That sounds exciting. That's in Brazil, right?\nSlide 4: Pequena frase, valor real de viagem. They don't speak Spanish in Brazil. They speak Portuguese.\nSlide 5: Vocabulário do dia. travel = viajar; exciting = empolgante; Brazil = Brasil; Portuguese = português; food = comida\nSlide 6: Leia, ouça e revise. Abra a lição completa do Dia 1 - Primeiro dia de viagem no Conversante e pratique a conversa linha por linha.",
+  "status": "copy-ready"
+}

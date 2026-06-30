@@ -1,0 +1,123 @@
+{
+  "id": "day-3",
+  "title": "John's Travel - Day 3",
+  "subtitle": "Dia 3 - O ônibus errado para a praia certa",
+  "destinationPath": "/day/3/static",
+  "sourcePostPath": "/day/3",
+  "visualAssetPath": "/social/day-3/art/cover.png",
+  "visualAssetAlt": "Ilustração editorial para Dia 3 - O ônibus errado para a praia certa.",
+  "audience": "Brasileiros aprendendo inglês que gostam de histórias de viagem com erros, direções e improviso.",
+  "promise": "Pratique inglês para falar de erros, transporte, direções e calma em situações inesperadas.",
+  "hook": "John pega o ônibus errado e transforma o erro em uma história de praia.",
+  "accounts": {
+    "conversante": {
+      "handle": "@conversante42",
+      "role": "Hub principal",
+      "cta": "Pratique a história completa no Conversante."
+    },
+    "john": {
+      "handle": "Série de viagem do John",
+      "role": "Conta de história de viagem",
+      "cta": "Acompanhe a viagem do John, uma conversa curta por vez."
+    },
+    "mariana": {
+      "handle": "Série de prática da Mariana",
+      "role": "Conta de prática guiada",
+      "cta": "Use os posts da Mariana para praticar fala com foco."
+    }
+  },
+  "contentNotes": [
+    "John tenta ir para a Joaquina, pega o ônibus errado e acaba em Campeche.",
+    "A história usa confusão, direções e uma mudança de planos para ensinar inglês prático de viagem.",
+    "Uma reação amigável que transforma um problema em história.",
+    "Um jeito memorável de suavizar um erro e manter o tom leve."
+  ],
+  "featuredLines": [
+    {
+      "speaker": "John",
+      "text": "Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake."
+    },
+    {
+      "speaker": "John",
+      "text": "It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "What did you do then? Did you ask someone, or did you just ride until the end?"
+    },
+    {
+      "speaker": "John",
+      "text": "I asked a woman near the door, 'Is this bus going to Joaquina?' She smiled and said, 'No, Campeche.'"
+    },
+    {
+      "speaker": "Nicky",
+      "text": "At least you understood the important word. Did you know where Campeche was?"
+    },
+    {
+      "speaker": "John",
+      "text": "Not really. I checked my phone, saw it was still by the ocean, and decided not to fight the day."
+    },
+    {
+      "speaker": "Nicky",
+      "text": "That is a good travel rule. If the wrong bus takes you to the ocean, maybe accept the gift."
+    }
+  ],
+  "slides": [
+    {
+      "number": 1,
+      "type": "hook",
+      "headline": "Dia 3 - O ônibus errado para a praia certa",
+      "body": "John tenta ir para a Joaquina, pega o ônibus errado e acaba em Campeche. John pega o ônibus errado e transforma o erro em uma história de praia."
+    },
+    {
+      "number": 2,
+      "type": "story-context",
+      "headline": "Trecho da conversa em inglês",
+      "body": [
+        "John: \"Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.\"",
+        "Nicky: \"Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.\"",
+        "John: \"It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.\""
+      ]
+    },
+    {
+      "number": 3,
+      "type": "dialogue",
+      "headline": "Frase para praticar",
+      "body": "That sounds like a very lucky mistake.",
+      "note": "Uma reação amigável que transforma um problema em história."
+    },
+    {
+      "number": 4,
+      "type": "language-point",
+      "headline": "Pequena frase, valor real de viagem",
+      "body": "I was not completely lost, but I was definitely temporarily confused.",
+      "note": "Um jeito memorável de suavizar um erro e manter o tom leve."
+    },
+    {
+      "number": 5,
+      "type": "vocabulary",
+      "headline": "Vocabulário do dia",
+      "body": [
+        "bus = ônibus",
+        "wrong = errado / errada",
+        "beach = praia",
+        "lost = perdido",
+        "market = mercado / mercadinho"
+      ]
+    },
+    {
+      "number": 6,
+      "type": "cta",
+      "headline": "Leia, ouça e revise",
+      "body": "Abra a lição completa do Dia 3 - O ônibus errado para a praia certa no Conversante e pratique a conversa linha por linha.",
+      "cta": "conversante.net"
+    }
+  ],
+  "caption": "Dia 3 - O ônibus errado para a praia certa: John pega o ônibus errado e transforma o erro em uma história de praia.\nCena do dia: John tenta ir para a Joaquina, pega o ônibus errado e acaba em Campeche.\nTrecho da conversa em inglês:\nJohn: \"Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.\"\nNicky: \"Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.\"\nJohn: \"It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.\"\nFrase para praticar: \"That sounds like a very lucky mistake.\"\nVocabulário do dia: bus = ônibus, wrong = errado / errada, beach = praia, lost = perdido, market = mercado / mercadinho.\nAbra a lição completa no Conversante para ler, ouvir e revisar linha por linha.\n#aprendaingles #ingles #inglesonline #englishpractice #vocabulario #conversante #inglesparabrasileiros",
+  "altText": "Slide 1: Dia 3 - O ônibus errado para a praia certa. John tenta ir para a Joaquina, pega o ônibus errado e acaba em Campeche. John pega o ônibus errado e transforma o erro em uma história de praia.\nSlide 2: Trecho da conversa em inglês. John: \"Today I tried to go to Joaquina, but I got on the wrong bus and ended up in Campeche instead.\"; Nicky: \"Wait, you took the wrong bus and still found a beach? That sounds like a very lucky mistake.\"; John: \"It was lucky after the panic passed. At first, I looked out the window and realized the signs did not match my map.\"\nSlide 3: Frase para praticar. That sounds like a very lucky mistake.\nSlide 4: Pequena frase, valor real de viagem. I was not completely lost, but I was definitely temporarily confused.\nSlide 5: Vocabulário do dia. bus = ônibus; wrong = errado / errada; beach = praia; lost = perdido; market = mercado / mercadinho\nSlide 6: Leia, ouça e revise. Abra a lição completa do Dia 3 - O ônibus errado para a praia certa no Conversante e pratique a conversa linha por linha.",
+  "status": "copy-ready"
+}

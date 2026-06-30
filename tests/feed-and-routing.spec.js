@@ -207,3 +207,28 @@ test("tracks Mariana lead-magnet analytics events", async ({ page }) => {
     properties: expect.objectContaining({ destination: "whatsapp", language: "pt", location: "hero" })
   }));
 });
+
+test("renders static downloadable story pages", async ({ page }) => {
+  await page.goto("/day/1/static");
+
+  await expect(page.getByText("Página estática da lição", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Abrir chat interativo" })).toHaveAttribute("href", "/day/1");
+  await expect(page.getByRole("button", { name: "Imprimir / salvar PDF" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Baixar deck do Anki" }).first()).toHaveAttribute("href", "/anki/day-1.apkg");
+  await expect(page.getByText(/cards from this post/)).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Conversa completa" })).toBeVisible();
+  await expect(page.getByText("Hello! How are you doing?", { exact: true })).toBeVisible();
+  await expect(page.getByText("Ol\u00e1! Como voc\u00ea est\u00e1?", { exact: true })).toBeVisible();
+  await expect(page.locator(".static-transcript-item")).toHaveCount(20);
+  await expect(page.getByRole("heading", { name: "Vocabulário desta história" })).toBeVisible();
+  await expect(page.locator(".static-vocabulary-item").first()).toBeVisible();
+
+  await page.goto("/day/3/static");
+  await expect(page.locator(".static-vocabulary-item", { hasText: /^joaquina\s*Joaquina$/i })).toHaveCount(0);
+  await expect(page.locator(".static-vocabulary-item", { hasText: /^campeche\s*Campeche$/i })).toHaveCount(0);
+
+  await page.goto("/day/1/static");
+  await page.getByRole("link", { name: /Pr\u00f3xima hist\u00f3ria/ }).click();
+  await expect(page).toHaveURL(/\/day\/2\/static$/);
+  await expect(page.getByText("Dia 2 - Explorando a Lagoa da Concei\u00e7\u00e3o", { exact: true })).toBeVisible();
+});
